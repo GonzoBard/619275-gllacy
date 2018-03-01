@@ -85,6 +85,7 @@ body {
 }
 
 h2 {
+  /* font-weight: bold; <--- default => Roboto Bold */
   font-size: 35px;
   line-height: 41px;
 }
@@ -120,16 +121,14 @@ a:hover, a:active {
   line-height: 16px;
 }
 
-.page-header-interaction .contact-info {
-  font-weight: bold;
-}
-
 .contact-info .time {
+  font-weight: bold;
   font-size: 14px;
   line-height: 16px;
 }
 
 .contact-info .phone {
+  font-weight: bold;
   font-size: 22px;
   line-height: 24px;
 }
@@ -163,11 +162,8 @@ a:hover, a:active {
   line-height: 16px;
 }
 
-.offers {
-  font-weight: bold;
-}
-
 .offer-item p {
+  font-weight: bold;
   font-size: 18px;
   line-height: 22px;
 }
