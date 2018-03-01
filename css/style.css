@@ -114,13 +114,19 @@ a:hover, a:active {
   list-style: none;
 }
 
-.page-header-interaction a, .contact-info .time, .breadcrumbs a {
+.page-header-interaction a {
+  font-weight: 500;
   font-size: 14px;
   line-height: 16px;
 }
 
 .page-header-interaction .contact-info {
   font-weight: bold;
+}
+
+.contact-info .time {
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .contact-info .phone {
@@ -134,6 +140,8 @@ a:hover, a:active {
 
 .breadcrumbs a {
   font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .slider {
@@ -142,7 +150,6 @@ a:hover, a:active {
   line-height: 60px;
   text-align: center;
 }
-
 
 .filters, .filters select {
   font-weight: 500;
@@ -172,6 +179,7 @@ a:hover, a:active {
 }
 
 .catalog-item .name {
+  font-weight: 500;
   font-size: 16px;
   line-height: 22px;
 }
@@ -187,18 +195,19 @@ a:hover, a:active {
 }
 
 .seo-item {
+  font-weight: normal;
   font-size: 16px;
   line-height: 22px;
 }
 
-.news, .mailing {
-  font-size: 16px;
-  line-height: 22px;
+.news-and-mailing {
   color: #5a5a5a;
 }
 
 .news h4 {
   font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .news a {
@@ -209,6 +218,12 @@ a:hover, a:active {
   border-bottom: 2px solid #353535;
 
   background-color: rgba(255, 255, 255, 0.8);
+}
+
+.mailing p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .mailing .btn, .map-info .btn {
@@ -223,22 +238,33 @@ a:hover, a:active {
   margin: 0;
 }
 
-.map-info .address-text, .map-info .phone-text, .map-info .phone-time {
+.map-info .address-text {
+  font-weight: normal;
   font-size: 14px;
   line-height: 20px;
 }
 
-.map-info .phone-time {
-  line-height: 22px;
-}
-
-.map-info .address-value, .map-info .phone-value {
+.map-info .address-value {
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
 }
 
+.map-info .phone-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
 .map-info .phone-value {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.map-info .phone-time {
+  font-weight: normal;
+  font-size: 14px;
   line-height: 22px;
 }
 
