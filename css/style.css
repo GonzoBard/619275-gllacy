@@ -114,7 +114,7 @@ a:hover, a:active {
   list-style: none;
 }
 
-.page-header-interaction a, .contact-info .time {
+.page-header-interaction a, .contact-info .time, .breadcrumbs a {
   font-size: 14px;
   line-height: 16px;
 }
@@ -132,11 +132,28 @@ a:hover, a:active {
   text-align: right;
 }
 
+.breadcrumbs a {
+  font-weight: normal;
+}
+
 .slider {
   font-weight: bold;
   font-size: 60px;
   line-height: 60px;
   text-align: center;
+}
+
+
+.filters, .filters select {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.filters .title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .offers {
