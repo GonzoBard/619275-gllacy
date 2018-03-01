@@ -88,3 +88,157 @@ h2 {
   font-size: 35px;
   line-height: 41px;
 }
+
+a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+a:hover, a:active {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+  cursor: pointer;
+}
+
+.page-header-nav a {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.page-header-nav ul, .page-footer-nav ul {
+  list-style: none;
+}
+
+.page-header-interaction a, .contact-info .time {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.page-header-interaction .contact-info {
+  font-weight: bold;
+}
+
+.contact-info .phone {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.contact-info {
+  text-align: right;
+}
+
+.slider {
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.offers {
+  font-weight: bold;
+}
+
+.offer-item p {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.catalog-item .price {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.catalog-item .name {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.seo {
+  color: #323232;
+}
+
+.seo h3 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.seo-item {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.news, .mailing {
+  font-size: 16px;
+  line-height: 22px;
+  color: #5a5a5a;
+}
+
+.news h4 {
+  font-weight: 500;
+}
+
+.news a {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #353535;
+  border-bottom: 2px solid #353535;
+
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.mailing .btn, .map-info .btn {
+  color: #fefefe;
+}
+
+.map-info {
+  color: #323232;
+}
+
+.map-info p {
+  margin: 0;
+}
+
+.map-info .address-text, .map-info .phone-text, .map-info .phone-time {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.map-info .phone-time {
+  line-height: 22px;
+}
+
+.map-info .address-value, .map-info .phone-value {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.map-info .phone-value {
+  line-height: 22px;
+}
+
+.page-footer-nav a {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.page-footer-nav .heart {
+  font-weight: bold;
+}
+
+.page-footer-copyright, .page-footer-copyright a {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fefefe;
+}
+
