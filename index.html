@@ -14,18 +14,53 @@
       <img src="img/logo.png" alt="Логотип магазина мороженого «Глейси»" width="154" height="64">
     </a>
     <ul class="site-navigation">
-      <li><a href="#">Каталог</a></li>
+      <li>
+        <a href="#">Каталог</a>
+        <ul class="submenu site-navigation-submenu">
+          <li><a href="#">Новинки</a></li>
+          <li><a href="#">Сливочное</a></li>
+          <li><a href="#">Щербеты</a></li>
+          <li><a href="#">Фруктовый лед</a></li>
+          <li><a href="#">Мелорин</a></li>
+        </ul>
+      </li>
       <li><a href="#">Доставка и оплата</a></li>
       <li><a href="#">О Компании</a></li>
     </ul>
     <ul class="user-navigation">
-      <li><a href="#">Поиск</a></li>
-      <li><a href="#">Вход</a></li>
+      <li>
+        <a href="#">Поиск</a>
+        <ul class="submenu user-navigation-search">
+          <li>
+            <form class="form-submenu" action="#" method="post">
+              <input type="text" placeholder="Что ищем?">
+            </form>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">Вход</a>
+        <ul class="submenu user-navigation-login">
+          <li>
+            <form class="form-submenu login" action="#">
+              <input type="email" name="email" placeholder="Электронная почта">
+              <input type="password" name="password" placeholder="Пароль">
+              <div class="login-submit">
+                <input class="btn btn-x1" type="submit" value="Войти">
+                <div class="login-submit-links">
+                  <a href="#">Забыли пароль?</a>
+                  <br>
+                  <a href="#">Новая регистрация</a>
+                </div>
+              </div>
+            </form>
+          </li>
+        </ul>
+      </li>
       <li><a href="#">Корзина</a></li>
     </ul>
   </nav>
 
-  <div class="contact-info">
+  <div class="header-contacts">
     <p>
       <span class="time">С 10 до 20, ежедневно</span><br>
       <span class="phone">8 812 450-25-25</span>
@@ -114,41 +149,48 @@
     </ul>
   </section>
 
-  <section class="news-and-mailing">
-
-    <h2 class="visually-hidden">Новости и рассылка</h2>
-
-    <article class="news">
-      <h3>Новое в нашем блоге</h3>
-      <a href="#">10 способов сервировки&nbsp;<br>
-        фруктовых щербетов к&nbsp;<br>
-        столу</a>
-    </article>
-
-    <section class="mailing">
-      <h3 class="visually-hidden">Рассылка</h3>
-      <p>
-        Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
-        Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-      </p>
-      <form action="#" method="post">
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Электронная почта">
-          <input class="btn btn-x1" type="submit" value="Отправить">
-        </div>
-      </form>
-    </section>
+  <section class="news">
+    <h3>Новое в нашем блоге</h3>
+    <a href="#">10 способов сервировки&nbsp;<br>
+      фруктовых щербетов к&nbsp;<br>
+      столу</a>
   </section>
 
-  <section class="location">
+  <section class="mailing">
+    <h3 class="visually-hidden">Рассылка</h3>
+    <p>
+      Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
+      Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+    </p>
+    <form action="#" method="post">
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Электронная почта">
+        <input class="btn btn-x1" type="submit" value="Отправить">
+      </div>
+    </form>
+  </section>
+
+  <section class="contacts-info">
     <h2 class="visually-hidden">Местонахождение</h2>
-    <div class="location-info">
-      <p class="address-text">Адрес главного офиса<br>
-        и офлайн-магазина:</p>
-      <p class="address-value">ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</p>
-      <p class="phone-text">Для заказов по телефону:</p>
-      <p class="phone-value">8 812 450-25-25</p>
-      <p class="phone-time">(с 10 до 20 ежедневно)</p>
+    <div class="contacts">
+      <p>
+        <span class="address-text">
+          Адрес главного офиса<br>
+          и офлайн-магазина:
+        </span>
+        <br>
+        <span class="address-value">
+          ул. Большая Конюшенная<br>
+          19/8, Санкт-Петербург
+        </span>
+      </p>
+      <p>
+        <span class="phone-text">Для заказов по телефону:</span>
+        <br>
+        <span class="phone-value">8 812 450-25-25</span>
+        <br>
+        <span class="phone-time">(с 10 до 20 ежедневно)</span>
+      </p>
       <a href="#" class="btn btn-x1">Форма обратной связи</a>
     </div>
   </section>
@@ -156,11 +198,13 @@
 
 <footer class="main-footer">
 
-  <div class="main-footer-social">
-    <a class="btn-social btn-social-tw" href="#">Twitter</a>
-    <a class="btn-social btn-social-in" href="#">Instagram</a>
-    <a class="btn-social btn-social-fb" href="#">Facebook</a>
-    <a class="btn-social btn-social-vk" href="#">VK</a>
+  <div class="footer-social">
+    <ul>
+      <li><a class="btn-social btn-social-tw" href="#">Twitter</a></li>
+      <li><a class="btn-social btn-social-in" href="#">Instagram</a></li>
+      <li><a class="btn-social btn-social-fb" href="#">Facebook</a></li>
+      <li><a class="btn-social btn-social-vk" href="#">VK</a></li>
+    </ul>
   </div>
 
   <nav>
@@ -172,7 +216,7 @@
     </ul>
   </nav>
 
-  <div class="main-footer-copyright">
+  <div class="footer-copyright">
     Картинка<br>
     Сделано в <a href="https://htmlacademy.ru/" target="_blank">HTML-Academy</a> &#169; 2017
   </div>

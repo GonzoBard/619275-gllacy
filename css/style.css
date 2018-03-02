@@ -186,7 +186,8 @@ a:hover, a:active {
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 }
 
-.site-navigation, .user-navigation, .breadcrumbs, .advantages-list, .footer-navigation, .catalog-list {
+.site-navigation, .user-navigation, .breadcrumbs, .advantages-list, .footer-navigation, .catalog-list, .footer-social ul,
+.site-navigation-submenu, .user-navigation-search {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -223,7 +224,7 @@ a:hover, a:active {
   align-items: center;
 }
 
-.site-navigation li {
+.site-navigation > li {
   margin-left: 25px;
 }
 
@@ -236,12 +237,12 @@ a:hover, a:active {
 .user-navigation {
   margin-left: auto;
   flex-shrink: 0;
+  width: 262px;
 
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  /*width: 262px;*/
 }
 
 .user-navigation a {
@@ -250,19 +251,19 @@ a:hover, a:active {
   line-height: 16px;
 }
 
-.contact-info .time {
+.header-contacts .time {
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
 }
 
-.contact-info .phone {
+.header-contacts .phone {
   font-weight: bold;
   font-size: 22px;
   line-height: 24px;
 }
 
-.contact-info {
+.header-contacts {
   text-align: right;
 
   position: absolute;
@@ -374,7 +375,7 @@ a:hover, a:active {
   line-height: 22px;
 }
 
-.news-and-mailing {
+.news, .mailing {
   color: #5a5a5a;
 }
 
@@ -400,11 +401,11 @@ a:hover, a:active {
   line-height: 22px;
 }
 
-.mailing .btn, .location-info .btn {
+.mailing .btn, .contacts .btn {
   color: #fefefe;
 }
 
-.location {
+.contacts-info {
   background-color: #849d8f;
   background: url('../img/pin.png') no-repeat 265px 140px,
   url('../img/map.png') no-repeat 50% 50%;
@@ -414,7 +415,7 @@ a:hover, a:active {
   position: relative;
 }
 
-.location-info {
+.contacts {
   color: #323232;
 
   background-color: #ffffff;
@@ -426,35 +427,31 @@ a:hover, a:active {
   right: 59px;
 }
 
-.location-info p {
-  margin: 0;
-}
-
-.location-info .address-text {
+.contacts .address-text {
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
 }
 
-.location-info .address-value {
+.contacts .address-value {
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
 }
 
-.location-info .phone-text {
+.contacts .phone-text {
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
 }
 
-.location-info .phone-value {
+.contacts .phone-value {
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
 }
 
-.location-info .phone-time {
+.contacts .phone-time {
   font-weight: normal;
   font-size: 14px;
   line-height: 22px;
@@ -471,11 +468,71 @@ a:hover, a:active {
   font-weight: bold;
 }
 
-.main-footer-copyright, .main-footer-copyright a {
+.footer-copyright, .footer-copyright a {
   font-weight: normal;
   font-size: 12px;
   line-height: 18px;
   color: #fefefe;
 }
 
+/*
+  НА СКРЫТЫХ СЛОЯХ МАКЕТА
+*/
+
+.form-submenu {
+  background-color: #f8f7f4;
+  border: 1px solid blue;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px 15px;
+}
+
+.form-submenu a{
+  font-weight: normal;
+  color: #323232;
+}
+
+.form-submenu input {
+  flex-grow: 1;
+}
+
+/* Выпадающие меню в шапке */
+
+.main-navigation li {
+  position: relative;
+}
+
+.main-navigation li:hover .submenu {
+  display: block;
+}
+
+.main-navigation .submenu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.site-navigation-submenu {
+  width: 142px;
+}
+
+.user-navigation-search {
+  width: 340px;
+  top: 20px;
+  left: -308px;
+}
+
+.user-navigation-login {
+  width: 277px;
+  top: 20px;
+  left: -270px;
+}
+
+/*.user-navigation-login*/
+
+/*.opened .submenu {*/
+/*display: block;*/
+/*}*/
 
