@@ -7,41 +7,34 @@
 </head>
 <body>
 
-<header class="page-header">
+<header class="main-header">
 
-  <div class="logo">
-    <img src="img/logo.png" alt="Мороженое Глейси" width="154" height="64">
-  </div>
-
-  <nav>
-    <ul class="page-header-nav">
-      <li class="catalog">
-        <a href="#">Каталог</a>
-      </li>
-      <li class="delivery-and-pay">
-        <a href="#">Доставка и оплата</a>
-      </li>
-      <li class="about">
-        <a href="#">О Компании</a>
-      </li>
+  <nav class="main-navigation">
+    <a class="logo" href="index.html">
+      <img src="img/logo.png" alt="Логотип магазина мороженого «Глейси»" width="154" height="64">
+    </a>
+    <ul class="site-navigation">
+      <li><a href="#">Каталог</a></li>
+      <li><a href="#">Доставка и оплата</a></li>
+      <li><a href="#">О Компании</a></li>
+    </ul>
+    <ul class="user-navigation">
+      <li><a href="#">Поиск</a></li>
+      <li><a href="#">Вход</a></li>
+      <li><a href="#">Корзина</a></li>
     </ul>
   </nav>
 
-  <div class="page-header-interaction">
-    <div class="search"><a href="#">Поиск</a></div>
-    <div class="auth"><a href="#">Вход</a></div>
-    <div class="basket"><a href="#">Корзина</a></div>
-    <div class="contact-info">
-      <p>
-        <span class="time">С 10 до 20, ежедневно</span><br>
-        <span class="phone">8 812 450-25-25</span>
-      </p>
-    </div>
+  <div class="contact-info">
+    <p>
+      <span class="time">С 10 до 20, ежедневно</span><br>
+      <span class="phone">8 812 450-25-25</span>
+    </p>
   </div>
 
 </header>
 
-<main>
+<main class="container">
 
   <nav>
     <ul class="breadcrumbs">
@@ -51,40 +44,43 @@
     </ul>
   </nav>
 
+  <h2>Сливочное мороженое</h2>
+
+  <aside class="filters">
+    <h3 class="visually-hidden">Фильтры каталога</h3>
+    <form action="#" method="post">
+      <div class="form-group-sort">
+        <label class="title" for="sort">Сортировка:</label>
+        <select name="sort" id="sort">
+          <option value="popular">по популярности</option>
+        </select>
+      </div>
+      <div class="form-group-price-range">
+        <label class="title" for="price-range">Цена: 100 руб. - 500 руб.</label>
+        <input type="range" name="price-range" id="price-range">
+      </div>
+      <div class="form-group-fat-content">
+        <label class="title">Жирность:</label>
+        <label><input type="radio" name="fat-content" value="0">0%</label>
+        <label><input type="radio" name="fat-content" value="to10" checked>до 10%</label>
+        <label><input type="radio" name="fat-content" value="to30">до 30%</label>
+        <label><input type="radio" name="fat-content" value="over30">выше 30%</label>
+      </div>
+      <div class="form-group-fillers">
+        <label class="title">Наполнители:</label>
+        <label><input type="checkbox" name="filler-chocolate" checked>шоколадные</label>
+        <label><input type="checkbox" name="filler-sugar-powder" checked>сахарные присыпки</label>
+        <label><input type="checkbox" name="filler-fruit">фрукты</label>
+        <label><input type="checkbox" name="filler-sirup">сиропы</label>
+        <label><input type="checkbox" name="filler-jam">джемы</label>
+      </div>
+      <input type="submit" value="Применить">
+    </form>
+  </aside>
+
   <section class="catalog">
 
-    <h2>Сливочное мороженое</h2>
-
-    <aside class="filters">
-      <form action="#" method="post">
-        <div class="form-group-sort">
-          <label class="title" for="sort">Сортировка:</label>
-          <select name="sort" id="sort">
-            <option value="popular">по популярности</option>
-          </select>
-        </div>
-        <div class="form-group-price-range">
-          <label class="title" for="price-range">Цена: 100 руб. - 500 руб.</label>
-          <input type="range" name="price-range" id="price-range">
-        </div>
-        <div class="form-group-fat-content">
-          <label class="title">Жирность:</label>
-          <label><input type="radio" name="fat-content" value="0">0%</label>
-          <label><input type="radio" name="fat-content" value="to10" checked>до 10%</label>
-          <label><input type="radio" name="fat-content" value="to30">до 30%</label>
-          <label><input type="radio" name="fat-content" value="over30">выше 30%</label>
-        </div>
-        <div class="form-group-fillers">
-          <label class="title">Наполнители:</label>
-          <label><input type="checkbox" name="filler-chocolate" checked>шоколадные</label>
-          <label><input type="checkbox" name="filler-sugar-powder" checked>сахарные присыпки</label>
-          <label><input type="checkbox" name="filler-fruit">фрукты</label>
-          <label><input type="checkbox" name="filler-sirup">сиропы</label>
-          <label><input type="checkbox" name="filler-jam">джемы</label>
-        </div>
-        <input type="submit" value="Применить">
-      </form>
-    </aside>
+    <h3 class="visually-hidden">Каталог</h3>
 
     <section class="catalog-list">
       <div class="catalog-item">
@@ -152,6 +148,7 @@
     </section>
 
     <nav class="paginator">
+      <h3 class="visually-hidden">Переключатель страниц</h3>
       <a class="prev disabled" href="#">Prev</a>
       <a class="current" href="#">1</a>
       <a href="#">2</a>
@@ -165,9 +162,9 @@
 
 </main>
 
-<footer class="page-footer">
+<footer class="main-footer">
 
-  <div class="page-footer-social">
+  <div class="main-footer-social">
     <a class="btn-social btn-social-tw" href="#">Twitter</a>
     <a class="btn-social btn-social-in" href="#">Instagram</a>
     <a class="btn-social btn-social-fb" href="#">Facebook</a>
@@ -175,18 +172,18 @@
   </div>
 
   <nav>
-    <ul class="page-footer-nav">
+    <ul class="footer-navigation">
       <li>Картинка<br><a class="heart" href="#">Для поставщиков</a></li>
-l     <li><a href="#">О производстве</a></li>
+      <li><a href="#">О производстве</a></li>
       <li><a href="#">Наши документы</a></li>
       <li><a href="#">Экологические стандарты</a></li>
     </ul>
   </nav>
 
-  <section class="page-footer-copyright">
+  <div class="main-footer-copyright">
     Картинка<br>
     Сделано в <a href="https://htmlacademy.ru/" target="_blank">HTML-Academy</a> &#169; 2017
-  </section>
+  </div>
 
 </footer>
 

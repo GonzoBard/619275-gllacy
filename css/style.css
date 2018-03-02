@@ -76,20 +76,20 @@
   font-style: italic;
 }
 
-/*.page-header {*/
-  /*border: 1px solid white;*/
+/*.main-header {*/
+/*border: 1px solid white;*/
 /*}*/
 
-/*.page-header .logo {*/
-  /*border: 2px solid black;*/
+/*.site-navigation {*/
+/*border: 2px solid yellow;*/
 /*}*/
 
-/*.page-header-nav {*/
-  /*border: 2px solid yellow;*/
+/*.user-navigation {*/
+/*border: 2px solid blue;*/
 /*}*/
 
-/*.page-header-interaction {*/
-  /*border: 2px solid blue;*/
+/*.main-navigation {*/
+/*border: 2px dashed red;*/
 /*}*/
 
 body {
@@ -98,6 +98,25 @@ body {
   font-family: Roboto, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 16px;
   color: #ffffff;
+
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden { /* https://allyjs.io/tutorials/hiding-elements.html#2017-edition-of-visuallyhidden */
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 h2 {
@@ -167,46 +186,65 @@ a:hover, a:active {
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 }
 
-.page-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.page-header-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-
+.site-navigation, .user-navigation, .breadcrumbs, .advantages-list, .footer-navigation {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.page-header-nav li {
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.main-header .logo {
+  text-decoration: none;
+  border: none;
+}
+
+.main-navigation {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: relative;
+}
+
+.site-navigation {
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.site-navigation li {
   margin-left: 25px;
 }
 
-.page-header-nav a {
+.site-navigation a {
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
 }
 
-.page-header-interaction {
+.user-navigation {
+  margin-left: auto;
+  flex-shrink: 0;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   /*width: 262px;*/
-
-  margin-left: auto;
-  position: relative;
 }
 
-.page-header-interaction a {
+.user-navigation a {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -230,12 +268,6 @@ a:hover, a:active {
   position: absolute;
   top: 50px;
   right: 0;
-}
-
-.breadcrumbs{
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .breadcrumbs a {
@@ -326,23 +358,17 @@ a:hover, a:active {
   height: 61px;
 }
 
-.seo {
+.advantages {
   color: #323232;
 }
 
-.seo h3 {
+.advantages h3 {
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
 }
 
-.seo-list{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.seo-item {
+.advantages-item {
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
@@ -352,7 +378,7 @@ a:hover, a:active {
   color: #5a5a5a;
 }
 
-.news h4 {
+.news h3 {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -374,11 +400,11 @@ a:hover, a:active {
   line-height: 22px;
 }
 
-.mailing .btn, .map-info .btn {
+.mailing .btn, .location-info .btn {
   color: #fefefe;
 }
 
-.map {
+.location {
   background-color: #849d8f;
   background: url('../img/pin.png') no-repeat 265px 140px,
   url('../img/map.png') no-repeat 50% 50%;
@@ -388,7 +414,7 @@ a:hover, a:active {
   position: relative;
 }
 
-.map-info {
+.location-info {
   color: #323232;
 
   background-color: #ffffff;
@@ -400,58 +426,52 @@ a:hover, a:active {
   right: 59px;
 }
 
-.map-info p {
+.location-info p {
   margin: 0;
 }
 
-.map-info .address-text {
+.location-info .address-text {
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
 }
 
-.map-info .address-value {
+.location-info .address-value {
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
 }
 
-.map-info .phone-text {
+.location-info .phone-text {
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
 }
 
-.map-info .phone-value {
+.location-info .phone-value {
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
 }
 
-.map-info .phone-time {
+.location-info .phone-time {
   font-weight: normal;
   font-size: 14px;
   line-height: 22px;
   margin-bottom: 20px;
 }
 
-.page-footer-nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.page-footer-nav a {
+.footer-navigation a {
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
 }
 
-.page-footer-nav .heart {
+.footer-navigation .heart {
   font-weight: bold;
 }
 
-.page-footer-copyright, .page-footer-copyright a {
+.main-footer-copyright, .main-footer-copyright a {
   font-weight: normal;
   font-size: 12px;
   line-height: 18px;

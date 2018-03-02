@@ -7,49 +7,46 @@
 </head>
 <body>
 
-<header class="page-header">
+<header class="main-header">
 
-  <div class="logo">
-    <img src="img/logo.png" alt="Мороженое Глейси" width="154" height="64">
-  </div>
-
-  <nav>
-    <ul class="page-header-nav">
-      <li class="catalog">
-        <a href="#">Каталог</a>
-      </li>
-      <li class="delivery-and-pay">
-        <a href="#">Доставка и оплата</a>
-      </li>
-      <li class="about">
-        <a href="#">О Компании</a>
-      </li>
+  <nav class="main-navigation">
+    <a class="logo">
+      <img src="img/logo.png" alt="Логотип магазина мороженого «Глейси»" width="154" height="64">
+    </a>
+    <ul class="site-navigation">
+      <li><a href="#">Каталог</a></li>
+      <li><a href="#">Доставка и оплата</a></li>
+      <li><a href="#">О Компании</a></li>
+    </ul>
+    <ul class="user-navigation">
+      <li><a href="#">Поиск</a></li>
+      <li><a href="#">Вход</a></li>
+      <li><a href="#">Корзина</a></li>
     </ul>
   </nav>
 
-  <div class="page-header-interaction">
-    <div class="search"><a href="#">Поиск</a></div>
-    <div class="auth"><a href="#">Вход</a></div>
-    <div class="basket"><a href="#">Корзина</a></div>
-    <div class="contact-info">
-      <p>
-        <span class="time">С 10 до 20, ежедневно</span><br>
-        <span class="phone">8 812 450-25-25</span>
-      </p>
-    </div>
+  <div class="contact-info">
+    <p>
+      <span class="time">С 10 до 20, ежедневно</span><br>
+      <span class="phone">8 812 450-25-25</span>
+    </p>
   </div>
 
 </header>
 
-<main>
+<main class="container">
+
+  <h1 class="visually-hidden">Магазина мороженого «Глейси»</h1>
 
   <section class="slider">
-    Слайдер<br>
+    <h2 class="visually-hidden">Слайдер</h2>
+    <p>Слайдер</p>
     <a href="#" class="btn btn-x2">Давайте оба!</a>
     <br><br>
   </section>
 
   <section class="offers">
+    <h2 class="visually-hidden">Предложения</h2>
     <article class="offer-item offer-raspberry">
       <h2>Малинка даром!</h2>
       <p>При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -63,6 +60,7 @@
   </section>
 
   <section class="hits">
+    <h2 class="visually-hidden">Хиты продаж</h2>
     <div class="catalog-item">
       <img src="img/ice-cream/1.png" alt="Картинка товара" width="267" height="267">
       <p class="price">310 &#8381; <span class="measure-unit-kg">/кг</span></p>
@@ -85,24 +83,25 @@
     </div>
   </section>
 
-  <section class="seo">
+  <section class="advantages">
+    <h2 class="visually-hidden">Преимущества</h2>
     <h3>
       Магазин Глэйси ⏤ это онлайн- и офлайн-магазин по продаже мороженного собственного производства на развес
     </h3>
-    <ul class="seo-list">
-      <li class="seo-item seo-manufacture">
+    <ul class="advantages-list">
+      <li class="advantages-item advantages-manufacture">
         Картинка<br>
         <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
       </li>
-      <li class="seo-item seo-vendors">
+      <li class="advantages-item advantages-vendors">
         Картинка<br>
         <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
       </li>
-      <li class="seo-item seo-quality">
+      <li class="advantages-item advantages-quality">
         Картинка<br>
         <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
       </li>
-      <li class="seo-item seo-delivery">
+      <li class="advantages-item advantages-delivery">
         Картинка<br>
         <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
       </li>
@@ -111,14 +110,17 @@
 
   <section class="news-and-mailing">
 
+    <h2 class="visually-hidden">Новости и рассылка</h2>
+
     <article class="news">
-      <h4>Новое в нашем блоге</h4>
+      <h3>Новое в нашем блоге</h3>
       <a href="#">10 способов сервировки&nbsp;<br>
         фруктовых щербетов к&nbsp;<br>
         столу</a>
     </article>
 
-    <div class="mailing">
+    <section class="mailing">
+      <h3 class="visually-hidden">Рассылка</h3>
       <p>
         Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
         Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
@@ -129,11 +131,12 @@
           <input class="btn btn-x1" type="submit" value="Отправить">
         </div>
       </form>
-    </div>
+    </section>
   </section>
 
-  <section class="map">
-    <div class="map-info">
+  <section class="location">
+    <h2 class="visually-hidden">Местонахождение</h2>
+    <div class="location-info">
       <p class="address-text">Адрес главного офиса<br>
         и офлайн-магазина:</p>
       <p class="address-value">ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</p>
@@ -145,9 +148,9 @@
   </section>
 </main>
 
-<footer class="page-footer">
+<footer class="main-footer">
 
-  <div class="page-footer-social">
+  <div class="main-footer-social">
     <a class="btn-social btn-social-tw" href="#">Twitter</a>
     <a class="btn-social btn-social-in" href="#">Instagram</a>
     <a class="btn-social btn-social-fb" href="#">Facebook</a>
@@ -155,7 +158,7 @@
   </div>
 
   <nav>
-    <ul class="page-footer-nav">
+    <ul class="footer-navigation">
       <li>Картинка<br><a class="heart" href="#">Для поставщиков</a></li>
       <li><a href="#">О производстве</a></li>
       <li><a href="#">Наши документы</a></li>
@@ -163,10 +166,10 @@
     </ul>
   </nav>
 
-  <section class="page-footer-copyright">
+  <div class="main-footer-copyright">
     Картинка<br>
     Сделано в <a href="https://htmlacademy.ru/" target="_blank">HTML-Academy</a> &#169; 2017
-  </section>
+  </div>
 
 </footer>
 
