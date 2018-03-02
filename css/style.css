@@ -186,7 +186,7 @@ a:hover, a:active {
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 }
 
-.site-navigation, .user-navigation, .breadcrumbs, .advantages-list, .footer-navigation {
+.site-navigation, .user-navigation, .breadcrumbs, .advantages-list, .footer-navigation, .catalog-list {
   list-style: none;
   margin: 0;
   padding: 0;
