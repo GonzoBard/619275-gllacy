@@ -13,13 +13,21 @@
     <img src="img/logo.png" alt="Мороженое Глейси" width="154" height="64">
   </div>
 
-  <nav class="page-header-nav">
-    <div class="catalog"><a href="#">Каталог</a></div>
-    <div class="delivery-and-pay"><a href="#">Доставка и оплата</a></div>
-    <div class="about"><a href="#">О Компании</a></div>
+  <nav>
+    <ul class="page-header-nav">
+      <li class="catalog">
+        <a href="#">Каталог</a>
+      </li>
+      <li class="delivery-and-pay">
+        <a href="#">Доставка и оплата</a>
+      </li>
+      <li class="about">
+        <a href="#">О Компании</a>
+      </li>
+    </ul>
   </nav>
 
-  <section class="page-header-interaction">
+  <div class="page-header-interaction">
     <div class="search"><a href="#">Поиск</a></div>
     <div class="auth"><a href="#">Вход</a></div>
     <div class="basket"><a href="#">Корзина</a></div>
@@ -29,23 +37,25 @@
         <span class="phone">8 812 450-25-25</span>
       </p>
     </div>
-  </section>
+  </div>
 
 </header>
 
 <main>
 
-  <nav class="breadcrumbs">
-    <a href="index.html">Главная</a>
-    <a href="catalog.html">Каталог</a>
-    <a class="active" href="#">Сливочное</a>
+  <nav>
+    <ul class="breadcrumbs">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="catalog.html">Каталог</a></li>
+      <li><a class="active" href="#">Сливочное</a></li>
+    </ul>
   </nav>
-
-  <h2>Сливочное мороженое</h2>
 
   <section class="catalog">
 
-    <section class="filters">
+    <h2>Сливочное мороженое</h2>
+
+    <aside class="filters">
       <form action="#" method="post">
         <div class="form-group-sort">
           <label class="title" for="sort">Сортировка:</label>
@@ -74,7 +84,7 @@
         </div>
         <input type="submit" value="Применить">
       </form>
-    </section>
+    </aside>
 
     <section class="catalog-list">
       <div class="catalog-item">
@@ -142,13 +152,15 @@
     </section>
 
     <section class="paginator">
-      <a class="prev disabled" href="#">Prev</a>
-      <a class="current" href="#">1</a>
-      <a href="#">2</a>
-      <a href="#">3</a>
-      <a href="#">4</a>
-      <a href="#">5</a>
-      <a class="next" href="#">Next</a>
+      <nav>
+        <a class="prev disabled" href="#">Prev</a>
+        <a class="current" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a class="next" href="#">Next</a>
+      </nav>
     </section>
 
   </section>

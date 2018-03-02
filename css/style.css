@@ -81,15 +81,15 @@
 /*}*/
 
 /*.page-header .logo {*/
-/*border: 2px solid black;*/
+  /*border: 2px solid black;*/
 /*}*/
 
 /*.page-header-nav {*/
-/*border: 2px solid yellow;*/
+  /*border: 2px solid yellow;*/
 /*}*/
 
 /*.page-header-interaction {*/
-/*border: 2px solid blue;*/
+  /*border: 2px solid blue;*/
 /*}*/
 
 body {
@@ -179,9 +179,13 @@ a:hover, a:active {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.page-header-nav > div {
+.page-header-nav li {
   margin-left: 25px;
 }
 
@@ -226,6 +230,12 @@ a:hover, a:active {
   position: absolute;
   top: 50px;
   right: 0;
+}
+
+.breadcrumbs{
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .breadcrumbs a {
