@@ -369,7 +369,7 @@ a:hover, a:active {
   line-height: 30px;
 }
 
-.advantages-item {
+.advantage-item {
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
@@ -505,11 +505,11 @@ a:hover, a:active {
   flex-wrap: wrap;
 }
 
-.modal-feedback-content .btn-close-modal{
+.modal-feedback-content .btn-close-modal {
   margin-left: auto;
 }
 
-.modal-feedback-content form{
+.modal-feedback-content form {
   width: 477px;
   display: flex;
   flex-direction: column;
@@ -517,11 +517,11 @@ a:hover, a:active {
   align-items: flex-start;
 }
 
-.modal-feedback-content input{
+.modal-feedback-content input {
   width: 265px;
 }
 
-.modal-feedback-content textarea{
+.modal-feedback-content textarea {
   width: 477px;
 }
 
@@ -576,7 +576,7 @@ a:hover, a:active {
   left: -270px;
 }
 
-.user-navigation-basket{
+.user-navigation-basket {
   background-color: #f8f7f4;
   color: #323232;
   width: 540px;
@@ -586,17 +586,25 @@ a:hover, a:active {
   padding: 0;
 }
 
-.user-navigation-basket table{
+.user-navigation-basket table {
   caption-side: bottom;
 }
 
-.user-navigation-basket .basket-total{
+.user-navigation-basket .basket-total {
   text-align: right;
   border-top: 1px solid black;
 }
 
-
 .opened .submenu {
-display: block;
+  display: block;
+}
+
+/* Товар в каталоге при наведении */
+
+.catalog-item .quick-view{
+  display: none;
+}
+.catalog-item:hover .quick-view{
+  display: block;
 }
 
