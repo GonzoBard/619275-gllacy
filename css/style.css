@@ -80,6 +80,10 @@
 /*border: 1px solid white;*/
 /*}*/
 
+/*.main-navigation {*/
+/*border: 2px dashed red;*/
+/*}*/
+
 /*.site-navigation {*/
 /*border: 2px solid yellow;*/
 /*}*/
@@ -88,8 +92,12 @@
 /*border: 2px solid blue;*/
 /*}*/
 
-/*.main-navigation {*/
-/*border: 2px dashed red;*/
+/*.modal-feedback-content{*/
+/*border: 1px solid red;*/
+/*}*/
+
+/*.form-submenu {*/
+/*border: 1px solid blue;*/
 /*}*/
 
 body {
@@ -103,24 +111,7 @@ body {
   padding: 0;
 }
 
-.visually-hidden { /* https://allyjs.io/tutorials/hiding-elements.html#2017-edition-of-visuallyhidden */
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 h2 {
-  /* font-weight: bold; <--- default => Roboto Bold */
   font-size: 35px;
   line-height: 41px;
 }
@@ -144,14 +135,12 @@ a:hover, a:active {
   color: #ffffff;
   background-image: linear-gradient(to bottom, rgb(242, 104, 67), rgb(202, 56, 36));
   box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.54);
-  border: none;
 
   display: inline-block;
   vertical-align: center;
 }
 
 .btn:hover {
-  border: none;
   background-image: linear-gradient(to bottom, rgb(242, 104, 67), rgb(231, 74, 53));
   box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 0.004);
   color: #fefefe;
@@ -163,7 +152,7 @@ a:hover, a:active {
   color: #fceeec;
 }
 
-.btn-x1 {
+.btn-normal {
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
@@ -172,17 +161,13 @@ a:hover, a:active {
   padding: 12px 22px;
 }
 
-.btn-x2 {
+.btn-attract-attention {
   font-weight: bold;
   font-size: 32px;
   line-height: 44px;
 
   border-radius: 32px;
   padding: 8px 38px;
-  -moz-transform: matrix(1.04013375779322, 0, 0, 1.04013375779322, 0, 0);
-  -webkit-transform: matrix(1.04013375779322, 0, 0, 1.04013375779322, 0, 0);
-  -ms-transform: matrix(1.04013375779322, 0, 0, 1.04013375779322, 0, 0);
-
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 }
 
@@ -193,16 +178,17 @@ a:hover, a:active {
   padding: 0;
 }
 
+.main-header-logo, .main-header-logo:hover,
+.main-footer .logo-htmlacademy, .main-footer .logo-htmlacademy:hover,
+.btn, .btn:hover {
+  border: none;
+}
+
 .main-header {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
-}
-
-.main-header .logo {
-  text-decoration: none;
-  border: none;
 }
 
 .main-navigation {
@@ -296,7 +282,7 @@ a:hover, a:active {
   line-height: 16px;
 }
 
-.offer-item h3{
+.offer-item h3 {
   font-weight: bold;
   font-size: 35px;
   line-height: 41px;
@@ -481,14 +467,85 @@ a:hover, a:active {
   color: #fefefe;
 }
 
-.main-footer .logo-htmlacademy{
-  text-decoration: none;
-  border: none;
-}
-
 /*
   НА СКРЫТЫХ СЛОЯХ МАКЕТА
 */
+
+.dialog {
+  background-color: #f8f7f4;
+  color: #323232;
+  padding: 19px 24px;
+  border: none;
+  border-radius: 10px;
+}
+
+.dialog a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #323232;
+  border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+}
+
+.dialog a:hover, .dialog a:active {
+  color: #e84d37;
+  border-bottom: 1px solid rgba(232, 77, 55, 0.3);
+  cursor: pointer;
+}
+
+.dialog input {
+  box-sizing: border-box;
+  width: 267px;
+  height: 44px;
+  padding: 14px;
+  margin: 0 0 20px 0;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+  outline: none;
+}
+
+.dialog input:hover {
+  padding: 13px;
+  border: 2px solid #c7c6c5;
+}
+
+.dialog input:focus {
+  padding: 13px;
+  border: 2px solid #8fbdec;
+}
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: #999999;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #999999;
+  opacity: 1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #999999;
+  opacity: 1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #999999;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #999999;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+  color: #999999;
+}
 
 .modal {
   display: none;
@@ -507,7 +564,6 @@ a:hover, a:active {
 .modal-feedback-content {
   margin: 0 auto;
   width: 477px;
-  border: 1px solid red;
 
   display: flex;
   flex-direction: row;
@@ -522,14 +578,11 @@ a:hover, a:active {
 
 .modal-feedback-content form {
   width: 477px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-}
-
-.modal-feedback-content input {
-  width: 265px;
 }
 
 .modal-feedback-content textarea {
@@ -537,22 +590,8 @@ a:hover, a:active {
 }
 
 .form-submenu {
-  background-color: #f8f7f4;
-  border: 1px solid blue;
-
   display: flex;
   flex-direction: column;
-
-  padding: 20px 15px;
-}
-
-.form-submenu a {
-  font-weight: normal;
-  color: #323232;
-}
-
-.form-submenu input {
-  flex-grow: 1;
 }
 
 /* Выпадающие меню в шапке */
@@ -588,13 +627,9 @@ a:hover, a:active {
 }
 
 .user-navigation-basket {
-  background-color: #f8f7f4;
-  color: #323232;
   width: 540px;
   top: 20px;
   left: -490px;
-
-  padding: 0;
 }
 
 .user-navigation-basket table {
@@ -612,10 +647,29 @@ a:hover, a:active {
 
 /* Товар в каталоге при наведении */
 
-.catalog-item .quick-view{
+.catalog-item .quick-view {
   display: none;
 }
-.catalog-item:hover .quick-view{
+
+.catalog-item:hover .quick-view {
   display: block;
 }
 
+/*
+  UTILS
+*/
+.visually-hidden { /* https://allyjs.io/tutorials/hiding-elements.html#2017-edition-of-visuallyhidden */
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
