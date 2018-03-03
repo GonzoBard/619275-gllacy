@@ -475,6 +475,11 @@ a:hover, a:active {
   color: #fefefe;
 }
 
+.main-footer .logo-htmlacademy{
+  text-decoration: none;
+  border: none;
+}
+
 /*
   НА СКРЫТЫХ СЛОЯХ МАКЕТА
 */
