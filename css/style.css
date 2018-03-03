@@ -501,7 +501,7 @@ a:hover, a:active {
   padding: 14px;
   margin: 0 0 20px 0;
 
-  font-weight: normal;
+  font-weight: bold;
   font-size: 16px;
   line-height: 24px;
 
@@ -520,30 +520,51 @@ a:hover, a:active {
   border: 2px solid #8fbdec;
 }
 
+.dialog input::placeholder {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
 
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+.dialog-submenu {
+  padding: 19px 16px;
+  border-radius: 6px;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.dialog-submenu input::placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css */
+.dialog input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color: #999999;
 }
 
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+.dialog input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
   color: #999999;
   opacity: 1;
 }
 
-::-moz-placeholder { /* Mozilla Firefox 19+ */
+.dialog input::-moz-placeholder { /* Mozilla Firefox 19+ */
   color: #999999;
   opacity: 1;
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.dialog input:-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: #999999;
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
+.dialog input::-ms-input-placeholder { /* Microsoft Edge */
   color: #999999;
 }
 
-::placeholder { /* Most modern browsers support this now. */
+.dialog input::placeholder { /* Most modern browsers support this now. */
   color: #999999;
 }
 
@@ -615,15 +636,23 @@ a:hover, a:active {
 }
 
 .user-navigation-search {
-  width: 340px;
-  top: 20px;
+  top: 22px;
   left: -308px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.user-navigation-search input {
+  margin-bottom: 0;
+  width: 311px;
 }
 
 .user-navigation-login {
-  width: 277px;
-  top: 20px;
+  top: 22px;
   left: -240px;
+}
+
+.user-navigation-login input {
+  width: 241px;
 }
 
 .user-navigation-basket {

@@ -33,7 +33,7 @@
     <ul class="user-navigation">
       <li>
         <a href="#">Поиск</a>
-        <ul class="submenu user-navigation-search dialog">
+        <ul class="user-navigation-search submenu dialog dialog-submenu">
           <li>
             <form class="form-submenu" action="#" method="post">
               <input type="text" placeholder="Что ищем?">
@@ -41,14 +41,15 @@
           </li>
         </ul>
       </li>
-      <li><a href="#">Вход</a>
-        <ul class="submenu user-navigation-login dialog">
+      <li class="opened">
+        <a href="#">Вход</a>
+        <ul class="user-navigation-login submenu dialog dialog-submenu">
           <li>
             <form class="form-submenu" action="#">
               <input type="email" name="email" placeholder="Электронная почта">
               <input type="password" name="password" placeholder="Пароль">
               <div class="login-submit">
-                <input class="btn btn-normal" type="submit" value="Войти">
+                <button class="btn btn-normal">Войти</button>
                 <div class="login-submit-links">
                   <a href="#">Забыли пароль?</a>
                   <br>
