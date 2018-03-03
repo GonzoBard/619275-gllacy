@@ -187,7 +187,7 @@ a:hover, a:active {
 }
 
 .site-navigation, .user-navigation, .breadcrumbs, .advantages-list, .footer-navigation, .catalog-list, .footer-social ul,
-.site-navigation-submenu, .user-navigation-search, .user-navigation-basket {
+.site-navigation-submenu, .user-navigation-search, .user-navigation-login, .user-navigation-basket {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -296,6 +296,12 @@ a:hover, a:active {
   line-height: 16px;
 }
 
+.offer-item h3{
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
+}
+
 .offer-item p {
   font-weight: bold;
   font-size: 18px;
@@ -379,7 +385,7 @@ a:hover, a:active {
   color: #5a5a5a;
 }
 
-.news h3 {
+.news h2 {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -578,7 +584,7 @@ a:hover, a:active {
 .user-navigation-login {
   width: 277px;
   top: 20px;
-  left: -270px;
+  left: -240px;
 }
 
 .user-navigation-basket {
