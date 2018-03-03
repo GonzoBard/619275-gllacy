@@ -528,12 +528,13 @@ a:hover, a:active {
 }
 
 .dialog-submenu {
-  padding: 19px 16px;
   border-radius: 6px;
 
   font-weight: bold;
   font-size: 14px;
   line-height: 24px;
+
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .dialog-submenu a {
@@ -645,7 +646,10 @@ a:hover, a:active {
 .user-navigation-search {
   top: 22px;
   left: -308px;
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .user-navigation-search input {
@@ -660,6 +664,8 @@ a:hover, a:active {
   left: -240px;
   padding-left: 19px;
   padding-right: 13px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .user-navigation-login input {
@@ -668,7 +674,6 @@ a:hover, a:active {
 
 .login-submit {
   margin-top: -1px;
-  margin-bottom: 2px;
 
   display: flex;
   flex-direction: row;
@@ -685,10 +690,12 @@ a:hover, a:active {
   justify-content: flex-start;
   align-items: flex-start;
 }
-.login-submit-links a{
+
+.login-submit-links a {
   height: 18px;
 }
-.login-submit-links a:last-child{
+
+.login-submit-links a:last-child {
   margin-top: 2px;
 }
 
