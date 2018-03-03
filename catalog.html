@@ -33,7 +33,7 @@
     <ul class="user-navigation">
       <li>
         <a href="#">Поиск</a>
-        <ul class="submenu user-navigation-search dialog">
+        <ul class="user-navigation-search submenu dialog dialog-submenu">
           <li>
             <form class="form-submenu" action="#" method="post">
               <input type="text" placeholder="Что ищем?">
@@ -41,17 +41,17 @@
           </li>
         </ul>
       </li>
-      <li><a href="#">Вход</a>
-        <ul class="submenu user-navigation-login dialog">
+      <li>
+        <a href="#">Вход</a>
+        <ul class="user-navigation-login submenu dialog dialog-submenu">
           <li>
             <form class="form-submenu" action="#">
               <input type="email" name="email" placeholder="Электронная почта">
               <input type="password" name="password" placeholder="Пароль">
               <div class="login-submit">
-                <input class="btn btn-usual" type="submit" value="Войти">
+                <button class="btn btn-usual">Войти</button>
                 <div class="login-submit-links">
                   <a href="#">Забыли пароль?</a>
-                  <br>
                   <a href="#">Новая регистрация</a>
                 </div>
               </div>
@@ -59,21 +59,21 @@
           </li>
         </ul>
       </li>
-      <li>
+      <li class="opened">
         <a href="#">2 товара</a>
-        <ul class="submenu user-navigation-basket dialog">
+        <ul class="user-navigation-basket submenu dialog dialog-submenu">
           <li>
             <table>
               <tr>
-                <td>x</td>
-                <td><img src="#" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
+                <td><img src="img/delete-basket-item.png" alt="Удалить" width="11" height="11"></td>
+                <td><img src="img/ice-cream/b-1.png" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
                 <td>Пломбир с апельсиновым джемом</td>
                 <td>1,5 кг x 200 руб.</td>
                 <td>300 руб.</td>
               </tr>
               <tr>
-                <td>x</td>
-                <td><img src="#" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
+                <td><img src="img/delete-basket-item.png" alt="Удалить" width="11" height="11"></td>
+                <td><img src="img/ice-cream/b-2.png" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
                 <td>Клубничный пломбир с присыпкой из белого шоколада</td>
                 <td>1,5 кг x 300 руб.</td>
                 <td>450 руб.</td>
