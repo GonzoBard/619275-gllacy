@@ -644,7 +644,7 @@ a:hover, a:active {
 }
 
 .user-navigation-search {
-  top: 22px;
+  top: 19px;
   left: -308px;
   padding-left: 15px;
   padding-right: 15px;
@@ -660,7 +660,7 @@ a:hover, a:active {
 .user-navigation-login {
   box-sizing: border-box;
   width: 277px;
-  top: 22px;
+  top: 19px;
   left: -240px;
   padding-left: 19px;
   padding-right: 13px;
@@ -701,21 +701,82 @@ a:hover, a:active {
 
 .user-navigation-basket {
   width: 540px;
-  top: 20px;
+  top: 22px;
   left: -490px;
+
+  padding-top: 19px;
+  padding-left: 20px;
+  padding-right: 0px;
 
   font-weight: normal;
   font-size: 13px;
   line-height: 16px;
 }
 
-.user-navigation-basket table {
+.user-navigation-basket-items-table {
+  width: 510px;
+  border-collapse: collapse;
   caption-side: bottom;
 }
 
-.user-navigation-basket .basket-total {
+.user-navigation-basket-items{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.user-navigation-basket-items-table tr {
+  height: 53px;
+  vertical-align: top;
+}
+
+.user-navigation-basket-items-table .delete {
+  width: 18px;
+  padding-top: 10px;
+}
+
+.user-navigation-basket-items-table .pic {
+  width: 44px;
+}
+
+.user-navigation-basket-items-table .name {
+  width: 246px;
+  padding-top: 10px;
+}
+
+.user-navigation-basket-items-table .calc {
+  width: 120px;
+  padding-top: 10px;
+}
+
+.user-navigation-basket-items-table-calc-price{
+  color: #999999;
+}
+
+.user-navigation-basket-items-table .price {
+  padding-top: 10px;
+}
+
+.user-navigation-basket-items .total {
+  height: 51px;
   text-align: right;
+
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+
   border-top: 1px solid black;
+  align-self: stretch;
+  margin-right: 33px;
+}
+.user-navigation-basket-items .total-txt {
+  padding-top: 3px;
+}
+
+.user-navigation-basket-place-order {
+  align-self: flex-end;
+  margin-right: 33px;
 }
 
 .opened .submenu {

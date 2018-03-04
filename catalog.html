@@ -62,25 +62,25 @@
       <li class="opened">
         <a href="#">2 товара</a>
         <ul class="user-navigation-basket submenu dialog dialog-submenu">
-          <li>
-            <table>
+          <li class="user-navigation-basket-items">
+            <table class="user-navigation-basket-items-table">
               <tr>
-                <td><img src="img/delete-basket-item.png" alt="Удалить" width="11" height="11"></td>
-                <td><img src="img/ice-cream/b-1.png" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
-                <td>Пломбир с апельсиновым джемом</td>
-                <td>1,5 кг x 200 руб.</td>
-                <td>300 руб.</td>
+                <td class="delete"><img src="img/delete-basket-item.png" alt="Удалить" width="11" height="11"></td>
+                <td class="pic"><img src="img/ice-cream/b-1.png" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
+                <td class="name">Пломбир с апельсиновым джемом</td>
+                <td class="calc">1,5 кг x <span class="user-navigation-basket-items-table-calc-price">200 руб.</span></td>
+                <td class="price">300 руб.</td>
               </tr>
               <tr>
-                <td><img src="img/delete-basket-item.png" alt="Удалить" width="11" height="11"></td>
-                <td><img src="img/ice-cream/b-2.png" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
-                <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                <td>1,5 кг x 300 руб.</td>
-                <td>450 руб.</td>
+                <td class="delete"><img src="img/delete-basket-item.png" alt="Удалить" width="11" height="11"></td>
+                <td class="pic"><img src="img/ice-cream/b-2.png" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
+                <td class="name">Клубничный пломбир с присыпкой<br>из белого шоколада</td>
+                <td class="calc">1,5 кг x <span class="user-navigation-basket-items-table-calc-price">300 руб.</span></td>
+                <td class="price">450 руб.</td>
               </tr>
-              <caption class="basket-total">Итого: 750 руб.</caption>
             </table>
-            <button class="btn btn-usual">Оформить заказ</button>
+            <div class="total"><p class="total-txt">Итого: 750 руб.</p></div>
+            <button class="btn btn-usual user-navigation-basket-place-order">Оформить заказ</button>
           </li>
         </ul>
       </li>
