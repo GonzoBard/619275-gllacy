@@ -173,7 +173,7 @@ a:hover, a:active {
 }
 
 .site-navigation, .user-navigation, .breadcrumbs, .advantages-list, .footer-navigation, .catalog-list, .footer-social ul,
-.site-navigation-submenu, .user-navigation-search, .user-navigation-login, .user-navigation-basket {
+.site-navigation-submenu, .user-navigation-search-submenu, .user-navigation-login-submenu, .user-navigation-basket-submenu {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -198,8 +198,6 @@ a:hover, a:active {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-
-  position: relative;
 }
 
 .site-navigation {
@@ -232,22 +230,9 @@ a:hover, a:active {
   align-items: center;
 }
 
-.user-navigation-item-search, .user-navigation-item-login, .user-navigation-item-basket {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  color: #ffffff;
-}
-
-.user-navigation-item-search {
-  width: 33px;
-  height: 33px;
-  background: rgba(255, 255, 255, 0.2) url('../img/magnifier.png') no-repeat center center;
-  border-radius: 50%;
-}
-
-.user-navigation-item-search:hover {
-  background: rgb(248, 247, 244) url('../img/magnifier2.png') no-repeat center center;
+.user-navigation > li { /* широкий li + на li relative + сброс z-index, для решения проблем с submenu */
+  height: 37px; /* 33(высота пунктов меню) + 4(отступ для появившегося submenu, вот на него и увеличиваю ширину) = 37px */
+  padding-top: 4px; /* чтобы не потерять центровку */
 }
 
 .header-contacts .time {
@@ -637,8 +622,9 @@ a:hover, a:active {
 
 /* Выпадающие меню в шапке */
 
-.main-navigation li {
+.main-navigation li { /* без этих двух пунктов + широкий li(38), в .user-navigation возникают проблемы с исчезновением submenu */
   position: relative;
+  z-index: 1;
 }
 
 .main-navigation li:hover .submenu {
@@ -659,8 +645,8 @@ a:hover, a:active {
   margin-left: 10px;
 }
 
-.user-navigation-search {
-  top: 37px;
+.user-navigation-search-submenu {
+  top: 41px;
   left: -308px;
   padding-left: 15px;
   padding-right: 15px;
@@ -668,12 +654,30 @@ a:hover, a:active {
   padding-bottom: 20px;
 }
 
-.user-navigation-search input {
+.user-navigation-search-submenu input {
   margin-bottom: 0;
   width: 311px;
 }
 
-.user-navigation-item-login {
+.user-navigation-search-item, .user-navigation-login-item, .user-navigation-basket-item {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.user-navigation-search-item {
+  width: 33px;
+  height: 33px;
+  background: rgba(255, 255, 255, 0.2) url('../img/magnifier.png') no-repeat center center;
+  border-radius: 50%;
+}
+
+.user-navigation-search:hover .user-navigation-search-item {
+  background: rgb(248, 247, 244) url('../img/magnifier2.png') no-repeat center center;
+}
+
+.user-navigation-login-item {
   width: 93px;
   height: 33px;
   box-sizing: border-box;
@@ -690,15 +694,15 @@ a:hover, a:active {
   align-items: center;
 }
 
-.user-navigation-item-login:hover {
+.user-navigation-login:hover .user-navigation-login-item {
   color: #323232;
   background: rgb(248, 247, 244) url('../img/login2.png') no-repeat 16px center;
 }
 
-.user-navigation-login {
+.user-navigation-login-submenu {
   box-sizing: border-box;
   width: 277px;
-  top: 37px;
+  top: 41px;
   left: -184px;
   padding-left: 19px;
   padding-right: 13px;
@@ -706,7 +710,7 @@ a:hover, a:active {
   padding-bottom: 20px;
 }
 
-.user-navigation-login input {
+.user-navigation-login-submenu input {
   width: 241px;
 }
 
@@ -737,7 +741,7 @@ a:hover, a:active {
   margin-top: 2px;
 }
 
-.user-navigation-item-basket {
+.user-navigation-basket-item {
   width: 116px;
   height: 33px;
   box-sizing: border-box;
@@ -754,14 +758,14 @@ a:hover, a:active {
   align-items: center;
 }
 
-.user-navigation-item-basket:hover {
+.user-navigation-basket:hover .user-navigation-basket-item {
   color: #323232;
   background: rgb(248, 247, 244) url('../img/basket2.png') no-repeat 16px center;
 }
 
-.user-navigation-basket {
+.user-navigation-basket-submenu {
   width: 519px;
-  top: 37px;
+  top: 41px;
   left: -423px;
 
   padding-top: 19px;
