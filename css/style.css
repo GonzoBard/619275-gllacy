@@ -232,10 +232,22 @@ a:hover, a:active {
   align-items: center;
 }
 
-.user-navigation a {
+.user-navigation-item-search, .user-navigation-item-login, .user-navigation-item-basket {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
+  color: #ffffff;
+}
+
+.user-navigation-item-search {
+  width: 33px;
+  height: 33px;
+  background: rgba(255, 255, 255, 0.2) url('../img/magnifier.png') no-repeat center center;
+  border-radius: 50%;
+}
+
+.user-navigation-item-search:hover {
+  background: rgb(248, 247, 244) url('../img/magnifier2.png') no-repeat center center;
 }
 
 .header-contacts .time {
@@ -643,8 +655,12 @@ a:hover, a:active {
   width: 142px;
 }
 
+.user-navigation > li:not(:first-child) {
+  margin-left: 10px;
+}
+
 .user-navigation-search {
-  top: 19px;
+  top: 37px;
   left: -308px;
   padding-left: 15px;
   padding-right: 15px;
@@ -657,11 +673,33 @@ a:hover, a:active {
   width: 311px;
 }
 
+.user-navigation-item-login {
+  width: 93px;
+  height: 33px;
+  box-sizing: border-box;
+  padding-left: 44px;
+
+  border: none;
+  border-radius: 33px;
+
+  background: rgba(255, 255, 255, 0.2) url('../img/login.png') no-repeat 16px center;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user-navigation-item-login:hover {
+  color: #323232;
+  background: rgb(248, 247, 244) url('../img/login2.png') no-repeat 16px center;
+}
+
 .user-navigation-login {
   box-sizing: border-box;
   width: 277px;
-  top: 19px;
-  left: -240px;
+  top: 37px;
+  left: -184px;
   padding-left: 19px;
   padding-right: 13px;
   padding-top: 20px;
@@ -699,10 +737,32 @@ a:hover, a:active {
   margin-top: 2px;
 }
 
+.user-navigation-item-basket {
+  width: 116px;
+  height: 33px;
+  box-sizing: border-box;
+  padding-left: 44px;
+
+  border: none;
+  border-radius: 33px;
+
+  background: rgba(255, 255, 255, 0.2) url('../img/basket.png') no-repeat 16px center;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user-navigation-item-basket:hover {
+  color: #323232;
+  background: rgb(248, 247, 244) url('../img/basket2.png') no-repeat 16px center;
+}
+
 .user-navigation-basket {
   width: 519px;
-  top: 22px;
-  left: -490px;
+  top: 37px;
+  left: -423px;
 
   padding-top: 19px;
   padding-left: 20px;
