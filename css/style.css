@@ -700,7 +700,7 @@ a:hover, a:active {
 }
 
 .user-navigation-basket {
-  width: 540px;
+  width: 519px;
   top: 22px;
   left: -490px;
 
@@ -713,17 +713,18 @@ a:hover, a:active {
   line-height: 16px;
 }
 
-.user-navigation-basket-items-table {
-  width: 510px;
-  border-collapse: collapse;
-  caption-side: bottom;
-}
-
-.user-navigation-basket-items{
+.user-navigation-basket-items {
+  width: 540px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+}
+
+.user-navigation-basket-items-table {
+  width: 510px;
+  border-collapse: collapse;
+  caption-side: bottom;
 }
 
 .user-navigation-basket-items-table tr {
@@ -741,16 +742,16 @@ a:hover, a:active {
 }
 
 .user-navigation-basket-items-table .name {
-  width: 246px;
+  width: 245px;
   padding-top: 10px;
 }
 
 .user-navigation-basket-items-table .calc {
-  width: 120px;
+  width: 121px;
   padding-top: 10px;
 }
 
-.user-navigation-basket-items-table-calc-price{
+.user-navigation-basket-items-table-calc-price {
   color: #999999;
 }
 
@@ -759,19 +760,22 @@ a:hover, a:active {
 }
 
 .user-navigation-basket-items .total {
-  height: 51px;
+  height: 46px;
   text-align: right;
 
   font-weight: bold;
   font-size: 15px;
   line-height: 18px;
 
-  border-top: 1px solid black;
+  border-top: 1px solid #cccccc;
   align-self: stretch;
   margin-right: 33px;
+  margin-top: 5px;
 }
+
 .user-navigation-basket-items .total-txt {
-  padding-top: 3px;
+  margin-top: 13px;
+  margin-bottom: 2px;
 }
 
 .user-navigation-basket-place-order {
