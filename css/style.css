@@ -173,7 +173,7 @@ a:hover, a:active {
 }
 
 .site-navigation, .user-navigation, .breadcrumbs, .advantages-list, .footer-navigation, .catalog-list, .footer-social ul,
-.site-navigation-submenu, .user-navigation-search-submenu, .user-navigation-login-submenu, .user-navigation-basket-submenu {
+.site-navigation-submenu, .user-navigation-search-item-submenu, .user-navigation-login-item-submenu, .user-navigation-basket-item-submenu {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -650,25 +650,25 @@ a:hover, a:active {
 }
 
 .user-navigation > li { /* увеличенный li + на li relative + сброс z-index, для решения проблем с submenu */
-  height: 37px; /* 33(высота пунктов меню) + 4(отступ для появившегося submenu, вот на него и увеличиваю ширину) = 37px */
-  padding-top: 4px; /* чтобы не потерять центровку */
+  height: 37px; /* 33(высота пунктов меню из макета) + 4(отступ для submenu, вот на него и увеличиваю ширину) = 37px */
+  padding-top: 4px; /* чтобы не потерять центровку на величину отступа submenu делаю отступ сверху*/
 }
 
 .site-navigation .submenu {
-  top: 42px;
+  top: 42px; /* 37 + 5 = 42px */
 }
 
 .user-navigation .submenu {
-  top: 41px;
+  top: 41px; /* 37 + 4 = 41px */
 }
 
-.main-navigation .submenu {
+.main-navigation .submenu { /* по умолчанию submenu скрыто */
   display: none;
   position: absolute;
   z-index: 1;
 }
 
-.main-navigation li:hover .submenu {
+.main-navigation li:hover .submenu { /* on hover на li submenu отображается */
   display: block;
 }
 
@@ -680,7 +680,7 @@ a:hover, a:active {
   margin-left: 10px;
 }
 
-.user-navigation-search-submenu {
+.user-navigation-search-item-submenu {
   left: -308px;
   padding-left: 15px;
   padding-right: 15px;
@@ -688,7 +688,7 @@ a:hover, a:active {
   padding-bottom: 20px;
 }
 
-.user-navigation-search-submenu input {
+.user-navigation-search-item-submenu input {
   margin-bottom: 0;
   width: 311px;
 }
@@ -736,7 +736,7 @@ a:hover, a:active {
   background: rgb(248, 247, 244) url('../img/login2.png') no-repeat 16px center;
 }
 
-.user-navigation-login-submenu {
+.user-navigation-login-item-submenu {
   box-sizing: border-box;
   width: 277px;
   left: -184px;
@@ -746,7 +746,7 @@ a:hover, a:active {
   padding-bottom: 20px;
 }
 
-.user-navigation-login-submenu input {
+.user-navigation-login-item-submenu input {
   width: 241px;
 }
 
@@ -799,7 +799,7 @@ a:hover, a:active {
   background: rgb(248, 247, 244) url('../img/basket2.png') no-repeat 16px center;
 }
 
-.user-navigation-basket-submenu {
+.user-navigation-basket-item-submenu {
   width: 519px;
   left: -423px;
 
@@ -877,7 +877,7 @@ a:hover, a:active {
   margin-bottom: 2px;
 }
 
-.user-navigation-basket-place-order {
+.user-navigation-basket-items .place-order {
   align-self: flex-end;
   margin-right: 33px;
 }
