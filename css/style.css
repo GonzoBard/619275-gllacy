@@ -213,13 +213,13 @@ a:hover, a:active {
   margin-left: 12px;
 }
 
-.site-navigation-item:hover .site-navigation-menu-item {
+.site-navigation-item:hover .site-navigation-item-menu {
   background-color: rgb(247, 246, 243);
   border: none;
   border-radius: 18px;
 }
 
-.site-navigation-menu-item {
+.site-navigation-item-menu {
   height: 32px;
   padding-right: 13px;
   padding-left: 13px;
@@ -230,13 +230,13 @@ a:hover, a:active {
   align-items: center;
 }
 
-.site-navigation-item-link {
+.site-navigation-item-menu-link {
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
 }
 
-.site-navigation-item:hover .site-navigation-item-link {
+.site-navigation-item:hover .site-navigation-item-menu-link {
   color: #333333;
   border: none;
 }
