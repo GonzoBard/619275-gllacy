@@ -13,27 +13,37 @@
 
   <nav class="main-navigation">
     <h2 class="visually-hidden">Основная навигация</h2>
-    <a class="logo" href="index.html">
+    <a class="main-header-logo" href="index.html">
       <img src="img/logo.png" alt="Логотип магазина мороженого «Глейси»" width="154" height="64">
     </a>
     <ul class="site-navigation">
-      <li>
-        <a>Каталог</a>
-        <ul class="submenu site-navigation-submenu">
+      <li class="site-navigation-item">
+        <div class="site-navigation-item-menu">
+          <a class="site-navigation-item-menu-link" href="#">Каталог</a>
+        </div>
+        <ul class="site-navigation-submenu submenu dialog">
           <li><a href="#">Новинки</a></li>
-          <li><a href="#">Сливочное</a></li>
+          <li><a>Сливочное</a></li>
           <li><a href="#">Щербеты</a></li>
           <li><a href="#">Фруктовый лед</a></li>
           <li><a href="#">Мелорин</a></li>
         </ul>
       </li>
-      <li><a href="#">Доставка и оплата</a></li>
-      <li><a href="#">О Компании</a></li>
+      <li class="site-navigation-item">
+        <div class="site-navigation-item-menu">
+          <a class="site-navigation-item-menu-link" href="#">Доставка и оплата</a>
+        </div>
+      </li>
+      <li class="site-navigation-item">
+        <div class="site-navigation-item-menu">
+          <a class="site-navigation-item-menu-link" href="#">О Компании</a>
+        </div>
+      </li>
     </ul>
     <ul class="user-navigation">
-      <li>
-        <a href="#">Поиск</a>
-        <ul class="submenu user-navigation-search">
+      <li class="user-navigation-search">
+        <div class="user-navigation-search-item">&nbsp;</div>
+        <ul class="user-navigation-search-submenu submenu dialog dialog-submenu">
           <li>
             <form class="form-submenu" action="#" method="post">
               <input type="text" placeholder="Что ищем?">
@@ -41,17 +51,17 @@
           </li>
         </ul>
       </li>
-      <li><a href="#">Вход</a>
-        <ul class="submenu user-navigation-login">
+      <li class="user-navigation-login">
+        <div class="user-navigation-login-item">Вход</div>
+        <ul class="user-navigation-login-submenu submenu dialog dialog-submenu">
           <li>
             <form class="form-submenu" action="#">
               <input type="email" name="email" placeholder="Электронная почта">
               <input type="password" name="password" placeholder="Пароль">
               <div class="login-submit">
-                <input class="btn btn-x1" type="submit" value="Войти">
+                <button class="btn btn-usual">Войти</button>
                 <div class="login-submit-links">
                   <a href="#">Забыли пароль?</a>
-                  <br>
                   <a href="#">Новая регистрация</a>
                 </div>
               </div>
@@ -59,28 +69,30 @@
           </li>
         </ul>
       </li>
-      <li>
-        <a href="#">2 товара</a>
-        <ul class="submenu user-navigation-basket">
-          <li>
-            <table>
+      <li class="user-navigation-basket">
+        <div class="user-navigation-basket-item">2 товара</div>
+        <ul class="user-navigation-basket-submenu submenu dialog dialog-submenu">
+          <li class="user-navigation-basket-items">
+            <table class="user-navigation-basket-items-table">
               <tr>
-                <td>x</td>
-                <td><img src="#" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
-                <td>Пломбир с апельсиновым джемом</td>
-                <td>1,5 кг x 200 руб.</td>
-                <td>300 руб.</td>
+                <td class="delete"><img src="img/delete-basket-item.png" alt="Удалить" width="11" height="11"></td>
+                <td class="pic"><img src="img/ice-cream/b-1.png" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
+                <td class="name">Пломбир с апельсиновым джемом</td>
+                <td class="calc">1,5 кг x <span class="user-navigation-basket-items-table-calc-price">200 руб.</span></td>
+                <td class="price">300 руб.</td>
               </tr>
               <tr>
-                <td>x</td>
-                <td><img src="#" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
-                <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                <td>1,5 кг x 300 руб.</td>
-                <td>450 руб.</td>
+                <td class="delete"><img src="img/delete-basket-item.png" alt="Удалить" width="11" height="11"></td>
+                <td class="pic"><img src="img/ice-cream/b-2.png" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
+                <td class="name">Клубничный пломбир с присыпкой<br>из белого шоколада</td>
+                <td class="calc">1,5 кг x <span class="user-navigation-basket-items-table-calc-price">300 руб.</span></td>
+                <td class="price">450 руб.</td>
               </tr>
-              <caption class="basket-total">Итого: 750 руб.</caption>
             </table>
-            <button class="btn btn-x1">Оформить заказ</button>
+            <div class="total">
+              <p class="total-txt">Итого: 750 руб.</p>
+            </div>
+            <button class="btn btn-usual user-navigation-basket-place-order">Оформить заказ</button>
           </li>
         </ul>
       </li>
@@ -154,7 +166,7 @@
         <p class="price">310 &#8381; <span class="measure-unit-kg">/кг</span></p>
         <a href="#" class="name">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         <div class="quick-view">
-          <a href="#" class="btn btn-x1">Быстрый просмотр</a>
+          <a href="#" class="btn btn-usual">Быстрый просмотр</a>
         </div>
       </li>
       <li class="catalog-item">
@@ -162,7 +174,7 @@
         <p class="price">380 &#8381; <span class="measure-unit-kg">/кг</span></p>
         <a href="#" class="name">Свочно-кофейное с кусочками шоколада</a>
         <div class="quick-view">
-          <a href="#" class="btn btn-x1">Быстрый просмотр</a>
+          <a href="#" class="btn btn-usual">Быстрый просмотр</a>
         </div>
       </li>
       <li class="catalog-item">
@@ -170,7 +182,7 @@
         <p class="price">355 &#8381; <span class="measure-unit-kg">/кг</span></p>
         <a href="#" class="name">Сливочно-клубничное с присыпкой из белого шоколада</a>
         <div class="quick-view">
-          <a href="#" class="btn btn-x1">Быстрый просмотр</a>
+          <a href="#" class="btn btn-usual">Быстрый просмотр</a>
         </div>
       </li>
       <li class="catalog-item">
@@ -178,7 +190,7 @@
         <p class="price">415 &#8381; <span class="measure-unit-kg">/кг</span></p>
         <a href="#" class="name">Сливочное крем-брюле с карамельной подливкой</a>
         <div class="quick-view">
-          <a href="#" class="btn btn-x1">Быстрый просмотр</a>
+          <a href="#" class="btn btn-usual">Быстрый просмотр</a>
         </div>
       </li>
 
@@ -187,7 +199,7 @@
         <p class="price">325 &#8381; <span class="measure-unit-kg">/кг</span></p>
         <a href="#" class="name">Сливочное с брусничным джемом</a>
         <div class="quick-view">
-          <a href="#" class="btn btn-x1">Быстрый просмотр</a>
+          <a href="#" class="btn btn-usual">Быстрый просмотр</a>
         </div>
       </li>
       <li class="catalog-item">
@@ -195,7 +207,7 @@
         <p class="price">410 &#8381; <span class="measure-unit-kg">/кг</span></p>
         <a href="#" class="name">Сливочно-черничное с цельными ягодами черники</a>
         <div class="quick-view">
-          <a href="#" class="btn btn-x1">Быстрый просмотр</a>
+          <a href="#" class="btn btn-usual">Быстрый просмотр</a>
         </div>
       </li>
       <li class="catalog-item">
@@ -203,7 +215,7 @@
         <p class="price">375 &#8381; <span class="measure-unit-kg">/кг</span></p>
         <a href="#" class="name">Сливочно-лимонное с карамельной присыпкой</a>
         <div class="quick-view">
-          <a href="#" class="btn btn-x1">Быстрый просмотр</a>
+          <a href="#" class="btn btn-usual">Быстрый просмотр</a>
         </div>
       </li>
       <li class="catalog-item">
@@ -211,7 +223,7 @@
         <p class="price">320 &#8381; <span class="measure-unit-kg">/кг</span></p>
         <a href="#" class="name">Сливочное с шоколадной стружкой</a>
         <div class="quick-view">
-          <a href="#" class="btn btn-x1">Быстрый просмотр</a>
+          <a href="#" class="btn btn-usual">Быстрый просмотр</a>
         </div>
       </li>
 
@@ -220,7 +232,7 @@
         <p class="price">440 &#8381; <span class="measure-unit-kg">/кг</span></p>
         <a href="#" class="name">Сливочно-ванильное с кусочками шоколада</a>
         <div class="quick-view">
-          <a href="#" class="btn btn-x1">Быстрый просмотр</a>
+          <a href="#" class="btn btn-usual">Быстрый просмотр</a>
         </div>
       </li>
       <li class="catalog-item">
@@ -228,7 +240,7 @@
         <p class="price">435 &#8381; <span class="measure-unit-kg">/кг</span></p>
         <a href="#" class="name">Сливочноe с ментоловым сиропом</a>
         <div class="quick-view">
-          <a href="#" class="btn btn-x1">Быстрый просмотр</a>
+          <a href="#" class="btn btn-usual">Быстрый просмотр</a>
         </div>
       </li>
       <li class="catalog-item">
@@ -236,7 +248,7 @@
         <p class="price">355 &#8381; <span class="measure-unit-kg">/кг</span></p>
         <a href="#" class="name">Сливочное с кусочками черного шоколада</a>
         <div class="quick-view">
-          <a href="#" class="btn btn-x1">Быстрый просмотр</a>
+          <a href="#" class="btn btn-usual">Быстрый просмотр</a>
         </div>
       </li>
       <li class="catalog-item">
@@ -244,7 +256,7 @@
         <p class="price">420 &#8381; <span class="measure-unit-kg">/кг</span></p>
         <a href="#" class="name">Сливочное с мятным сиропом</a>
         <div class="quick-view">
-          <a href="#" class="btn btn-x1">Быстрый просмотр</a>
+          <a href="#" class="btn btn-usual">Быстрый просмотр</a>
         </div>
       </li>
     </ul>

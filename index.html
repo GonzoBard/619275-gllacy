@@ -13,13 +13,15 @@
 
   <nav class="main-navigation">
     <h2 class="visually-hidden">Основная навигация</h2>
-    <a class="logo">
+    <a class="main-header-logo">
       <img src="img/logo.png" alt="Логотип магазина мороженого «Глейси»" width="154" height="64">
     </a>
     <ul class="site-navigation">
-      <li>
-        <a href="#">Каталог</a>
-        <ul class="submenu site-navigation-submenu">
+      <li class="site-navigation-item">
+        <div class="site-navigation-item-menu">
+          <a class="site-navigation-item-menu-link" href="#">Каталог</a>
+        </div>
+        <ul class="site-navigation-submenu submenu dialog">
           <li><a href="#">Новинки</a></li>
           <li><a href="catalog.html">Сливочное</a></li>
           <li><a href="#">Щербеты</a></li>
@@ -27,13 +29,21 @@
           <li><a href="#">Мелорин</a></li>
         </ul>
       </li>
-      <li><a href="#">Доставка и оплата</a></li>
-      <li><a href="#">О Компании</a></li>
+      <li class="site-navigation-item">
+        <div class="site-navigation-item-menu">
+          <a class="site-navigation-item-menu-link" href="#">Доставка и оплата</a>
+        </div>
+      </li>
+      <li class="site-navigation-item">
+        <div class="site-navigation-item-menu">
+          <a class="site-navigation-item-menu-link" href="#">О Компании</a>
+        </div>
+      </li>
     </ul>
     <ul class="user-navigation">
-      <li>
-        <a href="#">Поиск</a>
-        <ul class="submenu user-navigation-search">
+      <li class="user-navigation-search">
+        <div class="user-navigation-search-item">&nbsp;</div>
+        <ul class="user-navigation-search-submenu submenu dialog dialog-submenu">
           <li>
             <form class="form-submenu" action="#" method="post">
               <input type="text" placeholder="Что ищем?">
@@ -41,17 +51,17 @@
           </li>
         </ul>
       </li>
-      <li><a href="#">Вход</a>
-        <ul class="submenu user-navigation-login">
+      <li class="user-navigation-login">
+        <div class="user-navigation-login-item">Вход</div>
+        <ul class="user-navigation-login-submenu submenu dialog dialog-submenu">
           <li>
             <form class="form-submenu" action="#">
               <input type="email" name="email" placeholder="Электронная почта">
               <input type="password" name="password" placeholder="Пароль">
               <div class="login-submit">
-                <input class="btn btn-x1" type="submit" value="Войти">
+                <button class="btn btn-usual">Войти</button>
                 <div class="login-submit-links">
                   <a href="#">Забыли пароль?</a>
-                  <br>
                   <a href="#">Новая регистрация</a>
                 </div>
               </div>
@@ -59,8 +69,8 @@
           </li>
         </ul>
       </li>
-      <li>
-        <a href="#">Корзина</a>
+      <li class="user-navigation-basket">
+        <div class="user-navigation-basket-item">Корзина</div>
       </li>
     </ul>
   </nav>
@@ -79,7 +89,7 @@
   <section class="slider">
     <h2 class="visually-hidden">Слайдер</h2>
     <p>Слайдер</p>
-    <a href="#" class="btn btn-x2">Давайте оба!</a>
+    <a href="#" class="btn btn-attract-attention">Давайте оба!</a>
     <br><br>
   </section>
 
@@ -88,12 +98,12 @@
     <article class="offer-item offer-raspberry">
       <h3>Малинка даром!</h3>
       <p>При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-      <a href="#" class="btn btn-x1">Хочу варенье!</a>
+      <a href="#" class="btn btn-usual">Хочу варенье!</a>
     </article>
     <article class="offer-item offer-chocolate">
       <h3>Шоколадки даром!</h3>
       <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-      <a href="#" class="btn btn-x1">Хочу шоколадки!</a>
+      <a href="#" class="btn btn-usual">Хочу шоколадки!</a>
     </article>
   </section>
 
@@ -105,7 +115,7 @@
         <p class="price">310 &#8381; <span class="measure-unit-kg">/кг</span></p>
         <a href="#" class="name">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         <div class="quick-view">
-          <a href="#" class="btn btn-x1">Быстрый просмотр</a>
+          <a href="#" class="btn btn-usual">Быстрый просмотр</a>
         </div>
       </li>
       <li class="catalog-item">
@@ -113,7 +123,7 @@
         <p class="price">380 &#8381; <span class="measure-unit-kg">/кг</span></p>
         <a href="#" class="name">Свочно-кофейное с кусочками шоколада</a>
         <div class="quick-view">
-          <a href="#" class="btn btn-x1">Быстрый просмотр</a>
+          <a href="#" class="btn btn-usual">Быстрый просмотр</a>
         </div>
       </li>
       <li class="catalog-item">
@@ -121,7 +131,7 @@
         <p class="price">355 &#8381; <span class="measure-unit-kg">/кг</span></p>
         <a href="#" class="name">Сливочно-клубничное с присыпкой из белого шоколада</a>
         <div class="quick-view">
-          <a href="#" class="btn btn-x1">Быстрый просмотр</a>
+          <a href="#" class="btn btn-usual">Быстрый просмотр</a>
         </div>
       </li>
       <li class="catalog-item">
@@ -129,7 +139,7 @@
         <p class="price">415 &#8381; <span class="measure-unit-kg">/кг</span></p>
         <a href="#" class="name">Сливочное крем-брюле с карамельной подливкой</a>
         <div class="quick-view">
-          <a href="#" class="btn btn-x1">Быстрый просмотр</a>
+          <a href="#" class="btn btn-usual">Быстрый просмотр</a>
         </div>
       </li>
     </ul>
@@ -182,7 +192,7 @@
     <form action="#" method="post">
       <div class="form-group">
         <input type="email" name="email" placeholder="Электронная почта">
-        <input class="btn btn-x1" type="submit" value="Отправить">
+        <input class="btn btn-usual" type="submit" value="Отправить">
       </div>
     </form>
   </section>
@@ -208,12 +218,12 @@
         <br>
         <span class="phone-time">(с 10 до 20 ежедневно)</span>
       </p>
-      <button class="btn btn-x1" onclick="document.getElementById('modal-feedback').style.display='block'">Форма обратной связи</button>
+      <button class="btn btn-usual" onclick="document.getElementById('modal-feedback').style.display='block'">Форма обратной связи</button>
     </div>
   </section>
 
   <section id="modal-feedback" class="modal">
-    <div class="modal-feedback-content">
+    <div class="modal-feedback-content dialog">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p>Мы обязательно вам ответим!</p>
       <span class="btn-close-modal" onclick="document.getElementById('modal-feedback').style.display='none'">X</span>
@@ -221,7 +231,7 @@
         <input type="text" name="name" placeholder="Как вас зовут?">
         <input type="email" name="email" placeholder="Ваша почта для ответа?">
         <textarea name="message" placeholder="Напишите что-нибудь..."></textarea>
-        <input class="btn btn-x1" type="submit" value="Отправить">
+        <button class="btn btn-usual">Отправить</button>
       </form>
     </div>
   </section>
@@ -260,7 +270,6 @@
   </div>
 
 </footer>
-
 
 <script src="js/script.js"></script>
 </body>
