@@ -215,32 +215,6 @@ a:hover, a:active {
   margin-left: 12px;
 }
 
-.site-navigation-item:hover .site-navigation-item-menu {
-  background-color: rgb(247, 246, 243);
-  border-radius: 18px;
-}
-
-.site-navigation-item-menu {
-  height: 32px;
-  padding-right: 13px;
-  padding-left: 13px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.site-navigation-item-menu-link {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 18px;
-}
-
-.site-navigation-item:hover .site-navigation-item-menu-link {
-  color: #333333;
-}
-
 .user-navigation {
   margin-left: auto;
   flex-shrink: 0;
@@ -672,6 +646,32 @@ a:hover, a:active {
 
 .site-navigation-submenu {
   width: 142px;
+}
+
+.site-navigation-item:hover .site-navigation-item-menu {
+  background-color: rgb(247, 246, 243);
+  border-radius: 18px;
+}
+
+.site-navigation-item-menu {
+  height: 32px;
+  padding-right: 13px;
+  padding-left: 13px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-navigation-item-menu-link {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.site-navigation-item:hover .site-navigation-item-menu-link {
+  color: #333333;
 }
 
 .user-navigation > li:not(:first-child) {
