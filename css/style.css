@@ -252,16 +252,6 @@ a:hover, a:active {
   align-items: center;
 }
 
-.site-navigation > li {
-  height: 37px; /* 32 + 5 = 37px */
-  padding-top: 5px;
-}
-
-.user-navigation > li { /* увеличенный li + на li relative + сброс z-index, для решения проблем с submenu */
-  height: 37px; /* 33(высота пунктов меню) + 4(отступ для появившегося submenu, вот на него и увеличиваю ширину) = 37px */
-  padding-top: 4px; /* чтобы не потерять центровку */
-}
-
 .header-contacts .time {
   font-weight: bold;
   font-size: 14px;
@@ -649,19 +639,19 @@ a:hover, a:active {
 
 /* Выпадающие меню в шапке */
 
-.main-navigation li { /* без этих двух пунктов + увеличенный li, в .user-navigation возникают проблемы с исчезновением submenu */
+.main-navigation li { /* без данного правила + увеличенный li: возникают проблемы с исчезновением submenu */
   position: relative;
   z-index: 1;
 }
 
-.main-navigation li:hover .submenu {
-  display: block;
+.site-navigation > li {
+  height: 37px; /* 32 + 5 = 37px */
+  padding-top: 5px;
 }
 
-.main-navigation .submenu {
-  display: none;
-  position: absolute;
-  z-index: 1;
+.user-navigation > li { /* увеличенный li + на li relative + сброс z-index, для решения проблем с submenu */
+  height: 37px; /* 33(высота пунктов меню) + 4(отступ для появившегося submenu, вот на него и увеличиваю ширину) = 37px */
+  padding-top: 4px; /* чтобы не потерять центровку */
 }
 
 .site-navigation .submenu {
@@ -670,6 +660,16 @@ a:hover, a:active {
 
 .user-navigation .submenu {
   top: 41px;
+}
+
+.main-navigation .submenu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.main-navigation li:hover .submenu {
+  display: block;
 }
 
 .site-navigation-submenu {
@@ -705,10 +705,13 @@ a:hover, a:active {
   height: 33px;
   background: rgba(255, 255, 255, 0.2) url('../img/magnifier.png') no-repeat center center;
   border-radius: 50%;
+
+  position: relative;
 }
 
 .user-navigation-search:hover .user-navigation-search-item {
   background: rgb(248, 247, 244) url('../img/magnifier2.png') no-repeat center center;
+  border-radius: 50%;
 }
 
 .user-navigation-login-item {
