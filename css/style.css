@@ -172,16 +172,17 @@ a:hover, a:active {
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 }
 
-.site-navigation, .user-navigation, .breadcrumbs, .advantages-list, .footer-navigation, .catalog-list, .footer-social ul,
-.site-navigation-submenu, .user-navigation-search-item-submenu, .user-navigation-login-item-submenu, .user-navigation-basket-item-submenu {
+.site-navigation, .user-navigation, .breadcrumbs, .advantages-list, .footer-navigation, .catalog-list,
+.footer-social ul, .site-navigation-submenu, .user-navigation-search-item-submenu, .user-navigation-login-item-submenu,
+.user-navigation-basket-item-submenu {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.main-header-logo, .main-header-logo:hover,
-.main-footer .logo-htmlacademy, .main-footer .logo-htmlacademy:hover,
-.btn, .btn:hover {
+.main-header-logo, .main-header-logo:hover, .main-footer .logo-htmlacademy, .main-footer .logo-htmlacademy:hover,
+.btn, .btn:hover, .site-navigation-item:hover .site-navigation-item-menu, .site-navigation-item:hover .site-navigation-item-menu-link,
+.offer-raspberry, .offer-chocolate, .dialog, .user-navigation-login-item, .user-navigation-basket-item {
   border: none;
 }
 
@@ -194,6 +195,7 @@ a:hover, a:active {
 
 .main-navigation {
   flex-grow: 1;
+
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -215,7 +217,6 @@ a:hover, a:active {
 
 .site-navigation-item:hover .site-navigation-item-menu {
   background-color: rgb(247, 246, 243);
-  border: none;
   border-radius: 18px;
 }
 
@@ -238,7 +239,6 @@ a:hover, a:active {
 
 .site-navigation-item:hover .site-navigation-item-menu-link {
   color: #333333;
-  border: none;
 }
 
 .user-navigation {
@@ -323,7 +323,6 @@ a:hover, a:active {
 
 .offer-raspberry, .offer-chocolate {
   padding: 20px;
-  border: none;
   border-radius: 15px;
   background-size: cover;
 }
@@ -490,7 +489,6 @@ a:hover, a:active {
   background-color: #f8f7f4;
   color: #323232;
   padding: 19px 24px;
-  border: none;
   border-radius: 10px;
 }
 
@@ -720,9 +718,7 @@ a:hover, a:active {
   box-sizing: border-box;
   padding-left: 44px;
 
-  border: none;
   border-radius: 33px;
-
   background: rgba(255, 255, 255, 0.2) url('../img/login.png') no-repeat 16px center;
 
   display: flex;
@@ -783,9 +779,7 @@ a:hover, a:active {
   box-sizing: border-box;
   padding-left: 44px;
 
-  border: none;
   border-radius: 33px;
-
   background: rgba(255, 255, 255, 0.2) url('../img/basket.png') no-repeat 16px center;
 
   display: flex;
