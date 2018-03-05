@@ -209,14 +209,36 @@ a:hover, a:active {
   align-items: center;
 }
 
-.site-navigation > li {
-  margin-left: 25px;
+.site-navigation > li:first-child {
+  margin-left: 12px;
 }
 
-.site-navigation a {
+.site-navigation-item:hover .site-navigation-menu-item {
+  background-color: rgb(247, 246, 243);
+  border: none;
+  border-radius: 18px;
+}
+
+.site-navigation-menu-item {
+  height: 32px;
+  padding-right: 13px;
+  padding-left: 13px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-navigation-item-link {
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
+}
+
+.site-navigation-item:hover .site-navigation-item-link {
+  color: #333333;
+  border: none;
 }
 
 .user-navigation {
@@ -230,7 +252,12 @@ a:hover, a:active {
   align-items: center;
 }
 
-.user-navigation > li { /* широкий li + на li relative + сброс z-index, для решения проблем с submenu */
+.site-navigation > li {
+  height: 37px; /* 32 + 5 = 37px */
+  padding-top: 5px;
+}
+
+.user-navigation > li { /* увеличенный li + на li relative + сброс z-index, для решения проблем с submenu */
   height: 37px; /* 33(высота пунктов меню) + 4(отступ для появившегося submenu, вот на него и увеличиваю ширину) = 37px */
   padding-top: 4px; /* чтобы не потерять центровку */
 }
@@ -565,7 +592,7 @@ a:hover, a:active {
   color: #999999;
 }
 
-.dialog input::-ms-input-placeholder { /* Microsoft Edge */
+.dialog input:-ms-input-placeholder { /* Microsoft Edge */
   color: #999999;
 }
 
@@ -622,7 +649,7 @@ a:hover, a:active {
 
 /* Выпадающие меню в шапке */
 
-.main-navigation li { /* без этих двух пунктов + широкий li(38), в .user-navigation возникают проблемы с исчезновением submenu */
+.main-navigation li { /* без этих двух пунктов + увеличенный li, в .user-navigation возникают проблемы с исчезновением submenu */
   position: relative;
   z-index: 1;
 }
@@ -637,6 +664,14 @@ a:hover, a:active {
   z-index: 1;
 }
 
+.site-navigation .submenu {
+  top: 42px;
+}
+
+.user-navigation .submenu {
+  top: 41px;
+}
+
 .site-navigation-submenu {
   width: 142px;
 }
@@ -646,7 +681,6 @@ a:hover, a:active {
 }
 
 .user-navigation-search-submenu {
-  top: 41px;
   left: -308px;
   padding-left: 15px;
   padding-right: 15px;
@@ -702,7 +736,6 @@ a:hover, a:active {
 .user-navigation-login-submenu {
   box-sizing: border-box;
   width: 277px;
-  top: 41px;
   left: -184px;
   padding-left: 19px;
   padding-right: 13px;
@@ -765,7 +798,6 @@ a:hover, a:active {
 
 .user-navigation-basket-submenu {
   width: 519px;
-  top: 41px;
   left: -423px;
 
   padding-top: 19px;
