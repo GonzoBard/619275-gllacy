@@ -144,7 +144,7 @@ a:hover, a:active {
   font-size: 18px;
   line-height: 24px;
 
-  border-radius: 24px;
+  border-radius: 30px;
   padding: 10px 23px 12px;
   background-image: linear-gradient(to top, rgb(202, 56, 36) 0%, rgb(242, 104, 67) 100%);
   box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.54);
