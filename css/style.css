@@ -193,9 +193,11 @@ a:hover, a:active {
   line-height: 44px;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
-  border-radius: 32px;
-  padding: 8px 38px;
-  background-image: linear-gradient(to top, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+  padding: 7px 40px 12px;
+
+  border-radius: 40px;
+
+  background-image: linear-gradient(to top, #e74a35, #f26843);
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
 
   position: relative;
@@ -251,6 +253,9 @@ a:hover, a:active {
 }
 
 .main-header {
+  height: 64px;
+  box-sizing: border-box;
+
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -263,10 +268,11 @@ a:hover, a:active {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .site-navigation {
+  margin-top: 8px;
   flex-shrink: 0;
 
   display: flex;
@@ -281,6 +287,7 @@ a:hover, a:active {
 
 .user-navigation {
   margin-left: auto;
+  margin-top: 8px;
   flex-shrink: 0;
   width: 262px;
 
@@ -352,11 +359,13 @@ a:hover, a:active {
 }
 
 .offer-raspberry {
-  background: #849d8f url('../img/raspberry-bg.png') no-repeat center center;
+  background: #849d8f url('../img/bg-raspberry.jpg') no-repeat center center;
+  background-origin: border-box;
 }
 
 .offer-chocolate {
-  background: #849d8f url('../img/chocolate-bg.png') no-repeat center center;
+  background: #849d8f url('../img/bg-chocolate.jpg') no-repeat center center;
+  background-origin: border-box;
 }
 
 .offer-raspberry, .offer-chocolate {
@@ -367,6 +376,10 @@ a:hover, a:active {
 
 .catalog-item {
   position: relative
+}
+
+.catalog-item img{
+  border-radius: 50%;
 }
 
 .catalog-item .price {
@@ -396,11 +409,13 @@ a:hover, a:active {
   left: 0;
   width: 61px;
   height: 61px;
-  background: url('../img/hit.png') no-repeat center center;
+  background: url('../img/hit.svg') no-repeat center center;
 }
 
 .advantages {
   color: #323232;
+  background: #849d8f url("../img/bg-waffle.jpg") repeat;
+  border-radius: 15px;
 }
 
 .advantages .title {
@@ -446,10 +461,10 @@ a:hover, a:active {
 
 .contacts-info {
   background-color: #849d8f;
-  background: url('../img/pin.png') no-repeat 265px 140px,
-  url('../img/map.png') no-repeat 50% 50%;
-  width: 1200px;
-  height: 430px;
+  /*background: url('../img/pin.png') no-repeat 265px 140px,*/
+  /*url('../img/map.png') no-repeat 50% 50%;*/
+  /*width: 1200px;*/
+  /*height: 430px;*/
 
   position: relative;
 }
@@ -463,7 +478,7 @@ a:hover, a:active {
 
   position: absolute;
   top: 63px;
-  right: 59px;
+  left: 871px;
 }
 
 .contacts .address-text {
@@ -683,6 +698,7 @@ a:hover, a:active {
 .user-navigation > li { /* увеличенный li + на li relative + сброс z-index, для решения проблем с submenu */
   height: 37px; /* 33(высота пунктов меню из макета) + 4(отступ для submenu, вот на него и увеличиваю ширину) = 37px */
   padding-top: 4px; /* чтобы не потерять центровку на величину отступа submenu делаю отступ сверху*/
+  cursor: pointer;
 }
 
 .site-navigation .submenu {
@@ -760,14 +776,14 @@ a:hover, a:active {
 .user-navigation-search-item {
   width: 33px;
   height: 33px;
-  background: rgba(255, 255, 255, 0.2) url('../img/magnifier.png') no-repeat center center;
+  background: rgba(255, 255, 255, 0.2) url('../img/magnifier.svg') no-repeat center center;
   border-radius: 50%;
 
   position: relative;
 }
 
 .user-navigation-search:hover .user-navigation-search-item {
-  background: rgb(248, 247, 244) url('../img/magnifier2.png') no-repeat center center;
+  background: rgb(248, 247, 244) url('../img/magnifier2.svg') no-repeat center center;
   border-radius: 50%;
 }
 
@@ -778,7 +794,7 @@ a:hover, a:active {
   padding-left: 44px;
 
   border-radius: 33px;
-  background: rgba(255, 255, 255, 0.2) url('../img/login.png') no-repeat 16px center;
+  background: rgba(255, 255, 255, 0.2) url('../img/login.svg') no-repeat 16px center;
 
   display: flex;
   flex-direction: row;
@@ -788,7 +804,7 @@ a:hover, a:active {
 
 .user-navigation-login:hover .user-navigation-login-item {
   color: #323232;
-  background: rgb(248, 247, 244) url('../img/login2.png') no-repeat 16px center;
+  background: rgb(248, 247, 244) url('../img/login2.svg') no-repeat 16px center;
 }
 
 .user-navigation-login-item-submenu {
@@ -839,7 +855,7 @@ a:hover, a:active {
   padding-left: 44px;
 
   border-radius: 33px;
-  background: rgba(255, 255, 255, 0.2) url('../img/basket.png') no-repeat 16px center;
+  background: rgba(255, 255, 255, 0.2) url('../img/basket.svg') no-repeat 16px center;
 
   display: flex;
   flex-direction: row;
@@ -849,7 +865,7 @@ a:hover, a:active {
 
 .user-navigation-basket:hover .user-navigation-basket-item {
   color: #323232;
-  background: rgb(248, 247, 244) url('../img/basket2.png') no-repeat 16px center;
+  background: rgb(248, 247, 244) url('../img/basket2.svg') no-repeat 16px center;
 }
 
 .user-navigation-basket-item-submenu {
@@ -889,8 +905,12 @@ a:hover, a:active {
   padding-top: 10px;
 }
 
-.user-navigation-basket-items-table .pic {
+.user-navigation-basket-items-table-pic {
   width: 44px;
+}
+
+.user-navigation-basket-items-table-pic img {
+  border-radius: 50%;
 }
 
 .user-navigation-basket-items-table .name {
