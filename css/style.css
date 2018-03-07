@@ -440,9 +440,21 @@ a:hover, a:active {
 }
 
 .offers {
-  margin-top: 38px;
+  margin-top: 42px;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.offer-item {
+  padding: 14px 20px 23px 18px;
+  border-radius: 15px;
+  width: 50%;
+  height: 192px;
+  /*background-size: cover;*/
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
@@ -451,10 +463,17 @@ a:hover, a:active {
   margin-right: 2.2%;
 }
 
+.offer-item a {
+  margin-top: auto;
+  align-self: flex-end;
+}
+
 .offer-item h3 {
   font-weight: bold;
   font-size: 35px;
   line-height: 41px;
+  margin-top: 0;
+  margin-bottom: -2px;
 }
 
 .offer-item p {
@@ -475,12 +494,6 @@ a:hover, a:active {
 .offer-chocolate {
   background: #849d8f url('../img/bg-chocolate.jpg') no-repeat center center;
   background-origin: border-box;
-}
-
-.offer-raspberry, .offer-chocolate {
-  padding: 20px;
-  border-radius: 15px;
-  background-size: cover;
 }
 
 .catalog-item {
