@@ -9,7 +9,7 @@
 
 <h1 class="visually-hidden">Магазин мороженого «Глейси»</h1>
 
-<header class="main-header">
+<header class="main-header container">
 
   <nav class="main-navigation">
     <h2 class="visually-hidden">Основная навигация</h2>
@@ -97,9 +97,21 @@
 
   <section class="slider">
     <h2 class="visually-hidden">Слайдер</h2>
-    <p>Слайдер</p>
-    <a href="#" class="btn btn-attract-attention">Давайте оба!</a>
-    <br><br>
+    <p class="slider-promo-text">
+      Крем-брюле и пломбир<br>
+      с малиновым джемом
+    </p>
+    <div class="slider-main">
+      <div class="slider-main-controls">
+        <input type="radio" id="slider-main-control-1" class="slider-main-control-1" name="slider-toggle" checked>
+        <input type="radio" id="slider-main-control-2" class="slider-main-control-2" name="slider-toggle">
+        <input type="radio" id="slider-main-control-3" class="slider-main-control-3" name="slider-toggle">
+        <label for="slider-main-control-1"></label>
+        <label for="slider-main-control-2"></label>
+        <label for="slider-main-control-3"></label>
+      </div>
+      <a href="#" class="btn btn-attract-attention slider-button">Давайте оба!</a>
+    </div>
   </section>
 
   <section class="offers">
