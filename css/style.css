@@ -145,7 +145,7 @@ body {
   padding: 9px 2.3% 27px;
 }
 
-.container, .slider, .slider-main, .offers, .hits, .catalog-list {
+.container, .slider, .slider-main, .offers, .hits, .catalog-list, .advantages, .advantages-list, .news-mailing-wrapper {
   box-sizing: border-box;
   width: 100%;
 }
@@ -612,6 +612,7 @@ a:hover, a:active {
 
 .advantages {
   margin-top: 38px;
+  padding: 26px 20px 23px 20px;
   color: #323232;
   background: #849d8f url("../img/bg-waffle.jpg") repeat;
   border-radius: 15px;
@@ -621,12 +622,58 @@ a:hover, a:active {
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
+
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.advantages-list {
+  margin-top: -1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .advantage-item {
+  box-sizing: border-box;
+  width: 48.89%;
+  padding-left: 56px;
+  margin-top: 9px;
+
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
+
+  /*border: 1px solid black;*/
+}
+
+.advantage-item p{
+  margin: 0;
+  padding: 0;
+  padding-top: 13px;
+}
+
+.advantage-manufacture {
+  background: transparent url('../img/advantage-manufacture.svg') no-repeat top left;
+}
+
+.advantage-vendors {
+  background: transparent url('../img/advantage-vendors.svg') no-repeat top left;
+}
+
+.advantage-quality {
+  background: transparent url('../img/advantage-quality.svg') no-repeat top left;
+}
+
+.advantage-delivery {
+  background: transparent url('../img/advantage-delivery.svg') no-repeat top left;
+}
+
+.advantages-list li:nth-child(odd) {
+  margin-right: 2.2%;
 }
 
 .news, .mailing {
@@ -805,12 +852,13 @@ a:hover, a:active {
 .dialog-submenu input::placeholder {
   font-weight: normal;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 14px;
 }
 
 /* https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css */
 .dialog input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color: #999999;
+  padding-top: 7px;
 }
 
 .dialog input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
