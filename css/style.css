@@ -650,7 +650,7 @@ a:hover, a:active {
   /*border: 1px solid black;*/
 }
 
-.advantage-item p{
+.advantage-item p {
   margin: 0;
   padding: 0;
   padding-top: 13px;
@@ -676,8 +676,23 @@ a:hover, a:active {
   margin-right: 2.2%;
 }
 
+.news-mailing-wrapper {
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 .news, .mailing {
+  width: 50%;
+
   color: #5a5a5a;
+}
+
+.news {
+  margin-right: 2.2%;
 }
 
 .news h2 {
@@ -706,11 +721,8 @@ a:hover, a:active {
 }
 
 .contacts-info {
+  margin-top: 40px;
   background-color: #849d8f;
-  /*background: url('../img/pin.png') no-repeat 265px 140px,*/
-  /*url('../img/map.png') no-repeat 50% 50%;*/
-  /*width: 1200px;*/
-  /*height: 430px;*/
 
   position: relative;
 }
