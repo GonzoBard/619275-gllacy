@@ -112,6 +112,14 @@
 /*border: 1px solid blue;*/
 /*}*/
 
+/*.catalog-list{*/
+  /*border: 1px solid black;*/
+/*}*/
+
+/*.catalog-item{*/
+  /*border: 1px solid blue;*/
+/*}*/
+
 /*.modal-feedback-content{*/
 /*border: 1px solid red;*/
 /*}*/
@@ -137,7 +145,7 @@ body {
   padding: 9px 2.3% 27px;
 }
 
-.container, .slider, .slider-main, .offers {
+.container, .slider, .slider-main, .offers, .hits, .catalog-list {
   box-sizing: border-box;
   width: 100%;
 }
@@ -496,8 +504,22 @@ a:hover, a:active {
   background-origin: border-box;
 }
 
+.hits{
+  margin-top: 40px;
+}
+
+.catalog-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /*flex-wrap: wrap;*/
+}
+
 .catalog-item {
-  position: relative
+  position: relative;
+  width: 25%;
+  /*width: 267px;*/
+  margin-right: 2.2%;
 }
 
 .catalog-item img {
@@ -1177,13 +1199,20 @@ a:hover, a:active {
 
 /* Товар в каталоге при наведении */
 
+.catalog-item{
+  padding-bottom: 50px;
+}
+
 .catalog-item .quick-view {
   display: none;
 }
-
+.catalog-item:hover{
+  padding-bottom: 0;
+}
 .catalog-item:hover .quick-view {
   display: block;
 }
+
 
 /*
   UTILS
