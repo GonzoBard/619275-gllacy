@@ -253,7 +253,7 @@
         <br>
         <span class="phone-time">(с 10 до 20 ежедневно)</span>
       </p>
-      <a class="btn btn-usual" onclick="document.getElementById('modal-feedback').style.display='block'">Форма обратной связи</a>
+      <a class="btn btn-usual" onclick="document.getElementById('modal-feedback').style.display='block'" tabindex="0">Форма обратной связи</a>
     </div>
   </section>
 
@@ -261,7 +261,9 @@
     <div class="modal-feedback-content dialog">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p>Мы обязательно вам ответим!</p>
-      <span class="btn-close-modal" onclick="document.getElementById('modal-feedback').style.display='none'">X</span>
+      <button class="btn-close-modal" onclick="document.getElementById('modal-feedback').style.display='none'">
+        <img src="img/x-big.svg" alt="Закрыть окно">
+      </button>
       <form action="#" method="post">
         <input type="text" name="name" placeholder="Как вас зовут?">
         <input type="email" name="email" placeholder="Ваша почта для ответа?">

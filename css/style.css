@@ -166,8 +166,8 @@ body {
 
 .container, .slider, .slider-main, .offers, .hits, .catalog-list, .advantages, .advantages-list, .news-mailing-wrapper,
 .news, .mailing {
-  box-sizing: border-box;
   width: 100%;
+  box-sizing: border-box;
 }
 
 h2 {
@@ -300,7 +300,7 @@ a:hover, a:focus, a:active {
 .main-header-logo, .main-header-logo:hover, .main-header-logo:focus, .main-footer .logo-htmlacademy, .main-footer .logo-htmlacademy:hover,
 .btn, .btn:hover, .btn:focus, .site-navigation-item:hover .site-navigation-item-menu, .site-navigation-item:hover .site-navigation-item-menu-link,
 .offer-raspberry, .offer-chocolate, .dialog, .user-navigation-login-item, .user-navigation-basket-item, .user-navigation-search-item,
-.user-navigation-login-item, .user-navigation-basket-item {
+.user-navigation-login-item, .user-navigation-basket-item, .btn-close-modal {
   border: none;
 }
 
@@ -889,7 +889,9 @@ a:hover, a:focus, a:active {
 }
 
 .modal-feedback-content .btn-close-modal {
-  margin-left: auto;
+  margin: 0 0 0 auto;
+  padding: 0;
+  background-color: transparent;
 }
 
 .modal-feedback-content form {
