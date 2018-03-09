@@ -103,12 +103,9 @@
     </p>
     <div class="slider-main">
       <div class="slider-main-controls">
-        <input type="radio" id="slider-main-control-1" class="slider-main-control-1" name="slider-toggle" checked>
-        <input type="radio" id="slider-main-control-2" class="slider-main-control-2" name="slider-toggle">
-        <input type="radio" id="slider-main-control-3" class="slider-main-control-3" name="slider-toggle">
-        <label for="slider-main-control-1"></label>
-        <label for="slider-main-control-2"></label>
-        <label for="slider-main-control-3"></label>
+        <button class="control-1 active" aria-label="Слайд 1" onclick="changeBackground(1,this)"></button>
+        <button class="control-2" aria-label="Слайд 2" onclick="changeBackground(2,this)"></button>
+        <button class="control-3" aria-label="Слайд 3" onclick="changeBackground(3,this)"></button>
       </div>
       <a href="#" class="btn btn-attract-attention slider-button">Давайте оба!</a>
     </div>
@@ -310,5 +307,6 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script>changeBackground(1, document.querySelector('.slider-main-controls .control-1'));</script>
 </body>
 </html>

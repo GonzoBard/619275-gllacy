@@ -143,7 +143,20 @@ body {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
+
   background-color: #849d8f;
+}
+
+.body-bg-slide-1 {
+  background: #849d8f url('../img/bg-index-1.png') no-repeat top center;
+}
+
+.body-bg-slide-2 {
+  background: #8996a6 url('../img/bg-index-2.png') no-repeat top center;
+}
+
+.body-bg-slide-3 {
+  background: #9d8b84 url('../img/bg-index-3.png') no-repeat top center;
 }
 
 .container {
@@ -177,6 +190,7 @@ a:hover, a:focus, a:active {
 .btn {
   color: #ffffff;
   display: inline-block;
+  box-sizing: border-box;
   vertical-align: center;
   cursor: pointer;
 }
@@ -284,7 +298,7 @@ a:hover, a:focus, a:active {
 }
 
 .main-header-logo, .main-header-logo:hover, .main-header-logo:focus, .main-footer .logo-htmlacademy, .main-footer .logo-htmlacademy:hover,
-.btn, .btn:hover, .site-navigation-item:hover .site-navigation-item-menu, .site-navigation-item:hover .site-navigation-item-menu-link,
+.btn, .btn:hover, .btn:focus, .site-navigation-item:hover .site-navigation-item-menu, .site-navigation-item:hover .site-navigation-item-menu-link,
 .offer-raspberry, .offer-chocolate, .dialog, .user-navigation-login-item, .user-navigation-basket-item, .user-navigation-search-item,
 .user-navigation-login-item, .user-navigation-basket-item {
   border: none;
@@ -406,24 +420,23 @@ a:hover, a:focus, a:active {
   display: none;
 }
 
-.slider-main-controls label {
+.slider-main-controls button {
   display: inline-block;
-  width: 17px;
-  height: 17px;
-  margin-right: 7px;
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  margin: 0 7px 0 0;
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
 }
 
-.slider-main-controls label:hover {
+.slider-main-controls button:hover, .slider-main-controls button:focus {
   background-color: rgba(248, 247, 244, 0.4);
 }
 
-.slider-main-control-1:checked ~ label[for="slider-main-control-1"],
-.slider-main-control-2:checked ~ label[for="slider-main-control-2"],
-.slider-main-control-3:checked ~ label[for="slider-main-control-3"] {
+.slider-main-controls button.active {
   background-color: #ffffff;
 }
 
