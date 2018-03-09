@@ -168,7 +168,7 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-a:hover, a:active {
+a:hover, a:focus, a:active {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
   cursor: pointer;
@@ -193,13 +193,13 @@ a:hover, a:active {
   overflow: hidden;
 }
 
-.btn-usual:hover {
+.btn-usual:hover, .btn-usual:focus {
   color: #fefefe;
   background: linear-gradient(to top, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
   box-shadow: 0 1px 2px 0 #ac1000;
 }
 
-.btn-usual:hover:before { /* color overlay filter */
+.btn-usual:hover:before, .btn-usual:focus:before { /* color overlay filter */
   display: block;
   content: "";
   position: absolute;
@@ -241,13 +241,13 @@ a:hover, a:active {
   overflow: hidden;
 }
 
-.btn-attract-attention:hover {
+.btn-attract-attention:hover, .btn-attract-attention:focus {
   color: #ffffff;
   background-image: linear-gradient(to top, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
   box-shadow: 0 2px 2px 0 #ac1000;
 }
 
-.btn-attract-attention:hover:before { /* color overlay filter */
+.btn-attract-attention:hover:before, .btn-attract-attention:focus:before { /* color overlay filter */
   display: block;
   content: '';
   position: absolute;
@@ -283,7 +283,7 @@ a:hover, a:active {
   padding: 0;
 }
 
-.main-header-logo, .main-header-logo:hover, .main-footer .logo-htmlacademy, .main-footer .logo-htmlacademy:hover,
+.main-header-logo, .main-header-logo:hover, .main-header-logo:focus, .main-footer .logo-htmlacademy, .main-footer .logo-htmlacademy:hover,
 .btn, .btn:hover, .site-navigation-item:hover .site-navigation-item-menu, .site-navigation-item:hover .site-navigation-item-menu-link,
 .offer-raspberry, .offer-chocolate, .dialog, .user-navigation-login-item, .user-navigation-basket-item, .user-navigation-search-item,
 .user-navigation-login-item, .user-navigation-basket-item {
@@ -1075,14 +1075,14 @@ a:hover, a:active {
 .user-navigation-search-item {
   width: 33px;
   height: 32px;
-  background: rgba(255, 255, 255, 0.2) url('../img/magnifier.svg') no-repeat center 7px;
+  background: rgba(255, 255, 255, 0.2) url('../img/magnifier.svg') no-repeat 9px 7px;
   border-radius: 50%;
 
   position: relative;
 }
 
 .user-navigation-search:hover .user-navigation-search-item {
-  background: rgb(248, 247, 244) url('../img/magnifier2.svg') no-repeat center 7px;
+  background: rgb(248, 247, 244) url('../img/magnifier2.svg') no-repeat 9px 7px;
   border-radius: 50%;
 }
 
@@ -1090,10 +1090,10 @@ a:hover, a:active {
   width: 93px;
   height: 32px;
   box-sizing: border-box;
-  padding-left: 43px;
+  padding-left: 44px;
 
   border-radius: 33px;
-  background: rgba(255, 255, 255, 0.2) url('../img/login.svg') no-repeat 16px 6px;
+  background: rgba(255, 255, 255, 0.2) url('../img/login.svg') no-repeat 17px 6px;
 
   display: flex;
   flex-direction: row;
@@ -1103,17 +1103,14 @@ a:hover, a:active {
 
 .user-navigation-login:hover .user-navigation-login-item {
   color: #323232;
-  background: rgb(248, 247, 244) url('../img/login2.svg') no-repeat 16px 6px;
+  background: rgb(248, 247, 244) url('../img/login2.svg') no-repeat 17px 6px;
 }
 
 .user-navigation-login-item-submenu {
   box-sizing: border-box;
   width: 277px;
   left: -184px;
-  padding-left: 19px;
-  padding-right: 13px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 13px 20px 19px;
 }
 
 .user-navigation-login-item-submenu input {
@@ -1152,13 +1149,14 @@ a:hover, a:active {
 }
 
 .user-navigation-basket-item {
-  width: 116px;
+  width: 117px;
   height: 32px;
   box-sizing: border-box;
-  padding-left: 43px;
+  padding-left: 44px;
+  margin-right: 1px;
 
   border-radius: 33px;
-  background: rgba(255, 255, 255, 0.2) url('../img/basket.svg') no-repeat 15px center;
+  background: rgba(255, 255, 255, 0.2) url('../img/basket.svg') no-repeat 16px center;
 
   display: flex;
   flex-direction: row;
@@ -1169,7 +1167,7 @@ a:hover, a:active {
 .user-navigation-basket:hover .user-navigation-basket-item,
 .user-navigation-basket-not-empty .user-navigation-basket-item {
   color: #323232;
-  background: rgb(248, 247, 244) url('../img/basket2.svg') no-repeat 15px center;
+  background: rgb(248, 247, 244) url('../img/basket2.svg') no-repeat 16px center;
 }
 
 .user-navigation-basket-item-submenu {
