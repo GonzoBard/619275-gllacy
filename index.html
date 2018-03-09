@@ -51,11 +51,12 @@
     </ul>
     <ul class="user-navigation">
       <li class="user-navigation-search">
-        <button class="user-navigation-search-item" title="Поиск"></button>
+        <button class="user-navigation-search-item" aria-label="Поиск"></button>
         <ul class="user-navigation-search-item-submenu submenu dialog dialog-submenu">
           <li>
             <form class="form-submenu" action="https://echo.htmlacademy.ru" method="post">
-              <input type="text" name="search-request" placeholder="Что ищем?">
+              <label for="search-request-field" class="visually-hidden">Поле поиска</label>
+              <input type="text" name="search-request" id="search-request-field" placeholder="Что ищем?">
             </form>
           </li>
         </ul>
@@ -65,8 +66,10 @@
         <ul class="user-navigation-login-item-submenu submenu dialog dialog-submenu">
           <li>
             <form class="form-submenu" action="https://echo.htmlacademy.ru">
-              <input type="email" name="email" placeholder="Электронная почта">
-              <input type="password" name="password" placeholder="Пароль">
+              <label for="login-email" class="visually-hidden">Электронная почта</label>
+              <label for="login-password" class="visually-hidden">Пароль</label>
+              <input type="email" name="email" id="login-email" placeholder="Электронная почта">
+              <input type="password" name="password" id="login-password" placeholder="Пароль">
               <div class="login-submit">
                 <button class="btn btn-usual">Войти</button>
                 <div class="login-submit-links">
@@ -103,9 +106,9 @@
     </p>
     <div class="slider-main">
       <div class="slider-main-controls">
-        <button class="control-1 active" aria-label="Слайд 1" onclick="changeBackground(1,this)"></button>
-        <button class="control-2" aria-label="Слайд 2" onclick="changeBackground(2,this)"></button>
-        <button class="control-3" aria-label="Слайд 3" onclick="changeBackground(3,this)"></button>
+        <button class="control-1 active" aria-label="Слайд1 - Крем-брюле и пломбир с малиновым джемом" onclick="changeBackground(1,this)"></button>
+        <button class="control-2" aria-label="Слайд2 - Шоколадный пломбир и лимонный сорбет" onclick="changeBackground(2,this)"></button>
+        <button class="control-3" aria-label="Слайд3 - Пломбир с помадкой и клубничный щербет" onclick="changeBackground(3,this)"></button>
       </div>
       <a href="#" class="btn btn-attract-attention slider-button">Давайте оба!</a>
     </div>
@@ -223,7 +226,8 @@
       </p>
       <form action="https://echo.htmlacademy.ru" method="post">
         <div class="form-group">
-          <input type="email" name="email" placeholder="Электронная почта">
+          <label for="mailing-email" class="visually-hidden">Электронная почта</label>
+          <input type="email" name="email" id="mailing-email" placeholder="Электронная почта">
           <button class="btn btn-usual">Отправить</button>
         </div>
       </form>
@@ -253,7 +257,9 @@
         <br>
         <span class="phone-time">(с 10 до 20 ежедневно)</span>
       </p>
-      <a class="btn btn-usual" onclick="document.getElementById('modal-feedback').style.display='block'" tabindex="0">Форма обратной связи</a>
+      <button class="btn btn-usual" onclick="document.getElementById('modal-feedback').style.display='block'">
+        Форма обратной связи
+      </button>
     </div>
   </section>
 
@@ -261,13 +267,16 @@
     <div class="modal-feedback-content dialog">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p>Мы обязательно вам ответим!</p>
-      <button class="btn-close-modal" onclick="document.getElementById('modal-feedback').style.display='none'">
+      <button class="btn-close-modal" aria-label="Закрыть окно" onclick="document.getElementById('modal-feedback').style.display='none'">
         <img src="img/x-big.svg" alt="Закрыть окно">
       </button>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <input type="text" name="name" placeholder="Как вас зовут?">
-        <input type="email" name="email" placeholder="Ваша почта для ответа?">
-        <textarea name="message" placeholder="Напишите что-нибудь..."></textarea>
+        <label for="feedback-name" class="visually-hidden">Как вас зовут?</label>
+        <label for="feedback-email" class="visually-hidden">Ваша почта для ответа?</label>
+        <label for="feedback-message" class="visually-hidden">Текст сообщения</label>
+        <input type="text" name="name" id="feedback-name" placeholder="Как вас зовут?">
+        <input type="email" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
+        <textarea name="message" id="feedback-message" placeholder="Напишите что-нибудь..."></textarea>
         <button class="btn btn-usual">Отправить</button>
       </form>
     </div>
@@ -298,7 +307,7 @@
 
   <div class="footer-copyright">
     <p>
-      <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+      <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="ссылка на лендинг интенсива «Профессиональный HTML и CSS, уровень 1»" target="_blank">
         <img src="img/logo-htmlacademy.svg" alt="Логотип HTML-Academy" width="108" height="39">
       </a>
       <br>
