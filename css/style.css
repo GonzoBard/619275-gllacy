@@ -808,11 +808,13 @@ a:hover, a:focus, a:active {
 }
 
 .dialog input:hover {
+  outline: none;
   padding: 13px;
   border: 2px solid #c7c6c5;
 }
 
 .dialog input:focus {
+  outline: none;
   padding: 13px;
   border: 2px solid #8fbdec;
 }
