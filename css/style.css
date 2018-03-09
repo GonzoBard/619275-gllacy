@@ -7,8 +7,9 @@
   url('../assets/fonts/roboto-regular.woff2') format('woff2'),
   url('../assets/fonts/roboto-regular.ttf') format('truetype'),
   url('../assets/fonts/roboto-regular.svg#roboto-regular') format('svg');
-  font-weight: normal;
   font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
 }
 
 @font-face {
@@ -20,8 +21,9 @@
   url('../assets/fonts/roboto-italic.woff2') format('woff2'),
   url('../assets/fonts/roboto-italic.ttf') format('truetype'),
   url('../assets/fonts/roboto-italic.svg#roboto-italic') format('svg');
-  font-weight: normal;
   font-style: italic;
+  font-variant: normal;
+  font-weight: normal;
 }
 
 @font-face {
@@ -33,8 +35,9 @@
   url('../assets/fonts/roboto-medium.woff2') format('woff2'),
   url('../assets/fonts/roboto-medium.ttf') format('truetype'),
   url('../assets/fonts/roboto-medium.svg#roboto-medium') format('svg');
-  font-weight: 500;
   font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
 }
 
 @font-face {
@@ -46,8 +49,9 @@
   url('../assets/fonts/roboto-medium-italic.woff2') format('woff2'),
   url('../assets/fonts/roboto-medium-italic.ttf') format('truetype'),
   url('../assets/fonts/roboto-medium-italic.svg#roboto-medium-italic') format('svg');
-  font-weight: 500;
   font-style: italic;
+  font-variant: normal;
+  font-weight: 500;
 }
 
 @font-face {
@@ -59,8 +63,9 @@
   url('../assets/fonts/roboto-bold.woff2') format('woff2'),
   url('../assets/fonts/roboto-bold.ttf') format('truetype'),
   url('../assets/fonts/roboto-bold.svg#roboto-bold') format('svg');
-  font-weight: bold;
   font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
 }
 
 @font-face {
@@ -72,8 +77,9 @@
   url('../assets/fonts/roboto-bold-italic.woff2') format('woff2'),
   url('../assets/fonts/roboto-bold-italic.ttf') format('truetype'),
   url('../assets/fonts/roboto-bold-italic.svg#roboto-bold-italic') format('svg');
-  font-weight: bold;
   font-style: italic;
+  font-variant: normal;
+  font-weight: bold;
 }
 
 /*body {*/
@@ -133,12 +139,11 @@ body {
   font-size: 16px;
   color: #ffffff;
 
-  box-sizing: border-box;
   width: 1200px;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
   background-color: #849d8f;
-  /*background: #849d8f url('../img/bg-index-1.png') no-repeat top center;*/
 }
 
 .container {
@@ -153,14 +158,11 @@ body {
 }
 
 h2 {
-  font-size: 35px;
-  line-height: 41px;
+  font: normal normal bold 35px/41px Roboto;
 }
 
 a {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
+  font: normal normal 500 16px/18px Roboto;
   text-decoration: none;
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -176,14 +178,11 @@ a:hover, a:active {
   color: #ffffff;
   display: inline-block;
   vertical-align: center;
-  outline: 0;
   cursor: pointer;
 }
 
 .btn-usual {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
+  font: normal normal bold 18px/24px Roboto;
 
   border-radius: 30px;
   padding: 10px 23px 12px;
@@ -229,15 +228,12 @@ a:hover, a:active {
 }
 
 .btn-attract-attention {
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 44px;
+  font: normal normal bold 32px/44px Roboto;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
   padding: 7px 40px 12px;
 
   border-radius: 40px;
-
   background-image: linear-gradient(to top, #e74a35, #f26843);
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
 
@@ -289,7 +285,8 @@ a:hover, a:active {
 
 .main-header-logo, .main-header-logo:hover, .main-footer .logo-htmlacademy, .main-footer .logo-htmlacademy:hover,
 .btn, .btn:hover, .site-navigation-item:hover .site-navigation-item-menu, .site-navigation-item:hover .site-navigation-item-menu-link,
-.offer-raspberry, .offer-chocolate, .dialog, .user-navigation-login-item, .user-navigation-basket-item {
+.offer-raspberry, .offer-chocolate, .dialog, .user-navigation-login-item, .user-navigation-basket-item, .user-navigation-search-item,
+.user-navigation-login-item, .user-navigation-basket-item {
   border: none;
 }
 
@@ -367,31 +364,24 @@ a:hover, a:active {
 }
 
 .header-contacts .time {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
+  font: normal normal bold 14px/16px Roboto;
 }
 
 .header-contacts .phone {
   display: inline-block;
   padding-top: 4px;
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 24px;
+
+  font: normal normal bold 22px/24px Roboto;
 }
 
 .breadcrumbs a {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
+  font: normal normal normal 14px/16px Roboto;
 }
 
 .slider {
   margin-top: 281px;
 
-  font-weight: bold;
-  font-size: 60px;
-  line-height: 60px;
+  font: normal normal bold 60px/60px Roboto;
   text-align: center;
 }
 
@@ -438,15 +428,11 @@ a:hover, a:active {
 }
 
 .filters, .filters select {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
+  font: normal normal 500 16px/18px Roboto;
 }
 
 .filters .title {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font: normal normal 500 14px/16px Roboto;
 }
 
 .offers {
@@ -479,17 +465,13 @@ a:hover, a:active {
 }
 
 .offer-item h3 {
-  font-weight: bold;
-  font-size: 35px;
-  line-height: 41px;
+  font: normal normal bold 35px/41px Roboto;
   margin-top: 0;
   margin-bottom: -2px;
 }
 
 .offer-item p {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
+  font: normal normal bold 18px/22px Roboto;
 }
 
 .offer-item h2 {
@@ -515,13 +497,17 @@ a:hover, a:active {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .catalog-item {
   position: relative;
   z-index: 1;
-  width: 25%;
+
+  width: 22.2%;
+  flex-grow: 1;
   margin-right: 2.2%;
+
   text-align: center;
 }
 
@@ -581,24 +567,17 @@ a:hover, a:active {
 .catalog-item .price {
   position: absolute;
   top: 52%;
-  font-weight: bold;
-  font-size: 45px;
-  line-height: 45px;
 
+  font: normal normal bold 45px/45px Roboto;
   word-spacing: -5px;
 }
 
 .catalog-item .measure-unit-kg {
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 45px;
+  font: normal normal bold 30px/45px Roboto;
 }
 
 .catalog-item .name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
-
+  font: normal normal 500 16px/22px Roboto;
   margin-top: 3px;
 }
 
@@ -621,9 +600,7 @@ a:hover, a:active {
 }
 
 .advantages .title {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 30px;
+  font: normal normal 500 24px/30px Roboto;
 
   margin-top: 0;
   margin-bottom: 0;
@@ -641,13 +618,13 @@ a:hover, a:active {
 
 .advantage-item {
   box-sizing: border-box;
-  width: 48.9%;
+  width: 44.4%;
+  flex-grow: 1;
+
   padding-left: 56px;
   margin-top: 9px;
 
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
+  font: normal normal normal 16px/22px Roboto;
 
   /*border: 1px solid black;*/
 }
@@ -705,27 +682,22 @@ a:hover, a:active {
 }
 
 .news h2 {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
+  font: normal normal 500 16px/22px Roboto;
 
   margin: 0;
   margin-bottom: 3px;
 }
 
 .news a {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
+  font: normal normal bold 24px/30px Roboto;
   color: #353535;
+
   border-bottom: 2px solid #353535;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
 .mailing p {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
+  font: normal normal normal 16px/22px Roboto;
 }
 
 .mailing .btn, .contacts .btn {
@@ -752,40 +724,28 @@ a:hover, a:active {
 }
 
 .contacts .address-text {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
+  font: normal normal normal 14px/20px Roboto;
 }
 
 .contacts .address-value {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
+  font: normal normal bold 18px/24px Roboto;
 }
 
 .contacts .phone-text {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
+  font: normal normal normal 14px/20px Roboto;
 }
 
 .contacts .phone-value {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
+  font: normal normal bold 18px/22px Roboto;
 }
 
 .contacts .phone-time {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 22px;
+  font: normal normal normal 14px/22px Roboto;
   margin-bottom: 20px;
 }
 
 .footer-navigation a {
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 18px;
+  font: normal normal normal 13px/18px Roboto;
 }
 
 .footer-navigation .heart {
@@ -793,10 +753,8 @@ a:hover, a:active {
 }
 
 .footer-copyright, .footer-copyright a {
+  font: normal normal normal 12px/18px Roboto;
   color: #fefefe;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 18px;
 }
 
 /*
@@ -811,9 +769,7 @@ a:hover, a:active {
 }
 
 .dialog a {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
+  font: normal normal 500 16px/18px Roboto;
   text-decoration: none;
   color: #323232;
   border-bottom: 1px solid rgba(50, 50, 50, 0.3);
@@ -832,13 +788,10 @@ a:hover, a:active {
   padding: 14px;
   margin: 0 0 20px 0;
 
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
+  font: normal normal bold 16px/24px Roboto;
 
   border-radius: 5px;
   border: 1px solid #d3d3d2;
-  outline: none;
 }
 
 .dialog input:hover {
@@ -852,31 +805,21 @@ a:hover, a:active {
 }
 
 .dialog input::placeholder {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
+  font: normal normal normal 16px/24px Roboto;
 }
 
 .dialog-submenu {
+  font: normal normal bold 14px/24px Roboto;
   border-radius: 6px;
-
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
-
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .dialog-submenu a {
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 24px;
+  font: normal normal normal 13px/24px Roboto;
 }
 
 .dialog-submenu input::placeholder {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 14px;
+  font: normal normal normal 14px/14px Roboto;
 }
 
 /* https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css */
@@ -1012,9 +955,7 @@ a:hover, a:active {
   padding-left: 20px;
   margin-bottom: 3px;
 
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 28px;
+  font: normal normal normal 14px/28px Roboto;
   color: #323232;
   border: none;
 }
@@ -1060,9 +1001,7 @@ a:hover, a:active {
 }
 
 .site-navigation-item-menu-link {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 18px;
+  font: normal normal bold 16px/18px Roboto;
 }
 
 .site-navigation-item-current a {
@@ -1127,10 +1066,10 @@ a:hover, a:active {
 }
 
 .user-navigation-search-item, .user-navigation-login-item, .user-navigation-basket-item {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font: normal normal 500 14px/16px Roboto;
   color: #ffffff;
+  padding: 0;
+  text-align: left;
 }
 
 .user-navigation-search-item {
@@ -1239,11 +1178,9 @@ a:hover, a:active {
 
   padding-top: 19px;
   padding-left: 20px;
-  padding-right: 0px;
+  padding-right: 0;
 
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 16px;
+  font: normal normal normal 13px/16px Roboto;
 }
 
 .user-navigation-basket-items {
@@ -1297,17 +1234,14 @@ a:hover, a:active {
 }
 
 .user-navigation-basket-items .total {
-  height: 46px;
-  text-align: right;
-
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 18px;
-
-  border-top: 1px solid #cccccc;
   align-self: stretch;
+  height: 46px;
   margin-right: 33px;
   margin-top: 5px;
+  border-top: 1px solid #cccccc;
+
+  font: normal normal bold 15px/18px Roboto;
+  text-align: right;
 }
 
 .user-navigation-basket-items .total-txt {
