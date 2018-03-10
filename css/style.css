@@ -126,6 +126,10 @@
 /*border: 1px solid blue;*/
 /*}*/
 
+/*.contacts-info{*/
+/*border: 1px solid black;*/
+/*}*/
+
 /*.modal-feedback-content{*/
 /*border: 1px solid red;*/
 /*}*/
@@ -144,6 +148,10 @@ body {
   margin: 0 auto;
   padding: 0;
 
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*justify-content: flex-start;*/
+
   background-color: #849d8f;
 }
 
@@ -161,11 +169,12 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 9px 2.3% 27px;
+  padding: 0 2.3% 0;
+  /*9px 2.3% 27px;*/
 }
 
-.container, .slider, .slider-main, .offers, .hits, .catalog-list, .advantages, .advantages-list, .news-mailing-wrapper,
-.news, .mailing {
+.container, .main-header, .slider, .slider-main, .offers, .hits, .catalog-list, .advantages, .advantages-list, .news-mailing-wrapper,
+.news, .mailing, .main-footer {
   width: 100%;
   box-sizing: border-box;
 }
@@ -380,8 +389,8 @@ a:hover, a:focus, a:active {
   color: #999999;
 }
 
-.site-navigation, .user-navigation, .breadcrumbs, .advantages-list, .footer-navigation, .catalog-list,
-.footer-social ul, .site-navigation-submenu, .user-navigation-search-item-submenu, .user-navigation-login-item-submenu,
+.site-navigation, .user-navigation, .breadcrumbs, .advantages-list, .footer-navigation-list, .catalog-list,
+.footer-social-list, .site-navigation-submenu, .user-navigation-search-item-submenu, .user-navigation-login-item-submenu,
 .user-navigation-basket-item-submenu, .site-navigation-submenu li > ul {
   list-style: none;
   margin: 0;
@@ -397,8 +406,7 @@ a:hover, a:focus, a:active {
 }
 
 .main-header {
-  /*height: 64px;*/
-  box-sizing: border-box;
+  padding-top: 9px;
 
   display: flex;
   flex-direction: row;
@@ -485,7 +493,7 @@ a:hover, a:focus, a:active {
 }
 
 .slider {
-  margin-top: 281px;
+  margin-top: 317px;
 
   font: normal normal bold 60px/60px Roboto;
   text-align: center;
@@ -824,9 +832,8 @@ a:hover, a:focus, a:active {
 
 .mailing p {
   font: normal normal normal 16px/22px Roboto;
-  margin: 0;
   padding: 0;
-  margin-bottom: 36px;
+  margin: 0 0 36px;
 }
 
 .mailing-form {
@@ -836,8 +843,7 @@ a:hover, a:focus, a:active {
 
 .mailing-form input {
   width: 368px;
-  margin: 0;
-  margin-right: 10px;
+  margin: 0 10px 0 0;
 }
 
 .mailing-form .btn-usual {
@@ -851,7 +857,12 @@ a:hover, a:focus, a:active {
 }
 
 .contacts-info {
+  width: 1200px;
+  height: 430px;
+
   margin-top: 40px;
+  margin-left: -2.3%;
+
   background-color: #849d8f;
 
   position: relative;
@@ -914,12 +925,54 @@ a:hover, a:focus, a:active {
   margin-bottom: 20px;
 }
 
+.main-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-social {
+  margin-right: 235px;
+}
+
+.footer-social-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.footer-navigation-list {
+  width: 327px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-navigation-list li {
+  width: 50%;
+}
+
 .footer-navigation a {
   font: normal normal normal 13px/18px Roboto;
 }
 
 .footer-navigation .heart {
   font-weight: bold;
+}
+
+.footer-copyright {
+  margin-left: auto;
+  height: 103px;
+}
+
+.footer-copyright p {
+  margin: 18px 0 0;
+  padding: 0;
 }
 
 .footer-copyright, .footer-copyright a {
