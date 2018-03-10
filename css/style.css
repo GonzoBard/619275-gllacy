@@ -289,6 +289,97 @@ a:hover, a:focus, a:active {
   background-color: rgba(0, 0, 0, 0.07);
 }
 
+.dialog {
+  background-color: #f8f7f4;
+  color: #323232;
+  padding: 19px 24px;
+  border-radius: 10px;
+}
+
+.dialog a {
+  font: normal normal 500 16px/18px Roboto;
+  text-decoration: none;
+  color: #323232;
+  border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+}
+
+.dialog a:hover, .dialog a:active {
+  color: #e84d37;
+  border-bottom: 1px solid rgba(232, 77, 55, 0.3);
+  cursor: pointer;
+}
+
+.dialog input {
+  box-sizing: border-box;
+  width: 267px;
+  height: 44px;
+  padding: 14px;
+  margin: 0 0 20px 0;
+
+  font: normal normal bold 16px/24px Roboto;
+
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+}
+
+.dialog input:hover {
+  outline: none;
+  padding: 13px;
+  border: 2px solid #c7c6c5;
+}
+
+.dialog input:focus {
+  outline: none;
+  padding: 13px;
+  border: 2px solid #8fbdec;
+}
+
+.dialog input::placeholder {
+  font: normal normal normal 16px/24px Roboto;
+}
+
+.dialog-submenu {
+  font: normal normal bold 14px/24px Roboto;
+  border-radius: 6px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.dialog-submenu a {
+  font: normal normal normal 13px/24px Roboto;
+}
+
+.dialog-submenu input::placeholder {
+  font: normal normal normal 14px/14px Roboto;
+}
+
+/* https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css */
+.dialog input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: #999999;
+  padding-top: 7px;
+}
+
+.dialog input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #999999;
+  opacity: 1;
+}
+
+.dialog input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #999999;
+  opacity: 1;
+}
+
+.dialog input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #999999;
+}
+
+.dialog input:-ms-input-placeholder { /* Microsoft Edge */
+  color: #999999;
+}
+
+.dialog input::placeholder { /* Most modern browsers support this now. */
+  color: #999999;
+}
+
 .site-navigation, .user-navigation, .breadcrumbs, .advantages-list, .footer-navigation, .catalog-list,
 .footer-social ul, .site-navigation-submenu, .user-navigation-search-item-submenu, .user-navigation-login-item-submenu,
 .user-navigation-basket-item-submenu, .site-navigation-submenu li > ul {
@@ -460,7 +551,8 @@ a:hover, a:focus, a:active {
 .offer-item {
   padding: 14px 20px 23px 18px;
   border-radius: 15px;
-  width: 50%;
+  width: 44.4%;
+  flex-grow: 1;
   height: 192px;
   /*background-size: cover;*/
   display: flex;
@@ -683,23 +775,22 @@ a:hover, a:focus, a:active {
 }
 
 .news, .mailing {
-  width: 50%;
+  width: 44.4%;
+  flex-grow: 1;
   color: #5a5a5a;
+  border-radius: 15px;
 }
 
 .news {
   height: 219px;
   padding: 24px 20px 23px 20px;
-  border-radius: 15px;
 
   background: #ffffff url('../img/bg-strawberry.jpg') no-repeat -52px -224px;
 }
 
 .news h2 {
   font: normal normal 500 16px/22px Roboto;
-
-  margin: 0;
-  margin-bottom: 3px;
+  margin: 0 0 3px;
 }
 
 .news a {
@@ -710,8 +801,49 @@ a:hover, a:focus, a:active {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
+.mailing {
+  background: transparent url('../img/bg-postal.svg') no-repeat top left;
+  margin-top: 1px;
+  height: 218px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.mailing-wrapper {
+  margin: 5px;
+  padding-top: 28px;
+  padding-left: 21px;
+  padding-right: 15px;
+
+  background-color: #f8f7f4;
+  border-radius: 10px;
+}
+
 .mailing p {
   font: normal normal normal 16px/22px Roboto;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 36px;
+}
+
+.mailing-form {
+  margin: 0;
+  padding: 0;
+}
+
+.mailing-form input {
+  width: 368px;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.mailing-form .btn-usual {
+  padding-right: 18px;
+  padding-left: 18px;
+  color: #fefefe;
 }
 
 .mailing .btn, .contacts .btn {
@@ -798,97 +930,6 @@ a:hover, a:focus, a:active {
 /*
   НА СКРЫТЫХ СЛОЯХ МАКЕТА
 */
-
-.dialog {
-  background-color: #f8f7f4;
-  color: #323232;
-  padding: 19px 24px;
-  border-radius: 10px;
-}
-
-.dialog a {
-  font: normal normal 500 16px/18px Roboto;
-  text-decoration: none;
-  color: #323232;
-  border-bottom: 1px solid rgba(50, 50, 50, 0.3);
-}
-
-.dialog a:hover, .dialog a:active {
-  color: #e84d37;
-  border-bottom: 1px solid rgba(232, 77, 55, 0.3);
-  cursor: pointer;
-}
-
-.dialog input {
-  box-sizing: border-box;
-  width: 267px;
-  height: 44px;
-  padding: 14px;
-  margin: 0 0 20px 0;
-
-  font: normal normal bold 16px/24px Roboto;
-
-  border-radius: 5px;
-  border: 1px solid #d3d3d2;
-}
-
-.dialog input:hover {
-  outline: none;
-  padding: 13px;
-  border: 2px solid #c7c6c5;
-}
-
-.dialog input:focus {
-  outline: none;
-  padding: 13px;
-  border: 2px solid #8fbdec;
-}
-
-.dialog input::placeholder {
-  font: normal normal normal 16px/24px Roboto;
-}
-
-.dialog-submenu {
-  font: normal normal bold 14px/24px Roboto;
-  border-radius: 6px;
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-}
-
-.dialog-submenu a {
-  font: normal normal normal 13px/24px Roboto;
-}
-
-.dialog-submenu input::placeholder {
-  font: normal normal normal 14px/14px Roboto;
-}
-
-/* https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css */
-.dialog input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-  color: #999999;
-  padding-top: 7px;
-}
-
-.dialog input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  color: #999999;
-  opacity: 1;
-}
-
-.dialog input::-moz-placeholder { /* Mozilla Firefox 19+ */
-  color: #999999;
-  opacity: 1;
-}
-
-.dialog input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #999999;
-}
-
-.dialog input:-ms-input-placeholder { /* Microsoft Edge */
-  color: #999999;
-}
-
-.dialog input::placeholder { /* Most modern browsers support this now. */
-  color: #999999;
-}
 
 .modal {
   display: none;
