@@ -300,7 +300,8 @@ a:hover, a:focus, a:active {
 .main-header-logo, .main-header-logo:hover, .main-header-logo:focus, .main-footer .logo-htmlacademy, .main-footer .logo-htmlacademy:hover,
 .btn, .btn:hover, .btn:focus, .site-navigation-item:hover .site-navigation-item-menu, .site-navigation-item:hover .site-navigation-item-menu-link,
 .offer-raspberry, .offer-chocolate, .dialog, .user-navigation-login-item, .user-navigation-basket-item, .user-navigation-search-item,
-.user-navigation-login-item, .user-navigation-basket-item, .btn-close-modal {
+.user-navigation-login-item, .user-navigation-basket-item, .btn-close-modal, .user-navigation-basket-items-table-button-delete,
+.breadcrumbs a.active, .paginator a {
   border: none;
 }
 
@@ -722,6 +723,30 @@ a:hover, a:focus, a:active {
   background-color: #849d8f;
 
   position: relative;
+}
+
+.paginator-prev, .paginator-next {
+  display: inline-block;
+  width: 8px;
+  height: 12px;
+}
+
+.paginator-prev.disabled {
+  background: transparent url('../img/icon-right-small.svg') no-repeat center center;
+  transform: rotate(180deg);
+}
+
+.paginator-prev {
+  background: transparent url('../img/icon-right-small-active.svg') no-repeat center center;
+  transform: rotate(180deg);
+}
+
+.paginator-next.disabled {
+  background: transparent url('../img/icon-right-small.svg') no-repeat center center;
+}
+
+.paginator-next {
+  background: transparent url('../img/icon-right-small-active.svg') no-repeat center center;
 }
 
 .contacts {
@@ -1220,6 +1245,12 @@ a:hover, a:focus, a:active {
 .user-navigation-basket-items-table .delete {
   width: 18px;
   padding-top: 10px;
+}
+
+.user-navigation-basket-items-table-button-delete {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
 }
 
 .user-navigation-basket-items-table-pic {
