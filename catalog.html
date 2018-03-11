@@ -143,21 +143,23 @@
 
   <aside class="filters">
     <h3 class="visually-hidden">Фильтры каталога</h3>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <div class="form-group-sort">
+    <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="form-group">
         <label class="title" for="filters-sort">Сортировка:</label>
-        <select name="sort" id="filters-sort">
-          <option value="popular" selected>по популярности</option>
-          <option value="popular">сначала недорогие</option>
-          <option value="popular">сначала дорогие</option>
-          <option value="popular">по жирности</option>
-        </select>
+        <div class="filters-sort-wrapper">
+          <select class="filters-sort" name="sort" id="filters-sort">
+            <option value="popular" selected>по популярности</option>
+            <option value="popular">сначала недорогие</option>
+            <option value="popular">сначала дорогие</option>
+            <option value="popular">по жирности</option>
+          </select>
+        </div>
       </div>
-      <div class="form-group-price-range">
+      <div class="form-group">
         <label class="title" for="filters-price-range">Цена: 100 руб. - 500 руб.</label>
         <input type="range" name="price-range" id="filters-price-range">
       </div>
-      <div class="form-group-fat-content">
+      <div class="form-group">
         <fieldset>
           <legend class="title">Жирность:</legend>
           <label><input type="radio" name="fat-content" value="0">0%</label>
@@ -166,7 +168,7 @@
           <label><input type="radio" name="fat-content" value="over30">выше 30%</label>
         </fieldset>
       </div>
-      <div class="form-group-fillers">
+      <div class="form-group form-group-fillers">
         <fieldset>
           <legend class="title">Наполнители:</legend>
           <label><input type="checkbox" name="filler-chocolate" checked>шоколадные</label>
@@ -176,7 +178,7 @@
           <label><input type="checkbox" name="filler-jam">джемы</label>
         </fieldset>
       </div>
-      <button>Применить</button>
+      <div class="form-group"><button>Применить</button></div>
     </form>
   </aside>
 

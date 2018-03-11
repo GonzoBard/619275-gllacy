@@ -174,7 +174,7 @@ body {
 }
 
 .container, .main-header, .slider, .slider-main, .offers, .hits, .catalog-list, .advantages, .advantages-list, .news-mailing-wrapper,
-.news, .mailing, .main-footer {
+.news, .mailing, .main-footer, .filters {
   width: 100%;
   box-sizing: border-box;
 }
@@ -494,15 +494,15 @@ a:hover, a:focus, a:active {
   justify-content: flex-start;
 }
 
-.breadcrumbs-list li:not(:last-child){
+.breadcrumbs-list li:not(:last-child) {
   margin-right: 20px;
 }
 
-.breadcrumbs-list li{
+.breadcrumbs-list li {
   position: relative;
 }
 
-.breadcrumbs-list li:not(:last-child):after{
+.breadcrumbs-list li:not(:last-child):after {
   content: '»';
   position: absolute;
   top: 1px;
@@ -561,14 +561,6 @@ a:hover, a:focus, a:active {
   background-color: #ffffff;
 }
 
-.filters, .filters select {
-  font: normal normal 500 16px/18px Roboto;
-}
-
-.filters .title {
-  font: normal normal 500 14px/16px Roboto;
-}
-
 .offers {
   margin-top: 42px;
   display: flex;
@@ -625,6 +617,101 @@ a:hover, a:focus, a:active {
 
 .hits {
   margin-top: 40px;
+}
+
+
+.filters-form {
+  width: 900px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.filters-form .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.filters-form div:not(:last-child) {
+  margin-right: 10px;
+}
+
+.filters-form fieldset{
+  border: none;
+}
+
+.form-group-fillers {
+  margin-top: 20px;
+}
+
+.filters, .filters select {
+  font: normal normal 500 16px/18px Roboto;
+}
+
+.filters .title {
+  font: normal normal 500 14px/16px Roboto;
+  padding: 0 15px 10px;
+}
+
+.filters-sort {
+  width: 194px;
+  height: 37px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+  color: #ffffff;
+  background-color: #9db1a5;
+  border: none;
+  box-shadow: none;
+  -webkit-appearance: none; /* Edge, Chrome, Safari */
+  -moz-appearance: none;
+  appearance: none; /* remove default arrow */
+}
+
+.form-group select::-ms-expand {
+  display: none; /* hide the default arrow in ie10 and ie11 */
+}
+
+.filters-sort-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.filters-sort-wrapper::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 13px;
+  right: 18px;
+  border: 6px solid #ffffff;
+  border-top-width: 11px;
+  border-bottom-width: 0;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+.filters-sort-wrapper:hover select {
+  color: #323232;
+}
+
+.filters-sort-wrapper:hover::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 13px;
+  right: 18px;
+  border: 6px solid #323232;
+  border-top-width: 11px;
+  border-bottom-width: 0;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  pointer-events: none;
 }
 
 .catalog-list {
