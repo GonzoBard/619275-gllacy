@@ -389,7 +389,7 @@ a:hover, a:focus, a:active {
   color: #999999;
 }
 
-.site-navigation, .user-navigation, .breadcrumbs, .advantages-list, .footer-navigation-list, .catalog-list,
+.site-navigation, .user-navigation, .breadcrumbs, .advantages-list, .footer-navigation ul, .catalog-list,
 .footer-social-list, .site-navigation-submenu, .user-navigation-search-item-submenu, .user-navigation-login-item-submenu,
 .user-navigation-basket-item-submenu, .site-navigation-submenu li > ul {
   list-style: none;
@@ -401,7 +401,7 @@ a:hover, a:focus, a:active {
 .btn, .btn:hover, .btn:focus, .site-navigation-item:hover .site-navigation-item-menu, .site-navigation-item:hover .site-navigation-item-menu-link,
 .offer-raspberry, .offer-chocolate, .dialog, .user-navigation-login-item, .user-navigation-basket-item, .user-navigation-search-item,
 .user-navigation-login-item, .user-navigation-basket-item, .btn-close-modal, .user-navigation-basket-items-table-button-delete,
-.breadcrumbs a.active, .paginator a {
+.breadcrumbs a.active, .paginator a, .paginator a:hover, .paginator a:focus {
   border: none;
 }
 
@@ -943,18 +943,89 @@ a:hover, a:focus, a:active {
   align-items: flex-start;
 }
 
-.footer-navigation-list {
-  width: 327px;
+.btn-social {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
 
+.btn-social, .btn-social:hover, .btn-social:focus, .btn-social:active {
+  border: 3px solid #c2cec7;
+  border-radius: 50%;
+}
+
+.btn-social:hover, .btn-social:focus, .btn-social:active {
+  border-color: #dae2de;
+}
+
+.footer-social-list li:not(:last-child) {
+  margin-right: 11px;
+}
+
+.btn-social-tw {
+  background: url('../img/soc-twitter.svg') no-repeat center center;
+}
+
+.btn-social-tw:hover {
+  background: url('../img/soc-twitter-hover.svg') no-repeat center center;
+}
+
+.btn-social-tw:active {
+  background: url('../img/soc-twitter-active.svg') no-repeat center center;
+}
+
+.btn-social-in {
+  background: transparent url('../img/soc-instagram.svg') no-repeat;
+}
+
+.btn-social-in:hover {
+  background: transparent url('../img/soc-instagram-hover.svg') no-repeat;
+}
+
+.btn-social-in:active {
+  background: transparent url('../img/soc-instagram-active.svg') no-repeat;
+}
+
+.btn-social-fb {
+  background: transparent url('../img/soc-facebook.svg') no-repeat;
+}
+
+.btn-social-fb:hover {
+  background: transparent url('../img/soc-facebook-hover.svg') no-repeat;
+}
+
+.btn-social-fb:active {
+  background: transparent url('../img/soc-facebook-active.svg') no-repeat;
+}
+
+.btn-social-vk {
+  background: transparent url('../img/soc-vk.svg') no-repeat;
+}
+
+.btn-social-vk:hover {
+  background: transparent url('../img/soc-vk-hover.svg') no-repeat;
+}
+
+.btn-social-vk:active {
+  background: transparent url('../img/soc-vk-active.svg') no-repeat;
+}
+
+.footer-navigation {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-wrap: wrap;
 }
 
-.footer-navigation-list li {
-  width: 50%;
+.footer-navigation ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.footer-navigation ul:not(:last-child) {
+  margin-right: 30px;
 }
 
 .footer-navigation a {
@@ -963,6 +1034,20 @@ a:hover, a:focus, a:active {
 
 .footer-navigation .heart {
   font-weight: bold;
+  position: relative;
+}
+
+.footer-navigation .heart:before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+
+  position: absolute;
+  top: 2px;
+  left: -20px;
+
+  background: transparent url('../img/heart.svg') no-repeat;
 }
 
 .footer-copyright {
