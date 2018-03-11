@@ -389,7 +389,7 @@ a:hover, a:focus, a:active {
   color: #999999;
 }
 
-.site-navigation, .user-navigation, .breadcrumbs, .advantages-list, .footer-navigation ul, .catalog-list,
+.site-navigation, .user-navigation, .breadcrumbs-list, .advantages-list, .footer-navigation ul, .catalog-list,
 .footer-social-list, .site-navigation-submenu, .user-navigation-search-item-submenu, .user-navigation-login-item-submenu,
 .user-navigation-basket-item-submenu, .site-navigation-submenu li > ul {
   list-style: none;
@@ -401,7 +401,7 @@ a:hover, a:focus, a:active {
 .btn, .btn:hover, .btn:focus, .site-navigation-item:hover .site-navigation-item-menu, .site-navigation-item:hover .site-navigation-item-menu-link,
 .offer-raspberry, .offer-chocolate, .dialog, .user-navigation-login-item, .user-navigation-basket-item, .user-navigation-search-item,
 .user-navigation-login-item, .user-navigation-basket-item, .btn-close-modal, .user-navigation-basket-items-table-button-delete,
-.breadcrumbs a.active, .paginator a, .paginator a:hover, .paginator a:focus {
+.breadcrumbs-list a.active, .paginator a, .paginator a:hover, .paginator a:focus {
   border: none;
 }
 
@@ -488,7 +488,28 @@ a:hover, a:focus, a:active {
   font: normal normal bold 22px/24px Roboto;
 }
 
-.breadcrumbs a {
+.breadcrumbs-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.breadcrumbs-list li:not(:last-child){
+  margin-right: 20px;
+}
+
+.breadcrumbs-list li{
+  position: relative;
+}
+
+.breadcrumbs-list li:not(:last-child):after{
+  content: '»';
+  position: absolute;
+  top: 1px;
+  right: -14px;
+}
+
+.breadcrumbs-list a {
   font: normal normal normal 14px/16px Roboto;
 }
 
