@@ -619,7 +619,6 @@ a:hover, a:focus, a:active {
   margin-top: 40px;
 }
 
-
 .filters-form {
   width: 900px;
 
@@ -642,7 +641,7 @@ a:hover, a:focus, a:active {
   margin-right: 10px;
 }
 
-.filters-form fieldset{
+.filters-form fieldset {
   border: none;
 }
 
@@ -1535,9 +1534,11 @@ a:hover, a:focus, a:active {
 }
 
 .user-navigation-basket-items-table-button-delete {
+  width: 11px;
+  height: 11px;
   margin: 0;
   padding: 0;
-  background-color: transparent;
+  background: url("../img/delete-basket-item.svg") no-repeat;
 }
 
 .user-navigation-basket-items-table-pic {
