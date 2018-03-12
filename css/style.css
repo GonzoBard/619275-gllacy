@@ -847,35 +847,41 @@ a:hover, a:focus, a:active {
   align-items: center;
 }
 
-.fillers-wrapper > div:not(:last-child){
-  margin-right: 15px;
+.fillers-wrapper > div:not(:last-child) {
+  margin-right: 21px;
 }
-.fillers-wrapper > div{
-  padding-left: 30px;
+
+.fillers-wrapper > div {
+  padding-left: 31px;
 }
 
 .fillers-wrapper label {
   position: relative;
 }
+
 .fillers-wrapper label::before, .fillers-wrapper label::after {
   content: '';
   position: absolute;
   top: -2px;
-  left: -32px;
+  left: -33px;
   width: 27px;
   height: 23px;
 }
+
 .fillers-wrapper label::before {
   background: url('../img/checkbox-off.svg') no-repeat center center;
 }
-.fillers-wrapper label:hover::before {
+
+.fillers-wrapper label:hover::before, .fillers-wrapper-input:focus ~ label::before {
   background: url('../img/checkbox-off-hover.svg') no-repeat center center;
 }
+
 .fillers-wrapper label::after {
   display: none;
   background: url('../img/checkbox-on.svg') no-repeat center center;
 }
-.fillers-wrapper label:hover::after {
+
+.fillers-wrapper label:hover::after, .fillers-wrapper-input:focus ~ label::after {
   display: none;
   background: url('../img/checkbox-on-hover.svg') no-repeat center center;
 }
@@ -884,14 +890,49 @@ a:hover, a:focus, a:active {
   display: block;
 }
 
-.fillers-wrapper-input:checked ~ label::before{
+.fillers-wrapper-input:checked ~ label::before {
   display: none;
 }
 
+.form-group.form-group-submit {
+  justify-content: flex-end;
 
-.catalog{
+}
+
+.form-group-submit {
+  margin-top: 20px;
+  height: 60px;
+}
+
+.form-group-submit button {
+  box-sizing: border-box;
+  width: 142px;
+  height: 37px;
+  margin: 0;
+  padding: 0 11px;
+  font: normal normal 500 16px/18px Roboto;
+  color: #ffffff;
+  background-color: #9cb0a4;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+}
+
+.form-group-submit button:hover {
+  background-color: #ffffff;
+  color: #323232;
+}
+
+.form-group-submit button:active {
+  border: none;
+  background-color: #eaeaea;
+  color: #323232;
+  box-shadow: inset 0 2px 1px 0 #696969;
+}
+
+.catalog {
   margin-top: 40px;
 }
+
 .catalog-list {
   display: flex;
   flex-direction: row;
