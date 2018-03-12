@@ -620,7 +620,7 @@ a:hover, a:focus, a:active {
 }
 
 .filters-form {
-  width: 900px;
+  width: 800px;
 
   display: flex;
   flex-direction: row;
@@ -655,10 +655,10 @@ a:hover, a:focus, a:active {
 
 .filters .title {
   font: normal normal 500 14px/16px Roboto;
-  padding: 0 15px 10px;
+  padding: 0 15px 7px;
 }
 
-.filters-sort {
+.filters-sort-select {
   width: 194px;
   height: 37px;
   padding-left: 15px;
@@ -677,12 +677,12 @@ a:hover, a:focus, a:active {
   display: none; /* hide the default arrow in ie10 and ie11 */
 }
 
-.filters-sort-wrapper {
+.filters-sort-select-wrapper {
   display: inline-block;
   position: relative;
 }
 
-.filters-sort-wrapper::before {
+.filters-sort-select-wrapper::before {
   content: '';
   display: block;
   position: absolute;
@@ -695,11 +695,11 @@ a:hover, a:focus, a:active {
   border-left-color: transparent;
 }
 
-.filters-sort-wrapper:hover select {
+.filters-sort-select-wrapper:hover select {
   color: #323232;
 }
 
-.filters-sort-wrapper:hover::before {
+.filters-sort-select-wrapper:hover::before {
   content: '';
   display: block;
   position: absolute;
