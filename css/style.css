@@ -635,6 +635,11 @@ a:hover, a:focus, a:active {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  align-content: flex-start;
+}
+.form-group-fieldset{
+  padding: 0;
+  margin: 0;
 }
 
 .filters-form div:not(:last-child) {
@@ -656,6 +661,7 @@ a:hover, a:focus, a:active {
 .filters .title {
   font: normal normal 500 14px/16px Roboto;
   padding: 0 15px 7px;
+  margin: 0;
 }
 
 .filters-sort-select, .filters-price-range-wrapper {
@@ -722,16 +728,19 @@ a:hover, a:focus, a:active {
 
 .filters-price-range-wrapper #price-range-low{
   width: 30px;
+  pointer-events: none;
 }
 
 .filters-price-range-wrapper .price-range-between{
-  content: 'd';
   display: inline-block;
   width: 40px;
+  height: 3px;
+  background-color: #ffffff;
 }
 
 .filters-price-range-wrapper #price-range-high{
   width: 90px;
+  pointer-events: none;
 }
 
 
