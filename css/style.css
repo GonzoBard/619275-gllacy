@@ -620,7 +620,7 @@ a:hover, a:focus, a:active {
 }
 
 .filters-form {
-  width: 800px;
+  width: 840px;
 
   display: flex;
   flex-direction: row;
@@ -630,7 +630,7 @@ a:hover, a:focus, a:active {
   flex-wrap: wrap;
 }
 
-.filters-form .form-group {
+.filters-form .form-group, .filters-form .form-group-fieldset {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -658,8 +658,7 @@ a:hover, a:focus, a:active {
   padding: 0 15px 7px;
 }
 
-.filters-sort-select {
-  width: 194px;
+.filters-sort-select, .filters-price-range-wrapper {
   height: 37px;
   padding-left: 15px;
   padding-right: 15px;
@@ -668,6 +667,10 @@ a:hover, a:focus, a:active {
   background-color: #9db1a5;
   border: none;
   box-shadow: none;
+}
+
+.filters-sort-select {
+  width: 194px;
   -webkit-appearance: none; /* Edge, Chrome, Safari */
   -moz-appearance: none;
   appearance: none; /* remove default arrow */
@@ -712,6 +715,26 @@ a:hover, a:focus, a:active {
   border-left-color: transparent;
   pointer-events: none;
 }
+
+.filters-price-range-wrapper {
+  width: 200px;
+}
+
+.filters-price-range-wrapper #price-range-low{
+  width: 30px;
+}
+
+.filters-price-range-wrapper .price-range-between{
+  content: 'd';
+  display: inline-block;
+  width: 40px;
+}
+
+.filters-price-range-wrapper #price-range-high{
+  width: 90px;
+}
+
+
 
 .catalog-list {
   display: flex;

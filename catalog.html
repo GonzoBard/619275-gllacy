@@ -152,8 +152,16 @@
         </div>
       </div>
       <div class="form-group">
-        <label class="title" for="filters-price-range">Цена: 100 руб. - 500 руб.</label>
-        <input type="range" name="price-range" id="filters-price-range">
+        <fieldset class="form-group-fieldset">
+          <legend class="title">Цена: 100 руб. - 500 руб.</legend>
+          <label class="visually-hidden" for="price-range-low">Нижняя граница цены</label>
+          <label class="visually-hidden" for="price-range-high">Верхняя граница цены</label>
+          <div class="filters-price-range-wrapper">
+            <input type="range" name="price-range-low" id="price-range-low" max="100" value="100">
+            <span class="price-range-between" id="filters-price-range"></span>
+            <input type="range" name="price-range-high" id="price-range-high" min="500" value="500">
+          </div>
+        </fieldset>
       </div>
       <div class="form-group">
         <fieldset>
@@ -174,7 +182,9 @@
           <label><input type="checkbox" name="filler-jam">джемы</label>
         </fieldset>
       </div>
-      <div class="form-group"><button>Применить</button></div>
+      <div class="form-group">
+        <button>Применить</button>
+      </div>
     </form>
   </aside>
 
