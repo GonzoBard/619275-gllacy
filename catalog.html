@@ -173,14 +173,26 @@
           </div>
         </fieldset>
       </div>
-      <div class="form-group">
-        <fieldset>
-          <legend class="title">Жирность:</legend>
-          <label><input type="radio" name="fat-content" value="0">0%</label>
-          <label><input type="radio" name="fat-content" value="to10" checked>до 10%</label>
-          <label><input type="radio" name="fat-content" value="to30">до 30%</label>
-          <label><input type="radio" name="fat-content" value="over30">выше 30%</label>
-        </fieldset>
+      <div class="form-group form-group-fat-content">
+        <label class="title" aria-label="Жирность">Жирность:</label>
+        <div class="fat-content-wrapper">
+          <div class="checker-group">
+            <input type="radio" name="fat-content" id="fat-content-0" value="0">
+            <label for="fat-content-0">0%</label>
+          </div>
+          <div class="checker-group">
+            <input type="radio" name="fat-content" id="fat-content-to10" value="to10" checked>
+            <label for="fat-content-to10">до 10%</label>
+          </div>
+          <div class="checker-group">
+            <input type="radio" name="fat-content" id="fat-content-to30" value="to30">
+            <label for="fat-content-to30">до 30%</label>
+          </div>
+          <div class="checker-group">
+            <input type="radio" name="fat-content" id="fat-content-over30" value="over30">
+            <label for="fat-content-over30">выше 30%</label>
+          </div>
+        </div>
       </div>
       <div class="form-group form-group-fillers">
         <fieldset>
@@ -193,6 +205,7 @@
         </fieldset>
       </div>
       <div class="form-group">
+        <br><br>
         <button>Применить</button>
       </div>
     </form>
