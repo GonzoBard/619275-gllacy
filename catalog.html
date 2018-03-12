@@ -152,14 +152,24 @@
         </div>
       </div>
       <div class="form-group">
-        <fieldset class="form-group-fieldset">
+        <fieldset>
           <legend class="title">Цена: 100 руб. - 500 руб.</legend>
           <label class="visually-hidden" for="price-range-low">Нижняя граница цены</label>
           <label class="visually-hidden" for="price-range-high">Верхняя граница цены</label>
+          <input class="visually-hidden" type="range" name="price-range-low" id="price-range-low" max="100" value="100" tabindex="-1">
+          <input class="visually-hidden" type="range" name="price-range-high" id="price-range-high" min="500" value="500" tabindex="-1">
           <div class="filters-price-range-wrapper">
-            <input type="range" name="price-range-low" id="price-range-low" max="100" value="100" tabindex="-1">
-            <span class="price-range-between" id="filters-price-range"></span>
-            <input type="range" name="price-range-high" id="price-range-high" min="500" value="500" tabindex="-1">
+            <div class="price-range-low">
+              <span class="track"></span>
+              <span class="thumb"></span>
+            </div>
+            <div class="price-range-between">
+              <span class="track"></span>
+            </div>
+            <div class="price-range-high">
+              <span class="track"></span>
+              <span class="thumb"></span>
+            </div>
           </div>
         </fieldset>
       </div>
