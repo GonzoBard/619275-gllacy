@@ -173,36 +173,51 @@
           </div>
         </fieldset>
       </div>
-      <div class="form-group form-group-fat-content">
-        <label class="title" aria-label="Жирность">Жирность:</label>
+      <div class="form-group form-group-fat-content" aria-label="Жирность">
+        <label class="title">Жирность:</label>
         <div class="fat-content-wrapper">
           <div class="checker-group">
-            <input type="radio" name="fat-content" id="fat-content-0" value="0">
+            <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-0" value="0">
             <label for="fat-content-0">0%</label>
           </div>
           <div class="checker-group">
-            <input type="radio" name="fat-content" id="fat-content-to10" value="to10" checked>
+            <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-to10" value="to10" checked>
             <label for="fat-content-to10">до 10%</label>
           </div>
           <div class="checker-group">
-            <input type="radio" name="fat-content" id="fat-content-to30" value="to30">
+            <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-to30" value="to30">
             <label for="fat-content-to30">до 30%</label>
           </div>
           <div class="checker-group">
-            <input type="radio" name="fat-content" id="fat-content-over30" value="over30">
+            <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-over30" value="over30">
             <label for="fat-content-over30">выше 30%</label>
           </div>
         </div>
       </div>
-      <div class="form-group form-group-fillers">
-        <fieldset>
-          <legend class="title">Наполнители:</legend>
-          <label><input type="checkbox" name="filler-chocolate" checked>шоколадные</label>
-          <label><input type="checkbox" name="filler-sugar-powder" checked>сахарные присыпки</label>
-          <label><input type="checkbox" name="filler-fruit">фрукты</label>
-          <label><input type="checkbox" name="filler-sirup">сиропы</label>
-          <label><input type="checkbox" name="filler-jam">джемы</label>
-        </fieldset>
+      <div class="form-group form-group-fillers" aria-label="Наполнители">
+        <label class="title">Наполнители:</label>
+        <div class="fillers-wrapper">
+          <div class="checkbox-group">
+            <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-chocolate" id="filler-chocolate" checked>
+            <label for="filler-chocolate">шоколадные</label>
+          </div>
+          <div class="checkbox-group">
+            <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-sugar-powder" id="filler-sugar-powder" checked>
+            <label for="filler-sugar-powder">сахарные присыпки</label>
+          </div>
+          <div class="checkbox-group">
+            <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-fruit" id="filler-fruit">
+            <label for="filler-fruit">фрукты</label>
+          </div>
+          <div class="checkbox-group">
+            <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-sirup" id="filler-sirup">
+            <label for="filler-sirup">сиропы</label>
+          </div>
+          <div class="checkbox-group">
+            <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-jam" id="filler-jam">
+            <label for="filler-jam">джемы</label>
+          </div>
+        </div>
       </div>
       <div class="form-group">
         <br><br>

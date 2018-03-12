@@ -620,7 +620,7 @@ a:hover, a:focus, a:active {
 }
 
 .filters-form {
-  width: 840px;
+  width: 880px;
 
   display: flex;
   flex-direction: row;
@@ -666,7 +666,7 @@ a:hover, a:focus, a:active {
   margin: 0;
 }
 
-.filters-sort-select, .filters-price-range-wrapper, .fat-content-wrapper {
+.filters-sort-select, .filters-price-range-wrapper, .fat-content-wrapper, .fillers-wrapper {
   height: 37px;
   padding-left: 15px;
   padding-right: 15px;
@@ -793,13 +793,105 @@ a:hover, a:focus, a:active {
 }
 
 .fat-content-wrapper > div {
-  padding-left: 30px;
+  padding-left: 35px;
 }
 
-.form-group-fat-content input[type="radio"] {
+.fat-content-wrapper > div:not(:last-child) {
+  margin-right: 12px;
+}
+
+.fat-content-wrapper label {
+  position: relative;
+}
+
+.fat-content-wrapper label::before,
+.fat-content-wrapper label::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.fat-content-wrapper label::before {
+  top: -3px;
+  left: -32px;
+  width: 16px;
+  height: 16px;
+  border: 4px solid #e6ebe9;
+}
+
+.fat-content-wrapper label::after {
+  top: 5px;
+  left: -24px;
+  width: 8px;
+  height: 8px;
+  background-color: #e6ebe9;
   display: none;
 }
 
+.fat-content-wrapper label:hover::before, .fat-content-wrapper-input:focus ~ label::before {
+  border-color: #ffffff;
+}
+
+.fat-content-wrapper label:hover::after, .fat-content-wrapper-input:focus ~ label::after {
+  background-color: #ffffff;
+}
+
+.fat-content-wrapper-input:checked ~ label::after {
+  display: block;
+}
+
+.fillers-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.fillers-wrapper > div:not(:last-child){
+  margin-right: 15px;
+}
+.fillers-wrapper > div{
+  padding-left: 30px;
+}
+
+.fillers-wrapper label {
+  position: relative;
+}
+.fillers-wrapper label::before, .fillers-wrapper label::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -32px;
+  width: 27px;
+  height: 23px;
+}
+.fillers-wrapper label::before {
+  background: url('../img/checkbox-off.svg') no-repeat center center;
+}
+.fillers-wrapper label:hover::before {
+  background: url('../img/checkbox-off-hover.svg') no-repeat center center;
+}
+.fillers-wrapper label::after {
+  display: none;
+  background: url('../img/checkbox-on.svg') no-repeat center center;
+}
+.fillers-wrapper label:hover::after {
+  display: none;
+  background: url('../img/checkbox-on-hover.svg') no-repeat center center;
+}
+
+.fillers-wrapper-input:checked ~ label::after {
+  display: block;
+}
+
+.fillers-wrapper-input:checked ~ label::before{
+  display: none;
+}
+
+
+.catalog{
+  margin-top: 40px;
+}
 .catalog-list {
   display: flex;
   flex-direction: row;
