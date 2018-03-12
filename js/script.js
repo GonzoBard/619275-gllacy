@@ -23,9 +23,9 @@ function changeBackground(slide_num, control) {
   }
   promoTextElem.innerHTML = promoText;
 
-  document.querySelectorAll('.slider-main-controls .active')
-    .forEach(function (elem) {
-      elem.classList.remove(activeClassName);
-    });
+  var actives = document.querySelectorAll('.slider-main-controls .active');
+  for (i = 0; i < actives.length; i++) {
+    actives[i].classList.remove(activeClassName);
+  }
   control.classList.add(activeClassName);
 }
