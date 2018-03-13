@@ -133,8 +133,7 @@
 /*}*/
 
 body {
-  /*font-family: Roboto, 'Helvetica Neue', Helvetica, sans-serif;*/
-  font-family: Roboto, "Courier New", sans-serif;
+  font-family: Roboto, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 16px;
   color: #ffffff;
 
@@ -142,10 +141,6 @@ body {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
-
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  /*justify-content: flex-start;*/
 
   background-color: #849d8f;
 }
@@ -1022,8 +1017,6 @@ a:hover, a:focus, a:active {
   border-radius: 5px;
   background-color: rgba(248, 247, 244, 0.2);
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-
-  /*border: 1px solid black;*/
 }
 
 .quick-view-wrapper {
@@ -1032,8 +1025,6 @@ a:hover, a:focus, a:active {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
-  /*border: 1px solid blue;*/
 }
 
 .quick-view-wrapper-button {
@@ -1042,9 +1033,6 @@ a:hover, a:focus, a:active {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
-  /*border: 1px solid red;*/
-
 }
 
 .catalog-item:hover .quick-view {
@@ -1215,7 +1203,7 @@ a:hover, a:focus, a:active {
   margin: 5px;
   padding-top: 28px;
   padding-left: 21px;
-  padding-right: 15px;
+  padding-right: 12px;
 
   background-color: #f8f7f4;
   border-radius: 10px;
@@ -1235,15 +1223,23 @@ a:hover, a:focus, a:active {
   padding: 0;
 }
 
+.mailing-form .form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 .mailing-form input {
   width: 368px;
-  margin: 0 10px 0 0;
+  margin: 0 11px 0 0;
 }
 
 .mailing-form .btn-usual {
-  padding-right: 18px;
-  padding-left: 18px;
-  color: #fefefe;
+  margin-top: -1px;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-bottom: 10px;
 }
 
 .mailing .btn, .contacts .btn {
