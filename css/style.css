@@ -8,7 +8,6 @@
   url('../assets/fonts/roboto-regular.ttf') format('truetype'),
   url('../assets/fonts/roboto-regular.svg#roboto-regular') format('svg');
   font-style: normal;
-  font-variant: normal;
   font-weight: normal;
 }
 
@@ -22,7 +21,6 @@
   url('../assets/fonts/roboto-italic.ttf') format('truetype'),
   url('../assets/fonts/roboto-italic.svg#roboto-italic') format('svg');
   font-style: italic;
-  font-variant: normal;
   font-weight: normal;
 }
 
@@ -36,7 +34,6 @@
   url('../assets/fonts/roboto-medium.ttf') format('truetype'),
   url('../assets/fonts/roboto-medium.svg#roboto-medium') format('svg');
   font-style: normal;
-  font-variant: normal;
   font-weight: 500;
 }
 
@@ -50,7 +47,6 @@
   url('../assets/fonts/roboto-medium-italic.ttf') format('truetype'),
   url('../assets/fonts/roboto-medium-italic.svg#roboto-medium-italic') format('svg');
   font-style: italic;
-  font-variant: normal;
   font-weight: 500;
 }
 
@@ -64,7 +60,6 @@
   url('../assets/fonts/roboto-bold.ttf') format('truetype'),
   url('../assets/fonts/roboto-bold.svg#roboto-bold') format('svg');
   font-style: normal;
-  font-variant: normal;
   font-weight: bold;
 }
 
@@ -78,7 +73,6 @@
   url('../assets/fonts/roboto-bold-italic.ttf') format('truetype'),
   url('../assets/fonts/roboto-bold-italic.svg#roboto-bold-italic') format('svg');
   font-style: italic;
-  font-variant: normal;
   font-weight: bold;
 }
 
@@ -139,7 +133,8 @@
 /*}*/
 
 body {
-  font-family: Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+  /*font-family: Roboto, 'Helvetica Neue', Helvetica, sans-serif;*/
+  font-family: Roboto, "Courier New", sans-serif;
   font-size: 16px;
   color: #ffffff;
 
@@ -184,13 +179,18 @@ body {
 }
 
 h2 {
-  font: normal normal bold 35px/41px Roboto;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
 }
 
 a {
-  font: normal normal 500 16px/18px Roboto;
-  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
   color: #ffffff;
+
+  text-decoration: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -209,7 +209,9 @@ a:hover, a:focus, a:active {
 }
 
 .btn-usual {
-  font: normal normal bold 18px/24px Roboto;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
 
   border-radius: 30px;
   padding: 10px 23px 12px;
@@ -255,7 +257,9 @@ a:hover, a:focus, a:active {
 }
 
 .btn-attract-attention {
-  font: normal normal bold 32px/44px Roboto;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
   padding: 7px 40px 12px;
@@ -310,9 +314,12 @@ a:hover, a:focus, a:active {
 }
 
 .dialog a {
-  font: normal normal 500 16px/18px Roboto;
-  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
   color: #323232;
+
+  text-decoration: none;
   border-bottom: 1px solid rgba(50, 50, 50, 0.3);
 }
 
@@ -329,7 +336,9 @@ a:hover, a:focus, a:active {
   padding: 14px;
   margin: 0 0 20px 0;
 
-  font: normal normal bold 16px/24px Roboto;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
 
   border-radius: 5px;
   border: 1px solid #d3d3d2;
@@ -348,21 +357,30 @@ a:hover, a:focus, a:active {
 }
 
 .dialog input::placeholder {
-  font: normal normal normal 16px/24px Roboto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .dialog-submenu {
-  font: normal normal bold 14px/24px Roboto;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+
   border-radius: 6px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .dialog-submenu a {
-  font: normal normal normal 13px/24px Roboto;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
 }
 
 .dialog-submenu input::placeholder {
-  font: normal normal normal 14px/14px Roboto;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
 }
 
 /* https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css */
@@ -485,14 +503,18 @@ a:hover, a:focus, a:active {
 }
 
 .header-contacts .time {
-  font: normal normal bold 14px/16px Roboto;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .header-contacts .phone {
   display: inline-block;
   padding-top: 4px;
 
-  font: normal normal bold 22px/24px Roboto;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 24px;
 }
 
 .breadcrumbs-navigation {
@@ -521,23 +543,26 @@ a:hover, a:focus, a:active {
 }
 
 .breadcrumbs-list a {
-  font: normal normal normal 14px/16px Roboto;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
 }
 
-.catalog-main-header{
-  margin: 0;
+.catalog-main-header {
+  margin: 10px 0 0;
   padding: 0;
-  margin-top: 10px;
 }
 
 .slider {
   margin-top: 260px;
 
-  font: normal normal bold 60px/60px Roboto;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 60px;
   text-align: center;
 }
 
-.slider-promo-text {
+.slider-text {
   margin-bottom: 31px;
 }
 
@@ -608,14 +633,19 @@ a:hover, a:focus, a:active {
 }
 
 .offer-item h3 {
-  font: normal normal bold 35px/41px Roboto;
   margin-top: 0;
   margin-bottom: -2px;
+
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
 }
 
 .offer-item p {
   width: 100%; /* for IE11 */
-  font: normal normal bold 18px/22px Roboto;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .offer-item h2 {
@@ -674,13 +704,18 @@ a:hover, a:focus, a:active {
 }
 
 .filters, .filters select {
-  font: normal normal 500 16px/16px Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
 }
 
 .filters .title {
-  font: normal normal 500 14px/16px Roboto;
   padding: 0 15px 7px;
   margin: 0;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .filters-sort-select, .filters-price-range-wrapper, .fat-content-wrapper, .fillers-wrapper {
@@ -927,8 +962,12 @@ a:hover, a:focus, a:active {
   height: 37px;
   margin: 0;
   padding: 0 11px;
-  font: normal normal 500 16px/18px Roboto;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
   color: #ffffff;
+
   background-color: #9cb0a4;
   border: 2px solid #ffffff;
   border-radius: 20px;
@@ -1023,18 +1062,25 @@ a:hover, a:focus, a:active {
   position: absolute;
   top: 52%;
 
-  font: normal normal bold 45px/45px Roboto;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 45px;
   word-spacing: -5px;
   text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .catalog-item .measure-unit-kg {
-  font: normal normal bold 30px/45px Roboto;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 45px;
 }
 
 .catalog-item .name {
-  font: normal normal 500 16px/22px Roboto;
   margin-top: 3px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .hits .catalog-item:before {
@@ -1055,10 +1101,12 @@ a:hover, a:focus, a:active {
 }
 
 .advantages .title {
-  font: normal normal 500 24px/30px Roboto;
-
   margin-top: 0;
   margin-bottom: 0;
+
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .advantages-list {
@@ -1076,12 +1124,12 @@ a:hover, a:focus, a:active {
   width: 44.4%;
   flex-grow: 1;
 
-  padding-left: 56px;
   margin-top: 9px;
+  padding-left: 56px;
 
-  font: normal normal normal 16px/22px Roboto;
-
-  /*border: 1px solid black;*/
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .advantage-item p {
@@ -1136,12 +1184,17 @@ a:hover, a:focus, a:active {
 }
 
 .news h2 {
-  font: normal normal 500 16px/22px Roboto;
   margin: 0 0 3px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .news a {
-  font: normal normal bold 24px/30px Roboto;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
   color: #353535;
 
   border-bottom: 2px solid #353535;
@@ -1169,9 +1222,12 @@ a:hover, a:focus, a:active {
 }
 
 .mailing p {
-  font: normal normal normal 16px/22px Roboto;
-  padding: 0;
   margin: 0 0 36px;
+  padding: 0;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .mailing-form {
@@ -1282,24 +1338,35 @@ a.paginator-next {
 }
 
 .contacts .address-text {
-  font: normal normal normal 14px/20px Roboto;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .contacts .address-value {
-  font: normal normal bold 18px/24px Roboto;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .contacts .phone-text {
-  font: normal normal normal 14px/20px Roboto;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .contacts .phone-value {
-  font: normal normal bold 18px/22px Roboto;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .contacts .phone-time {
-  font: normal normal normal 14px/22px Roboto;
   margin-bottom: 20px;
+
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .main-footer {
@@ -1311,7 +1378,7 @@ a.paginator-next {
   position: relative;
 }
 
-.main-footer-bordered:before{
+.main-footer-bordered:before {
   content: '';
   position: absolute;
   top: 0;
@@ -1418,7 +1485,9 @@ a.paginator-next {
 }
 
 .footer-navigation a {
-  font: normal normal normal 13px/18px Roboto;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 .footer-navigation .heart {
@@ -1450,7 +1519,9 @@ a.paginator-next {
 }
 
 .footer-copyright, .footer-copyright a {
-  font: normal normal normal 12px/18px Roboto;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
   color: #fefefe;
 }
 
@@ -1565,8 +1636,11 @@ a.paginator-next {
   padding-left: 20px;
   margin-bottom: 3px;
 
-  font: normal normal normal 14px/28px Roboto;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28px;
   color: #323232;
+
   border: none;
 }
 
@@ -1611,7 +1685,9 @@ a.paginator-next {
 }
 
 .site-navigation-item-menu-link {
-  font: normal normal bold 16px/18px Roboto;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .site-navigation-item-current a {
@@ -1673,9 +1749,12 @@ a.paginator-next {
 }
 
 .user-navigation-search-item, .user-navigation-login-item, .user-navigation-basket-item {
-  font: normal normal 500 14px/16px Roboto;
-  color: #ffffff;
   padding: 0;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
   text-align: left;
 }
 
@@ -1785,7 +1864,9 @@ a.paginator-next {
   padding-left: 20px;
   padding-right: 0;
 
-  font: normal normal normal 13px/16px Roboto;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
 }
 
 .user-navigation-basket-items {
@@ -1854,7 +1935,9 @@ a.paginator-next {
   margin-top: 5px;
   border-top: 1px solid #cccccc;
 
-  font: normal normal bold 15px/18px Roboto;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
   text-align: right;
 }
 
