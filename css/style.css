@@ -524,6 +524,12 @@ a:hover, a:focus, a:active {
   font: normal normal normal 14px/16px Roboto;
 }
 
+.catalog-main-header{
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
 .slider {
   margin-top: 260px;
 
@@ -664,7 +670,7 @@ a:hover, a:focus, a:active {
 }
 
 .filters {
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
 .filters, .filters select {
@@ -1199,17 +1205,50 @@ a:hover, a:focus, a:active {
 
 .paginator {
   margin-top: 80px;
+  margin-bottom: 30px;
+  align-self: flex-end;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.paginator > a:not(:first-child) {
+  margin-left: 5px;
+}
+
+.paginator > a {
+  display: inline-block;
+  line-height: 28px;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.paginator-page {
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+.paginator-page.current, .paginator-page.current:hover, .paginator-page.current:focus {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.paginator-page:hover, .paginator-page:focus {
+  color: #ffffff;
+  background-color: #9db1a5;
+}
+
+a.paginator-next {
+  padding-right: 0;
 }
 
 .paginator-prev, .paginator-next {
-  display: inline-block;
   width: 8px;
   height: 12px;
-}
-
-.paginator-prev.disabled {
-  background: transparent url('../img/icon-right-small.svg') no-repeat center center;
-  transform: rotate(180deg);
 }
 
 .paginator-prev {
@@ -1217,12 +1256,17 @@ a:hover, a:focus, a:active {
   transform: rotate(180deg);
 }
 
-.paginator-next.disabled {
+.paginator-prev.disabled {
   background: transparent url('../img/icon-right-small.svg') no-repeat center center;
+  transform: rotate(180deg);
 }
 
 .paginator-next {
   background: transparent url('../img/icon-right-small-active.svg') no-repeat center center;
+}
+
+.paginator-next.disabled {
+  background: transparent url('../img/icon-right-small.svg') no-repeat center center;
 }
 
 .contacts {
@@ -1263,6 +1307,18 @@ a:hover, a:focus, a:active {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+
+  position: relative;
+}
+
+.main-footer-bordered:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #a9bbb1;
 }
 
 .footer-social {
