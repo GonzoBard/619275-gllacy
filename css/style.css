@@ -1011,6 +1011,7 @@ a:hover, a:focus, a:active {
 
   font: normal normal bold 45px/45px Roboto;
   word-spacing: -5px;
+  text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .catalog-item .measure-unit-kg {
@@ -1200,6 +1201,8 @@ a:hover, a:focus, a:active {
   width: 8px;
   height: 12px;
 }
+
+
 
 .paginator-prev.disabled {
   background: transparent url('../img/icon-right-small.svg') no-repeat center center;
