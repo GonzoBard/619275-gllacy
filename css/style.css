@@ -170,7 +170,11 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 2.3% 0;
-  /*9px 2.3% 27px;*/
+
+  display: flex; /* for IE11 */
+  flex-direction: column; /* for IE11 */
+  justify-content: flex-start; /* for IE11 */
+  align-items: flex-start; /* for IE11 */
 }
 
 .container, .main-header, .slider, .slider-main, .offers, .hits, .catalog-list, .advantages, .advantages-list, .news-mailing-wrapper,
