@@ -177,7 +177,7 @@ body {
   align-items: flex-start; /* for IE11 */
 }
 
-.container, .main-header, .slider, .slider-main, .offers, .hits, .catalog-list, .advantages, .advantages-list, .news-mailing-wrapper,
+.container, .main-header, .slider, .slider-main, .offers, .hits, .catalog, .catalog-list, .advantages, .advantages-list, .news-mailing-wrapper,
 .news, .mailing, .main-footer, .filters, .mailing-wrapper {
   width: 100%;
   box-sizing: border-box;
@@ -518,7 +518,7 @@ a:hover, a:focus, a:active {
 }
 
 .slider {
-  margin-top: 317px;
+  margin-top: 260px;
 
   font: normal normal bold 60px/60px Roboto;
   text-align: center;
