@@ -190,9 +190,7 @@ a:hover, a:focus, a:active {
 }
 
 .btn-usual {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
+  font: normal normal bold 18px/24px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
 
   border-radius: 30px;
   padding: 10px 23px 12px;
@@ -238,9 +236,7 @@ a:hover, a:focus, a:active {
 }
 
 .btn-attract-attention {
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 44px;
+  font: normal normal bold 32px/44px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
   padding: 7px 40px 12px;
@@ -317,16 +313,10 @@ a:hover, a:focus, a:active {
   padding: 13px;
   margin: 0 0 20px 0;
 
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
+  font: normal normal bold 16px/24px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
 
   border-radius: 5px;
   border: 1px solid #d3d3d2;
-}
-
-.dialog textarea {
-  font-family: inherit; /* for IE11 */
 }
 
 .dialog input:hover, .dialog textarea:hover {
@@ -358,40 +348,34 @@ a:hover, a:focus, a:active {
 
 /* https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css */
 .dialog input::-webkit-input-placeholder, .dialog textarea::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-  font-weight: normal;
-  font-size: 16px;
+  font: normal normal normal 16px/16px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
   color: #999;
 }
 
 .dialog input:-moz-placeholder, .dialog textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  font-weight: normal;
-  font-size: 16px;
+  font: normal normal normal 16px/16px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
   color: #999;
   opacity: 1;
 }
 
 .dialog input::-moz-placeholder, .dialog textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
-  font-weight: normal;
-  font-size: 16px;
+  font: normal normal normal 16px/16px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
   color: #999;
   opacity: 1;
 }
 
 .dialog input:-ms-input-placeholder, .dialog textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  font-weight: normal;
-  font-size: 16px;
+  font: normal normal normal 16px/16px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
   color: #999;
 }
 
 .dialog input:-ms-input-placeholder, .dialog textarea:-ms-input-placeholder { /* Microsoft Edge */
-  font-weight: normal;
-  font-size: 16px;
+  font: normal normal normal 16px/16px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
   color: #999;
 }
 
 .dialog input::placeholder, .dialog textarea::placeholder { /* Most modern browsers support this now. */
-  font-weight: normal;
-  font-size: 16px;
+  font: normal normal normal 16px/16px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
   color: #999;
 }
 
@@ -706,9 +690,7 @@ a:hover, a:focus, a:active {
 }
 
 .filters, .filters select {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 16px;
+  font: normal normal 500 16px/16px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 .filters .title {
@@ -965,9 +947,7 @@ a:hover, a:focus, a:active {
   margin: 0;
   padding: 0 11px;
 
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
+  font: normal normal 500 16px/18px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
   color: #fff;
 
   background-color: #9cb0a4;
@@ -1774,9 +1754,7 @@ a.paginator-next {
 .user-navigation-search-item, .user-navigation-login-item, .user-navigation-basket-item {
   padding: 0;
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font: normal normal 500 14px/16px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
   color: #fff;
   text-align: left;
 }
