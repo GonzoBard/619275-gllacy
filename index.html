@@ -5,7 +5,7 @@
   <title>HTML Academy: Глейси</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="body-bg-slide-1">
 
 <h1 class="visually-hidden">Магазин мороженого «Глейси»</h1>
 
@@ -100,7 +100,7 @@
 
   <section class="slider">
     <h2 class="visually-hidden">Слайдер</h2>
-    <p class="slider-promo-text">
+    <p class="slider-text">
       Крем-брюле и пломбир<br>
       с малиновым джемом
     </p>
@@ -185,7 +185,7 @@
   <section class="advantages">
     <h2 class="visually-hidden">Преимущества</h2>
     <p class="title">
-      Магазин Глэйси ⏤ это онлайн- и офлайн-магазин по продаже мороженного собственного производства на развес
+      Магазин Глэйси &#8212; это онлайн- и офлайн-магазин по продаже мороженного собственного производства на развес
     </p>
     <ul class="advantages-list">
       <li class="advantage-item advantage-manufacture">
@@ -220,17 +220,19 @@
 
     <section class="mailing">
       <h2 class="visually-hidden">Рассылка</h2>
-      <p>
-        Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
-        Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-      </p>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <div class="form-group">
-          <label for="mailing-email" class="visually-hidden">Электронная почта</label>
-          <input type="email" name="email" id="mailing-email" placeholder="Электронная почта">
-          <button class="btn btn-usual">Отправить</button>
-        </div>
-      </form>
+      <div class="mailing-wrapper">
+        <p>
+          Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
+          Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+        </p>
+        <form class="mailing-form dialog" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form-group">
+            <label for="mailing-email" class="visually-hidden">Электронная почта</label>
+            <input type="email" name="email" id="mailing-email" placeholder="Электронная почта">
+            <button class="btn btn-usual">Отправить</button>
+          </div>
+        </form>
+      </div>
     </section>
 
   </div>
@@ -284,22 +286,24 @@
 
 </main>
 
-<footer class="main-footer">
+<footer class="main-footer container">
 
   <div class="footer-social">
-    <ul>
-      <li><a class="btn-social btn-social-tw" href="#">Twitter</a></li>
-      <li><a class="btn-social btn-social-in" href="#">Instagram</a></li>
-      <li><a class="btn-social btn-social-fb" href="#">Facebook</a></li>
-      <li><a class="btn-social btn-social-vk" href="#">VK</a></li>
+    <ul class="footer-social-list">
+      <li><a class="btn-social btn-social-tw" href="#" aria-label="Twitter"></a></li>
+      <li><a class="btn-social btn-social-in" href="#" aria-label="Instagram"></a></li>
+      <li><a class="btn-social btn-social-fb" href="#" aria-label="Facebook"></a></li>
+      <li><a class="btn-social btn-social-vk" href="#" aria-label="VK"></a></li>
     </ul>
   </div>
 
-  <nav>
+  <nav class="footer-navigation">
     <h2 class="visually-hidden">Навигация подвала</h2>
-    <ul class="footer-navigation">
-      <li>Картинка<br><a class="heart" href="#">Для поставщиков</a></li>
+    <ul>
+      <li><a class="heart" href="#">Для поставщиков</a></li>
       <li><a href="#">О производстве</a></li>
+    </ul>
+    <ul>
       <li><a href="#">Наши документы</a></li>
       <li><a href="#">Экологические стандарты</a></li>
     </ul>
@@ -318,6 +322,5 @@
 </footer>
 
 <script src="js/script.js"></script>
-<script>changeBackground(1, document.querySelector('.slider-main-controls .control-1'));</script>
 </body>
 </html>

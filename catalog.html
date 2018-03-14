@@ -30,7 +30,7 @@
             </ul>
             <hr>
             <ul class="site-navigation-submenu-usual">
-              <li><a>Сливочное</a></li>
+              <li><a class="active">Сливочное</a></li>
               <li><a href="#">Щербеты</a></li>
               <li><a href="#">Фруктовый лед</a></li>
               <li><a href="#">Мелорин</a></li>
@@ -128,51 +128,100 @@
 
   <nav class="breadcrumbs-navigation">
     <h2 class="visually-hidden">Навигация - «Хлебные крошки»</h2>
-    <ul class="breadcrumbs">
+    <ul class="breadcrumbs-list">
       <li><a href="index.html">Главная</a></li>
       <li><a href="catalog.html">Каталог</a></li>
       <li><a class="active" href="#">Сливочное</a></li>
     </ul>
   </nav>
 
-  <h2>Сливочное мороженое</h2>
+  <h2 class="catalog-main-header">Сливочное мороженое</h2>
 
   <aside class="filters">
     <h3 class="visually-hidden">Фильтры каталога</h3>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <div class="form-group-sort">
+    <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="form-group">
         <label class="title" for="filters-sort">Сортировка:</label>
-        <select name="sort" id="filters-sort">
-          <option value="popular" selected>по популярности</option>
-          <option value="popular">сначала недорогие</option>
-          <option value="popular">сначала дорогие</option>
-          <option value="popular">по жирности</option>
-        </select>
+        <div class="filters-sort-select-wrapper">
+          <select class="filters-sort-select" name="sort" id="filters-sort">
+            <option value="popular" selected>по популярности</option>
+            <option value="popular">сначала недорогие</option>
+            <option value="popular">сначала дорогие</option>
+            <option value="popular">по жирности</option>
+          </select>
+        </div>
       </div>
-      <div class="form-group-price-range">
-        <label class="title" for="filters-price-range">Цена: 100 руб. - 500 руб.</label>
-        <input type="range" name="price-range" id="filters-price-range">
-      </div>
-      <div class="form-group-fat-content">
+      <div class="form-group">
         <fieldset>
-          <legend class="title">Жирность:</legend>
-          <label><input type="radio" name="fat-content" value="0">0%</label>
-          <label><input type="radio" name="fat-content" value="to10" checked>до 10%</label>
-          <label><input type="radio" name="fat-content" value="to30">до 30%</label>
-          <label><input type="radio" name="fat-content" value="over30">выше 30%</label>
+          <legend class="title">Цена: 100 руб. - 500 руб.</legend>
+          <label class="visually-hidden" for="price-range-low">Нижняя граница цены</label>
+          <label class="visually-hidden" for="price-range-high">Верхняя граница цены</label>
+          <input class="visually-hidden" type="range" name="price-range-low" id="price-range-low" min="1" max="101" value="100" tabindex="-1">
+          <input class="visually-hidden" type="range" name="price-range-high" id="price-range-high" min="499" max="100000" value="500" tabindex="-1">
+          <div class="filters-price-range-wrapper">
+            <div class="price-range-low">
+              <span class="track"></span>
+              <span class="thumb"></span>
+            </div>
+            <div class="price-range-between">
+              <span class="track"></span>
+            </div>
+            <div class="price-range-high">
+              <span class="track"></span>
+              <span class="thumb"></span>
+            </div>
+          </div>
         </fieldset>
       </div>
-      <div class="form-group-fillers">
-        <fieldset>
-          <legend class="title">Наполнители:</legend>
-          <label><input type="checkbox" name="filler-chocolate" checked>шоколадные</label>
-          <label><input type="checkbox" name="filler-sugar-powder" checked>сахарные присыпки</label>
-          <label><input type="checkbox" name="filler-fruit">фрукты</label>
-          <label><input type="checkbox" name="filler-sirup">сиропы</label>
-          <label><input type="checkbox" name="filler-jam">джемы</label>
-        </fieldset>
+      <div class="form-group form-group-fat-content" aria-label="Жирность">
+        <label class="title">Жирность:</label>
+        <div class="fat-content-wrapper">
+          <div class="checker-group">
+            <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-0" value="0">
+            <label for="fat-content-0">0%</label>
+          </div>
+          <div class="checker-group">
+            <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-to10" value="to10" checked>
+            <label for="fat-content-to10">до 10%</label>
+          </div>
+          <div class="checker-group">
+            <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-to30" value="to30">
+            <label for="fat-content-to30">до 30%</label>
+          </div>
+          <div class="checker-group">
+            <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-over30" value="over30">
+            <label for="fat-content-over30">выше 30%</label>
+          </div>
+        </div>
       </div>
-      <button>Применить</button>
+      <div class="form-group form-group-fillers" aria-label="Наполнители">
+        <label class="title">Наполнители:</label>
+        <div class="fillers-wrapper">
+          <div class="checkbox-group">
+            <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-chocolate" id="filler-chocolate" checked>
+            <label for="filler-chocolate">шоколадные</label>
+          </div>
+          <div class="checkbox-group">
+            <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-sugar-powder" id="filler-sugar-powder" checked>
+            <label for="filler-sugar-powder">сахарные присыпки</label>
+          </div>
+          <div class="checkbox-group">
+            <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-fruit" id="filler-fruit">
+            <label for="filler-fruit">фрукты</label>
+          </div>
+          <div class="checkbox-group">
+            <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-sirup" id="filler-sirup">
+            <label for="filler-sirup">сиропы</label>
+          </div>
+          <div class="checkbox-group">
+            <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-jam" id="filler-jam">
+            <label for="filler-jam">джемы</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group form-group-submit">
+        <button>Применить</button>
+      </div>
     </form>
   </aside>
 
@@ -334,32 +383,34 @@
   <nav class="paginator">
     <h3 class="visually-hidden">Переключатель страниц каталога</h3>
     <a class="paginator-prev disabled" href="#" aria-label="Предыдущая страница"></a>
-    <a class="current" href="#">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
-    <a href="#">4</a>
-    <a href="#">5</a>
+    <a class="paginator-page current" href="#">1</a>
+    <a class="paginator-page" href="#">2</a>
+    <a class="paginator-page" href="#">3</a>
+    <a class="paginator-page" href="#">4</a>
+    <a class="paginator-page" href="#">5</a>
     <a class="paginator-next" href="#" aria-label="Следующая страница"></a>
   </nav>
 
 </main>
 
-<footer class="main-footer">
+<footer class="main-footer container main-footer-bordered">
 
   <div class="footer-social">
-    <ul>
-      <li><a class="btn-social btn-social-tw" href="#">Twitter</a></li>
-      <li><a class="btn-social btn-social-in" href="#">Instagram</a></li>
-      <li><a class="btn-social btn-social-fb" href="#">Facebook</a></li>
-      <li><a class="btn-social btn-social-vk" href="#">VK</a></li>
+    <ul class="footer-social-list">
+      <li><a class="btn-social btn-social-tw" href="#" aria-label="Twitter"></a></li>
+      <li><a class="btn-social btn-social-in" href="#" aria-label="Instagram"></a></li>
+      <li><a class="btn-social btn-social-fb" href="#" aria-label="Facebook"></a></li>
+      <li><a class="btn-social btn-social-vk" href="#" aria-label="VK"></a></li>
     </ul>
   </div>
 
-  <nav>
+  <nav class="footer-navigation">
     <h2 class="visually-hidden">Навигация подвала</h2>
-    <ul class="footer-navigation">
-      <li>Картинка<br><a class="heart" href="#">Для поставщиков</a></li>
+    <ul>
+      <li><a class="heart" href="#">Для поставщиков</a></li>
       <li><a href="#">О производстве</a></li>
+    </ul>
+    <ul>
       <li><a href="#">Наши документы</a></li>
       <li><a href="#">Экологические стандарты</a></li>
     </ul>
