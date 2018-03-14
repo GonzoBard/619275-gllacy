@@ -6,7 +6,7 @@ function changeBackground(slide_num, control) {
 
   var bodyElem = document.getElementsByTagName('body')[0];
   var bodyClassList = bodyElem.classList;
-  var promoTextElem = document.querySelector('.slider-promo-text');
+  var slideTextElem = document.querySelector('.slider-text');
 
   if (bodyClassList) {
     for (i = 1; i <= totalNum; i++) {
@@ -15,13 +15,13 @@ function changeBackground(slide_num, control) {
   }
   bodyClassList.add(slideTemplateClassName + slide_num);
 
-  var promoText = 'Крем-брюле и пломбир<br>с малиновым джемом';
+  var slideText = 'Крем-брюле и пломбир<br>с малиновым джемом';
   if (slide_num === 2) {
-    promoText = 'Шоколадный пломбир<br>и лимонный сорбет';
+    slideText = 'Шоколадный пломбир<br>и лимонный сорбет';
   } else if (slide_num === 3) {
-    promoText = 'Пломбир с помадкой<br>и клубничный щербет';
+    slideText = 'Пломбир с помадкой<br>и клубничный щербет';
   }
-  promoTextElem.innerHTML = promoText;
+  slideTextElem.innerHTML = slideText;
 
   var actives = document.querySelectorAll('.slider-main-controls .active');
   for (i = 0; i < actives.length; i++) {
