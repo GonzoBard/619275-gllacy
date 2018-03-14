@@ -147,10 +147,6 @@ body {
   background-color: #849d8f;
 }
 
-.main-page {
-
-}
-
 .container {
   margin: 0 auto;
   padding: 0 2.3% 0;
@@ -314,7 +310,7 @@ a:hover, a:focus, a:active {
   cursor: pointer;
 }
 
-.dialog input {
+.dialog input, .dialog textarea {
   box-sizing: border-box;
   width: 267px;
   height: 44px;
@@ -329,13 +325,17 @@ a:hover, a:focus, a:active {
   border: 1px solid #d3d3d2;
 }
 
-.dialog input:hover {
+.dialog textarea {
+  font-family: inherit; /* for IE11 */
+}
+
+.dialog input:hover, .dialog textarea:hover {
   outline: none;
   padding: 12px;
   border: 2px solid #c7c6c5;
 }
 
-.dialog input:focus {
+.dialog input:focus, .dialog textarea:focus {
   outline: none;
   padding: 12px;
   border: 2px solid #8fbdec;
@@ -357,39 +357,39 @@ a:hover, a:focus, a:active {
 }
 
 /* https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css */
-.dialog input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+.dialog input::-webkit-input-placeholder, .dialog textarea::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   font-weight: normal;
   font-size: 16px;
   color: #999;
 }
 
-.dialog input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  font-weight: normal;
-  font-size: 16px;
-  color: #999;
-  opacity: 1;
-}
-
-.dialog input::-moz-placeholder { /* Mozilla Firefox 19+ */
+.dialog input:-moz-placeholder, .dialog textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
   font-weight: normal;
   font-size: 16px;
   color: #999;
   opacity: 1;
 }
 
-.dialog input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.dialog input::-moz-placeholder, .dialog textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+  font-weight: normal;
+  font-size: 16px;
+  color: #999;
+  opacity: 1;
+}
+
+.dialog input:-ms-input-placeholder, .dialog textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
   font-weight: normal;
   font-size: 16px;
   color: #999;
 }
 
-.dialog input:-ms-input-placeholder { /* Microsoft Edge */
+.dialog input:-ms-input-placeholder, .dialog textarea:-ms-input-placeholder { /* Microsoft Edge */
   font-weight: normal;
   font-size: 16px;
   color: #999;
 }
 
-.dialog input::placeholder { /* Most modern browsers support this now. */
+.dialog input::placeholder, .dialog textarea::placeholder { /* Most modern browsers support this now. */
   font-weight: normal;
   font-size: 16px;
   color: #999;
@@ -1546,20 +1546,25 @@ a.paginator-next {
 }
 
 .modal-feedback-content {
-  margin: 0 auto;
   width: 477px;
+  margin: 0 auto;
+  padding-bottom: 25px;
 
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-wrap: wrap;
+
+  position: relative;
 }
 
 .modal-feedback-content .btn-close-modal {
-  margin: 0 0 0 auto;
-  padding: 0;
   background-color: transparent;
+
+  position: absolute;
+  top: 15px;
+  right: 9px;
 }
 
 .modal-feedback-content form {
@@ -1567,12 +1572,28 @@ a.paginator-next {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
+}
+
+.modal-feedback-content p {
+  align-self: flex-start;
+
+  margin: 0 0 25px;
+  padding: 0;
+
+  font-weight: 500;
+  font-size: 24px;
 }
 
 .modal-feedback-content textarea {
   width: 477px;
+  height: 153px;
+  margin-bottom: 25px;
+}
+
+.modal-feedback-content .btn-usual {
+  margin-left: auto;
 }
 
 .form-submenu {
