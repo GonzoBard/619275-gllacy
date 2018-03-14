@@ -350,6 +350,7 @@ a:hover, a:focus, a:active {
 .dialog input::-webkit-input-placeholder, .dialog textarea::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   font: normal normal normal 16px/16px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
   color: #999;
+  padding-top: 7px;
 }
 
 .dialog input:-moz-placeholder, .dialog textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
