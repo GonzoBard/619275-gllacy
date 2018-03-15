@@ -1688,7 +1688,8 @@ a.paginator-next {
 .footer-copyright-logo img {
   padding-left: 3px;
 }
-p.footer-copyright-text{
+
+p.footer-copyright-text {
   margin-bottom: 25px;
 }
 
@@ -1918,6 +1919,10 @@ p.footer-copyright-text{
 .site-navigation-item-menu:hover {
   background-color: rgb(247, 246, 243);
   border-radius: 18px;
+}
+
+.site-navigation-item-menu:hover .site-navigation-item-menu-link {
+  pointer-events: none;
 }
 
 .site-navigation-item-menu:active {
