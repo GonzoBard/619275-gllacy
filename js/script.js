@@ -1,4 +1,4 @@
-function changeBackground(slide_num, control) {
+function changeSlide(slide_num, control) {
 
   var totalNum = 3;
   var slideTemplateClassName = 'body-bg-slide-';
