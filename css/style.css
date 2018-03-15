@@ -475,7 +475,7 @@ a:hover, a:focus, a:active {
 .header-contacts .phone {
   display: inline-block;
   vertical-align: middle;
-  padding-top: 4px;
+  padding-top: 5px;
 
   font-weight: bold;
   font-size: 22px;
@@ -553,18 +553,24 @@ a:hover, a:focus, a:active {
 }
 
 .slider-text {
-  margin-bottom: 31px;
+  margin-bottom: 29px;
 }
 
 .slider-main {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.slider-main .btn-attract-attention {
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 .slider-main-controls {
-  margin-right: 350px;
+  margin-top: 21px;
+  margin-right: 348px;
   font-size: 0;
   line-height: 0;
 }
@@ -579,7 +585,7 @@ a:hover, a:focus, a:active {
   width: 21px;
   height: 21px;
   padding: 0;
-  margin: 0 7px 0 0;
+  margin: 0 8px 0 0;
   background-color: transparent;
   border: 2px solid #fff;
   border-radius: 50%;
@@ -602,7 +608,7 @@ a:hover, a:focus, a:active {
 }
 
 .offer-item {
-  padding: 14px 20px 23px 18px;
+  padding: 17px 14px 20px 19px;
   border-radius: 15px;
   width: 44.4%;
   flex-grow: 1;
@@ -620,6 +626,8 @@ a:hover, a:focus, a:active {
 
 .offer-item a {
   margin-top: auto;
+  margin-bottom: 3px;
+  margin-right: 7px;
   align-self: flex-end;
 }
 
@@ -634,6 +642,8 @@ a:hover, a:focus, a:active {
 
 .offer-item p {
   width: 100%; /* for IE11 */
+  margin: 16px 0 0;
+
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
@@ -1081,7 +1091,7 @@ a:hover, a:focus, a:active {
   border-radius: 50%;
 }
 
-.catalog-item a{
+.catalog-item a {
   position: relative;
   z-index: 2000;
 }
@@ -1604,7 +1614,7 @@ a.paginator-next {
   line-height: 18px;
 }
 
-.footer-copyright{
+.footer-copyright {
   color: #fefefe;
 }
 
@@ -1867,7 +1877,7 @@ a.paginator-next {
   background-color: rgba(255, 255, 255, 0.2);
   background-image: url('../img/magnifier.svg');
   background-repeat: no-repeat;
-  background-position: 9px 7px;
+  background-position: 8px 7px;
 
   border-radius: 50%;
 
@@ -1878,21 +1888,21 @@ a.paginator-next {
   background-color: rgb(248, 247, 244);
   background-image: url('../img/magnifier2.svg');
   background-repeat: no-repeat;
-  background-position: 9px 7px;
+  background-position: 8px 7px;
 
   border-radius: 50%;
 }
 
 .user-navigation-login-item {
-  width: 93px;
+  width: 92px;
   height: 32px;
   box-sizing: border-box;
-  padding-left: 44px;
+  padding-left: 43px;
 
   background-color: rgba(255, 255, 255, 0.2);
   background-image: url('../img/login.svg');
   background-repeat: no-repeat;
-  background-position: 17px 6px;
+  background-position: 16px 6px;
 
   border-radius: 33px;
 
@@ -1908,7 +1918,7 @@ a.paginator-next {
   background-color: rgb(248, 247, 244);
   background-image: url('../img/login2.svg');
   background-repeat: no-repeat;
-  background-position: 17px 6px;
+  background-position: 16px 6px;
 }
 
 .user-navigation-login-item-submenu {
@@ -1957,7 +1967,7 @@ a.paginator-next {
   width: 117px;
   height: 32px;
   box-sizing: border-box;
-  padding-left: 44px;
+  padding-left: 43px;
   margin-right: 1px;
 
   background-color: rgba(255, 255, 255, 0.2);
