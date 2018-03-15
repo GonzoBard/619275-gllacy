@@ -891,6 +891,14 @@ a:hover, a:focus, a:active {
   display: block;
 }
 
+.fat-content-wrapper-input[disabled] ~ label::before {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.fat-content-wrapper-input[disabled] ~ label::after {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
 .fillers-wrapper {
   display: flex;
   flex-direction: row;
@@ -949,17 +957,32 @@ a:hover, a:focus, a:active {
   background-position: center;
 }
 
-.fillers-wrapper-input:checked ~ label::after {
-  display: block;
-}
-
 .fillers-wrapper-input:checked ~ label::before {
   display: none;
 }
 
+.fillers-wrapper-input:checked ~ label::after {
+  display: block;
+}
+
+.fillers-wrapper-input[disabled] ~ label::before {
+  background-color: transparent;
+  background-image: url('../img/checkbox-off-hover.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.4;
+}
+
+.fillers-wrapper-input[disabled] ~ label::after {
+  background-color: transparent;
+  background-image: url('../img/checkbox-on-hover.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.4;
+}
+
 .form-group.form-group-submit {
   justify-content: flex-end;
-
 }
 
 .form-group-submit {
