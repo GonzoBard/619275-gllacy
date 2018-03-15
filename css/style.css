@@ -391,8 +391,12 @@ a:hover, a:focus, a:active {
   border: none;
 }
 
-.offers, .news-mailing-wrapper, .contacts-info, .catalog-item {
+.offers, .news-mailing-wrapper, .catalog-item {
   margin-top: 40px;
+}
+
+.advantages, .contacts-info {
+  margin-top: 39px;
 }
 
 .main-header {
@@ -1142,7 +1146,6 @@ a:hover, a:focus, a:active {
 }
 
 .advantages {
-  margin-top: 39px;
   padding: 25px 20px 24px 20px;
   color: #323232;
   background-color: #E4DAC2;
@@ -1240,7 +1243,7 @@ a:hover, a:focus, a:active {
 }
 
 .news {
-  height: 219px;
+  height: 220px;
   padding: 23px 20px 23px 20px;
 
   background-color: #fff;
@@ -1280,7 +1283,8 @@ a:hover, a:focus, a:active {
 p.news-line-1 {
   margin-top: 1px;
 }
-p.news-line-1 a{
+
+p.news-line-1 a {
   height: 26px;
 }
 
@@ -1288,7 +1292,7 @@ p.news-line-2 {
   margin-top: 2px;
 }
 
-p.news-line-2 a{
+p.news-line-2 a {
   height: 25px;
 }
 
@@ -1296,12 +1300,12 @@ p.news-line-3 {
   margin-top: 3px;
 }
 
-p.news-line-3 a{
+p.news-line-3 a {
   height: 24px;
 }
 
 .mailing {
-  margin-top: 1px;
+  margin-top: 0px;
 
   background-color: #92CDFF;
   background-image: url('../img/bg-postal.svg');
@@ -1315,7 +1319,7 @@ p.news-line-3 a{
 }
 
 .mailing-wrapper {
-  margin: 5px;
+  margin: 6px 5px 5px 6px;
   padding-top: 28px;
   padding-left: 21px;
   padding-right: 12px;
@@ -1347,13 +1351,14 @@ p.news-line-3 a{
 
 .mailing-form input {
   width: 368px;
+  margin-left: -1px;
 }
 
 .mailing-form .btn-usual {
   margin-top: -1px;
   margin-left: 11px;
-  padding-right: 16px;
-  padding-left: 16px;
+  padding-right: 19px;
+  padding-left: 19px;
   padding-bottom: 10px;
 }
 
