@@ -1081,6 +1081,11 @@ a:hover, a:focus, a:active {
   border-radius: 50%;
 }
 
+.catalog-item a{
+  position: relative;
+  z-index: 2000;
+}
+
 .catalog-item .price {
   position: absolute;
   top: 52%;
@@ -1597,6 +1602,9 @@ a.paginator-next {
   font-weight: normal;
   font-size: 12px;
   line-height: 18px;
+}
+
+.footer-copyright{
   color: #fefefe;
 }
 
