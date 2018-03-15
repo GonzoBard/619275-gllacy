@@ -1518,7 +1518,7 @@ a.paginator-next {
   line-height: 22px;
 }
 
-.contacts .btn-usual{
+.contacts .btn-usual {
   margin-top: 24px;
   align-self: stretch;
 }
@@ -1527,7 +1527,7 @@ a.paginator-next {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 
   position: relative;
 }
@@ -1543,7 +1543,8 @@ a.paginator-next {
 }
 
 .footer-social {
-  margin-right: 235px;
+  margin-left: 1px;
+  margin-top: 36px;
 }
 
 .footer-social-list {
@@ -1621,6 +1622,9 @@ a.paginator-next {
 }
 
 .footer-navigation {
+  margin-top: 33px;
+  margin-left: 236px;
+
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -1635,7 +1639,11 @@ a.paginator-next {
 }
 
 .footer-navigation ul:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 32px;
+}
+
+.footer-navigation li {
+  margin-bottom: 3px;
 }
 
 .footer-navigation a {
@@ -1658,7 +1666,7 @@ a.paginator-next {
 
   position: absolute;
   top: 2px;
-  left: -20px;
+  left: -22px;
 
   background-color: transparent;
   background-image: url('../img/heart.svg');
@@ -1668,12 +1676,20 @@ a.paginator-next {
 
 .footer-copyright {
   margin-left: auto;
-  height: 103px;
+  padding-left: 3px;
+  margin-top: 18px;
 }
 
 .footer-copyright p {
-  margin: 18px 0 0;
+  margin: 0;
   padding: 0;
+}
+
+.footer-copyright-logo img {
+  padding-left: 3px;
+}
+p.footer-copyright-text{
+  margin-bottom: 25px;
 }
 
 .footer-copyright, .footer-copyright a {
