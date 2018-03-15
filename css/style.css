@@ -391,7 +391,7 @@ a:hover, a:focus, a:active {
   border: none;
 }
 
-.offers, .advantages, .news-mailing-wrapper, .contacts-info, .catalog-item {
+.offers, .news-mailing-wrapper, .contacts-info, .catalog-item {
   margin-top: 40px;
 }
 
@@ -1107,10 +1107,10 @@ a:hover, a:focus, a:active {
   text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-.catalog-item .rur-symbol{
+.catalog-item .rur-symbol {
   display: inline-block;
   vertical-align: baseline;
-  margin-left: 3px;
+  margin-left: 4px;
 }
 
 .catalog-item .measure-unit-kg {
@@ -1142,7 +1142,8 @@ a:hover, a:focus, a:active {
 }
 
 .advantages {
-  padding: 26px 20px 23px 20px;
+  margin-top: 39px;
+  padding: 25px 20px 24px 20px;
   color: #323232;
   background-color: #E4DAC2;
   background-image: url("../img/bg-waffle.jpg");
@@ -1240,7 +1241,7 @@ a:hover, a:focus, a:active {
 
 .news {
   height: 219px;
-  padding: 24px 20px 23px 20px;
+  padding: 23px 20px 23px 20px;
 
   background-color: #fff;
   background-image: url('../img/bg-strawberry.jpg');
@@ -1256,14 +1257,47 @@ a:hover, a:focus, a:active {
   line-height: 22px;
 }
 
+.news p {
+  display: inline-block;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 .news a {
+  display: inline-block;
+  vertical-align: baseline;
+
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
   color: #353535;
 
   border-bottom: 2px solid #353535;
-  background-color: rgba(255, 255, 255, 0.8);
+}
+
+p.news-line-1 {
+  margin-top: 1px;
+}
+p.news-line-1 a{
+  height: 26px;
+}
+
+p.news-line-2 {
+  margin-top: 2px;
+}
+
+p.news-line-2 a{
+  height: 25px;
+}
+
+p.news-line-3 {
+  margin-top: 3px;
+}
+
+p.news-line-3 a{
+  height: 24px;
 }
 
 .mailing {
