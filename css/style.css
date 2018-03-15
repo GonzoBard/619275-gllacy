@@ -1086,7 +1086,7 @@ a:hover, a:focus, a:active {
 .catalog-item img {
   display: inline-block;
   vertical-align: middle;
-  margin-bottom: 2px;
+  margin-bottom: 12px;
 
   border-radius: 50%;
 }
@@ -1098,13 +1098,19 @@ a:hover, a:focus, a:active {
 
 .catalog-item .price {
   position: absolute;
-  top: 52%;
+  top: 51%;
 
   font-weight: bold;
   font-size: 45px;
   line-height: 45px;
   word-spacing: -5px;
   text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.catalog-item .rur-symbol{
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 3px;
 }
 
 .catalog-item .measure-unit-kg {
@@ -1114,7 +1120,7 @@ a:hover, a:focus, a:active {
 }
 
 .catalog-item .name {
-  margin-top: 3px;
+  margin-top: 13px;
 
   font-weight: 500;
   font-size: 16px;
