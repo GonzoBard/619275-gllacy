@@ -135,7 +135,7 @@ body {
   margin: 0 auto;
 
   font-family: Roboto, 'Helvetica Neue', Helvetica, sans-serif;
-  font-weight: normal;
+  /*font-weight: bold;*/
   font-size: 16px;
   line-height: 18px;
   color: #fff;
@@ -179,12 +179,14 @@ a:hover, a:focus, a:active {
 }
 
 .btn-usual {
-  font: normal normal bold 18px/24px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
-
   border-radius: 30px;
   padding: 10px 23px 12px;
   background-image: linear-gradient(to top, rgb(202, 56, 36) 0%, rgb(242, 104, 67) 100%);
   box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.54);
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
 
   position: relative;
   overflow: hidden;
@@ -225,14 +227,16 @@ a:hover, a:focus, a:active {
 }
 
 .btn-attract-attention {
-  font: normal normal bold 32px/44px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
-  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-
   padding: 7px 40px 12px;
 
   border-radius: 40px;
   background-image: linear-gradient(to top, #e74a35, #f26843);
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
   position: relative;
   overflow: hidden;
@@ -302,7 +306,9 @@ a:hover, a:focus, a:active {
   padding: 13px;
   margin: 0 0 20px 0;
 
-  font: normal normal bold 16px/24px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
 
   border-radius: 5px;
   border: 1px solid #d3d3d2;
@@ -337,35 +343,50 @@ a:hover, a:focus, a:active {
 
 /* https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css */
 .dialog input::-webkit-input-placeholder, .dialog textarea::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-  font: normal normal normal 16px/16px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
-  color: #999;
   padding-top: 7px;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: #999;
 }
 
 .dialog input:-moz-placeholder, .dialog textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  font: normal normal normal 16px/16px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
   color: #999;
+
   opacity: 1;
 }
 
 .dialog input::-moz-placeholder, .dialog textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
-  font: normal normal normal 16px/16px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
   color: #999;
+
   opacity: 1;
 }
 
 .dialog input:-ms-input-placeholder, .dialog textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  font: normal normal normal 16px/16px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
   color: #999;
 }
 
 .dialog input:-ms-input-placeholder, .dialog textarea:-ms-input-placeholder { /* Microsoft Edge */
-  font: normal normal normal 16px/16px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
   color: #999;
 }
 
 .dialog input::placeholder, .dialog textarea::placeholder { /* Most modern browsers support this now. */
-  font: normal normal normal 16px/16px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
   color: #999;
 }
 
@@ -375,9 +396,10 @@ a:hover, a:focus, a:active {
   box-sizing: border-box;
 }
 
-.site-navigation, .user-navigation, .breadcrumbs-list, .advantages-list, .footer-navigation ul, .catalog-list,
-.footer-social-list, .site-navigation-submenu, .user-navigation-search-item-submenu, .user-navigation-login-item-submenu,
-.user-navigation-basket-item-submenu, .site-navigation-submenu li > ul {
+.site-navigation, .site-navigation-submenu, .site-navigation-submenu-attention, .site-navigation-submenu-usual,
+.user-navigation, .breadcrumbs-list, .advantages-list, .footer-navigation ul, .catalog-list,
+.footer-social-list, .user-navigation-search-item-submenu, .user-navigation-login-item-submenu,
+.user-navigation-basket-item-submenu {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -719,7 +741,9 @@ a:hover, a:focus, a:active {
 }
 
 .filters, .filters select {
-  font: normal normal 500 16px/16px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
 }
 
 .filters .title {
@@ -1030,7 +1054,9 @@ a:hover, a:focus, a:active {
   margin: 0;
   padding: 0 12px;
 
-  font: normal normal 500 16px/18px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
   color: #fff;
 
   background-color: #9cb0a4;
@@ -1981,7 +2007,9 @@ p.footer-copyright-text {
 .user-navigation-search-item, .user-navigation-login-item, .user-navigation-basket-item {
   padding: 0;
 
-  font: normal normal 500 14px/16px Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
   color: #fff;
   text-align: left;
 }
