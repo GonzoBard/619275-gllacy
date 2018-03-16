@@ -1589,7 +1589,7 @@ a.paginator-prev, a.paginator-next {
   position: absolute;
   top: 0;
   left: 2.3%;
-  width: calc(100% - 2 * 2.3%);
+  right: 2.3%;
   height: 1px;
   background-color: #a9bbb1;
 }
