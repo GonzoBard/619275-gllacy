@@ -1850,7 +1850,6 @@ p.footer-copyright-text {
 .user-navigation > li { /* увеличенный li + на li relative + сброс z-index, для решения проблем с submenu */
   height: 36px; /* 32(высота пунктов меню из макета) + 4(отступ для submenu, вот на него и увеличиваю ширину) = 36px */
   padding-top: 4px; /* чтобы не потерять центровку на величину отступа submenu делаю отступ сверху*/
-  cursor: pointer;
 }
 
 .site-navigation .submenu {
