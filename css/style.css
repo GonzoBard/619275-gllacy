@@ -1775,8 +1775,10 @@ p.footer-copyright-text {
 
 .modal-feedback-content {
   width: 477px;
+  box-sizing: border-box;
   margin: 0 auto;
-  padding-bottom: 25px;
+  padding-top: 21px;
+  padding-bottom: 26px;
 
   display: flex;
   flex-direction: row;
@@ -1796,8 +1798,6 @@ p.footer-copyright-text {
 }
 
 .modal-feedback-content form {
-  width: 477px;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1807,7 +1807,7 @@ p.footer-copyright-text {
 .modal-feedback-content p {
   align-self: flex-start;
 
-  margin: 0 0 25px;
+  margin: 0 0 24px -2px;
   padding: 0;
 
   font-weight: 500;
@@ -1815,13 +1815,19 @@ p.footer-copyright-text {
 }
 
 .modal-feedback-content textarea {
-  width: 477px;
-  height: 153px;
+  box-sizing: border-box;
+  min-width: 428px;
+  width: 428px;
+  max-width: 428px;
+  min-height: 155px;
+  height: 155px;
+  max-height: 155px;
   margin-bottom: 25px;
 }
 
 .modal-feedback-content .btn-usual {
   margin-left: auto;
+  padding-top: 9px;
 }
 
 .form-submenu {
