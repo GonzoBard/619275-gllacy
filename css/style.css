@@ -2077,6 +2077,7 @@ p.footer-copyright-text {
 
 .login-submit {
   margin-top: -1px;
+  margin-bottom: 1px;
 
   display: flex;
   flex-direction: row;
@@ -2084,8 +2085,16 @@ p.footer-copyright-text {
   align-items: flex-start;
 }
 
+.login-submit .btn-usual{
+  margin-top: 1px;
+
+  padding-top: 11px;
+  padding-bottom: 10px;
+  padding-left: 24px;
+}
+
 .login-submit-links {
-  margin-left: 19px;
+  margin-left: 21px;
   padding: 0;
 
   display: flex;
