@@ -476,13 +476,18 @@ a:hover, a:focus, a:active {
   text-align: right;
 
   position: absolute;
-  top: 73px;
+  top: 70px;
   right: 2.3%;
 }
 
 .header-contacts p {
   margin: 0;
   padding: 0;
+}
+
+.header-contacts span{
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .header-contacts .time {
