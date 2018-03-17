@@ -427,7 +427,8 @@ a:hover, a:focus, a:active {
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
-  flex-wrap: wrap;
+
+  position: relative;
 }
 
 .main-header-logo {
@@ -473,19 +474,10 @@ a:hover, a:focus, a:active {
 
 .header-contacts {
   text-align: right;
-  flex-grow: 1;
-  width: 900px;
 
-  font-size: 0;
-  line-height: 0;
-
-  position: relative;
-}
-
-.header-contacts .positioning-unit {
   position: absolute;
-  top: -1px;
-  right: 0;
+  top: 73px;
+  right: 2.3%;
 }
 
 .header-contacts p {
