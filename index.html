@@ -260,7 +260,7 @@
         <span class="phone-value">8 812 450-25-25</span><br>
         <span class="phone-time">(с 10 до 20 ежедневно)</span>
       </p>
-      <button class="btn btn-usual" onclick="openModalFeedBack()">
+      <button class="btn btn-usual" onclick="modalFeedBack.open();">
         Форма обратной связи
       </button>
     </div>
@@ -270,7 +270,7 @@
     <div class="modal-feedback-content dialog">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p>Мы обязательно вам ответим!</p>
-      <button class="btn-close-modal" aria-label="Закрыть окно" onclick="closeModalFeedBack()">
+      <button class="btn-close-modal" aria-label="Закрыть окно" onclick="modalFeedBack.close();">
         <img src="img/x-big.svg" alt="Закрыть окно" width="18" height="17">
       </button>
       <form action="https://echo.htmlacademy.ru" method="post">

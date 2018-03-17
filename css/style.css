@@ -815,7 +815,7 @@ a:hover, a:focus, a:active {
   display: block;
   position: absolute;
   top: 13px;
-  right: 18px;
+  right: 15px;
   border: 6px solid #323232;
   border-top-width: 11px;
   border-bottom-width: 0;
@@ -1761,11 +1761,11 @@ a.paginator-prev, a.paginator-next {
   display: none;
   position: fixed;
   z-index: 3000;
-  left: 0;
   top: -100%;
+  left: 0;
   width: 100%;
   height: 100%;
-  padding-top: 100px;
+  padding-top: 8%;
   overflow: auto;
 
   /*background-color: rgb(0, 0, 0);*/
@@ -1775,6 +1775,9 @@ a.paginator-prev, a.paginator-next {
 @keyframes modal-feedback-animation-open {
   0% {
     top: -100%;
+  }
+  1% { /* for Edge */
+    top: -99%;
   }
   100% {
     top: 0;

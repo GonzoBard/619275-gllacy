@@ -30,17 +30,22 @@ function changeSlide(slide_num, control) {
   control.classList.add(activeClassName);
 }
 
-function closeModalFeedBack() {
+function ModalFeedBack() {
   var modal = document.querySelector('.modal-feedback');
+  var openClassName = 'modal-feedback-open';
+  var closeClassName = 'modal-feedback-close';
+  var timeToClose = 500; //millisec.
 
-  modal.classList.add('modal-feedback-close');
-  setTimeout(function () {
-    modal.classList.remove('modal-feedback-open');
-  }, 500);
-}
+  this.open = function () {
+    modal.classList.remove(closeClassName);
+    modal.classList.add(openClassName);
+  };
 
-function openModalFeedBack() {
-  var modal = document.querySelector('.modal-feedback');
-  modal.classList.remove('modal-feedback-close');
-  modal.classList.add('modal-feedback-open');
+  this.close = function () {
+    modal.classList.add(closeClassName);
+    setTimeout(function () {
+      modal.classList.remove(openClassName);
+    }, timeToClose);
+  };
 }
+var modalFeedBack = new ModalFeedBack();
