@@ -1088,9 +1088,8 @@ a:hover, a:focus, a:active {
 .catalog-item {
   position: relative;
 
-  width: 22.2%;
+  width: 23.35%; /* 22.2 + (2.3 * 2) / 4 */
   margin-right: 2.2%;
-  flex-grow: 1;
 
   text-align: center;
 }
@@ -1148,8 +1147,9 @@ a:hover, a:focus, a:active {
 }
 
 .catalog-item .price {
-  position: absolute;
-  top: 51%;
+  margin-top: -70px;
+  margin-bottom: 20px;
+  text-align: left;
 
   font-weight: bold;
   font-size: 45px;
