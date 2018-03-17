@@ -1772,30 +1772,12 @@ a.paginator-prev, a.paginator-next {
   /*background-color: rgba(0, 0, 0, 0.4);*/
 }
 
-@-webkit-keyframes modal-feedback-animation-open {
-  0% {
-    top: -100%;
-  }
-  100% {
-    top: 0;
-  }
-}
-
 @keyframes modal-feedback-animation-open {
   0% {
     top: -100%;
   }
   100% {
     top: 0;
-  }
-}
-
-@-webkit-keyframes modal-feedback-animation-close {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -100%;
   }
 }
 
@@ -1810,20 +1792,14 @@ a.paginator-prev, a.paginator-next {
 
 .modal-feedback-open {
   display: block;
-  -webkit-animation-name: modal-feedback-animation-open;
   animation-name: modal-feedback-animation-open;
-  -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .modal-feedback-close {
-  -webkit-animation-name: modal-feedback-animation-close;
   animation-name: modal-feedback-animation-close;
-  -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
