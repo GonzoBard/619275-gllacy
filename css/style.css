@@ -485,7 +485,7 @@ a:hover, a:focus, a:active {
   padding: 0;
 }
 
-.header-contacts span{
+.header-contacts span {
   display: inline-block;
   vertical-align: middle;
 }
@@ -1535,6 +1535,11 @@ a.paginator-prev, a.paginator-next {
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
+}
+
+.contacts span {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .contacts .phone-text {
