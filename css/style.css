@@ -72,6 +72,62 @@
   url('../assets/fonts/roboto-bold-italic.svg#roboto-bold-italic') format('svg');
 }
 
+/*body {*/
+/*border: 1px dashed red;*/
+/*}*/
+
+/*.container {*/
+/*border: 1px solid red;*/
+/*}*/
+
+/*.main-header {*/
+/*border: 1px solid white;*/
+/*}*/
+
+/*.main-navigation {*/
+/*border: 2px dashed red;*/
+/*}*/
+
+/*.site-navigation {*/
+/*border: 2px solid yellow;*/
+/*}*/
+
+/*.user-navigation {*/
+/*border: 2px solid blue;*/
+/*}*/
+
+/*.header-contacts {*/
+/*border: 2px solid blueviolet;*/
+/*}*/
+
+/*.slider-main {*/
+/*border: 1px solid black;*/
+/*}*/
+
+/*.slider-main-controls {*/
+/*border: 1px solid blue;*/
+/*}*/
+
+/*.catalog-list{*/
+/*border: 1px solid black;*/
+/*}*/
+
+/*.catalog-item{*/
+/*border: 1px solid blue;*/
+/*}*/
+
+/*.contacts-info{*/
+/*border: 1px solid black;*/
+/*}*/
+
+/*.modal-feedback-content{*/
+/*border: 1px solid red;*/
+/*}*/
+
+/*.form-submenu {*/
+/*border: 1px solid blue;*/
+/*}*/
+
 body {
   width: 1200px;
   box-sizing: border-box;
@@ -388,6 +444,7 @@ a:hover, a:focus, a:active {
 }
 
 .site-navigation {
+  width: 410px;
   margin-top: 8px;
   flex-shrink: 0;
 
@@ -395,6 +452,7 @@ a:hover, a:focus, a:active {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .site-navigation > li:first-child {
@@ -581,7 +639,6 @@ a:hover, a:focus, a:active {
   border-radius: 15px;
   width: 44.4%;
   flex-grow: 1;
-  height: 192px;
 
   display: flex;
   flex-direction: column;
@@ -618,8 +675,8 @@ a:hover, a:focus, a:active {
   line-height: 22px;
 }
 
-.offer-item h2 {
-  margin: 0;
+.offer-item .btn-usual {
+  margin-top: 44px;
 }
 
 .offer-raspberry {
@@ -2034,7 +2091,7 @@ p.footer-copyright-text {
   align-items: flex-start;
 }
 
-.login-submit .btn-usual{
+.login-submit .btn-usual {
   margin-top: 1px;
 
   padding-top: 11px;
@@ -2188,7 +2245,7 @@ p.footer-copyright-text {
 .user-navigation-basket-items .total::before {
   content: '';
   position: absolute;
-  top:0;
+  top: 0;
   left: -5px;
   right: -2px;
   width: 101%;
