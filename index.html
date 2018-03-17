@@ -89,10 +89,10 @@
   </nav>
 
   <div class="header-contacts">
-    <div class="positioning-unit">
-      <p class="time">С 10 до 20, ежедневно</p>
-      <p class="phone">8 812 450-25-25</p>
-    </div>
+    <p>
+      <span class="time">С 10 до 20, ежедневно</span><br>
+      <span class="phone">8 812 450-25-25</span>
+    </p>
   </div>
 
 </header>
@@ -212,9 +212,13 @@
 
     <section class="news">
       <h2>Новое в нашем блоге</h2>
-      <p class="news-line-1"><a href="#">10 способов сервировки</a>&nbsp;</p>
-      <p class="news-line-2"><a href="#">фруктовых щербетов к</a>&nbsp;</p><br>
-      <p class="news-line-3"><a href="#">столу</a></p>
+      <p>
+        <a href="#">
+          <span class="news-line news-line-1">10 способов сервировки</span><br>
+          <span class="news-line news-line-2">фруктовых щербетов к</span><br>
+          <span class="news-line news-line-3">столу</span>
+        </a>
+      </p>
     </section>
 
     <section class="mailing">
@@ -240,17 +244,21 @@
     <h2 class="visually-hidden">Контакты</h2>
     <img src="img/map2.png" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург. Для заказов по телефону: 8 812 450-25-25 (с 10 до 20 ежедневно)">
     <div class="contacts">
-      <p class="address-text">
-        Адрес главного офиса<br>
-        и офлайн-магазина:
+      <p>
+        <span class="address-text">
+          Адрес главного офиса<br>
+          и офлайн-магазина:
+        </span>
+        <span class="address-value">
+          ул. Большая Конюшенная<br>
+          19/8, Санкт-Петербург
+        </span>
       </p>
-      <p class="address-value">
-        ул. Большая Конюшенная<br>
-        19/8, Санкт-Петербург
+      <p>
+        <span class="phone-text">Для заказов по телефону:</span><br>
+        <span class="phone-value">8 812 450-25-25</span><br>
+        <span class="phone-time">(с 10 до 20 ежедневно)</span>
       </p>
-      <p class="phone-text">Для заказов по телефону:</p>
-      <p class="phone-value">8 812 450-25-25</p>
-      <p class="phone-time">(с 10 до 20 ежедневно)</p>
       <button class="btn btn-usual" onclick="document.getElementById('modal-feedback').style.display='block'">
         Форма обратной связи
       </button>

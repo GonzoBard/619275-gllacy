@@ -147,9 +147,9 @@ body {
   padding: 0 2.3% 0;
 
   display: flex; /* for IE11 */
-  flex-direction: column; /* for IE11 */
-  justify-content: flex-start; /* for IE11 */
-  align-items: flex-start; /* for IE11 */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 a {
@@ -427,7 +427,8 @@ a:hover, a:focus, a:active {
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
-  flex-wrap: wrap;
+
+  position: relative;
 }
 
 .main-header-logo {
@@ -444,6 +445,7 @@ a:hover, a:focus, a:active {
 }
 
 .site-navigation {
+  width: 410px;
   margin-top: 8px;
   flex-shrink: 0;
 
@@ -451,6 +453,7 @@ a:hover, a:focus, a:active {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .site-navigation > li:first-child {
@@ -471,24 +474,20 @@ a:hover, a:focus, a:active {
 
 .header-contacts {
   text-align: right;
-  flex-grow: 1;
-  width: 900px;
 
-  font-size: 0;
-  line-height: 0;
-
-  position: relative;
-}
-
-.header-contacts .positioning-unit {
   position: absolute;
-  top: -1px;
-  right: 0;
+  top: 70px;
+  right: 2.3%;
 }
 
 .header-contacts p {
   margin: 0;
   padding: 0;
+}
+
+.header-contacts span {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .header-contacts .time {
@@ -637,7 +636,6 @@ a:hover, a:focus, a:active {
   border-radius: 15px;
   width: 44.4%;
   flex-grow: 1;
-  height: 192px;
 
   display: flex;
   flex-direction: column;
@@ -674,8 +672,8 @@ a:hover, a:focus, a:active {
   line-height: 22px;
 }
 
-.offer-item h2 {
-  margin: 0;
+.offer-item .btn-usual {
+  margin-top: 44px;
 }
 
 .offer-raspberry {
@@ -1087,9 +1085,8 @@ a:hover, a:focus, a:active {
 .catalog-item {
   position: relative;
 
-  width: 22.2%;
+  width: 23.35%; /* 22.2 + (2.3 * 2) / 4 */
   margin-right: 2.2%;
-  flex-grow: 1;
 
   text-align: center;
 }
@@ -1147,8 +1144,9 @@ a:hover, a:focus, a:active {
 }
 
 .catalog-item .price {
-  position: absolute;
-  top: 51%;
+  margin-top: -70px;
+  margin-bottom: 20px;
+  text-align: left;
 
   font-weight: bold;
   font-size: 45px;
@@ -1274,7 +1272,7 @@ a:hover, a:focus, a:active {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: flex-start;
 }
 
 .news-mailing-wrapper section:first-of-type {
@@ -1289,7 +1287,6 @@ a:hover, a:focus, a:active {
 }
 
 .news {
-  height: 220px;
   padding: 23px 20px 23px 20px;
 
   background-color: #fff;
@@ -1299,7 +1296,7 @@ a:hover, a:focus, a:active {
 }
 
 .news h2 {
-  margin: 0 0 3px;
+  margin: 0 0 1px;
 
   font-weight: 500;
   font-size: 16px;
@@ -1311,52 +1308,45 @@ a:hover, a:focus, a:active {
   vertical-align: baseline;
   margin: 0;
   padding: 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  padding-bottom: 60px;
 }
 
 .news a {
-  display: inline-block;
-  vertical-align: baseline;
-
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
   color: #353535;
+}
 
+.news-line {
+  display: inline-block;
+  vertical-align: middle;
   border-bottom: 2px solid #353535;
+  /*background-color: rgba(255, 255, 255, 0.8);*/
 }
 
-p.news-line-1 {
-  margin-top: 1px;
-}
-
-p.news-line-1 a {
+.news-line-1 {
   height: 26px;
 }
 
-p.news-line-2 {
-  margin-top: 2px;
-}
-
-p.news-line-2 a {
+.news-line-2 {
+  margin-top: -2px;
   height: 25px;
 }
 
-p.news-line-3 {
-  margin-top: 3px;
-}
-
-p.news-line-3 a {
+.news-line-3 {
+  margin-top: -3px;
   height: 24px;
 }
 
 .mailing {
-  margin-top: 0px;
-
-  background-color: #92CDFF;
-  background-image: url('../img/bg-postal.svg');
-  background-repeat: no-repeat;
-  background-position: top left;
+  background-image: repeating-linear-gradient(
+    135deg,
+    #FE9E90 0px, #FE9E90 1px,
+    #FFF 1px, #FFF 8px,
+    #92CDFF 8px, #92CDFF 15px,
+    #FFF 15px, #FFF 22px,
+    #FE9E90 22px, #FE9E90 28px);
 
   display: flex;
   flex-direction: row;
@@ -1365,8 +1355,8 @@ p.news-line-3 a {
 }
 
 .mailing-wrapper {
-  margin: 6px 5px 5px 6px;
-  padding-top: 28px;
+  margin: 5px 5px 5px 6px;
+  padding-top: 29px;
   padding-left: 21px;
   padding-right: 12px;
 
@@ -1398,6 +1388,7 @@ p.news-line-3 a {
 .mailing-form input {
   width: 368px;
   margin-left: -1px;
+  margin-bottom: 35px;
 }
 
 .mailing-form .btn-usual {
@@ -1423,7 +1414,7 @@ p.news-line-3 a {
 
 .paginator {
   margin-top: 78px;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   align-self: flex-end;
 
   display: flex;
@@ -1546,6 +1537,11 @@ a.paginator-prev, a.paginator-next {
   line-height: 24px;
 }
 
+.contacts span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .contacts .phone-text {
   margin-top: 17px;
 
@@ -1596,17 +1592,22 @@ a.paginator-prev, a.paginator-next {
 
 .footer-social {
   margin-left: 1px;
-  margin-top: 36px;
+  margin-top: 26px;
+  margin-bottom: 30px;
 }
 
 .footer-social-list {
+  width: 200px;
+
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .btn-social {
+  margin-top: 10px;
   display: block;
   width: 32px;
   height: 32px;
@@ -1675,7 +1676,8 @@ a.paginator-prev, a.paginator-next {
 
 .footer-navigation {
   margin-top: 33px;
-  margin-left: 236px;
+  margin-left: 221px;
+  margin-bottom: 30px;
 
   display: flex;
   flex-direction: row;
@@ -1741,10 +1743,6 @@ a.paginator-prev, a.paginator-next {
   padding-left: 3px;
 }
 
-p.footer-copyright-text {
-  margin-bottom: 25px;
-}
-
 .footer-copyright, .footer-copyright a {
   font-weight: normal;
   font-size: 12px;
@@ -1775,8 +1773,10 @@ p.footer-copyright-text {
 
 .modal-feedback-content {
   width: 477px;
+  box-sizing: border-box;
   margin: 0 auto;
-  padding-bottom: 25px;
+  padding-top: 21px;
+  padding-bottom: 26px;
 
   display: flex;
   flex-direction: row;
@@ -1796,8 +1796,6 @@ p.footer-copyright-text {
 }
 
 .modal-feedback-content form {
-  width: 477px;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1807,7 +1805,7 @@ p.footer-copyright-text {
 .modal-feedback-content p {
   align-self: flex-start;
 
-  margin: 0 0 25px;
+  margin: 0 0 24px -2px;
   padding: 0;
 
   font-weight: 500;
@@ -1815,13 +1813,19 @@ p.footer-copyright-text {
 }
 
 .modal-feedback-content textarea {
-  width: 477px;
-  height: 153px;
+  box-sizing: border-box;
+  min-width: 428px;
+  width: 428px;
+  max-width: 428px;
+  min-height: 155px;
+  height: 155px;
+  max-height: 155px;
   margin-bottom: 25px;
 }
 
 .modal-feedback-content .btn-usual {
   margin-left: auto;
+  padding-top: 9px;
 }
 
 .form-submenu {
@@ -1844,7 +1848,6 @@ p.footer-copyright-text {
 .user-navigation > li { /* увеличенный li + на li relative + сброс z-index, для решения проблем с submenu */
   height: 36px; /* 32(высота пунктов меню из макета) + 4(отступ для submenu, вот на него и увеличиваю ширину) = 36px */
   padding-top: 4px; /* чтобы не потерять центровку на величину отступа submenu делаю отступ сверху*/
-  cursor: pointer;
 }
 
 .site-navigation .submenu {
@@ -2077,6 +2080,7 @@ p.footer-copyright-text {
 
 .login-submit {
   margin-top: -1px;
+  margin-bottom: 1px;
 
   display: flex;
   flex-direction: row;
@@ -2084,8 +2088,16 @@ p.footer-copyright-text {
   align-items: flex-start;
 }
 
+.login-submit .btn-usual {
+  margin-top: 1px;
+
+  padding-top: 11px;
+  padding-bottom: 10px;
+  padding-left: 24px;
+}
+
 .login-submit-links {
-  margin-left: 19px;
+  margin-left: 21px;
   padding: 0;
 
   display: flex;
@@ -2151,7 +2163,7 @@ p.footer-copyright-text {
 
 .user-navigation-basket-items {
   width: 540px;
-  padding-bottom: 18px;
+  padding-bottom: 22px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -2217,22 +2229,35 @@ p.footer-copyright-text {
   height: 46px;
   margin-right: 33px;
   margin-top: 5px;
-  border-top: 1px solid #cccccc;
+  margin-bottom: 1px;
 
   font-weight: bold;
   font-size: 15px;
   line-height: 18px;
   text-align: right;
+
+  position: relative;
+}
+
+.user-navigation-basket-items .total::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -5px;
+  right: -2px;
+  width: 101%;
+  height: 1px;
+  background-color: #ccc;
 }
 
 .user-navigation-basket-items .total-txt {
-  margin-top: 13px;
-  margin-bottom: 2px;
+  margin-top: 15px;
 }
 
 .user-navigation-basket-items .place-order {
   align-self: flex-end;
-  margin-right: 33px;
+  margin-right: 35px;
+  padding: 9px 15px 10px;
 }
 
 .opened .submenu {
