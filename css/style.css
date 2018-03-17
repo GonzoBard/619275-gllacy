@@ -1292,7 +1292,7 @@ a:hover, a:focus, a:active {
 }
 
 .news h2 {
-  margin: 0 0 3px;
+  margin: 0 0 1px;
 
   font-weight: 500;
   font-size: 16px;
@@ -1304,48 +1304,37 @@ a:hover, a:focus, a:active {
   vertical-align: baseline;
   margin: 0;
   padding: 0;
-  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .news a {
-  display: inline-block;
-  vertical-align: baseline;
-
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
   color: #353535;
+}
 
+.news-line {
+  display: inline-block;
+  vertical-align: middle;
   border-bottom: 2px solid #353535;
+  /*background-color: rgba(255, 255, 255, 0.8);*/
 }
 
-p.news-line-1 {
-  margin-top: 1px;
-}
-
-p.news-line-1 a {
+.news-line-1 {
   height: 26px;
 }
 
-p.news-line-2 {
-  margin-top: 2px;
-}
-
-p.news-line-2 a {
+.news-line-2 {
+  margin-top: -2px;
   height: 25px;
 }
 
-p.news-line-3 {
-  margin-top: 3px;
-}
-
-p.news-line-3 a {
+.news-line-3 {
+  margin-top: -3px;
   height: 24px;
 }
 
 .mailing {
-  margin-top: 0px;
-
   background-color: #92CDFF;
   background-image: url('../img/bg-postal.svg');
   background-repeat: no-repeat;
