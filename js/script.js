@@ -29,3 +29,18 @@ function changeSlide(slide_num, control) {
   }
   control.classList.add(activeClassName);
 }
+
+function closeModalFeedBack() {
+  var modal = document.querySelector('.modal-feedback');
+
+  modal.classList.add('modal-feedback-close');
+  setTimeout(function () {
+    modal.classList.remove('modal-feedback-open');
+  }, 500);
+}
+
+function openModalFeedBack() {
+  var modal = document.querySelector('.modal-feedback');
+  modal.classList.remove('modal-feedback-close');
+  modal.classList.add('modal-feedback-open');
+}
