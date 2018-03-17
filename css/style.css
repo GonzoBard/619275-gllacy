@@ -1592,17 +1592,22 @@ a.paginator-prev, a.paginator-next {
 
 .footer-social {
   margin-left: 1px;
-  margin-top: 36px;
+  margin-top: 26px;
+  margin-bottom: 30px;
 }
 
 .footer-social-list {
+  width: 200px;
+
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .btn-social {
+  margin-top: 10px;
   display: block;
   width: 32px;
   height: 32px;
@@ -1671,7 +1676,8 @@ a.paginator-prev, a.paginator-next {
 
 .footer-navigation {
   margin-top: 33px;
-  margin-left: 236px;
+  margin-left: 221px;
+  margin-bottom: 30px;
 
   display: flex;
   flex-direction: row;
@@ -1735,10 +1741,6 @@ a.paginator-prev, a.paginator-next {
 
 .footer-copyright-logo img {
   padding-left: 3px;
-}
-
-p.footer-copyright-text {
-  margin-bottom: 25px;
 }
 
 .footer-copyright, .footer-copyright a {
