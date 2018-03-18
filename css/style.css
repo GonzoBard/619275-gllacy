@@ -555,23 +555,22 @@ a:hover, a:focus, a:active {
   text-align: center;
 }
 
-.body-bg-slide-1 {
+.body-bg-slide-0 {
   background-color: #849d8f;
-  background-image: url('../img/bg-index-1.png');
-  background-repeat: no-repeat;
-  background-position: top center;
+  background-image: url('../img/bg-slide-0.png');
+}
+
+.body-bg-slide-1 {
+  background-color: #8996a6;
+  background-image: url('../img/bg-slide-1.png');
 }
 
 .body-bg-slide-2 {
-  background-color: #8996a6;
-  background-image: url('../img/bg-index-2.png');
-  background-repeat: no-repeat;
-  background-position: top center;
+  background-color: #9d8b84;
+  background-image: url('../img/bg-slide-2.png');
 }
 
-.body-bg-slide-3 {
-  background-color: #9d8b84;
-  background-image: url('../img/bg-index-3.png');
+.body-bg-slide-0, .body-bg-slide-1, .body-bg-slide-2 {
   background-repeat: no-repeat;
   background-position: top center;
 }

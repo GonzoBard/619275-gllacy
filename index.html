@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="body-bg-slide-1">
+<body class="body-bg-slide-0">
 
 <h1 class="visually-hidden">Магазин мороженого «Глейси»</h1>
 
@@ -107,9 +107,9 @@
     </p>
     <div class="slider-main">
       <div class="slider-main-controls">
-        <button class="control-1 active" aria-label="Слайд1 - Крем-брюле и пломбир с малиновым джемом" onclick="changeSlide(1,this)"></button>
-        <button class="control-2" aria-label="Слайд2 - Шоколадный пломбир и лимонный сорбет" onclick="changeSlide(2,this)"></button>
-        <button class="control-3" aria-label="Слайд3 - Пломбир с помадкой и клубничный щербет" onclick="changeSlide(3,this)"></button>
+        <button class="control-0 active" aria-label="Слайд1 - Крем-брюле и пломбир с малиновым джемом" onclick="sliderOfMainPage.change(this)"></button>
+        <button class="control-1" aria-label="Слайд2 - Шоколадный пломбир и лимонный сорбет" onclick="sliderOfMainPage.change(this)"></button>
+        <button class="control-2" aria-label="Слайд3 - Пломбир с помадкой и клубничный щербет" onclick="sliderOfMainPage.change(this)"></button>
       </div>
       <a href="#" class="btn btn-attract-attention">Давайте оба!</a>
     </div>
@@ -243,8 +243,8 @@
   <section class="contacts-info">
     <h2 class="visually-hidden">Контакты</h2>
     <img src="img/map2.png" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург. Для заказов по телефону: 8 812 450-25-25 (с 10 до 20 ежедневно)">
-    <!--https://yandex.ru/maps/?um=constructor%3A1a0e5b125a87ead3d51ac2b44b2b135ad915bbab62f06138aa63f32db70bba5f&source=constructorLink-->
     <!--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1a0e5b125a87ead3d51ac2b44b2b135ad915bbab62f06138aa63f32db70bba5f&amp;width=100%25&amp;height=430&amp;lang=ru_RU&amp;scroll=false"></script>-->
+    <!--https://yandex.ru/maps/?um=constructor%3A1a0e5b125a87ead3d51ac2b44b2b135ad915bbab62f06138aa63f32db70bba5f&source=constructorLink-->
     <div class="contacts">
       <p>
         <span class="address-text">
@@ -262,7 +262,7 @@
         <span class="phone-value">8 812 450-25-25</span><br>
         <span class="phone-time">(с 10 до 20 ежедневно)</span>
       </p>
-      <button class="btn btn-usual" onclick="modalFeedBack.open();">
+      <button class="btn btn-usual" onclick="feedBackModal.open();">
         Форма обратной связи
       </button>
     </div>
@@ -273,10 +273,10 @@
     <div class="modal-feedback-content dialog">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p>Мы обязательно вам ответим!</p>
-      <button class="btn-close-modal" aria-label="Закрыть окно" onclick="modalFeedBack.close();">
+      <button class="btn-close-modal" aria-label="Закрыть окно" onclick="feedBackModal.close();">
         <img src="img/x-big.svg" alt="Закрыть окно" width="18" height="17">
       </button>
-      <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="post" onsubmit="return modalFeedBack.check()">
+      <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="post" onsubmit="return feedBackModal.check()">
         <label for="feedback-name" class="visually-hidden">Как вас зовут?</label>
         <label for="feedback-email" class="visually-hidden">Ваша почта для ответа?</label>
         <label for="feedback-message" class="visually-hidden">Текст сообщения</label>

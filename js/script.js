@@ -1,36 +1,52 @@
-function changeSlide(slide_num, control) {
+function SliderOfMainPage() {
 
-  var totalNum = 3;
-  var slideTemplateClassName = 'body-bg-slide-';
-  var activeClassName = 'active';
-
-  var bodyElem = document.getElementsByTagName('body')[0];
-  var bodyClassList = bodyElem.classList;
-  var slideTextElem = document.querySelector('.slider-text');
-
-  if (bodyClassList) {
-    for (i = 1; i <= totalNum; i++) {
-      bodyClassList.remove(slideTemplateClassName + i);
+  var sliderData = [
+    {
+      'text': 'Крем-брюле и пломбир<br>с малиновым джемом',
+      'bodyClass': 'body-bg-slide-0',
+      'control': document.querySelector('.slider .control-0')
+    },
+    {
+      'text': 'Шоколадный пломбир<br>и лимонный сорбет',
+      'bodyClass': 'body-bg-slide-1',
+      'control': document.querySelector('.slider .control-1')
+    },
+    {
+      'text': 'Пломбир с помадкой<br>и клубничный щербет',
+      'bodyClass': 'body-bg-slide-2',
+      'control': document.querySelector('.slider .control-2')
     }
-  }
-  bodyClassList.add(slideTemplateClassName + slide_num);
+  ];
+  var bodyClassList = document.getElementsByTagName('body')[0].classList;
+  var textElem = document.querySelector('.slider-text');
+  var activeClassName = 'active';
+  var currentSlide = sliderData[0]; //исходное состояние => 0-слайд активен
 
-  var slideText = 'Крем-брюле и пломбир<br>с малиновым джемом';
-  if (slide_num === 2) {
-    slideText = 'Шоколадный пломбир<br>и лимонный сорбет';
-  } else if (slide_num === 3) {
-    slideText = 'Пломбир с помадкой<br>и клубничный щербет';
-  }
-  slideTextElem.innerHTML = slideText;
+  this.change = function (controlOfNextSlide) {
 
-  var actives = document.querySelectorAll('.slider-main-controls .active');
-  for (i = 0; i < actives.length; i++) {
-    actives[i].classList.remove(activeClassName);
-  }
-  control.classList.add(activeClassName);
+    if (currentSlide.control === controlOfNextSlide) {
+      return; //do nothing, если выбрали активный слайд
+    }
+
+    var nextSlide;
+    for (i = 0; i < sliderData.length; i++) {
+      if (!nextSlide && sliderData[i].control === controlOfNextSlide) {
+        nextSlide = sliderData[i];
+      }
+    }
+    bodyClassList.remove(currentSlide.bodyClass); //очищаю фон текущего слайда
+    bodyClassList.add(nextSlide.bodyClass); //назначаю фон следующего слайда
+
+    textElem.innerHTML = nextSlide.text; // назначаю текст следующего слайда
+
+    currentSlide.control.classList.remove(activeClassName); //деактивирую контрол текущего слайда
+    nextSlide.control.classList.add(activeClassName); //активирую контрол следующего слайда
+
+    currentSlide = nextSlide; // теперь следующий слайд стал текущим
+  };
 }
 
-function ModalFeedBack() {
+function FeedBackModal() {
   var modal = document.querySelector('.modal-feedback');
   var content = document.querySelector('.modal-feedback-content');
   var form = document.querySelector('.modal-feedback-form');
@@ -71,4 +87,5 @@ function ModalFeedBack() {
   };
 }
 
-var modalFeedBack = new ModalFeedBack();
+var sliderOfMainPage = new SliderOfMainPage();
+var feedBackModal = new FeedBackModal();
