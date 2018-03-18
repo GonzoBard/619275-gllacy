@@ -144,7 +144,7 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 0 2.3% 0;
+  padding: 0 2.3%;
 
   display: flex; /* for IE11 */
   flex-direction: column;
