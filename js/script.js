@@ -32,9 +32,17 @@ function changeSlide(slide_num, control) {
 
 function ModalFeedBack() {
   var modal = document.querySelector('.modal-feedback');
+  var content = document.querySelector('.modal-feedback-content');
+  var form = document.querySelector('.modal-feedback-form');
+
   var openClassName = 'modal-feedback-open';
   var closeClassName = 'modal-feedback-close';
-  var timeToClose = 500; //millisec.
+  var forShakeClassName = 'modal-shake-effect';
+  var timeToClose = 500; //ms
+  var timeToStopShake = 400; //ms
+
+  //http://emailregex.com/
+  var emailregex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   this.open = function () {
     modal.classList.remove(closeClassName);
@@ -48,22 +56,15 @@ function ModalFeedBack() {
     }, timeToClose);
   };
 
-  //http://emailregex.com/
-  var emailregex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  var modalFeedbackContent = document.querySelector('.modal-feedback-content');
-  var forShakeClassName = 'modal-shake-effect';
-  var timeToStopShake = 400; //millisec.
-
-  this.check = function (form) {
-
+  this.check = function () {
     var result = form['name'].value !== ''
       && emailregex.test(form['email'].value)
       && form['message'].value !== '';
 
     if (!result) {
-      modalFeedbackContent.classList.add(forShakeClassName);
+      content.classList.add(forShakeClassName);
       setTimeout(function () {
-        modalFeedbackContent.classList.remove(forShakeClassName);
+        content.classList.remove(forShakeClassName);
       }, timeToStopShake)
     }
     return result;
