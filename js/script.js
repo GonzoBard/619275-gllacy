@@ -4,21 +4,21 @@ function SliderOfMainPage() {
     {
       'text': 'Крем-брюле и пломбир<br>с малиновым джемом',
       'bodyClass': 'body-bg-slide-0',
-      'control': document.querySelector('.slider .control-0')
+      'control': document.getElementById('slider-main-control-0')
     },
     {
       'text': 'Шоколадный пломбир<br>и лимонный сорбет',
       'bodyClass': 'body-bg-slide-1',
-      'control': document.querySelector('.slider .control-1')
+      'control': document.getElementById('slider-main-control-1')
     },
     {
       'text': 'Пломбир с помадкой<br>и клубничный щербет',
       'bodyClass': 'body-bg-slide-2',
-      'control': document.querySelector('.slider .control-2')
+      'control': document.getElementById('slider-main-control-2')
     }
   ];
   var bodyClassList = document.getElementsByTagName('body')[0].classList;
-  var textElem = document.querySelector('.slider-text');
+  var textElem = document.getElementById('slider-text');
   var activeClassName = 'active';
   var currentSlide = sliderData[0]; //исходное состояние => 0-слайд активен
 
@@ -47,9 +47,9 @@ function SliderOfMainPage() {
 }
 
 function FeedBackModal() {
-  var modal = document.querySelector('.modal-feedback');
-  var content = document.querySelector('.modal-feedback-content');
-  var form = document.querySelector('.modal-feedback-form');
+  var modal = document.getElementById('modal-feedback');
+  var content = document.getElementById('modal-feedback-content');
+  var form = document.getElementById('modal-feedback-form');
 
   var openClassName = 'modal-feedback-open';
   var closeClassName = 'modal-feedback-close';
