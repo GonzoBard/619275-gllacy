@@ -47,5 +47,27 @@ function ModalFeedBack() {
       modal.classList.remove(openClassName);
     }, timeToClose);
   };
+
+  //http://emailregex.com/
+  var emailregex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  var modalFeedbackContent = document.querySelector('.modal-feedback-content');
+  var forShakeClassName = 'modal-shake-effect';
+  var timeToStopShake = 400; //millisec.
+
+  this.check = function (form) {
+
+    var result = form['name'].value !== ''
+      && emailregex.test(form['email'].value)
+      && form['message'].value !== '';
+
+    if (!result) {
+      modalFeedbackContent.classList.add(forShakeClassName);
+      setTimeout(function () {
+        modalFeedbackContent.classList.remove(forShakeClassName);
+      }, timeToStopShake)
+    }
+    return result;
+  };
 }
+
 var modalFeedBack = new ModalFeedBack();
