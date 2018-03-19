@@ -392,7 +392,7 @@ a:active {
 }
 
 .offers, .hits, .catalog, .catalog-list, .advantages, .advantages-list, .news-mailing-wrapper,
-.news, .mailing, .main-footer, .filters, .mailing-wrapper {
+.news, .mailing, .main-footer, .mailing-wrapper {
   width: 100%;
   box-sizing: border-box;
 }
@@ -1093,83 +1093,24 @@ a:active {
   background-color: #fff;
 }
 
-/*
-************************************************************************************************************************************
-************************************************************************************************************************************
-************************************************************************************************************************************
-************************************************************************************************************************************
-*/
-
-.offers {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.offer-item {
-  padding: 17px 14px 20px 19px;
-  border-radius: 15px;
-  width: 44.4%;
-  flex-grow: 1;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.offers article:first-of-type {
-  margin-right: 2.2%;
-}
-
-.offer-item a {
-  margin-top: auto;
-  margin-bottom: 3px;
-  margin-right: 7px;
-  align-self: flex-end;
-}
-
-.offer-item h3 {
-  margin-top: 0;
-  margin-bottom: -2px;
-
-  font-weight: bold;
-  font-size: 35px;
-  line-height: 41px;
-}
-
-.offer-item p {
-  width: 100%; /* for IE11 */
-  margin: 16px 0 0;
-
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
-}
-
-.offer-item .btn--usual {
-  margin-top: 44px;
-}
-
-.offer-raspberry {
-  background-color: #8E020C;
-  background-image: url('../img/bg-raspberry.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-origin: border-box;
-}
-
-.offer-chocolate {
-  background-color: #845F4D;
-  background-image: url('../img/bg-chocolate.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-origin: border-box;
+.catalog-filters {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 25px;
 }
 
 .filters-form {
   width: 890px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.filters-form__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
   display: flex;
   flex-direction: row;
@@ -1179,7 +1120,11 @@ a:active {
   flex-wrap: wrap;
 }
 
-.filters-form .form-group {
+.filters-form__list > li:not(:last-child) {
+  margin-right: 14px;
+}
+
+.filters-form__group {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1187,39 +1132,21 @@ a:active {
   align-content: flex-start;
 }
 
-.form-group fieldset {
+.filters-form__group fieldset {
   padding: 0;
   margin: 0;
   border: none;
 }
 
-.form-group legend {
+.filters-form__group legend {
   color: #fff;
 }
 
-.filters-form > div:not(:last-child) {
-  margin-right: 14px;
-}
-
-.filters-form div.form-group-fillers {
-  margin-right: 13px;
-}
-
-.form-group-fillers {
+.filters-form__group--fillers {
   margin-top: 14px;
 }
 
-.filters {
-  margin-top: 25px;
-}
-
-.filters, .filters select {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 16px;
-}
-
-.filters .title {
+.filters-form__title {
   padding: 0 15px 6px 16px;
   margin: 0;
 
@@ -1228,11 +1155,11 @@ a:active {
   line-height: 16px;
 }
 
-.form-group-fillers .title {
+.filters-form__title--fillers {
   padding-bottom: 7px;
 }
 
-.filters-sort-select, .filters-price-range-wrapper, .fat-content-wrapper, .fillers-wrapper {
+.filters-form__wrap {
   height: 37px;
   padding-left: 15px;
   padding-right: 15px;
@@ -1243,33 +1170,23 @@ a:active {
   box-shadow: none;
 }
 
-.fat-content-wrapper {
-  padding-left: 7px;
+.filters-price-range-wrapper, .fat-content-wrapper, .fillers-wrapper {
+  height: 37px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+  color: #fff;
+  background-color: #9db1a5;
+  border: none;
+  box-shadow: none;
 }
 
-.fillers-wrapper {
-  padding-left: 17px;
-  padding-right: 19px;
-}
-
-.filters-sort-select {
-  width: 194px;
-  -webkit-appearance: none; /* Edge, Chrome, Safari */
-  -moz-appearance: none;
-  appearance: none; /* remove default arrow */
-}
-
-.form-group select::-ms-expand {
-  display: none; /* hide the default arrow in ie10 and ie11 */
-}
-
-.filters-sort-select-wrapper {
+.filters-form__wrap--sort {
   display: inline-block;
   vertical-align: middle;
   position: relative;
 }
-
-.filters-sort-select-wrapper::before {
+.filters-form__wrap--sort::before {
   content: '';
   display: block;
   position: absolute;
@@ -1282,11 +1199,11 @@ a:active {
   border-left-color: transparent;
 }
 
-.filters-sort-select-wrapper:hover select {
+.filters-form__wrap--sort:hover select {
   color: #323232;
 }
 
-.filters-sort-select-wrapper:hover::before {
+.filters-form__wrap--sort:hover::before {
   content: '';
   display: block;
   position: absolute;
@@ -1298,6 +1215,31 @@ a:active {
   border-right-color: transparent;
   border-left-color: transparent;
   pointer-events: none;
+}
+
+.filters-form__sort {
+  width: 194px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+
+  -webkit-appearance: none; /* Edge, Chrome, Safari */
+  -moz-appearance: none;
+  appearance: none; /* remove default arrow */
+}
+
+.fat-content-wrapper {
+  padding-left: 7px;
+}
+
+.fillers-wrapper {
+  padding-left: 17px;
+  padding-right: 19px;
+}
+
+.filters-form__group select::-ms-expand {
+  display: none; /* hide the default arrow in ie10 and ie11 */
 }
 
 .filters-price-range-wrapper {
@@ -1357,10 +1299,6 @@ a:active {
 
 .price-range-high .thumb {
   left: 0;
-}
-
-.form-group-fat-content .title {
-  width: 100%;
 }
 
 .fat-content-wrapper {
@@ -1511,7 +1449,7 @@ a:active {
   opacity: 0.4;
 }
 
-.form-group.form-group-submit {
+.filters-form__group.form-group-submit {
   justify-content: flex-end;
 }
 
@@ -1547,6 +1485,81 @@ a:active {
   background-color: #eaeaea;
   color: #323232;
   box-shadow: inset 0 2px 1px 0 #696969;
+}
+
+/*
+************************************************************************************************************************************
+************************************************************************************************************************************
+************************************************************************************************************************************
+************************************************************************************************************************************
+*/
+
+.offers {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.offer-item {
+  padding: 17px 14px 20px 19px;
+  border-radius: 15px;
+  width: 44.4%;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.offers article:first-of-type {
+  margin-right: 2.2%;
+}
+
+.offer-item a {
+  margin-top: auto;
+  margin-bottom: 3px;
+  margin-right: 7px;
+  align-self: flex-end;
+}
+
+.offer-item h3 {
+  margin-top: 0;
+  margin-bottom: -2px;
+
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.offer-item p {
+  width: 100%; /* for IE11 */
+  margin: 16px 0 0;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.offer-item .btn--usual {
+  margin-top: 44px;
+}
+
+.offer-raspberry {
+  background-color: #8E020C;
+  background-image: url('../img/bg-raspberry.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: border-box;
+}
+
+.offer-chocolate {
+  background-color: #845F4D;
+  background-image: url('../img/bg-chocolate.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: border-box;
 }
 
 .catalog-list {
@@ -1675,7 +1688,7 @@ a:active {
   border-radius: 15px;
 }
 
-.advantages .title {
+.advantages .filters-form__title {
   margin-top: 0;
   margin-bottom: 0;
 
@@ -1854,7 +1867,7 @@ a:active {
   padding: 0;
 }
 
-.mailing-form .form-group {
+.mailing-form .filters-form__group {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

@@ -140,91 +140,93 @@
 
   <h2 class="catalog-main-header">Сливочное мороженое</h2>
 
-  <aside class="filters">
+  <aside class="catalog-filters">
     <h3 class="visually-hidden">Фильтры каталога</h3>
     <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
-      <div class="form-group">
-        <label class="title" for="filters-sort">Сортировка:</label>
-        <div class="filters-sort-select-wrapper">
-          <select class="filters-sort-select" name="sort" id="filters-sort">
-            <option value="popular" selected>по популярности</option>
-            <option value="popular">сначала недорогие</option>
-            <option value="popular">сначала дорогие</option>
-            <option value="popular">по жирности</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <fieldset>
-          <legend class="title">Цена: 100 руб.&nbsp;–&nbsp;500 руб.</legend>
-          <label class="visually-hidden" for="price-range-low">Нижняя граница цены</label>
-          <label class="visually-hidden" for="price-range-high">Верхняя граница цены</label>
-          <input class="visually-hidden" type="range" name="price-range-low" id="price-range-low" min="1" max="101" value="100" tabindex="-1">
-          <input class="visually-hidden" type="range" name="price-range-high" id="price-range-high" min="499" max="100000" value="500" tabindex="-1">
-          <div class="filters-price-range-wrapper">
-            <div class="price-range-low">
-              <span class="track"></span>
-              <span class="thumb"></span>
+      <ul class="filters-form__list">
+        <li class="filters-form__group">
+          <label class="filters-form__title" for="filters-form__sort">Сортировка:</label>
+          <div class="filters-form__wrap filters-form__wrap--sort">
+            <select class="filters-form__sort" name="sort" id="filters-form__sort">
+              <option value="popular" selected>по популярности</option>
+              <option value="popular">сначала недорогие</option>
+              <option value="popular">сначала дорогие</option>
+              <option value="popular">по жирности</option>
+            </select>
+          </div>
+        </li>
+        <li class="filters-form__group">
+          <fieldset>
+            <legend class="filters-form__title">Цена: 100 руб.&nbsp;–&nbsp;500 руб.</legend>
+            <label class="visually-hidden" for="price-range-low">Нижняя граница цены</label>
+            <label class="visually-hidden" for="price-range-high">Верхняя граница цены</label>
+            <input class="visually-hidden" type="range" name="price-range-low" id="price-range-low" min="1" max="101" value="100" tabindex="-1">
+            <input class="visually-hidden" type="range" name="price-range-high" id="price-range-high" min="499" max="100000" value="500" tabindex="-1">
+            <div class="filters-price-range-wrapper">
+              <div class="price-range-low">
+                <span class="track"></span>
+                <span class="thumb"></span>
+              </div>
+              <div class="price-range-between">
+                <span class="track"></span>
+              </div>
+              <div class="price-range-high">
+                <span class="track"></span>
+                <span class="thumb"></span>
+              </div>
             </div>
-            <div class="price-range-between">
-              <span class="track"></span>
+          </fieldset>
+        </li>
+        <li class="filters-form__group" aria-label="Жирность">
+          <label class="filters-form__title">Жирность:</label>
+          <div class="fat-content-wrapper">
+            <div class="checker-group">
+              <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-0" value="0">
+              <label for="fat-content-0">0%</label>
             </div>
-            <div class="price-range-high">
-              <span class="track"></span>
-              <span class="thumb"></span>
+            <div class="checker-group">
+              <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-to10" value="to10" checked>
+              <label for="fat-content-to10">до 10%</label>
+            </div>
+            <div class="checker-group">
+              <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-to30" value="to30">
+              <label for="fat-content-to30">до 30%</label>
+            </div>
+            <div class="checker-group">
+              <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-over30" value="over30">
+              <label for="fat-content-over30">выше 30%</label>
             </div>
           </div>
-        </fieldset>
-      </div>
-      <div class="form-group form-group-fat-content" aria-label="Жирность">
-        <label class="title">Жирность:</label>
-        <div class="fat-content-wrapper">
-          <div class="checker-group">
-            <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-0" value="0">
-            <label for="fat-content-0">0%</label>
+        </li>
+        <li class="filters-form__group filters-form__group--fillers" aria-label="Наполнители">
+          <label class="filters-form__title filters-form__title--fillers">Наполнители:</label>
+          <div class="fillers-wrapper">
+            <div class="checkbox-group">
+              <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-chocolate" id="filler-chocolate" checked>
+              <label for="filler-chocolate">шоколадные</label>
+            </div>
+            <div class="checkbox-group">
+              <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-sugar-powder" id="filler-sugar-powder" checked>
+              <label for="filler-sugar-powder">сахарные присыпки</label>
+            </div>
+            <div class="checkbox-group checkbox-group-fruit">
+              <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-fruit" id="filler-fruit">
+              <label for="filler-fruit">фрукты</label>
+            </div>
+            <div class="checkbox-group">
+              <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-sirup" id="filler-sirup">
+              <label for="filler-sirup">сиропы</label>
+            </div>
+            <div class="checkbox-group">
+              <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-jam" id="filler-jam">
+              <label for="filler-jam">джемы</label>
+            </div>
           </div>
-          <div class="checker-group">
-            <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-to10" value="to10" checked>
-            <label for="fat-content-to10">до 10%</label>
-          </div>
-          <div class="checker-group">
-            <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-to30" value="to30">
-            <label for="fat-content-to30">до 30%</label>
-          </div>
-          <div class="checker-group">
-            <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-over30" value="over30">
-            <label for="fat-content-over30">выше 30%</label>
-          </div>
-        </div>
-      </div>
-      <div class="form-group form-group-fillers" aria-label="Наполнители">
-        <label class="title">Наполнители:</label>
-        <div class="fillers-wrapper">
-          <div class="checkbox-group">
-            <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-chocolate" id="filler-chocolate" checked>
-            <label for="filler-chocolate">шоколадные</label>
-          </div>
-          <div class="checkbox-group">
-            <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-sugar-powder" id="filler-sugar-powder" checked>
-            <label for="filler-sugar-powder">сахарные присыпки</label>
-          </div>
-          <div class="checkbox-group checkbox-group-fruit">
-            <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-fruit" id="filler-fruit">
-            <label for="filler-fruit">фрукты</label>
-          </div>
-          <div class="checkbox-group">
-            <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-sirup" id="filler-sirup">
-            <label for="filler-sirup">сиропы</label>
-          </div>
-          <div class="checkbox-group">
-            <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-jam" id="filler-jam">
-            <label for="filler-jam">джемы</label>
-          </div>
-        </div>
-      </div>
-      <div class="form-group form-group-submit">
-        <button>Применить</button>
-      </div>
+        </li>
+        <li class="filters-form__group form-group-submit">
+          <button>Применить</button>
+        </li>
+      </ul>
     </form>
   </aside>
 
