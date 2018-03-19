@@ -14,11 +14,11 @@
 
   <nav class="main-nav">
     <h2 class="visually-hidden">Основная навигация</h2>
-    <a class="main-nav__logo">
+    <a class="main-nav__logo" href="index.html">
       <img src="img/logo.svg" alt="Логотип магазина мороженого «Глейси»" width="154" height="64">
     </a>
     <ul class="site-nav">
-      <li class="site-nav__wrap">
+      <li class="site-nav__wrap site-nav__wrap--current">
         <div class="site-nav__control-wrap">
           <a class="site-nav__control" href="#">Каталог</a>
         </div>
@@ -29,7 +29,7 @@
             </ul>
             <hr>
             <ul class="site-nav__inner">
-              <li class="site-nav__item"><a href="catalog.html">Сливочное</a></li>
+              <li class="site-nav__item site-nav__item--current"><a>Сливочное</a></li>
               <li class="site-nav__item"><a href="#">Щербеты</a></li>
               <li class="site-nav__item"><a href="#">Фруктовый лед</a></li>
               <li class="site-nav__item"><a href="#">Мелорин</a></li>
@@ -82,7 +82,7 @@
       </li>
       <li class="user-nav__item user-nav__item--basket-not-empty">
         <button class="user-nav__control user-nav__control--basket">2 товара</button>
-        <ul class="user-nav__submenu user-nav__submenu--basket dialog dialog--submenu">
+        <ul class="user-nav__submenu user-nav__submenu--basket dialog">
           <li class="user-navigation-basket-items">
             <table class="user-navigation-basket-items-table">
               <tr>

@@ -723,7 +723,6 @@ a:active {
   padding: 0;
 
   display: none;
-  box-sizing: border-box;
   position: absolute;
   top: 40px; /* 36 + 4 = 40px */
 
@@ -742,8 +741,9 @@ a:active {
 }
 
 .user-nav__submenu--login {
-  width: 277px;
   left: -184px;
+  box-sizing: border-box;
+  width: 277px;
   padding: 20px 13px 20px 19px;
 }
 
