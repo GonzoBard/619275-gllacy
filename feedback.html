@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Глейси</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<section class="feedback feedback--no-js" id="modal-feedback">
+  <div class="feedback__content dialog" id="feedback__content">
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <p>Мы обязательно вам ответим!</p>
+    <form class="feedback-form" id="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      <label for="feedback-form__name" class="visually-hidden">Как вас зовут?</label>
+      <label for="feedback-form__email" class="visually-hidden">Ваша почта для ответа?</label>
+      <label for="feedback-form__message" class="visually-hidden">Текст сообщения</label>
+      <input type="text" name="name" id="feedback-form__name" placeholder="Как вас зовут?" required>
+      <input type="email" name="email" id="feedback-form__email" placeholder="Ваша почта для ответа?" required>
+      <textarea class="feedback-form__message" name="message" id="feedback-form__message" placeholder="Напишите что-нибудь..." required></textarea>
+      <button class="btn btn--usual">Отправить</button>
+    </form>
+  </div>
+</section>
+
+</body>
+</html>
