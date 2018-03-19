@@ -146,8 +146,8 @@
       <ul class="filters-form__list">
         <li class="filters-form__group">
           <label class="filters-form__title" for="filters-form__sort">Сортировка:</label>
-          <div class="filters-form__wrap filters-form__wrap--sort">
-            <select class="filters-form__sort" name="sort" id="filters-form__sort">
+          <div class="filters-form__sort-wrap">
+            <select class="filters-form__wrap filters-form__sort" name="sort" id="filters-form__sort">
               <option value="popular" selected>по популярности</option>
               <option value="popular">сначала недорогие</option>
               <option value="popular">сначала дорогие</option>
@@ -158,19 +158,19 @@
         <li class="filters-form__group">
           <fieldset>
             <legend class="filters-form__title">Цена: 100 руб.&nbsp;–&nbsp;500 руб.</legend>
-            <label class="visually-hidden" for="price-range-low">Нижняя граница цены</label>
-            <label class="visually-hidden" for="price-range-high">Верхняя граница цены</label>
-            <input class="visually-hidden" type="range" name="price-range-low" id="price-range-low" min="1" max="101" value="100" tabindex="-1">
-            <input class="visually-hidden" type="range" name="price-range-high" id="price-range-high" min="499" max="100000" value="500" tabindex="-1">
-            <div class="filters-price-range-wrapper">
-              <div class="price-range-low">
+            <label class="visually-hidden" for="filters-form__price-range-low">Нижняя граница цены</label>
+            <label class="visually-hidden" for="filters-form__price-range-high">Верхняя граница цены</label>
+            <input class="visually-hidden" type="range" name="price-range-low" id="filters-form__price-range-low" min="1" max="101" value="100" tabindex="-1">
+            <input class="visually-hidden" type="range" name="price-range-high" id="filters-form__price-range-high" min="499" max="100000" value="500" tabindex="-1">
+            <div class="filters-form__wrap filters-form__wrap--price-range">
+              <div class="filters-form__price-range-low">
                 <span class="track"></span>
                 <span class="thumb"></span>
               </div>
-              <div class="price-range-between">
+              <div class="filters-form__price-range-between">
                 <span class="track"></span>
               </div>
-              <div class="price-range-high">
+              <div class="filters-form__price-range-high">
                 <span class="track"></span>
                 <span class="thumb"></span>
               </div>
@@ -179,28 +179,28 @@
         </li>
         <li class="filters-form__group" aria-label="Жирность">
           <label class="filters-form__title">Жирность:</label>
-          <div class="fat-content-wrapper">
-            <div class="checker-group">
-              <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-0" value="0">
+          <ul class="filters-form__wrap filters-form__wrap--fat-content">
+            <li class="checker-group">
+              <input class="filters-form__fat-content-input visually-hidden" type="radio" name="fat-content" id="fat-content-0" value="0">
               <label for="fat-content-0">0%</label>
-            </div>
-            <div class="checker-group">
-              <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-to10" value="to10" checked>
+            </li>
+            <li class="checker-group">
+              <input class="filters-form__fat-content-input visually-hidden" type="radio" name="fat-content" id="fat-content-to10" value="to10" checked>
               <label for="fat-content-to10">до 10%</label>
-            </div>
-            <div class="checker-group">
-              <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-to30" value="to30">
+            </li>
+            <li class="checker-group">
+              <input class="filters-form__fat-content-input visually-hidden" type="radio" name="fat-content" id="fat-content-to30" value="to30">
               <label for="fat-content-to30">до 30%</label>
-            </div>
-            <div class="checker-group">
-              <input class="fat-content-wrapper-input visually-hidden" type="radio" name="fat-content" id="fat-content-over30" value="over30">
+            </li>
+            <li class="checker-group">
+              <input class="filters-form__fat-content-input visually-hidden" type="radio" name="fat-content" id="fat-content-over30" value="over30">
               <label for="fat-content-over30">выше 30%</label>
-            </div>
-          </div>
+            </li>
+          </ul>
         </li>
         <li class="filters-form__group filters-form__group--fillers" aria-label="Наполнители">
           <label class="filters-form__title filters-form__title--fillers">Наполнители:</label>
-          <div class="fillers-wrapper">
+          <div class="filters-form__wrap filters-form__wrap--fillers">
             <div class="checkbox-group">
               <input class="fillers-wrapper-input visually-hidden" type="checkbox" name="filler-chocolate" id="filler-chocolate" checked>
               <label for="filler-chocolate">шоколадные</label>
