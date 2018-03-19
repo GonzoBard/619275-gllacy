@@ -266,21 +266,20 @@
     </div>
   </section>
 
-
-  <section class="modal-feedback" id="modal-feedback">
-    <div class="modal-feedback-content dialog" id="modal-feedback-content">
+  <section class="feedback" id="modal-feedback">
+    <div class="feedback__content dialog" id="feedback__content">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p>Мы обязательно вам ответим!</p>
-      <button class="btn-close-modal" aria-label="Закрыть окно" onclick="feedBackModal.close();">
+      <button class="feedback__btn-close" aria-label="Закрыть окно" onclick="feedBackModal.close();">
         <img src="img/x-big.svg" alt="Закрыть окно" width="18" height="17">
       </button>
-      <form class="modal-feedback-form" id="modal-feedback-form" action="https://echo.htmlacademy.ru" method="post" onsubmit="return feedBackModal.check()">
-        <label for="feedback-name" class="visually-hidden">Как вас зовут?</label>
-        <label for="feedback-email" class="visually-hidden">Ваша почта для ответа?</label>
-        <label for="feedback-message" class="visually-hidden">Текст сообщения</label>
-        <input type="text" name="name" id="feedback-name" placeholder="Как вас зовут?">
-        <input type="text" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
-        <textarea name="message" id="feedback-message" placeholder="Напишите что-нибудь..."></textarea>
+      <form class="feedback-form" id="feedback-form" action="https://echo.htmlacademy.ru" method="post" onsubmit="return feedBackModal.check()">
+        <label for="feedback-form__name" class="visually-hidden">Как вас зовут?</label>
+        <label for="feedback-form__email" class="visually-hidden">Ваша почта для ответа?</label>
+        <label for="feedback-form__message" class="visually-hidden">Текст сообщения</label>
+        <input type="text" name="name" id="feedback-form__name" placeholder="Как вас зовут?">
+        <input type="text" name="email" id="feedback-form__email" placeholder="Ваша почта для ответа?">
+        <textarea class="feedback-form__message" name="message" id="feedback-form__message" placeholder="Напишите что-нибудь..."></textarea>
         <button class="btn btn--usual">Отправить</button>
       </form>
     </div>
@@ -288,32 +287,32 @@
 
 </main>
 
-<footer class="main-footer container">
+<footer class="page-footer container">
 
   <div class="footer-social">
-    <ul class="footer-social-list">
-      <li><a class="btn-social btn-social-tw" href="#" aria-label="Twitter"></a></li>
-      <li><a class="btn-social btn-social-in" href="#" aria-label="Instagram"></a></li>
-      <li><a class="btn-social btn-social-fb" href="#" aria-label="Facebook"></a></li>
-      <li><a class="btn-social btn-social-vk" href="#" aria-label="VK"></a></li>
+    <ul class="footer-social__list">
+      <li><a class="btn-social btn-social--tw" href="#" aria-label="Twitter"></a></li>
+      <li><a class="btn-social btn-social--in" href="#" aria-label="Instagram"></a></li>
+      <li><a class="btn-social btn-social--fb" href="#" aria-label="Facebook"></a></li>
+      <li><a class="btn-social btn-social--vk" href="#" aria-label="VK"></a></li>
     </ul>
   </div>
 
-  <nav class="footer-navigation">
+  <nav class="footer-nav">
     <h2 class="visually-hidden">Навигация подвала</h2>
-    <ul>
+    <ul class="footer-nav__list">
       <li><a class="heart" href="#">Для поставщиков</a></li>
       <li><a href="#">О производстве</a></li>
     </ul>
-    <ul>
+    <ul class="footer-nav__list">
       <li><a href="#">Наши документы</a></li>
       <li><a href="#">Экологические стандарты</a></li>
     </ul>
   </nav>
 
   <div class="footer-copyright">
-    <p class="footer-copyright-logo">
-      <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на лендинг интенсива «Профессиональный HTML и CSS, уровень 1»" target="_blank">
+    <p>
+      <a class="footer-copyright__logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на лендинг интенсива «Профессиональный HTML и CSS, уровень 1»" target="_blank">
         <img src="img/logo-htmlacademy.svg" alt="Логотип HTML-Academy" width="108" height="39">
       </a>
     </p>

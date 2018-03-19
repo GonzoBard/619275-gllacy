@@ -93,7 +93,7 @@
                   <img src="img/ice-cream/b-1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33">
                 </td>
                 <td class="basket-table__item-name">Пломбир с апельсиновым джемом</td>
-                <td class="basket-table__calc">1,5 кг x <span class="catalog-item__price">200 руб.</span></td>
+                <td class="basket-table__calc">1,5 кг x <span class="basket-table__item-price">200 руб.</span></td>
                 <td class="basket-table__item-cost">300 руб.</td>
               </tr>
               <tr>
@@ -104,7 +104,7 @@
                   <img src="img/ice-cream/b-2.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33">
                 </td>
                 <td class="basket-table__item-name">Клубничный пломбир с присыпкой<br>из белого шоколада</td>
-                <td class="basket-table__calc">1,5 кг x <span class="catalog-item__price">300 руб.</span></td>
+                <td class="basket-table__calc">1,5 кг x <span class="basket-table__item-price">300 руб.</span></td>
                 <td class="basket-table__item-cost">450 руб.</td>
               </tr>
             </table>
@@ -385,45 +385,45 @@
 
   </section>
 
-  <nav class="paginator">
+  <nav class="pag">
     <h3 class="visually-hidden">Переключатель страниц каталога</h3>
-    <a class="paginator-prev disabled" href="#" aria-label="Предыдущая страница"></a>
-    <a class="paginator-page current" href="#">1</a>
-    <a class="paginator-page" href="#">2</a>
-    <a class="paginator-page" href="#">3</a>
-    <a class="paginator-page" href="#">4</a>
-    <a class="paginator-page" href="#">5</a>
-    <a class="paginator-next" href="#" aria-label="Следующая страница"></a>
+    <a class="pag__prev pag__prev--not-active" href="#" aria-label="Предыдущая страница"></a>
+    <a class="pag__page pag__page--current" href="#">1</a>
+    <a class="pag__page" href="#">2</a>
+    <a class="pag__page" href="#">3</a>
+    <a class="pag__page" href="#">4</a>
+    <a class="pag__page" href="#">5</a>
+    <a class="pag__next" href="#" aria-label="Следующая страница"></a>
   </nav>
 
 </main>
 
-<footer class="main-footer container main-footer-bordered">
+<footer class="page-footer page-footer--bordered container">
 
   <div class="footer-social">
-    <ul class="footer-social-list">
-      <li><a class="btn-social btn-social-tw" href="#" aria-label="Twitter"></a></li>
-      <li><a class="btn-social btn-social-in" href="#" aria-label="Instagram"></a></li>
-      <li><a class="btn-social btn-social-fb" href="#" aria-label="Facebook"></a></li>
-      <li><a class="btn-social btn-social-vk" href="#" aria-label="VK"></a></li>
+    <ul class="footer-social__list">
+      <li><a class="btn-social btn-social--tw" href="#" aria-label="Twitter"></a></li>
+      <li><a class="btn-social btn-social--in" href="#" aria-label="Instagram"></a></li>
+      <li><a class="btn-social btn-social--fb" href="#" aria-label="Facebook"></a></li>
+      <li><a class="btn-social btn-social--vk" href="#" aria-label="VK"></a></li>
     </ul>
   </div>
 
-  <nav class="footer-navigation">
+  <nav class="footer-nav">
     <h2 class="visually-hidden">Навигация подвала</h2>
-    <ul>
+    <ul class="footer-nav__list">
       <li><a class="heart" href="#">Для поставщиков</a></li>
       <li><a href="#">О производстве</a></li>
     </ul>
-    <ul>
+    <ul class="footer-nav__list">
       <li><a href="#">Наши документы</a></li>
       <li><a href="#">Экологические стандарты</a></li>
     </ul>
   </nav>
 
   <div class="footer-copyright">
-    <p class="footer-copyright-logo">
-      <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на лендинг интенсива «Профессиональный HTML и CSS, уровень 1»" target="_blank">
+    <p>
+      <a class="footer-copyright__logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на лендинг интенсива «Профессиональный HTML и CSS, уровень 1»" target="_blank">
         <img src="img/logo-htmlacademy.svg" alt="Логотип HTML-Academy" width="108" height="39">
       </a>
     </p>

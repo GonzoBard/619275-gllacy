@@ -48,12 +48,12 @@ function SliderOfMainPage() {
 
 function FeedBackModal() {
   var modal = document.getElementById('modal-feedback');
-  var content = document.getElementById('modal-feedback-content');
-  var form = document.getElementById('modal-feedback-form');
+  var content = document.getElementById('feedback__content');
+  var form = document.getElementById('feedback-form');
 
-  var openClassName = 'modal-feedback-open';
-  var closeClassName = 'modal-feedback-close';
-  var forShakeClassName = 'modal-shake-effect';
+  var openClassName = 'feedback--open';
+  var closeClassName = 'feedback--close';
+  var forShakeClassName = 'shake-effect';
   var timeToClose = 500; //ms
   var timeToStopShake = 400; //ms
 
