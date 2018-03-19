@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="body-bg-slide-0">
+<body class="body-bg body-bg--0">
 
 <h1 class="visually-hidden">Магазин мороженого «Глейси»</h1>
 
@@ -88,8 +88,8 @@
 
   <div class="header-contacts">
     <p>
-      <span class="time">С 10 до 20, ежедневно</span><br>
-      <span class="phone">8 812 450-25-25</span>
+      <span class="header-contacts__time">С 10 до 20, ежедневно</span><br>
+      <span class="header-contacts__phone">8 812 450-25-25</span>
     </p>
   </div>
 
@@ -97,17 +97,17 @@
 
 <main class="container">
 
-  <section class="slider">
+  <section class="main-bg-slider">
     <h2 class="visually-hidden">Слайдер</h2>
-    <p class="slider-text" id="slider-text">
+    <p class="main-bg-slider__text" id="main-bg-slider__text">
       Крем-брюле и пломбир<br>
       с малиновым джемом
     </p>
-    <div class="slider-main">
-      <div class="slider-main-controls">
-        <button id="slider-main-control-0" class="active" aria-label="Слайд1 - Крем-брюле и пломбир с малиновым джемом" onclick="sliderOfMainPage.change(this)"></button>
-        <button id="slider-main-control-1" aria-label="Слайд2 - Шоколадный пломбир и лимонный сорбет" onclick="sliderOfMainPage.change(this)"></button>
-        <button id="slider-main-control-2" aria-label="Слайд3 - Пломбир с помадкой и клубничный щербет" onclick="sliderOfMainPage.change(this)"></button>
+    <div class="main-bg-slider__wrap">
+      <div class="main-bg-slider__controls">
+        <button id="main-bg-slider__control-0" class="main-bg-slider__control main-bg-slider__control--active" aria-label="Слайд1 - Крем-брюле и пломбир с малиновым джемом" onclick="sliderOfMainPage.change(this)"></button>
+        <button id="main-bg-slider__control-1" class="main-bg-slider__control" aria-label="Слайд2 - Шоколадный пломбир и лимонный сорбет" onclick="sliderOfMainPage.change(this)"></button>
+        <button id="main-bg-slider__control-2" class="main-bg-slider__control" aria-label="Слайд3 - Пломбир с помадкой и клубничный щербет" onclick="sliderOfMainPage.change(this)"></button>
       </div>
       <a href="#" class="btn btn--attract-attention">Давайте оба!</a>
     </div>

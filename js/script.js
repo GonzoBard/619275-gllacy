@@ -3,23 +3,23 @@ function SliderOfMainPage() {
   var sliderData = [
     {
       'text': 'Крем-брюле и пломбир<br>с малиновым джемом',
-      'bodyClass': 'body-bg-slide-0',
-      'control': document.getElementById('slider-main-control-0')
+      'bodyClass': 'body-bg--0',
+      'control': document.getElementById('main-bg-slider__control-0')
     },
     {
       'text': 'Шоколадный пломбир<br>и лимонный сорбет',
-      'bodyClass': 'body-bg-slide-1',
-      'control': document.getElementById('slider-main-control-1')
+      'bodyClass': 'body-bg--1',
+      'control': document.getElementById('main-bg-slider__control-1')
     },
     {
       'text': 'Пломбир с помадкой<br>и клубничный щербет',
-      'bodyClass': 'body-bg-slide-2',
-      'control': document.getElementById('slider-main-control-2')
+      'bodyClass': 'body-bg--2',
+      'control': document.getElementById('main-bg-slider__control-2')
     }
   ];
+  var textElem = document.getElementById('main-bg-slider__text');
+  var activeClassName = 'main-bg-slider__control--active';
   var bodyClassList = document.getElementsByTagName('body')[0].classList;
-  var textElem = document.getElementById('slider-text');
-  var activeClassName = 'active';
   var currentSlide = sliderData[0]; //исходное состояние => 0-слайд активен
 
   this.change = function (controlOfNextSlide) {
