@@ -50,10 +50,10 @@
     </ul>
     <ul class="user-nav">
       <li class="user-nav__item">
-        <button class="user-nav__search-control" aria-label="Поиск"></button>
-        <ul class="user-nav__submenu--search submenu">
+        <button class="user-nav__control user-nav__control--search" aria-label="Поиск"></button>
+        <ul class="user-nav__submenu user-nav__submenu--search">
           <li>
-            <form class="form-submenu dialog" action="https://echo.htmlacademy.ru" method="post">
+            <form class="user-nav__form user-nav__form--search dialog" action="https://echo.htmlacademy.ru" method="post">
               <label for="search-request-field" class="visually-hidden">Поле поиска</label>
               <input type="text" name="search-request" id="search-request-field" placeholder="Что ищем?">
             </form>
@@ -61,10 +61,10 @@
         </ul>
       </li>
       <li class="user-nav__item">
-        <button class="user-nav__login-control">Вход</button>
-        <ul class="user-nav__submenu--login submenu ">
+        <button class="user-nav__control user-nav__control--login">Вход</button>
+        <ul class="user-nav__submenu user-nav__submenu--login">
           <li>
-            <form class="form-submenu dialog" action="https://echo.htmlacademy.ru">
+            <form class="user-nav__form user-nav__form--login dialog" action="https://echo.htmlacademy.ru">
               <label for="login-email" class="visually-hidden">Электронная почта</label>
               <label for="login-password" class="visually-hidden">Пароль</label>
               <input type="email" name="email" id="login-email" placeholder="Электронная почта" required>
@@ -81,8 +81,8 @@
         </ul>
       </li>
       <li class="user-nav__item user-nav__item--basket-not-empty">
-        <button class="user-nav__basket-control">2 товара</button>
-        <ul class="user-navigation-basket-item-submenu submenu dialog dialog--submenu">
+        <button class="user-nav__control user-nav__control--basket">2 товара</button>
+        <ul class="user-nav__submenu user-nav__submenu--basket dialog dialog--submenu">
           <li class="user-navigation-basket-items">
             <table class="user-navigation-basket-items-table">
               <tr>

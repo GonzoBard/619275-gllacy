@@ -395,9 +395,7 @@ a:active {
   box-sizing: border-box;
 }
 
-.breadcrumbs-list, .advantages-list, .footer-navigation ul, .catalog-list,
-.footer-social-list, .user-nav__submenu--login,
-.user-navigation-basket-item-submenu {
+.breadcrumbs-list, .advantages-list, .footer-navigation ul, .catalog-list, .footer-social-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -405,8 +403,7 @@ a:active {
 
 .main-footer .logo-htmlacademy, .main-footer .logo-htmlacademy:hover,
 .btn, .btn:hover, .btn:focus,
-.offer-raspberry, .offer-chocolate, .dialog, .user-nav__login-control, .user-nav__basket-control, .user-nav__search-control,
-.user-nav__login-control, .user-nav__basket-control, .btn-close-modal, .user-navigation-basket-items-table-button-delete,
+.offer-raspberry, .offer-chocolate, .dialog, .btn-close-modal, .user-navigation-basket-items-table-button-delete,
 .breadcrumbs-list a.active, .paginator a, .paginator a:hover, .paginator a:focus {
   border: none;
 }
@@ -640,7 +637,7 @@ a:active {
   text-align: left;
 }
 
-.user-nav__item:hover .user-nav__search-control {
+.user-nav__item:hover .user-nav__control--search {
   background-color: rgb(248, 247, 244);
   background-image: url('../img/magnifier2.svg');
   background-repeat: no-repeat;
@@ -649,7 +646,7 @@ a:active {
   border-radius: 50%;
 }
 
-.user-nav__item:hover .user-nav__login-control {
+.user-nav__item:hover .user-nav__control--login {
   color: #323232;
 
   background-color: rgb(248, 247, 244);
@@ -658,8 +655,8 @@ a:active {
   background-position: 16px 6px;
 }
 
-.user-nav__item:hover .user-nav__basket-control,
-.user-nav__item--basket-not-empty .user-nav__basket-control {
+.user-nav__item:hover .user-nav__control--basket,
+.user-nav__item--basket-not-empty .user-nav__control--basket {
   color: #323232;
 
   background-color: rgb(248, 247, 244);
@@ -672,9 +669,20 @@ a:active {
   display: block;
 }
 
-.user-nav__search-control {
-  width: 33px;
+.user-nav__control {
   height: 32px;
+  box-sizing: border-box;
+  border: none;
+  color: #fff;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user-nav__control--search {
+  width: 33px;
 
   background-color: rgba(255, 255, 255, 0.2);
   background-image: url('../img/magnifier.svg');
@@ -684,10 +692,8 @@ a:active {
   border-radius: 50%;
 }
 
-.user-nav__login-control {
+.user-nav__control--login {
   width: 92px;
-  height: 32px;
-  box-sizing: border-box;
   padding-left: 43px;
 
   background-color: rgba(255, 255, 255, 0.2);
@@ -696,17 +702,10 @@ a:active {
   background-position: 16px 6px;
 
   border-radius: 33px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
 }
 
-.user-nav__basket-control {
+.user-nav__control--basket {
   width: 117px;
-  height: 32px;
-  box-sizing: border-box;
   padding-left: 43px;
   margin-right: 1px;
 
@@ -716,11 +715,6 @@ a:active {
   background-position: 16px center;
 
   border-radius: 33px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
 }
 
 .user-nav__submenu {
@@ -742,20 +736,9 @@ a:active {
   line-height: 24px;
 }
 
-.user-nav__submenu a {
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 24px;
-}
-
 .user-nav__submenu--search {
   left: -308px;
   padding: 20px 15px;
-}
-
-.user-nav__submenu--search input {
-  margin-bottom: 0;
-  width: 311px;
 }
 
 .user-nav__submenu--login {
@@ -764,7 +747,38 @@ a:active {
   padding: 20px 13px 20px 19px;
 }
 
-.user-nav__submenu--login input {
+.user-nav__submenu--basket {
+  width: 519px;
+  left: -423px;
+
+  padding-top: 19px;
+  padding-left: 20px;
+  padding-right: 0;
+
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.user-nav__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.user-nav__form a {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.user-nav__form--search input {
+  margin-bottom: 0;
+  width: 311px;
+}
+
+.user-nav__form--login input {
   width: 241px;
 }
 
@@ -2166,10 +2180,6 @@ a.paginator-prev, a.paginator-next {
   padding-top: 9px;
 }
 
-.form-submenu {
-  display: flex;
-  flex-direction: column;
-}
 
 @keyframes shake {
   0% {
@@ -2215,7 +2225,6 @@ a.paginator-prev, a.paginator-next {
 
 /* Выпадающие меню в шапке */
 
-
 .login-submit {
   margin-top: -1px;
   margin-bottom: 1px;
@@ -2252,21 +2261,8 @@ a.paginator-prev, a.paginator-next {
   margin-top: 2px;
 }
 
-.user-nav__login-control, .user-nav__basket-control {
+.user-nav__control--login, .user-nav__control--basket {
   padding-bottom: 3px;
-}
-
-.user-navigation-basket-item-submenu {
-  width: 519px;
-  left: -423px;
-
-  padding-top: 19px;
-  padding-left: 20px;
-  padding-right: 0;
-
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 16px;
 }
 
 .user-navigation-basket-items {
