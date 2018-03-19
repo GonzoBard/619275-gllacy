@@ -84,11 +84,11 @@
 /*border: 1px solid white;*/
 /*}*/
 
-/*.main-navigation {*/
+/*.main-nav {*/
 /*border: 2px dashed red;*/
 /*}*/
 
-/*.site-navigation {*/
+/*.site-nav {*/
 /*border: 2px solid yellow;*/
 /*}*/
 
@@ -143,6 +143,8 @@ body {
 }
 
 .container {
+  width: 100%;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 0 2.3%;
 
@@ -162,7 +164,9 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
   cursor: pointer;
@@ -174,10 +178,13 @@ a:hover, a:focus, a:active {
   box-sizing: border-box;
 
   color: #fff;
+
   cursor: pointer;
+  overflow: hidden;
+  position: relative;
 }
 
-.btn-usual {
+.btn--usual {
   border-radius: 30px;
   padding: 10px 23px 12px;
   background-image: linear-gradient(to top, rgb(202, 56, 36) 0%, rgb(242, 104, 67) 100%);
@@ -186,18 +193,17 @@ a:hover, a:focus, a:active {
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
-
-  position: relative;
-  overflow: hidden;
 }
 
-.btn-usual:hover, .btn-usual:focus {
+.btn--usual:hover,
+.btn--usual:focus {
   color: #fefefe;
   background: linear-gradient(to top, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
   box-shadow: 0 1px 2px 0 #ac1000;
 }
 
-.btn-usual:hover:before, .btn-usual:focus:before { /* color overlay filter */
+.btn--usual:hover:before,
+.btn--usual:focus:before { /* color overlay filter */
   content: '';
   position: absolute;
   top: 0;
@@ -208,24 +214,24 @@ a:hover, a:focus, a:active {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.btn-usual:active {
+.btn--usual:active {
   color: #fceeec;
   background-image: linear-gradient(to top, #f26843, #e74a35);
   box-shadow: inset 0 2px 2px 0 #942718;
 }
 
-.btn-usual:active:before { /* color overlay filter */
-  display: block;
+.btn--usual:active:before { /* color overlay filter */
   content: '';
   position: absolute;
   top: 0;
   left: 0;
+  display: block;
   width: 300px;
   height: 100px;
   background-color: rgba(0, 0, 0, 0.07);
 }
 
-.btn-attract-attention {
+.btn--attract-attention {
   padding: 7px 40px 12px;
 
   border-radius: 40px;
@@ -236,112 +242,102 @@ a:hover, a:focus, a:active {
   font-size: 32px;
   line-height: 44px;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-
-  position: relative;
-  overflow: hidden;
 }
 
-.btn-attract-attention:hover, .btn-attract-attention:focus {
+.btn--attract-attention:hover,
+.btn--attract-attention:focus {
   color: #fff;
   background-image: linear-gradient(to top, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
   box-shadow: 0 2px 2px 0 #ac1000;
 }
 
-.btn-attract-attention:hover:before, .btn-attract-attention:focus:before { /* color overlay filter */
-  display: block;
+.btn--attract-attention:hover:before,
+.btn--attract-attention:focus:before { /* color overlay filter */
   content: '';
   position: absolute;
   top: 0;
   left: 0;
+  display: block;
   width: 300px;
   height: 100px;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.btn-attract-attention:active {
+.btn--attract-attention:active {
   color: #fceeec;
   background-image: linear-gradient(to top, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
   box-shadow: inset 0 2px 2px 0 #942718;
 }
 
-.btn-attract-attention:active:before { /* color overlay filter */
-  display: block;
+.btn--attract-attention:active:before { /* color overlay filter */
   content: '';
   position: absolute;
   top: 0;
   left: 0;
+  display: block;
   width: 300px;
   height: 100px;
   background-color: rgba(0, 0, 0, 0.07);
 }
 
 .dialog {
-  background-color: #f8f7f4;
-  color: #323232;
   padding: 19px 24px;
   border-radius: 10px;
+
+  color: #323232;
+  background-color: #f8f7f4;
 }
 
 .dialog a {
+  border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   color: #323232;
-
   text-decoration: none;
-  border-bottom: 1px solid rgba(50, 50, 50, 0.3);
 }
 
-.dialog a:hover, .dialog a:active {
-  color: #e84d37;
+.dialog a:hover,
+.dialog a:active {
   border-bottom: 1px solid rgba(232, 77, 55, 0.3);
+  color: #e84d37;
   cursor: pointer;
 }
 
-.dialog input, .dialog textarea {
+.dialog input,
+.dialog textarea {
   box-sizing: border-box;
   width: 267px;
   height: 44px;
   padding: 13px;
   margin: 0 0 20px 0;
 
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
-
-  border-radius: 5px;
-  border: 1px solid #d3d3d2;
 }
 
-.dialog input:hover, .dialog textarea:hover {
-  outline: none;
+.dialog input:hover,
+.dialog textarea:hover {
   padding: 12px;
   border: 2px solid #c7c6c5;
+  outline: none;
 }
 
-.dialog input:focus, .dialog textarea:focus {
-  outline: none;
+.dialog input:focus,
+.dialog textarea:focus {
   padding: 12px;
   border: 2px solid #8fbdec;
-}
-
-.dialog-submenu {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
-
-  border-radius: 6px;
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-}
-
-.dialog-submenu a {
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 24px;
+  outline: none;
 }
 
 /* https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css */
-.dialog input::-webkit-input-placeholder, .dialog textarea::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+.dialog input::-webkit-input-placeholder,
+.dialog textarea::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   padding-top: 7px;
 
   font-weight: normal;
@@ -350,7 +346,8 @@ a:hover, a:focus, a:active {
   color: #999;
 }
 
-.dialog input:-moz-placeholder, .dialog textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+.dialog input:-moz-placeholder,
+.dialog textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
   font-weight: normal;
   font-size: 16px;
   line-height: 16px;
@@ -359,7 +356,8 @@ a:hover, a:focus, a:active {
   opacity: 1;
 }
 
-.dialog input::-moz-placeholder, .dialog textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+.dialog input::-moz-placeholder,
+.dialog textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
   font-weight: normal;
   font-size: 16px;
   line-height: 16px;
@@ -368,35 +366,38 @@ a:hover, a:focus, a:active {
   opacity: 1;
 }
 
-.dialog input:-ms-input-placeholder, .dialog textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.dialog input:-ms-input-placeholder,
+.dialog textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
   font-weight: normal;
   font-size: 16px;
   line-height: 16px;
   color: #999;
 }
 
-.dialog input:-ms-input-placeholder, .dialog textarea:-ms-input-placeholder { /* Microsoft Edge */
+.dialog input:-ms-input-placeholder,
+.dialog textarea:-ms-input-placeholder { /* Microsoft Edge */
   font-weight: normal;
   font-size: 16px;
   line-height: 16px;
   color: #999;
 }
 
-.dialog input::placeholder, .dialog textarea::placeholder { /* Most modern browsers support this now. */
+.dialog input::placeholder,
+.dialog textarea::placeholder { /* Most modern browsers support this now. */
   font-weight: normal;
   font-size: 16px;
   line-height: 16px;
   color: #999;
 }
 
-.container, .main-header, .slider, .slider-main, .offers, .hits, .catalog, .catalog-list, .advantages, .advantages-list, .news-mailing-wrapper,
+.slider, .slider-main, .offers, .hits, .catalog, .catalog-list, .advantages, .advantages-list, .news-mailing-wrapper,
 .news, .mailing, .main-footer, .filters, .mailing-wrapper {
   width: 100%;
   box-sizing: border-box;
 }
 
-.site-navigation, .site-navigation-submenu, .site-navigation-submenu-attention, .site-navigation-submenu-usual,
-.user-navigation, .breadcrumbs-list, .advantages-list, .footer-navigation ul, .catalog-list,
+.site-navigation-submenu-attention, .site-navigation-submenu-usual,
+.user-nav, .breadcrumbs-list, .advantages-list, .footer-navigation ul, .catalog-list,
 .footer-social-list, .user-navigation-search-item-submenu, .user-navigation-login-item-submenu,
 .user-navigation-basket-item-submenu {
   list-style: none;
@@ -404,8 +405,8 @@ a:hover, a:focus, a:active {
   padding: 0;
 }
 
-.main-header-logo, .main-header-logo:hover, .main-header-logo:focus, .main-footer .logo-htmlacademy, .main-footer .logo-htmlacademy:hover,
-.btn, .btn:hover, .btn:focus, .site-navigation-item:hover .site-navigation-item-menu, .site-navigation-item:hover .site-navigation-item-menu-link,
+.main-footer .logo-htmlacademy, .main-footer .logo-htmlacademy:hover,
+.btn, .btn:hover, .btn:focus,
 .offer-raspberry, .offer-chocolate, .dialog, .user-navigation-login-item, .user-navigation-basket-item, .user-navigation-search-item,
 .user-navigation-login-item, .user-navigation-basket-item, .btn-close-modal, .user-navigation-basket-items-table-button-delete,
 .breadcrumbs-list a.active, .paginator a, .paginator a:hover, .paginator a:focus {
@@ -420,34 +421,45 @@ a:hover, a:focus, a:active {
   margin-top: 39px;
 }
 
-.main-header {
+.page-header {
+  width: 100%;
+  box-sizing: border-box;
   padding-top: 9px;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
 
   position: relative;
 }
 
-.main-header-logo {
-  height: 64px;
-}
-
-.main-navigation {
-  flex-grow: 1;
-
+.main-nav {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-.site-navigation {
+.main-nav__logo {
+  width: 154px;
+  height: 64px;
+}
+
+.main-nav__logo,
+.main-nav__logo:hover,
+.main-nav__logo:focus {
+  border: none;
+}
+
+.site-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  flex-shrink: 0;
   width: 410px;
   margin-top: 8px;
-  flex-shrink: 0;
 
   display: flex;
   flex-direction: row;
@@ -456,11 +468,135 @@ a:hover, a:focus, a:active {
   flex-wrap: wrap;
 }
 
-.site-navigation > li:first-child {
+.site-nav > li:first-child {
   margin-left: 10px;
 }
 
-.user-navigation {
+.site-nav__item {
+  position: relative;
+  z-index: 1; /* сброс z-index + увеличенный по высоте li, для решения проблем с submenu */
+
+  height: 37px; /* 32 + 5 = 37px */
+  padding-top: 5px;
+}
+
+.site-nav__item:hover .site-nav__submenu-control-wrap {
+  background-color: rgb(247, 246, 243);
+  border-radius: 18px;
+}
+
+.site-nav__item:hover .site-nav__submenu-control {
+  color: #333333;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav__item:hover .site-nav__submenu {
+  display: block;
+}
+
+.site-nav__item--current .site-nav__submenu-control-wrap,
+.site-nav__item--current:hover .site-nav__submenu-control-wrap {
+  background-color: #d07058;
+  border-radius: 18px;
+}
+
+.site-nav__item--current .site-nav__submenu-control,
+.site-nav__item--current:hover .site-nav__submenu-control {
+  color: #fff;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav__item--current:active .site-nav__submenu-control-wrap {
+  color: #fff;
+  box-shadow: none;
+  background-color: #d07058;
+}
+
+.site-nav__submenu-control-wrap {
+  height: 32px;
+  padding-right: 14px;
+  padding-left: 14px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-nav__submenu-control-wrap:active {
+  color: #333333;
+  box-shadow: inset 0 2px 1px 0 #696969;
+  background-color: #ededed;
+}
+
+.site-nav__submenu-control {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.site-nav__submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  position: absolute;
+  top: 42px; /* 37 + 5 = 42px, см. селектор .site-nav__item */
+  left: -7px;
+
+  display: none;
+  box-sizing: border-box;
+  width: 143px;
+  padding-top: 4px;
+  padding-bottom: 5px;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.site-nav__submenu a {
+  display: block;
+  box-sizing: border-box;
+  width: 143px;
+  height: 28px;
+  margin-bottom: 3px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28px;
+  color: #323232;
+
+  border: none;
+}
+
+.site-nav__submenu a:hover {
+  background-color: #fbded7;
+}
+
+.site-nav__submenu a:active {
+  background-color: #f6b5a5;
+}
+
+.site-nav__submenu a.active {
+  color: #fff;
+  background-color: #d07058;
+}
+
+.site-nav__submenu hr {
+  width: 128px;
+  height: 1px;
+
+  margin: 6px 0 3px 6px;
+  padding: 0;
+
+  border: none;
+  background-color: rgba(53, 53, 53, 0.2);
+}
+
+.user-nav {
   margin-left: auto;
   margin-top: 10px;
   flex-shrink: 0;
@@ -586,7 +722,7 @@ a:hover, a:focus, a:active {
   align-items: flex-start;
 }
 
-.slider-main .btn-attract-attention {
+.slider-main .btn--attract-attention {
   margin-top: 1px;
   margin-bottom: 1px;
 }
@@ -671,7 +807,7 @@ a:hover, a:focus, a:active {
   line-height: 22px;
 }
 
-.offer-item .btn-usual {
+.offer-item .btn--usual {
   margin-top: 44px;
 }
 
@@ -1390,7 +1526,7 @@ a:hover, a:focus, a:active {
   margin-bottom: 35px;
 }
 
-.mailing-form .btn-usual {
+.mailing-form .btn--usual {
   margin-top: -1px;
   margin-left: 11px;
   padding-right: 19px;
@@ -1565,7 +1701,7 @@ a.paginator-prev, a.paginator-next {
   line-height: 22px;
 }
 
-.contacts .btn-usual {
+.contacts .btn--usual {
   margin-top: 24px;
   align-self: stretch;
 }
@@ -1859,7 +1995,7 @@ a.paginator-prev, a.paginator-next {
   margin-bottom: 25px;
 }
 
-.modal-feedback-content .btn-usual {
+.modal-feedback-content .btn--usual {
   margin-left: auto;
   padding-top: 9px;
 }
@@ -1913,80 +2049,43 @@ a.paginator-prev, a.paginator-next {
 
 /* Выпадающие меню в шапке */
 
-.main-navigation li { /* без данного правила + увеличенный li: возникают проблемы с исчезновением submenu */
+.submenu {
+  border-radius: 6px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.submenu a {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.user-nav li { /* без данного правила + увеличенный li: возникают проблемы с исчезновением submenu */
   position: relative;
   z-index: 1;
 }
 
-.site-navigation > li {
-  height: 37px; /* 32 + 5 = 37px */
-  padding-top: 5px;
-}
-
-.user-navigation > li { /* увеличенный li + на li relative + сброс z-index, для решения проблем с submenu */
+.user-nav > li { /* увеличенный li + на li relative + сброс z-index, для решения проблем с submenu */
   height: 36px; /* 32(высота пунктов меню из макета) + 4(отступ для submenu, вот на него и увеличиваю ширину) = 36px */
   padding-top: 4px; /* чтобы не потерять центровку на величину отступа submenu делаю отступ сверху*/
 }
 
-.site-navigation .submenu {
-  top: 42px; /* 37 + 5 = 42px */
-}
-
-.user-navigation .submenu {
+.user-nav .submenu {
   top: 40px; /* 36 + 4 = 40px */
 }
 
-.main-navigation .submenu { /* по умолчанию submenu скрыто */
+.user-nav .submenu { /* по умолчанию submenu скрыто */
   display: none;
   position: absolute;
   z-index: 1;
 }
 
-.main-navigation li:hover .submenu { /* on hover на li submenu отображается */
+.user-nav li:hover .submenu { /* on hover на li submenu отображается */
   display: block;
-}
-
-.site-navigation-submenu {
-  left: -7px;
-  box-sizing: border-box;
-  width: 143px;
-  padding-top: 4px;
-  padding-bottom: 5px;
-
-  background-color: #f8f7f4;
-  border-radius: 5px;
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-
-}
-
-.site-navigation-submenu a {
-  display: block;
-  box-sizing: border-box;
-  height: 28px;
-  width: 143px;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-bottom: 3px;
-
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 28px;
-  color: #323232;
-
-  border: none;
-}
-
-.site-navigation-submenu a:hover {
-  background-color: #fbded7;
-}
-
-.site-navigation-submenu a:active {
-  background-color: #f6b5a5;
-}
-
-.site-navigation-submenu a.active {
-  color: #fff;
-  background-color: #d07058;
 }
 
 .site-navigation-submenu-attention a {
@@ -1994,83 +2093,7 @@ a.paginator-prev, a.paginator-next {
   border: none;
 }
 
-.site-navigation-submenu hr {
-  width: 128px;
-  height: 1px;
-
-  padding: 0;
-  margin: 6px 0 3px 6px;
-
-  border: none;
-  background-color: rgba(53, 53, 53, 0.2);
-}
-
-.site-navigation-item-menu {
-  height: 32px;
-  padding-right: 14px;
-  padding-left: 14px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.site-navigation-item-menu-link {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 18px;
-}
-
-.site-navigation-item-current a {
-  border: none;
-}
-
-.site-navigation-item-current .site-navigation-item-menu {
-  background-color: #d07058;
-  border-radius: 18px;
-}
-
-.site-navigation-item:hover .site-navigation-item-menu {
-  background-color: rgb(247, 246, 243);
-  border-radius: 18px;
-}
-
-.site-navigation-item:hover .site-navigation-item-menu-link {
-  color: #333333;
-}
-
-.site-navigation-item-current:hover .site-navigation-item-menu {
-  background-color: #d07058;
-  border-radius: 18px;
-}
-
-.site-navigation-item-current:hover .site-navigation-item-menu-link {
-  color: #fff;
-}
-
-.site-navigation-item-menu:hover {
-  background-color: rgb(247, 246, 243);
-  border-radius: 18px;
-}
-
-.site-navigation-item-menu:hover .site-navigation-item-menu-link {
-  pointer-events: none;
-}
-
-.site-navigation-item-menu:active {
-  color: #333333;
-  box-shadow: inset 0 2px 1px 0 #696969;
-  background-color: #ededed;
-}
-
-.site-navigation-item-current:active .site-navigation-item-menu {
-  color: #fff;
-  box-shadow: none;
-  background-color: #d07058;
-}
-
-.user-navigation > li:not(:first-child) {
+.user-nav > li:not(:first-child) {
   margin-left: 10px;
 }
 
@@ -2166,7 +2189,7 @@ a.paginator-prev, a.paginator-next {
   align-items: flex-start;
 }
 
-.login-submit .btn-usual {
+.login-submit .btn--usual {
   margin-top: 1px;
 
   padding-top: 11px;
