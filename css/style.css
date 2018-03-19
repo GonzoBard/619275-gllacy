@@ -403,7 +403,7 @@ a:active {
 
 .main-footer .logo-htmlacademy, .main-footer .logo-htmlacademy:hover,
 .btn, .btn:hover, .btn:focus,
-.offer-raspberry, .offer-chocolate, .dialog, .btn-close-modal, .user-navigation-basket-items-table-button-delete,
+.offer-raspberry, .offer-chocolate, .dialog, .btn-close-modal, .basket-table__btn-delete,
 .breadcrumbs-list a.active, .paginator a, .paginator a:hover, .paginator a:focus {
   border: none;
 }
@@ -672,6 +672,7 @@ a:active {
 .user-nav__control {
   height: 32px;
   box-sizing: border-box;
+  padding-bottom: 3px;
   border: none;
   color: #fff;
 
@@ -767,19 +768,171 @@ a:active {
   align-items: flex-start;
 }
 
-.user-nav__form a {
+.form-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.form-search input {
+  margin-bottom: 0;
+  width: 311px;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.form-login a {
   font-weight: normal;
   font-size: 13px;
   line-height: 24px;
 }
 
-.user-nav__form--search input {
-  margin-bottom: 0;
-  width: 311px;
+.form-login input {
+  width: 241px;
 }
 
-.user-nav__form--login input {
-  width: 241px;
+.form-login__submit {
+  margin-top: -1px;
+  margin-bottom: 1px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.form-login__submit .btn--usual {
+  margin-top: 1px;
+
+  padding-top: 11px;
+  padding-bottom: 10px;
+  padding-left: 24px;
+}
+
+.form-login__links {
+  margin-left: 21px;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.form-login__links a {
+  height: 18px;
+}
+
+.form-login__links a:last-child {
+  margin-top: 2px;
+}
+
+.user-nav__basket {
+  width: 540px;
+  padding-bottom: 22px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.basket-table {
+  width: 510px;
+  border-collapse: collapse;
+  caption-side: bottom;
+}
+
+.basket-table tr {
+  height: 53px;
+  vertical-align: top;
+}
+
+.basket-table .delete {
+  width: 18px;
+  padding-top: 10px;
+}
+
+.basket-table .btn-delete {
+  width: 11px;
+  height: 11px;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  background-color: transparent;
+  background-image: url("../img/delete-basket-item.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.basket-table__item-pic {
+  width: 44px;
+}
+
+.basket-table__item-pic img {
+  border-radius: 50%;
+}
+
+.basket-table .name {
+  width: 245px;
+  padding-top: 10px;
+}
+
+.basket-table .calc {
+  width: 121px;
+  padding-top: 10px;
+}
+
+.basket-table .calc-price {
+  color: #999;
+}
+
+.basket-table .price {
+  padding-top: 10px;
+}
+
+.user-nav__basket .total {
+  align-self: stretch;
+  height: 46px;
+  margin-right: 33px;
+  margin-top: 5px;
+  margin-bottom: 1px;
+
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: right;
+
+  position: relative;
+}
+
+.user-nav__basket .total::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -5px;
+  right: -2px;
+  width: 101%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.user-nav__basket .total-txt {
+  margin-top: 15px;
+}
+
+.user-nav__basket .place-order {
+  align-self: flex-end;
+  margin-right: 35px;
+  padding: 9px 15px 10px;
 }
 
 /*
@@ -2180,7 +2333,6 @@ a.paginator-prev, a.paginator-next {
   padding-top: 9px;
 }
 
-
 @keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);
@@ -2225,144 +2377,7 @@ a.paginator-prev, a.paginator-next {
 
 /* Выпадающие меню в шапке */
 
-.login-submit {
-  margin-top: -1px;
-  margin-bottom: 1px;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.login-submit .btn--usual {
-  margin-top: 1px;
-
-  padding-top: 11px;
-  padding-bottom: 10px;
-  padding-left: 24px;
-}
-
-.login-submit-links {
-  margin-left: 21px;
-  padding: 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.login-submit-links a {
-  height: 18px;
-}
-
-.login-submit-links a:last-child {
-  margin-top: 2px;
-}
-
-.user-nav__control--login, .user-nav__control--basket {
-  padding-bottom: 3px;
-}
-
-.user-navigation-basket-items {
-  width: 540px;
-  padding-bottom: 22px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.user-navigation-basket-items-table {
-  width: 510px;
-  border-collapse: collapse;
-  caption-side: bottom;
-}
-
-.user-navigation-basket-items-table tr {
-  height: 53px;
-  vertical-align: top;
-}
-
-.user-navigation-basket-items-table .delete {
-  width: 18px;
-  padding-top: 10px;
-}
-
-.user-navigation-basket-items-table-button-delete {
-  width: 11px;
-  height: 11px;
-  margin: 0;
-  padding: 0;
-
-  background-color: transparent;
-  background-image: url("../img/delete-basket-item.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.user-navigation-basket-items-table-pic {
-  width: 44px;
-}
-
-.user-navigation-basket-items-table-pic img {
-  border-radius: 50%;
-}
-
-.user-navigation-basket-items-table .name {
-  width: 245px;
-  padding-top: 10px;
-}
-
-.user-navigation-basket-items-table .calc {
-  width: 121px;
-  padding-top: 10px;
-}
-
-.user-navigation-basket-items-table-calc-price {
-  color: #999;
-}
-
-.user-navigation-basket-items-table .price {
-  padding-top: 10px;
-}
-
-.user-navigation-basket-items .total {
-  align-self: stretch;
-  height: 46px;
-  margin-right: 33px;
-  margin-top: 5px;
-  margin-bottom: 1px;
-
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 18px;
-  text-align: right;
-
-  position: relative;
-}
-
-.user-navigation-basket-items .total::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -5px;
-  right: -2px;
-  width: 101%;
-  height: 1px;
-  background-color: #ccc;
-}
-
-.user-navigation-basket-items .total-txt {
-  margin-top: 15px;
-}
-
-.user-navigation-basket-items .place-order {
-  align-self: flex-end;
-  margin-right: 35px;
-  padding: 9px 15px 10px;
-}
 
 .opened {
   display: block;
