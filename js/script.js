@@ -60,7 +60,7 @@ function FeedBackModal() {
   //http://emailregex.com/
   var emailregex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-  this.open = function () {
+  this.open = function (event) {
     event.preventDefault(); //отменить стандартное действие
     modal.classList.remove(closeClassName);
     modal.classList.add(openClassName);
