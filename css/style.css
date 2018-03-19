@@ -1916,10 +1916,7 @@ a:active {
   padding-right: 19px;
   padding-left: 19px;
   padding-bottom: 10px;
-}
 
-.mailing .btn,
-.contacts .btn {
   color: #fefefe;
 }
 
@@ -2094,8 +2091,9 @@ a.paginator-prev, a.paginator-next {
 }
 
 .contacts .btn--usual {
-  margin-top: 24px;
   align-self: stretch;
+  margin-top: 24px;
+  color: #fefefe;
 }
 
 .main-footer {
