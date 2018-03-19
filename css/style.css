@@ -179,9 +179,15 @@ a:active {
 
   color: #fff;
 
+  border: none;
   cursor: pointer;
   overflow: hidden;
   position: relative;
+}
+
+.btn:hover,
+.btn:focus {
+  border: none;
 }
 
 .btn--usual {
@@ -283,6 +289,7 @@ a:active {
 }
 
 .dialog {
+  border: none;
   border-radius: 10px;
 
   color: #323232;
@@ -391,8 +398,7 @@ a:active {
   color: #999;
 }
 
-.catalog, .news-mailing-wrapper,
-.news, .mailing, .main-footer, .mailing-wrapper {
+.catalog, .main-footer {
   width: 100%;
   box-sizing: border-box;
 }
@@ -403,15 +409,9 @@ a:active {
   padding: 0;
 }
 
-.main-footer .logo-htmlacademy, .main-footer .logo-htmlacademy:hover,
-.btn, .btn:hover, .btn:focus,
-.offer-item--raspberry, .offer-item--chocolate, .dialog, .btn-close-modal, .basket-table__btn-delete,
+.main-footer .logo-htmlacademy, .main-footer .logo-htmlacademy:hover, .btn-close-modal,
 .paginator a, .paginator a:hover, .paginator a:focus {
   border: none;
-}
-
-.offers, .news-mailing-wrapper {
-  margin-top: 40px;
 }
 
 .contacts-info {
@@ -1491,6 +1491,7 @@ a:active {
 .offers {
   width: 100%;
   box-sizing: border-box;
+  margin-top: 40px;
 
   display: flex;
   flex-direction: row;
@@ -1511,6 +1512,7 @@ a:active {
 }
 
 .offer-item--raspberry {
+  border: none;
   background-color: #8E020C;
   background-image: url('../img/bg-raspberry.jpg');
   background-repeat: no-repeat;
@@ -1519,6 +1521,7 @@ a:active {
 }
 
 .offer-item--chocolate {
+  border: none;
   background-color: #845F4D;
   background-image: url('../img/bg-chocolate.jpg');
   background-repeat: no-repeat;
@@ -1686,7 +1689,6 @@ a:active {
   align-items: center;
 }
 
-
 .advantages {
   width: 100%;
   box-sizing: border-box;
@@ -1778,23 +1780,18 @@ a:active {
   margin-right: 2.2%;
 }
 
-/*
-************************************************************************************************************************************
-************************************************************************************************************************************
-************************************************************************************************************************************
-************************************************************************************************************************************
-*/
+.news-mailing-wrap {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 40px;
 
-
-
-.news-mailing-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-.news-mailing-wrapper section:first-of-type {
+.news-mailing-wrap section:first-of-type {
   margin-right: 2.2%;
 }
 
@@ -1806,6 +1803,8 @@ a:active {
 }
 
 .news {
+  width: 100%;
+  box-sizing: border-box;
   padding: 23px 20px 23px 20px;
 
   background-color: #fff;
@@ -1837,28 +1836,31 @@ a:active {
   color: #353535;
 }
 
-.news-line {
+.news__line {
   display: inline-block;
   vertical-align: middle;
   border-bottom: 2px solid #353535;
   /*background-color: rgba(255, 255, 255, 0.8);*/
 }
 
-.news-line-1 {
+.news__line--1 {
   height: 26px;
 }
 
-.news-line-2 {
+.news__line--2 {
   margin-top: -2px;
   height: 25px;
 }
 
-.news-line-3 {
+.news__line--3 {
   margin-top: -3px;
   height: 24px;
 }
 
 .mailing {
+  width: 100%;
+  box-sizing: border-box;
+
   background-image: repeating-linear-gradient(
     135deg,
     #FE9E90 0px, #FE9E90 1px,
@@ -1873,7 +1875,9 @@ a:active {
   align-items: stretch;
 }
 
-.mailing-wrapper {
+.mailing-wrap {
+  width: 100%;
+  box-sizing: border-box;
   margin: 5px 5px 5px 6px;
   padding-top: 29px;
   padding-left: 21px;
@@ -1921,6 +1925,13 @@ a:active {
 .mailing .btn, .contacts .btn {
   color: #fefefe;
 }
+
+/*
+************************************************************************************************************************************
+************************************************************************************************************************************
+************************************************************************************************************************************
+************************************************************************************************************************************
+*/
 
 .contacts-info {
   width: 1200px;
