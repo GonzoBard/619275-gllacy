@@ -342,15 +342,6 @@ a:active {
   color: #999;
 }
 
-.catalog {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.feedback__btn-close {
-  border: none;
-}
-
 .page-header {
   width: 100%;
   box-sizing: border-box;
@@ -1517,6 +1508,11 @@ a:active {
   background-position: center;
 }
 
+.catalog {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .catalog-list {
   width: 100%;
   box-sizing: border-box;
@@ -2319,7 +2315,7 @@ a.pag__next {
   /*background-color: rgba(0, 0, 0, 0.4);*/
 }
 
-.feedback--no-js{
+.feedback--no-js {
   display: block;
   top: 0;
 }
@@ -2366,6 +2362,7 @@ a.pag__next {
 
 .feedback__btn-close {
   background-color: transparent;
+  border: none;
 
   position: absolute;
   top: 15px;
