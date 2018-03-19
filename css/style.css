@@ -72,62 +72,6 @@
   url('../assets/fonts/roboto-bold-italic.svg#roboto-bold-italic') format('svg');
 }
 
-/*body {*/
-/*border: 1px dashed red;*/
-/*}*/
-
-/*.container {*/
-/*border: 1px solid red;*/
-/*}*/
-
-/*.main-header {*/
-/*border: 1px solid white;*/
-/*}*/
-
-/*.main-nav {*/
-/*border: 2px dashed red;*/
-/*}*/
-
-/*.site-nav {*/
-/*border: 2px solid yellow;*/
-/*}*/
-
-/*.user-navigation {*/
-/*border: 2px solid blue;*/
-/*}*/
-
-/*.header-contacts {*/
-/*border: 2px solid blueviolet;*/
-/*}*/
-
-/*.slider-main {*/
-/*border: 1px solid black;*/
-/*}*/
-
-/*.slider-main-controls {*/
-/*border: 1px solid blue;*/
-/*}*/
-
-/*.catalog-list{*/
-/*border: 1px solid black;*/
-/*}*/
-
-/*.catalog-item{*/
-/*border: 1px solid blue;*/
-/*}*/
-
-/*.contacts-info{*/
-/*border: 1px solid black;*/
-/*}*/
-
-/*.modal-feedback-content{*/
-/*border: 1px solid red;*/
-/*}*/
-
-/*.form-submenu {*/
-/*border: 1px solid blue;*/
-/*}*/
-
 body {
   width: 1200px;
   box-sizing: border-box;
