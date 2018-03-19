@@ -281,7 +281,6 @@ a:active {
 }
 
 .dialog {
-  padding: 19px 24px;
   border-radius: 10px;
 
   color: #323232;
@@ -396,8 +395,8 @@ a:active {
   box-sizing: border-box;
 }
 
-.user-nav, .breadcrumbs-list, .advantages-list, .footer-navigation ul, .catalog-list,
-.footer-social-list, .user-navigation-search-item-submenu, .user-navigation-login-item-submenu,
+.breadcrumbs-list, .advantages-list, .footer-navigation ul, .catalog-list,
+.footer-social-list, .user-nav__submenu--login,
 .user-navigation-basket-item-submenu {
   list-style: none;
   margin: 0;
@@ -406,8 +405,8 @@ a:active {
 
 .main-footer .logo-htmlacademy, .main-footer .logo-htmlacademy:hover,
 .btn, .btn:hover, .btn:focus,
-.offer-raspberry, .offer-chocolate, .dialog, .user-navigation-login-item, .user-navigation-basket-item, .user-navigation-search-item,
-.user-navigation-login-item, .user-navigation-basket-item, .btn-close-modal, .user-navigation-basket-items-table-button-delete,
+.offer-raspberry, .offer-chocolate, .dialog, .user-nav__login-control, .user-nav__basket-control, .user-nav__search-control,
+.user-nav__login-control, .user-nav__basket-control, .btn-close-modal, .user-navigation-basket-items-table-button-delete,
 .breadcrumbs-list a.active, .paginator a, .paginator a:hover, .paginator a:focus {
   border: none;
 }
@@ -609,16 +608,172 @@ a:active {
 }
 
 .user-nav {
-  margin-left: auto;
-  margin-top: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
   flex-shrink: 0;
   width: 262px;
+  margin-left: auto;
+  margin-top: 10px;
 
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
+
+.user-nav > li:not(:first-child) {
+  margin-left: 10px;
+}
+
+.user-nav__item {
+  position: relative;
+  z-index: 1; /* сброс z-index + увеличенный li, для решения проблем с submenu */
+
+  height: 36px; /* 32(высота контрола меню из макета) + 4(отступ для submenu, вот на него и увеличиваю ширину) = 36px */
+  padding-top: 4px; /* чтобы не потерять центровку на величину отступа submenu делаю отступ сверху */
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+}
+
+.user-nav__item:hover .user-nav__search-control {
+  background-color: rgb(248, 247, 244);
+  background-image: url('../img/magnifier2.svg');
+  background-repeat: no-repeat;
+  background-position: 8px 7px;
+
+  border-radius: 50%;
+}
+
+.user-nav__item:hover .user-nav__login-control {
+  color: #323232;
+
+  background-color: rgb(248, 247, 244);
+  background-image: url('../img/login2.svg');
+  background-repeat: no-repeat;
+  background-position: 16px 6px;
+}
+
+.user-nav__item:hover .user-nav__basket-control,
+.user-nav__item--basket-not-empty .user-nav__basket-control {
+  color: #323232;
+
+  background-color: rgb(248, 247, 244);
+  background-image: url('../img/basket2.svg');
+  background-repeat: no-repeat;
+  background-position: 16px center;
+}
+
+.user-nav__item:hover .user-nav__submenu {
+  display: block;
+}
+
+.user-nav__search-control {
+  width: 33px;
+  height: 32px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url('../img/magnifier.svg');
+  background-repeat: no-repeat;
+  background-position: 8px 7px;
+
+  border-radius: 50%;
+}
+
+.user-nav__login-control {
+  width: 92px;
+  height: 32px;
+  box-sizing: border-box;
+  padding-left: 43px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url('../img/login.svg');
+  background-repeat: no-repeat;
+  background-position: 16px 6px;
+
+  border-radius: 33px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user-nav__basket-control {
+  width: 117px;
+  height: 32px;
+  box-sizing: border-box;
+  padding-left: 43px;
+  margin-right: 1px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url('../img/basket.svg');
+  background-repeat: no-repeat;
+  background-position: 16px center;
+
+  border-radius: 33px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user-nav__submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: none;
+  box-sizing: border-box;
+  position: absolute;
+  top: 40px; /* 36 + 4 = 40px */
+
+  border-radius: 6px;
+  background-color: #f8f7f4;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.user-nav__submenu a {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.user-nav__submenu--search {
+  left: -308px;
+  padding: 20px 15px;
+}
+
+.user-nav__submenu--search input {
+  margin-bottom: 0;
+  width: 311px;
+}
+
+.user-nav__submenu--login {
+  width: 277px;
+  left: -184px;
+  padding: 20px 13px 20px 19px;
+}
+
+.user-nav__submenu--login input {
+  width: 241px;
+}
+
+/*
+************************************************************************************************************************************
+************************************************************************************************************************************
+************************************************************************************************************************************
+************************************************************************************************************************************
+*/
 
 .header-contacts {
   text-align: right;
@@ -1958,8 +2113,7 @@ a.paginator-prev, a.paginator-next {
   width: 477px;
   box-sizing: border-box;
   margin: 0 auto;
-  padding-top: 21px;
-  padding-bottom: 26px;
+  padding: 21px 0 26px 24px;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.4);
 
   display: flex;
@@ -2061,130 +2215,6 @@ a.paginator-prev, a.paginator-next {
 
 /* Выпадающие меню в шапке */
 
-.submenu {
-  border-radius: 6px;
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
-}
-
-.submenu a {
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 24px;
-}
-
-.user-nav li { /* без данного правила + увеличенный li: возникают проблемы с исчезновением submenu */
-  position: relative;
-  z-index: 1;
-}
-
-.user-nav > li { /* увеличенный li + на li relative + сброс z-index, для решения проблем с submenu */
-  height: 36px; /* 32(высота пунктов меню из макета) + 4(отступ для submenu, вот на него и увеличиваю ширину) = 36px */
-  padding-top: 4px; /* чтобы не потерять центровку на величину отступа submenu делаю отступ сверху*/
-}
-
-.user-nav .submenu {
-  top: 40px; /* 36 + 4 = 40px */
-}
-
-.user-nav .submenu { /* по умолчанию submenu скрыто */
-  display: none;
-  position: absolute;
-  z-index: 1;
-}
-
-.user-nav li:hover .submenu { /* on hover на li submenu отображается */
-  display: block;
-}
-
-.user-nav > li:not(:first-child) {
-  margin-left: 10px;
-}
-
-.user-navigation-search-item-submenu {
-  left: -308px;
-  padding: 20px 15px;
-}
-
-.user-navigation-search-item-submenu input {
-  margin-bottom: 0;
-  width: 311px;
-}
-
-.user-navigation-search-item, .user-navigation-login-item, .user-navigation-basket-item {
-  padding: 0;
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  color: #fff;
-  text-align: left;
-}
-
-.user-navigation-search-item {
-  width: 33px;
-  height: 32px;
-
-  background-color: rgba(255, 255, 255, 0.2);
-  background-image: url('../img/magnifier.svg');
-  background-repeat: no-repeat;
-  background-position: 8px 7px;
-
-  border-radius: 50%;
-
-  position: relative;
-}
-
-.user-navigation-search:hover .user-navigation-search-item {
-  background-color: rgb(248, 247, 244);
-  background-image: url('../img/magnifier2.svg');
-  background-repeat: no-repeat;
-  background-position: 8px 7px;
-
-  border-radius: 50%;
-}
-
-.user-navigation-login-item {
-  width: 92px;
-  height: 32px;
-  box-sizing: border-box;
-  padding-left: 43px;
-
-  background-color: rgba(255, 255, 255, 0.2);
-  background-image: url('../img/login.svg');
-  background-repeat: no-repeat;
-  background-position: 16px 6px;
-
-  border-radius: 33px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.user-navigation-login:hover .user-navigation-login-item {
-  color: #323232;
-
-  background-color: rgb(248, 247, 244);
-  background-image: url('../img/login2.svg');
-  background-repeat: no-repeat;
-  background-position: 16px 6px;
-}
-
-.user-navigation-login-item-submenu {
-  box-sizing: border-box;
-  width: 277px;
-  left: -184px;
-  padding: 20px 13px 20px 19px;
-}
-
-.user-navigation-login-item-submenu input {
-  width: 241px;
-}
 
 .login-submit {
   margin-top: -1px;
@@ -2222,38 +2252,8 @@ a.paginator-prev, a.paginator-next {
   margin-top: 2px;
 }
 
-.user-navigation-login-item, .user-navigation-basket-item {
+.user-nav__login-control, .user-nav__basket-control {
   padding-bottom: 3px;
-}
-
-.user-navigation-basket-item {
-  width: 117px;
-  height: 32px;
-  box-sizing: border-box;
-  padding-left: 43px;
-  margin-right: 1px;
-
-  background-color: rgba(255, 255, 255, 0.2);
-  background-image: url('../img/basket.svg');
-  background-repeat: no-repeat;
-  background-position: 16px center;
-
-  border-radius: 33px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.user-navigation-basket:hover .user-navigation-basket-item,
-.user-navigation-basket-not-empty .user-navigation-basket-item {
-  color: #323232;
-
-  background-color: rgb(248, 247, 244);
-  background-image: url('../img/basket2.svg');
-  background-repeat: no-repeat;
-  background-position: 16px center;
 }
 
 .user-navigation-basket-item-submenu {
