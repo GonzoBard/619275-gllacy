@@ -1796,15 +1796,14 @@ a:active {
 }
 
 .news, .mailing {
-  width: 44.4%;
   flex-grow: 1;
-  color: #5a5a5a;
+  width: 44.4%;
+  box-sizing: border-box;
   border-radius: 15px;
+  color: #5a5a5a;
 }
 
 .news {
-  width: 100%;
-  box-sizing: border-box;
   padding: 23px 20px 23px 20px;
 
   background-color: #fff;
@@ -1858,9 +1857,6 @@ a:active {
 }
 
 .mailing {
-  width: 100%;
-  box-sizing: border-box;
-
   background-image: repeating-linear-gradient(
     135deg,
     #FE9E90 0px, #FE9E90 1px,
@@ -1901,7 +1897,7 @@ a:active {
   padding: 0;
 }
 
-.mailing-form .filters-form__group {
+.mailing-form__group {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -1922,7 +1918,8 @@ a:active {
   padding-bottom: 10px;
 }
 
-.mailing .btn, .contacts .btn {
+.mailing .btn,
+.contacts .btn {
   color: #fefefe;
 }
 
