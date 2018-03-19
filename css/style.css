@@ -458,7 +458,7 @@ a:active {
 
   flex-shrink: 0;
   width: 410px;
-  margin-top: 8px;
+  margin-top: 9px;
 
   display: flex;
   flex-direction: row;
@@ -471,50 +471,50 @@ a:active {
   margin-left: 10px;
 }
 
-.site-nav__item {
+.site-nav__wrap {
   position: relative;
   z-index: 1; /* сброс z-index + увеличенный по высоте li, для решения проблем с submenu */
 
   height: 37px; /* 32 + 5 = 37px */
   padding-top: 5px;
+
 }
 
-.site-nav__item:hover .site-nav__submenu-control-wrap {
+.site-nav__wrap:hover .site-nav__control-wrap {
   background-color: rgb(247, 246, 243);
   border-radius: 18px;
 }
 
-.site-nav__item:hover .site-nav__submenu-control {
+.site-nav__wrap:hover .site-nav__control {
   color: #333333;
   border-bottom: 1px solid transparent;
 }
 
-.site-nav__item:hover .site-nav__submenu {
+.site-nav__wrap:hover .site-nav__submenu {
   display: block;
 }
 
-.site-nav__item--current .site-nav__submenu-control-wrap,
-.site-nav__item--current:hover .site-nav__submenu-control-wrap {
+.site-nav__wrap--current .site-nav__control-wrap,
+.site-nav__wrap--current:hover .site-nav__control-wrap {
   background-color: #d07058;
   border-radius: 18px;
 }
 
-.site-nav__item--current .site-nav__submenu-control,
-.site-nav__item--current:hover .site-nav__submenu-control {
+.site-nav__wrap--current .site-nav__control,
+.site-nav__wrap--current:hover .site-nav__control {
   color: #fff;
   border-bottom: 1px solid transparent;
 }
 
-.site-nav__item--current:active .site-nav__submenu-control-wrap {
+.site-nav__wrap--current:active .site-nav__control-wrap {
   color: #fff;
   box-shadow: none;
   background-color: #d07058;
 }
 
-.site-nav__submenu-control-wrap {
+.site-nav__control-wrap {
   height: 32px;
-  padding-right: 14px;
-  padding-left: 14px;
+  padding: 0 14px;
 
   display: flex;
   flex-direction: row;
@@ -522,13 +522,13 @@ a:active {
   align-items: center;
 }
 
-.site-nav__submenu-control-wrap:active {
+.site-nav__control-wrap:active {
   color: #333333;
   box-shadow: inset 0 2px 1px 0 #696969;
   background-color: #ededed;
 }
 
-.site-nav__submenu-control {
+.site-nav__control {
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
@@ -565,13 +565,13 @@ a:active {
   background-color: rgba(53, 53, 53, 0.2);
 }
 
-.site-nav__submenu-inner{
+.site-nav__inner {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.site-nav__submenu-inner a {
+.site-nav__item a {
   display: block;
   box-sizing: border-box;
   width: 143px;
@@ -588,22 +588,24 @@ a:active {
   border: none;
 }
 
-.site-nav__submenu-inner a:hover {
+.site-nav__item a:hover {
   background-color: #fbded7;
 }
 
-.site-nav__submenu-inner a:active {
+.site-nav__item a:active {
   background-color: #f6b5a5;
 }
 
-.site-nav__submenu-inner a.active {
-  color: #fff;
-  background-color: #d07058;
-}
-
-.site-nav__submenu-inner--attention a {
+.site-nav__item--attention a {
   font-weight: bold;
   border: none;
+}
+
+.site-nav__item--current a,
+.site-nav__item--current:hover a,
+.site-nav__item--current:active a {
+  color: #fff;
+  background-color: #d07058;
 }
 
 .user-nav {
