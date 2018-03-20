@@ -776,7 +776,6 @@ a:active {
 .basket-table {
   width: 510px;
   border-collapse: collapse;
-  caption-side: bottom;
 }
 
 .basket-table tr {
@@ -1430,24 +1429,29 @@ a:active {
 .offers {
   width: 100%;
   box-sizing: border-box;
-  margin-top: 40px;
 
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .offer-item {
   padding: 17px 14px 20px 19px;
   border-radius: 15px;
-  width: 44.4%;
-  flex-grow: 1;
+  width: 48.9%; /* (100 - 2.2) / 2 = 48.9% */
+  box-sizing: border-box;
+  margin-top: 40px;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+}
+
+.offers article:nth-of-type(odd) {
+  margin-right: 2.2%;
 }
 
 .offer-item--raspberry {
@@ -1466,10 +1470,6 @@ a:active {
   background-repeat: no-repeat;
   background-position: center;
   background-origin: border-box;
-}
-
-.offers article:first-of-type {
-  margin-right: 2.2%;
 }
 
 .offer-item a {
@@ -1542,7 +1542,7 @@ a:active {
 }
 
 .catalog-item {
-  width: 23.35%; /* 22.2 + (2.3 * 2) / 4 = 23.35% */
+  width: 23.35%; /* (100 - 2.2 * 3) / 4 = 23.35% */
   margin-right: 2.2%;
   margin-top: 40px;
 
@@ -1675,9 +1675,8 @@ a:active {
 }
 
 .advantages__item {
+  width: 48.9%; /* (100 - 2.2) / 2 = 48.9% */
   box-sizing: border-box;
-  width: 44.4%;
-  flex-grow: 1;
 
   margin-top: 9px;
   padding-left: 56px;
@@ -1685,6 +1684,10 @@ a:active {
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
+}
+
+.advantages__item:nth-child(odd) {
+  margin-right: 2.2%;
 }
 
 .advantages__item p {
@@ -1720,19 +1723,15 @@ a:active {
   background-position: top left;
 }
 
-.advantages__item:nth-child(odd) {
-  margin-right: 2.2%;
-}
-
 .news-mailing-wrap {
   width: 100%;
   box-sizing: border-box;
-  margin-top: 40px;
 
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .news-mailing-wrap section:first-of-type {
@@ -1740,9 +1739,10 @@ a:active {
 }
 
 .news, .mailing {
-  flex-grow: 1;
-  width: 44.4%;
+  width: 48.9%; /* (100 - 2.2) / 2 = 48.9% */
   box-sizing: border-box;
+  margin-top: 40px;
+
   border-radius: 15px;
   color: #5a5a5a;
 }
@@ -2408,7 +2408,7 @@ a.pag__next {
   padding-top: 9px;
 }
 
-.feedback-form__send{
+.feedback-form__send {
   margin-top: 5px;
 }
 
