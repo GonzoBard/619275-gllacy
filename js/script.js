@@ -2,47 +2,49 @@ function SliderOfMainPage() {
 
   var sliderData = [
     {
-      'text': 'Крем-брюле и пломбир<br>с малиновым джемом',
+      "textIndex": 0,
       'bodyClass': 'body-bg--0',
-      'control': document.getElementById('main-bg-slider__control-0')
+      'control': document.getElementById('main-bg-slider__control--0')
     },
     {
-      'text': 'Шоколадный пломбир<br>и лимонный сорбет',
+      "textIndex": 1,
       'bodyClass': 'body-bg--1',
-      'control': document.getElementById('main-bg-slider__control-1')
+      'control': document.getElementById('main-bg-slider__control--1')
     },
     {
-      'text': 'Пломбир с помадкой<br>и клубничный щербет',
+      "textIndex": 2,
       'bodyClass': 'body-bg--2',
-      'control': document.getElementById('main-bg-slider__control-2')
+      'control': document.getElementById('main-bg-slider__control--2')
     }
   ];
-  var textElem = document.getElementById('main-bg-slider__text');
-  var activeClassName = 'main-bg-slider__control--active';
+  var listOfText = document.getElementById('main-bg-slider__list-of-text');
+  var activeTextClassName = 'main-bg-slider__text--active';
+  var activeControlClassName = 'main-bg-slider__control--active';
   var bodyClassList = document.getElementsByTagName('body')[0].classList;
-  var currentSlide = sliderData[0]; //исходное состояние => 0-слайд активен
+  var current = sliderData[0]; //исходное состояние => 0-слайд активен
 
   this.change = function (controlOfNextSlide) {
 
-    if (currentSlide.control === controlOfNextSlide) {
+    if (current.control === controlOfNextSlide) {
       return; //do nothing, если выбрали активный слайд
     }
 
-    var nextSlide;
+    var next;
     for (i = 0; i < sliderData.length; i++) {
-      if (!nextSlide && sliderData[i].control === controlOfNextSlide) {
-        nextSlide = sliderData[i];
+      if (!next && sliderData[i].control === controlOfNextSlide) {
+        next = sliderData[i];
       }
     }
-    bodyClassList.remove(currentSlide.bodyClass); //очищаю фон текущего слайда
-    bodyClassList.add(nextSlide.bodyClass); //назначаю фон следующего слайда
+    bodyClassList.remove(current.bodyClass); //очищаю фон текущего слайда
+    bodyClassList.add(next.bodyClass); //назначаю фон следующего слайда
 
-    textElem.innerHTML = nextSlide.text; // назначаю текст следующего слайда
+    current.control.classList.remove(activeControlClassName); //деактивирую контрол текущего слайда
+    next.control.classList.add(activeControlClassName); //активирую контрол следующего слайда
 
-    currentSlide.control.classList.remove(activeClassName); //деактивирую контрол текущего слайда
-    nextSlide.control.classList.add(activeClassName); //активирую контрол следующего слайда
+    listOfText.children[current.textIndex].classList.remove(activeTextClassName); // скрываю текст текущего слайда
+    listOfText.children[next.textIndex].classList.add(activeTextClassName); // отображаю текст следующего слайда
 
-    currentSlide = nextSlide; // теперь следующий слайд стал текущим
+    current = next; // теперь следующий слайд стал текущим
   };
 }
 
