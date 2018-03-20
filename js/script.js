@@ -20,29 +20,29 @@ function SliderOfMainPage() {
   var textElem = document.getElementById('main-bg-slider__text');
   var activeClassName = 'main-bg-slider__control--active';
   var bodyClassList = document.getElementsByTagName('body')[0].classList;
-  var currentSlide = sliderData[0]; //исходное состояние => 0-слайд активен
+  var current = sliderData[0]; //исходное состояние => 0-слайд активен
 
   this.change = function (controlOfNextSlide) {
 
-    if (currentSlide.control === controlOfNextSlide) {
+    if (current.control === controlOfNextSlide) {
       return; //do nothing, если выбрали активный слайд
     }
 
-    var nextSlide;
+    var next;
     for (i = 0; i < sliderData.length; i++) {
-      if (!nextSlide && sliderData[i].control === controlOfNextSlide) {
-        nextSlide = sliderData[i];
+      if (!next && sliderData[i].control === controlOfNextSlide) {
+        next = sliderData[i];
       }
     }
-    bodyClassList.remove(currentSlide.bodyClass); //очищаю фон текущего слайда
-    bodyClassList.add(nextSlide.bodyClass); //назначаю фон следующего слайда
+    bodyClassList.remove(current.bodyClass); //очищаю фон текущего слайда
+    bodyClassList.add(next.bodyClass); //назначаю фон следующего слайда
 
-    textElem.innerHTML = nextSlide.text; // назначаю текст следующего слайда
+    textElem.innerHTML = next.text; // назначаю текст следующего слайда
 
-    currentSlide.control.classList.remove(activeClassName); //деактивирую контрол текущего слайда
-    nextSlide.control.classList.add(activeClassName); //активирую контрол следующего слайда
+    current.control.classList.remove(activeClassName); //деактивирую контрол текущего слайда
+    next.control.classList.add(activeClassName); //активирую контрол следующего слайда
 
-    currentSlide = nextSlide; // теперь следующий слайд стал текущим
+    current = next; // теперь следующий слайд стал текущим
   };
 }
 
