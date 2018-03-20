@@ -99,15 +99,25 @@
 
   <section class="main-bg-slider">
     <h2 class="visually-hidden">Слайдер</h2>
-    <p class="main-bg-slider__text" id="main-bg-slider__text">
-      Крем-брюле и пломбир<br>
-      с малиновым джемом
-    </p>
+    <ul class="main-bg-slider__list-of-text" id="main-bg-slider__list-of-text">
+      <li class="main-bg-slider__text main-bg-slider__text--active">
+        Крем-брюле и пломбир<br>
+        с малиновым джемом
+      </li>
+      <li class="main-bg-slider__text">
+        Шоколадный пломбир<br>
+        и лимонный сорбет
+      </li>
+      <li class="main-bg-slider__text">
+        Пломбир с помадкой<br>
+        и клубничный щербет
+      </li>
+    </ul>
     <div class="main-bg-slider__wrap">
       <div class="main-bg-slider__controls">
-        <button id="main-bg-slider__control-0" class="main-bg-slider__control main-bg-slider__control--active" aria-label="Слайд1 - Крем-брюле и пломбир с малиновым джемом" onclick="sliderOfMainPage.change(this)"></button>
-        <button id="main-bg-slider__control-1" class="main-bg-slider__control" aria-label="Слайд2 - Шоколадный пломбир и лимонный сорбет" onclick="sliderOfMainPage.change(this)"></button>
-        <button id="main-bg-slider__control-2" class="main-bg-slider__control" aria-label="Слайд3 - Пломбир с помадкой и клубничный щербет" onclick="sliderOfMainPage.change(this)"></button>
+        <button class="main-bg-slider__control main-bg-slider__control--active" id="main-bg-slider__control--0" aria-label="Слайд1 - Крем-брюле и пломбир с малиновым джемом" onclick="sliderOfMainPage.change(this)"></button>
+        <button class="main-bg-slider__control" id="main-bg-slider__control--1" aria-label="Слайд2 - Шоколадный пломбир и лимонный сорбет" onclick="sliderOfMainPage.change(this)"></button>
+        <button class="main-bg-slider__control" id="main-bg-slider__control--2" aria-label="Слайд3 - Пломбир с помадкой и клубничный щербет" onclick="sliderOfMainPage.change(this)"></button>
       </div>
       <a href="#" class="btn btn--attract-attention">Давайте оба!</a>
     </div>
@@ -241,7 +251,7 @@
   <section class="contacts">
     <h2 class="visually-hidden">Контакты</h2>
     <img src="img/map2.png" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург. Для заказов по телефону: 8 812 450-25-25 (с 10 до 20 ежедневно)">
-    <!--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1a0e5b125a87ead3d51ac2b44b2b135ad915bbab62f06138aa63f32db70bba5f&amp;width=100%25&amp;height=430&amp;lang=ru_RU&amp;scroll=false"></script>-->
+    <!--<script type="textIndex/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1a0e5b125a87ead3d51ac2b44b2b135ad915bbab62f06138aa63f32db70bba5f&amp;width=100%25&amp;height=430&amp;lang=ru_RU&amp;scroll=false"></script>-->
     <!--https://yandex.ru/maps/?um=constructor%3A1a0e5b125a87ead3d51ac2b44b2b135ad915bbab62f06138aa63f32db70bba5f&source=constructorLink-->
     <div class="contacts__wrap">
       <p>
