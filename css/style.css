@@ -389,7 +389,7 @@ a:active {
   flex-wrap: wrap;
 }
 
-.site-nav > li:first-child {
+.site-nav__wrap:first-child {
   margin-left: 10px;
 }
 
@@ -549,7 +549,7 @@ a:active {
   align-items: center;
 }
 
-.user-nav > li:not(:first-child) {
+.user-nav__item:not(:first-child) {
   margin-left: 10px;
 }
 
@@ -2173,7 +2173,7 @@ a.pag__next {
   align-items: flex-start;
 }
 
-.footer-nav ul:not(:last-child) {
+.footer-nav__list:not(:last-child) {
   margin-right: 32px;
 }
 
