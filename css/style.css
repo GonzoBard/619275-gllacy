@@ -970,7 +970,7 @@ a:active {
 .main-bg-slider {
   width: 100%;
   box-sizing: border-box;
-  margin-top: 260px;
+  margin-top: 320px;
 
   font-weight: bold;
   font-size: 60px;
@@ -982,7 +982,6 @@ a:active {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: 60px;
   margin-bottom: 29px;
 }
 
