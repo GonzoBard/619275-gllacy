@@ -1003,7 +1003,6 @@ a:active {
 
 .main-bg-slider__controls {
   margin-top: 21px;
-  margin-right: 348px;
   font-size: 0;
   line-height: 0;
 }
@@ -1028,6 +1027,10 @@ a:active {
 .main-bg-slider__control--active:hover,
 .main-bg-slider__control--active:focus {
   background-color: #fff;
+}
+
+.main-bg-slider__wrap .btn {
+  margin-left: 348px;
 }
 
 .catalog-filters {
