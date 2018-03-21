@@ -612,6 +612,11 @@ a:active {
   align-items: center;
 }
 
+.user-nav__control:hover,
+.user-nav__control:active {
+  cursor: pointer;
+}
+
 .user-nav__control--search {
   width: 33px;
 
@@ -802,6 +807,11 @@ a:active {
   background-position: center;
 }
 
+.basket-table__btn-delete:hover,
+.basket-table__btn-delete:active {
+  cursor: pointer;
+}
+
 .basket-table__item-pic {
   width: 44px;
 }
@@ -934,7 +944,7 @@ a:active {
 }
 
 .breadcrumbs-nav__item--active a {
-  border: none;
+  border-bottom-color: transparent;
 }
 
 .catalog-main-header {
@@ -1187,6 +1197,11 @@ a:active {
   appearance: none; /* remove default arrow */
 }
 
+.filters-form__sort:hover,
+.filters-form__sort:active {
+  cursor: pointer;
+}
+
 .filters-form__sort::-ms-expand {
   display: none; /* hide the default arrow in ie10 and ie11 */
 }
@@ -1253,26 +1268,31 @@ a:active {
   align-items: center;
 }
 
-.filters-form__wrap--fat-content > li {
+.filters-form__fat-content-item {
   padding-left: 38px;
 }
 
-.filters-form__wrap--fat-content > li:not(:last-child) {
+.filters-form__fat-content-item:not(:last-child) {
   margin-right: 12px;
 }
 
-.filters-form__wrap--fat-content label {
+.filters-form__fat-content-item label {
   position: relative;
 }
 
-.filters-form__wrap--fat-content label::before,
-.filters-form__wrap--fat-content label::after {
+.filters-form__fat-content-item label:hover,
+.filters-form__fat-content-item label:active {
+  cursor: pointer;
+}
+
+.filters-form__fat-content-item label::before,
+.filters-form__fat-content-item label::after {
   content: '';
   position: absolute;
   border-radius: 50%;
 }
 
-.filters-form__wrap--fat-content label::before {
+.filters-form__fat-content-item label::before {
   top: -3px;
   left: -32px;
   width: 16px;
@@ -1280,7 +1300,7 @@ a:active {
   border: 4px solid #e6ebe9;
 }
 
-.filters-form__wrap--fat-content label::after {
+.filters-form__fat-content-item label::after {
   top: 5px;
   left: -24px;
   width: 8px;
@@ -1289,12 +1309,12 @@ a:active {
   display: none;
 }
 
-.filters-form__wrap--fat-content label:hover::before,
+.filters-form__fat-content-item label:hover::before,
 .filters-form__fat-content-input:focus ~ label::before {
   border-color: #fff;
 }
 
-.filters-form__wrap--fat-content label:hover::after,
+.filters-form__fat-content-item label:hover::after,
 .filters-form__fat-content-input:focus ~ label::after {
   background-color: #fff;
 }
@@ -1311,24 +1331,29 @@ a:active {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-.filters-form__wrap--fillers > li {
+.filters-form__fillers-item {
   padding-left: 31px;
 }
 
-.filters-form__wrap--fillers > li:not(:last-child) {
+.filters-form__fillers-item:not(:last-child) {
   margin-right: 21px;
 }
 
-.filters-form__wrap--fillers li.filters-form__fillers-checkbox-group--fruit {
+.filters-form__wrap--fillers li.filters-form__fillers-item--checkbox-group-fruit {
   margin-right: 25px;
 }
 
-.filters-form__wrap--fillers label {
+.filters-form__fillers-item label {
   position: relative;
 }
 
-.filters-form__wrap--fillers label::before,
-.filters-form__wrap--fillers label::after {
+.filters-form__fillers-item label:hover,
+.filters-form__fillers-item label:active {
+  cursor: pointer;
+}
+
+.filters-form__fillers-item label::before,
+.filters-form__fillers-item label::after {
   content: '';
   position: absolute;
   top: -2px;
@@ -1337,14 +1362,14 @@ a:active {
   height: 23px;
 }
 
-.filters-form__wrap--fillers label::before {
+.filters-form__fillers-item label::before {
   background-color: transparent;
   background-image: url('../img/checkbox-off.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.filters-form__wrap--fillers label:hover::before,
+.filters-form__fillers-item label:hover::before,
 .filters-form__fillers-input:focus ~ label::before {
   background-color: transparent;
   background-image: url('../img/checkbox-off-hover.svg');
@@ -1352,7 +1377,7 @@ a:active {
   background-position: center;
 }
 
-.filters-form__wrap--fillers label::after {
+.filters-form__fillers-item label::after {
   display: none;
   background-color: transparent;
   background-image: url('../img/checkbox-on.svg');
@@ -1360,7 +1385,7 @@ a:active {
   background-position: center;
 }
 
-.filters-form__wrap--fillers label:hover::after,
+.filters-form__fillers-item label:hover::after,
 .filters-form__fillers-input:focus ~ label::after {
   display: none;
   background-color: transparent;
@@ -1420,6 +1445,7 @@ a:active {
 .filters-form__submit:focus {
   background-color: #fff;
   color: #323232;
+  cursor: pointer;
 }
 
 .filters-form__submit:active {
@@ -1427,6 +1453,7 @@ a:active {
   background-color: #eaeaea;
   color: #323232;
   box-shadow: inset 0 2px 1px 0 #696969;
+  cursor: pointer;
 }
 
 .offers {
@@ -2383,6 +2410,11 @@ a.pag__next {
   position: absolute;
   top: 15px;
   right: 9px;
+}
+
+.feedback__btn-close:hover,
+.feedback__btn-close:active {
+  cursor: pointer;
 }
 
 .feedback-form {
