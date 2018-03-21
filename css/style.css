@@ -73,7 +73,8 @@
 }
 
 body {
-  width: 1200px;
+  min-width: 900px;
+  max-width: 1200px;
   box-sizing: border-box;
   padding: 0;
   margin: 0 auto;
@@ -1499,7 +1500,7 @@ a:active {
   line-height: 22px;
 }
 
-.offer-item .btn--usual {
+.offer-item .btn {
   margin-top: 44px;
 }
 
@@ -2412,6 +2413,87 @@ a.pag__next {
 .feedback-form__send {
   margin-top: 5px;
 }
+
+@media (max-width: 1200px) {
+
+  .main-bg-slider__wrap .btn {
+    margin-left: 23.78%;
+    margin-right: auto;
+  }
+
+  .offer-item .btn {
+    margin-top: 22px;
+  }
+
+  .filters-form__group--submit {
+    margin-top: 12px;
+  }
+
+  .catalog {
+    margin-top: -2px;
+    margin-bottom: 2px;
+  }
+
+  .catalog-list img {
+    width: 100%;
+    height: auto;
+  }
+
+  .catalog-item {
+    margin-top: 38px;
+  }
+
+  .news {
+    background-position: -195px -224px;
+  }
+
+  .news__line {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .mailing-form input {
+    width: 61.5%;
+  }
+
+  .mailing p {
+    margin-bottom: 14px;
+  }
+
+  .contacts {
+    width: 100%;
+    margin-bottom: -1px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .contacts img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .contacts__wrap {
+    top: 62px;
+    right: 20px;
+    left: auto;
+  }
+
+  .footer-nav {
+    margin-left: 9%;
+  }
+}
+
+@media (max-width: 1120px) {
+  .contacts img {
+    margin-left: -79px;
+  }
+}
+
+/*@media (max-width: 900px) {*/
+/*body {*/
+/*background-color: magenta;*/
+/*}*/
+/*}*/
 
 /*
   UTILS
