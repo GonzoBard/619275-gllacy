@@ -2417,8 +2417,7 @@ a.pag__next {
 @media (max-width: 1200px) {
 
   .main-bg-slider__wrap .btn {
-    margin-left: 23.78%;
-    margin-right: auto;
+    margin-left: 29%;
   }
 
   .offer-item .btn {
@@ -2477,6 +2476,10 @@ a.pag__next {
 
 @media (max-width: 1120px) {
 
+  .main-bg-slider__wrap .btn {
+    margin-left: 27%;
+  }
+
   .news {
     background-position: -140px -224px;
   }
@@ -2496,6 +2499,10 @@ a.pag__next {
 }
 
 @media (max-width: 970px) {
+
+  .main-bg-slider__wrap .btn {
+    margin-left: 23.78%;
+  }
 
   .news {
     background-position: -195px -224px;
