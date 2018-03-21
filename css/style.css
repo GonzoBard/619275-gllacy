@@ -2443,20 +2443,12 @@ a.pag__next {
     margin-top: 38px;
   }
 
-  .news {
-    background-position: -195px -224px;
-  }
-
   .news__line {
     background-color: rgba(255, 255, 255, 0.8);
   }
 
   .mailing-form input {
     width: 61.5%;
-  }
-
-  .mailing p {
-    margin-bottom: 14px;
   }
 
   .contacts {
@@ -2484,9 +2476,31 @@ a.pag__next {
 }
 
 @media (max-width: 1120px) {
+
+  .news {
+    background-position: -140px -224px;
+  }
+
   .contacts img {
     margin-left: -79px;
   }
+
+}
+
+@media (max-width: 1083px) {
+
+  .mailing p {
+    margin-bottom: 14px;
+  }
+
+}
+
+@media (max-width: 970px) {
+
+  .news {
+    background-position: -195px -224px;
+  }
+
 }
 
 /*@media (max-width: 900px) {*/
