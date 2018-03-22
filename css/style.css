@@ -1581,6 +1581,10 @@ a:active {
   position: relative;
 }
 
+.catalog .catalog-item {
+  margin-top: 39px;
+}
+
 .catalog-item:nth-child(4n) {
   margin-right: 0;
 }
@@ -1981,7 +1985,7 @@ a:active {
 }
 
 .pag {
-  margin-top: 78px;
+  margin-top: 81px;
   margin-bottom: 29px;
   align-self: flex-end;
 
@@ -2473,6 +2477,10 @@ a.pag__next {
 
   .catalog-item {
     margin-top: 38px;
+  }
+
+  .catalog .catalog-item {
+    margin-top: 37px;
   }
 
   .news__line {
