@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 
@@ -17,18 +17,18 @@
     <a class="main-nav__logo" href="index.html">
       <img src="img/logo.svg" alt="Логотип магазина мороженого «Глейси»" width="154" height="64">
     </a>
-    <ul class="site-nav">
-      <li class="site-nav__wrap site-nav__wrap--current">
+    <ul class="site-nav" aria-label="Главная навигация">
+      <li class="site-nav__wrap site-nav__wrap--current" aria-label="Каталог">
         <div class="site-nav__control-wrap">
           <a class="site-nav__control" href="#">Каталог</a>
         </div>
-        <ul class="site-nav__submenu">
+        <ul class="site-nav__submenu" aria-label="Позиции каталога">
           <li>
-            <ul class="site-nav__inner">
+            <ul class="site-nav__inner" aria-label="Важные">
               <li class="site-nav__item site-nav__item--attention"><a href="#">Новинки</a></li>
             </ul>
             <hr>
-            <ul class="site-nav__inner">
+            <ul class="site-nav__inner" aria-label="Обычные">
               <li class="site-nav__item site-nav__item--current"><a>Сливочное</a></li>
               <li class="site-nav__item"><a href="#">Щербеты</a></li>
               <li class="site-nav__item"><a href="#">Фруктовый лед</a></li>
@@ -37,19 +37,19 @@
           </li>
         </ul>
       </li>
-      <li class="site-nav__wrap">
+      <li class="site-nav__wrap" aria-label="Доставка и оплата">
         <div class="site-nav__control-wrap">
           <a class="site-nav__control" href="#">Доставка и оплата</a>
         </div>
       </li>
-      <li class="site-nav__wrap">
+      <li class="site-nav__wrap" aria-label="О Компании">
         <div class="site-nav__control-wrap">
           <a class="site-nav__control" href="#">О Компании</a>
         </div>
       </li>
     </ul>
-    <ul class="user-nav">
-      <li class="user-nav__item">
+    <ul class="user-nav" aria-label="Пользовательская навигация">
+      <li class="user-nav__item" aria-label="Поиск">
         <button class="user-nav__control user-nav__control--search" aria-label="Поиск"></button>
         <ul class="user-nav__submenu user-nav__submenu--search">
           <li>
@@ -60,7 +60,7 @@
           </li>
         </ul>
       </li>
-      <li class="user-nav__item">
+      <li class="user-nav__item" aria-label="Аутентификация">
         <button class="user-nav__control user-nav__control--login">Вход</button>
         <ul class="user-nav__submenu user-nav__submenu--login">
           <li>
@@ -80,7 +80,7 @@
           </li>
         </ul>
       </li>
-      <li class="user-nav__item user-nav__item--basket-not-empty">
+      <li class="user-nav__item user-nav__item--basket-not-empty" aria-label="Корзина товаров">
         <button class="user-nav__control user-nav__control--basket">2 товара</button>
         <ul class="user-nav__submenu user-nav__submenu--basket dialog">
           <li class="user-nav__basket">
@@ -133,8 +133,8 @@
     <h2 class="visually-hidden">Навигация - «Хлебные крошки»</h2>
     <ul class="breadcrumbs-nav__list">
       <li class="breadcrumbs-nav__item"><a href="index.html">Главная</a></li>
-      <li class="breadcrumbs-nav__item"><a href="catalog.html">Каталог</a></li>
-      <li class="breadcrumbs-nav__item breadcrumbs-nav__item--active"><a href="#">Сливочное</a></li>
+      <li class="breadcrumbs-nav__item"><a href="#">Каталог</a></li>
+      <li class="breadcrumbs-nav__item breadcrumbs-nav__item--active"><a>Сливочное</a></li>
     </ul>
   </nav>
 
@@ -144,24 +144,24 @@
     <h3 class="visually-hidden">Фильтры каталога</h3>
     <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
       <ul class="filters-form__list">
-        <li class="filters-form__group">
+        <li class="filters-form__group" aria-label="Порядок сортировки">
           <label class="filters-form__title" for="filters-form__sort">Сортировка:</label>
           <div class="filters-form__sort-wrap">
             <select class="filters-form__wrap filters-form__sort" name="sort" id="filters-form__sort">
-              <option value="popular" selected>по популярности</option>
-              <option value="popular">сначала недорогие</option>
-              <option value="popular">сначала дорогие</option>
-              <option value="popular">по жирности</option>
+              <option value="by-popular" selected>по популярности</option>
+              <option value="by-cheap">сначала недорогие</option>
+              <option value="by-expensive">сначала дорогие</option>
+              <option value="by-fat">по жирности</option>
             </select>
           </div>
         </li>
-        <li class="filters-form__group">
+        <li class="filters-form__group" aria-label="Диапазон цены">
           <fieldset>
             <legend class="filters-form__title">Цена: 100 руб.&nbsp;–&nbsp;500 руб.</legend>
             <label class="visually-hidden" for="filters-form__price-range-low">Нижняя граница цены</label>
             <label class="visually-hidden" for="filters-form__price-range-high">Верхняя граница цены</label>
-            <input class="visually-hidden" type="range" name="price-range-low" id="filters-form__price-range-low" min="1" max="101" value="100" tabindex="-1">
-            <input class="visually-hidden" type="range" name="price-range-high" id="filters-form__price-range-high" min="499" max="100000" value="500" tabindex="-1">
+            <input class="visually-hidden" type="number" name="price-range-low" id="filters-form__price-range-low" value="100" tabindex="-1">
+            <input class="visually-hidden" type="number" name="price-range-high" id="filters-form__price-range-high" value="500" tabindex="-1">
             <div class="filters-form__wrap filters-form__wrap--price-range">
               <div class="filters-form__price-range-low">
                 <span class="track"></span>
@@ -223,7 +223,7 @@
             </li>
           </ul>
         </li>
-        <li class="filters-form__group filters-form__group--submit">
+        <li class="filters-form__group filters-form__group--submit" aria-label="Блок отправки формы">
           <button class="filters-form__submit">Применить</button>
         </li>
       </ul>
@@ -400,14 +400,15 @@
 
 <footer class="page-footer page-footer--bordered container">
 
-  <div class="footer-social">
+  <section class="footer-social">
+    <h2 class="visually-hidden">Мы в социальных сетях</h2>
     <ul class="footer-social__list">
-      <li><a class="btn-social btn-social--tw" href="#" aria-label="Twitter"></a></li>
-      <li><a class="btn-social btn-social--in" href="#" aria-label="Instagram"></a></li>
-      <li><a class="btn-social btn-social--fb" href="#" aria-label="Facebook"></a></li>
-      <li><a class="btn-social btn-social--vk" href="#" aria-label="VK"></a></li>
+      <li><a class="btn-social btn-social--tw" href="#" aria-label="Мы в сети 'Twitter'"></a></li>
+      <li><a class="btn-social btn-social--in" href="#" aria-label="Мы в сети 'Instagram'"></a></li>
+      <li><a class="btn-social btn-social--fb" href="#" aria-label="Мы в сети 'Facebook'"></a></li>
+      <li><a class="btn-social btn-social--vk" href="#" aria-label="Мы в сети 'ВКонтакте'"></a></li>
     </ul>
-  </div>
+  </section>
 
   <nav class="footer-nav">
     <h2 class="visually-hidden">Навигация подвала</h2>
@@ -421,7 +422,8 @@
     </ul>
   </nav>
 
-  <div class="footer-copyright">
+  <section class="footer-copyright">
+    <h2 class="visually-hidden">Сopyright</h2>
     <p>
       <a class="footer-copyright__logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на лендинг интенсива «Профессиональный HTML и CSS, уровень 1»" target="_blank">
         <img src="img/logo-htmlacademy.svg" alt="Логотип HTML-Academy" width="108" height="39">
@@ -430,10 +432,9 @@
     <p class="footer-copyright-text">
       Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML-Academy</a> &#169; 2017
     </p>
-  </div>
+  </section>
 
 </footer>
 
-<script src="js/script.js"></script>
 </body>
 </html>

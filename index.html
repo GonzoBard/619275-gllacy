@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="body-bg body-bg--0">
 
@@ -14,21 +14,21 @@
 
   <nav class="main-nav">
     <h2 class="visually-hidden">Основная навигация</h2>
-    <a class="main-nav__logo">
+    <a class="main-nav__logo" aria-label="Логотип">
       <img src="img/logo.svg" alt="Логотип магазина мороженого «Глейси»" width="154" height="64">
     </a>
-    <ul class="site-nav">
-      <li class="site-nav__wrap">
+    <ul class="site-nav" aria-label="Главная навигация">
+      <li class="site-nav__wrap" aria-label="Каталог">
         <div class="site-nav__control-wrap">
           <a class="site-nav__control" href="#">Каталог</a>
         </div>
-        <ul class="site-nav__submenu">
+        <ul class="site-nav__submenu" aria-label="Позиции каталога">
           <li>
-            <ul class="site-nav__inner">
+            <ul class="site-nav__inner" aria-label="Важные">
               <li class="site-nav__item site-nav__item--attention"><a href="#">Новинки</a></li>
             </ul>
             <hr>
-            <ul class="site-nav__inner">
+            <ul class="site-nav__inner" aria-label="Обычные">
               <li class="site-nav__item"><a href="catalog.html">Сливочное</a></li>
               <li class="site-nav__item"><a href="#">Щербеты</a></li>
               <li class="site-nav__item"><a href="#">Фруктовый лед</a></li>
@@ -37,20 +37,20 @@
           </li>
         </ul>
       </li>
-      <li class="site-nav__wrap">
+      <li class="site-nav__wrap" aria-label="Доставка и оплата">
         <div class="site-nav__control-wrap">
           <a class="site-nav__control" href="#">Доставка и оплата</a>
         </div>
       </li>
-      <li class="site-nav__wrap">
+      <li class="site-nav__wrap" aria-label="О Компании">
         <div class="site-nav__control-wrap">
           <a class="site-nav__control" href="#">О Компании</a>
         </div>
       </li>
     </ul>
-    <ul class="user-nav">
-      <li class="user-nav__item">
-        <button class="user-nav__control user-nav__control--search" aria-label="Поиск"></button>
+    <ul class="user-nav" aria-label="Пользовательская навигация">
+      <li class="user-nav__item" aria-label="Поиск">
+        <button class="user-nav__control user-nav__control--search" aria-label="Кнопка 'Поиск'"></button>
         <ul class="user-nav__submenu user-nav__submenu--search">
           <li>
             <form class="form-search dialog" action="https://echo.htmlacademy.ru" method="post">
@@ -60,7 +60,7 @@
           </li>
         </ul>
       </li>
-      <li class="user-nav__item">
+      <li class="user-nav__item" aria-label="Аутентификация">
         <button class="user-nav__control user-nav__control--login">Вход</button>
         <ul class="user-nav__submenu user-nav__submenu--login">
           <li>
@@ -80,7 +80,7 @@
           </li>
         </ul>
       </li>
-      <li class="user-nav__item">
+      <li class="user-nav__item" aria-label="Корзина товаров">
         <button class="user-nav__control user-nav__control--basket">Пусто</button>
       </li>
     </ul>
@@ -303,14 +303,15 @@
 
 <footer class="page-footer container">
 
-  <div class="footer-social">
+  <section class="footer-social">
+    <h2 class="visually-hidden">Мы в социальных сетях</h2>
     <ul class="footer-social__list">
-      <li><a class="btn-social btn-social--tw" href="#" aria-label="Twitter"></a></li>
-      <li><a class="btn-social btn-social--in" href="#" aria-label="Instagram"></a></li>
-      <li><a class="btn-social btn-social--fb" href="#" aria-label="Facebook"></a></li>
-      <li><a class="btn-social btn-social--vk" href="#" aria-label="VK"></a></li>
+      <li><a class="btn-social btn-social--tw" href="#" aria-label="Мы в сети 'Twitter'"></a></li>
+      <li><a class="btn-social btn-social--in" href="#" aria-label="Мы в сети 'Instagram'"></a></li>
+      <li><a class="btn-social btn-social--fb" href="#" aria-label="Мы в сети 'Facebook'"></a></li>
+      <li><a class="btn-social btn-social--vk" href="#" aria-label="Мы в сети 'ВКонтакте'"></a></li>
     </ul>
-  </div>
+  </section>
 
   <nav class="footer-nav">
     <h2 class="visually-hidden">Навигация подвала</h2>
@@ -324,7 +325,8 @@
     </ul>
   </nav>
 
-  <div class="footer-copyright">
+  <section class="footer-copyright">
+    <h2 class="visually-hidden">Сopyright</h2>
     <p>
       <a class="footer-copyright__logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на лендинг интенсива «Профессиональный HTML и CSS, уровень 1»" target="_blank">
         <img src="img/logo-htmlacademy.svg" alt="Логотип HTML-Academy" width="108" height="39">
@@ -333,10 +335,10 @@
     <p class="footer-copyright-text">
       Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML-Academy</a> &#169; 2017
     </p>
-  </div>
+  </section>
 
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

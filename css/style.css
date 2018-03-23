@@ -1596,6 +1596,8 @@ a:active {
 .catalog-item img {
   display: inline-block;
   vertical-align: middle;
+  width: 267px;
+  height: 267px;
   margin-bottom: 12px;
 
   border-radius: 50%;
