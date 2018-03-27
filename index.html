@@ -14,9 +14,7 @@
 
   <nav class="main-nav">
     <h2 class="visually-hidden">Основная навигация</h2>
-    <a class="main-nav__logo" aria-label="Логотип">
-      <img src="img/logo.svg" alt="Логотип магазина мороженого «Глейси»" width="154" height="64">
-    </a>
+    <img src="img/logo.svg" alt="Логотип магазина мороженого «Глейси»" width="154" height="64">
     <ul class="site-nav" aria-label="Главная навигация">
       <li class="site-nav__wrap" aria-label="Каталог">
         <div class="site-nav__control-wrap">
@@ -87,10 +85,8 @@
   </nav>
 
   <div class="header-contacts">
-    <p>
-      <span class="header-contacts__time">С 10 до 20, ежедневно</span><br>
-      <span class="header-contacts__phone">8 812 450-25-25</span>
-    </p>
+    <p class="header-contacts__time">С 10 до 20, ежедневно</p>
+    <p class="header-contacts__phone">8 812 450-25-25</p>
   </div>
 
 </header>
@@ -103,16 +99,13 @@
       <h2 class="visually-hidden">Слайдер</h2>
       <ul class="main-bg-slider__list-of-text" id="main-bg-slider__list-of-text">
         <li class="main-bg-slider__text main-bg-slider__text--active">
-          Крем-брюле и пломбир<br>
-          с малиновым джемом
+          <p>Крем-брюле и пломбир с малиновым джемом</p>
         </li>
         <li class="main-bg-slider__text">
-          Шоколадный пломбир<br>
-          и лимонный сорбет
+          <p>Шоколадный пломбир и лимонный сорбет</p>
         </li>
         <li class="main-bg-slider__text">
-          Пломбир с помадкой<br>
-          и клубничный щербет
+          <p>Пломбир с помадкой и клубничный щербет</p>
         </li>
       </ul>
       <div class="main-bg-slider__wrap">
@@ -222,10 +215,10 @@
 
       <section class="news">
         <h2>Новое в нашем блоге</h2>
-        <p>
+        <p class="news__text-wrap">
           <a href="#">
-            <span class="news__line news__line--1">10 способов сервировки</span><br>
-            <span class="news__line news__line--2">фруктовых щербетов к</span><br>
+            <span class="news__line news__line--1">10 способов сервировки</span>
+            <span class="news__line news__line--2">фруктовых щербетов к</span>
             <span class="news__line news__line--3">столу</span>
           </a>
         </p>
@@ -255,25 +248,12 @@
   <section class="contacts">
     <h2 class="visually-hidden">Контакты</h2>
     <img src="img/map2.png" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург. Для заказов по телефону: 8 812 450-25-25 (с 10 до 20 ежедневно)">
-    <!--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1a0e5b125a87ead3d51ac2b44b2b135ad915bbab62f06138aa63f32db70bba5f&amp;width=100%25&amp;height=430&amp;lang=ru_RU&amp;scroll=false"></script>-->
-    <!--https://yandex.ru/maps/?um=constructor%3A1a0e5b125a87ead3d51ac2b44b2b135ad915bbab62f06138aa63f32db70bba5f&source=constructorLink-->
     <div class="contacts__wrap">
-      <p>
-        <span class="contacts__address-text">
-          Адрес главного офиса<br>
-          и офлайн-магазина:
-        </span>
-        <br>
-        <span class="contacts__address-value">
-          ул. Большая Конюшенная<br>
-          19/8, Санкт-Петербург
-        </span>
-      </p>
-      <p>
-        <span class="contacts__phone-text">Для заказов по телефону:</span><br>
-        <span class="contacts__phone-value">8 812 450-25-25</span><br>
-        <span class="contacts__phone-time">(с 10 до 20 ежедневно)</span>
-      </p>
+      <p class="contacts__address-text">Адрес главного офиса и офлайн-магазина:</p>
+      <p class="contacts__address-value">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+      <p class="contacts__phone-text">Для заказов по телефону:</p>
+      <p class="contacts__phone-value">8 812 450-25-25</p>
+      <p class="contacts__phone-time">(с 10 до 20 ежедневно)</p>
       <a class="btn btn--usual" onclick="feedBackModal.open(event);" href="feedback.html" target="_blank">
         Форма обратной связи
       </a>
@@ -304,7 +284,7 @@
 <footer class="page-footer container">
 
   <section class="footer-social">
-    <h2 class="visually-hidden">Мы в социальных сетях</h2>
+    <h2 class="visually-hidden">«Глейси» в социальных сетях</h2>
     <ul class="footer-social__list">
       <li><a class="btn-social btn-social--tw" href="#" aria-label="Мы в сети 'Twitter'"></a></li>
       <li><a class="btn-social btn-social--in" href="#" aria-label="Мы в сети 'Instagram'"></a></li>
