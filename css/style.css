@@ -905,8 +905,6 @@ a:active {
 }
 
 .header-contacts__phone {
-  display: inline-block;
-  vertical-align: middle;
   margin: 5px 0 0;
   padding: 0;
 
