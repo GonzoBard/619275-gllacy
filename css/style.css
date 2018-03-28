@@ -1976,6 +1976,9 @@ a:active {
 }
 
 .contacts__address-value {
+  display: inline-block;
+  vertical-align: middle;
+  width: 250px;
   margin: 1px 0 0;
   padding: 0;
 
