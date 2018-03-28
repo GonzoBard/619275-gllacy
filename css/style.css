@@ -877,15 +877,18 @@ a:active {
   line-height: 24px;
   color: #fff;
   text-decoration: none;
+  border: none;
 }
 
 .user-nav__basket .place-order:hover,
 .user-nav__basket .place-order:focus {
   color: #fff;
+  border: none;
 }
 
 .user-nav__basket .place-order:active {
   color: #fceeec;
+  border: none;
 }
 
 .header-contacts {
@@ -963,7 +966,7 @@ a:active {
 
 .body-bg {
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: 50% 0; /*  по Горизонтали: центр;  по Вертикали: вверху без отступа  */
 }
 
 .body-bg--0 {
@@ -1005,7 +1008,8 @@ a:active {
 
 .main-bg-slider__text p {
   display: inline-block;
-  width: 670px;
+  vertical-align: middle;
+  width: 675px;
   margin: 0;
   padding: 0;
 }
@@ -1063,7 +1067,13 @@ a:active {
 }
 
 .filters-form {
-  width: 890px;
+  /*
+  1) При изменении ширины Cтраницы, Блок с фильтрами не изменяет свои линейные размеры.
+  2) Минимальная ширина макета 900px, отступы справа и слева по 2.3%, соответственно:
+       (100% - 2 * 2.3%) * 900px / 100% = 858.6px
+  То есть общая ширина Блока с фильтрами должна быть <= 858.6px
+  */
+  width: 858.6px;
 
   font-weight: 500;
   font-size: 16px;
@@ -1083,17 +1093,23 @@ a:active {
   flex-wrap: wrap;
 }
 
-.filters-form__list > li:not(:last-child) {
-  margin-right: 14px;
-}
-
 .filters-form__group {
+  margin-right: 14px;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
+}
+
+.filters-form__group:nth-child(4) {
+  margin-right: 13px; /* special for Edge and IE11 */
+}
+
+.filters-form__group:nth-child(3),
+.filters-form__group:nth-child(5) {
+  margin-right: 0;
 }
 
 .filters-form__group fieldset {
@@ -1153,6 +1169,7 @@ a:active {
 
 .filters-form__wrap--fat-content {
   padding-left: 7px;
+  padding-right: 14px;
 }
 
 .filters-form__wrap--fillers {
@@ -1438,10 +1455,10 @@ a:active {
 
 .filters-form__submit {
   box-sizing: border-box;
-  width: 145px;
+  width: 142px;
   height: 37px;
   margin: 0;
-  padding: 0 12px;
+  padding: 0 12px 0 15px;
 
   font-weight: 500;
   font-size: 16px;
@@ -1813,12 +1830,12 @@ a:active {
   line-height: 22px;
 }
 
-.news__text-wrap{
+.news__text-wrap {
   margin: 0 0 62px;
   padding: 0;
 }
 
-.news__text-wrap a{
+.news__text-wrap a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -2569,6 +2586,21 @@ a.pag__next {
     background-position: -195px -224px;
   }
 
+}
+
+@media (max-width: 899px) {
+
+  .body-bg--0 {
+    background-position: -72.5px 0; /* (1045 - 900) / 2 = 72.5px */
+  }
+
+  .body-bg--1 {
+    background-position: -82.5px 0; /* (1065 - 900) / 2 = 82.5px */
+  }
+
+  .body-bg--2 {
+    background-position: -89.5px 0; /* (1079 - 900) / 2 = 89.5px */
+  }
 }
 
 /*
