@@ -877,15 +877,18 @@ a:active {
   line-height: 24px;
   color: #fff;
   text-decoration: none;
+  border: none;
 }
 
 .user-nav__basket .place-order:hover,
 .user-nav__basket .place-order:focus {
   color: #fff;
+  border: none;
 }
 
 .user-nav__basket .place-order:active {
   color: #fceeec;
+  border: none;
 }
 
 .header-contacts {
@@ -1100,7 +1103,7 @@ a:active {
   align-content: flex-start;
 }
 
-.filters-form__group:nth-child(4){
+.filters-form__group:nth-child(4) {
   margin-right: 13px; /* special for Edge and IE11 */
 }
 
