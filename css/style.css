@@ -1963,6 +1963,10 @@ a:active {
   align-items: flex-start;
 }
 
+.contacts__wrap > p {
+  max-width: 100%;
+}
+
 .contacts__address-text {
   display: inline-block;
   vertical-align: middle;
@@ -1976,9 +1980,6 @@ a:active {
 }
 
 .contacts__address-value {
-  display: inline-block;
-  vertical-align: middle;
-  width: 250px;
   margin: 1px 0 0;
   padding: 0;
 
@@ -1988,8 +1989,6 @@ a:active {
 }
 
 .contacts__phone-text {
-  display: inline-block;
-  vertical-align: middle;
   margin: 16px 0 0;
   padding: 0;
 
