@@ -800,7 +800,7 @@ a:active {
   border: none;
 
   background-color: transparent;
-  background-image: url("../img/delete-basket-item.svg");
+  background-image: url('../img/delete-basket-item.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1063,7 +1063,7 @@ a:active {
 .catalog-filters {
   width: 100%;
   box-sizing: border-box;
-  margin-top: 25px;
+  margin-top: 11px;
 }
 
 .filters-form {
@@ -1094,6 +1094,7 @@ a:active {
 }
 
 .filters-form__group {
+  margin-top: 14px;
   margin-right: 14px;
 
   display: flex;
@@ -1122,10 +1123,6 @@ a:active {
   color: #fff;
 }
 
-.filters-form__group--fillers {
-  margin-top: 14px;
-}
-
 .filters-form__title {
   padding: 0 15px 6px 16px;
   margin: 0;
@@ -1140,7 +1137,6 @@ a:active {
 }
 
 .filters-form__wrap {
-  height: 37px;
   margin: 0;
   padding: 0 15px;
 
@@ -1150,6 +1146,16 @@ a:active {
   border: none;
   box-shadow: none;
   list-style: none;
+}
+
+.filters-form__sort,
+.filters-form__wrap--price-range {
+  height: 37px;
+}
+
+.filters-form__wrap--fillers,
+.filters-form__wrap--fat-content {
+  min-height: 30px;
 }
 
 .filters-form__sort-wrap {
@@ -1170,17 +1176,19 @@ a:active {
 .filters-form__wrap--fat-content {
   padding-left: 7px;
   padding-right: 14px;
+  padding-bottom: 7px;
 }
 
 .filters-form__wrap--fillers {
   margin: 0;
-  padding: 0 19px 0 17px;
+  padding: 0 19px 7px 17px;
   list-style: none;
 
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .filters-form__sort-wrap::before {
@@ -1283,21 +1291,26 @@ a:active {
   background-color: #ababab;
   border: 8px solid #fff;
   border-radius: 50%;
-  cursor: pointer;
 }
 
 .filters-form__price-range-high .thumb {
   left: 0;
 }
 
+.filters-form__wrap--price-range .thumb:hover {
+  cursor: pointer;
+}
+
 .filters-form__wrap--fat-content {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .filters-form__fat-content-item {
+  margin-top: 10px;
   padding-left: 38px;
 }
 
@@ -1361,6 +1374,7 @@ a:active {
 }
 
 .filters-form__fillers-item {
+  margin-top: 11px;
   padding-left: 31px;
 }
 
@@ -1708,7 +1722,7 @@ a:active {
   border-radius: 15px;
 
   background-color: #E4DAC2;
-  background-image: url("../img/bg-waffle.jpg");
+  background-image: url('../img/bg-waffle.jpg');
   background-repeat: repeat;
   background-position: center;
 }
@@ -2065,7 +2079,8 @@ a:active {
 
 .pag__page--current,
 .pag__page--current:hover,
-.pag__page--current:focus {
+.pag__page--current:focus,
+.pag__page:active {
   color: #323232;
   background-color: #fff;
 }

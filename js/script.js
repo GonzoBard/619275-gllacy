@@ -2,17 +2,17 @@ function SliderOfMainPage() {
 
   var sliderData = [
     {
-      "textIndex": 0,
+      'textIndex': 0,
       'bodyClass': 'body-bg--0',
       'control': document.getElementById('main-bg-slider__control--0')
     },
     {
-      "textIndex": 1,
+      'textIndex': 1,
       'bodyClass': 'body-bg--1',
       'control': document.getElementById('main-bg-slider__control--1')
     },
     {
-      "textIndex": 2,
+      'textIndex': 2,
       'bodyClass': 'body-bg--2',
       'control': document.getElementById('main-bg-slider__control--2')
     }
