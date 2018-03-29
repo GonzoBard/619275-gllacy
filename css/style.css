@@ -1150,7 +1150,7 @@ a:active {
 
 .filters-form__sort,
 .filters-form__wrap--price-range {
-  height: 37px;
+  height: 37.4px;
 }
 
 .filters-form__wrap--fillers,
@@ -1279,30 +1279,50 @@ a:active {
   background-color: #fff;
 }
 
-.filters-form__price-range-low .thumb,
-.filters-form__price-range-high .thumb {
+.filters-form__wrap--price-range .thumb {
   position: absolute;
   right: 0;
-  display: inline-block;
-  vertical-align: middle;
+  top: -1px;
   box-sizing: border-box;
   width: 20px;
   height: 20px;
-  background-color: #ababab;
-  border: 8px solid #fff;
+  background-color: #fff;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .filters-form__price-range-high .thumb {
   left: 0;
 }
 
-.filters-form__wrap--price-range .thumb:hover,
-.filters-form__wrap--price-range .thumb:focus {
-  width: 21px;
-  height: 21px;
-  cursor: pointer;
+.filters-form__wrap--price-range .thumb:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 4px;
+  height: 4px;
+  margin-top: -2px;
+  margin-left: -2px;
+  background-color: #ababab;
+  border-radius: 50%;
 }
+
+.filters-form__wrap--price-range .thumb:hover:after,
+.filters-form__wrap--price-range .thumb:focus:after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
 
 .filters-form__wrap--fat-content {
   display: flex;
