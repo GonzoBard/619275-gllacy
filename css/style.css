@@ -1297,7 +1297,10 @@ a:active {
   left: 0;
 }
 
-.filters-form__wrap--price-range .thumb:hover {
+.filters-form__wrap--price-range .thumb:hover,
+.filters-form__wrap--price-range .thumb:focus {
+  width: 21px;
+  height: 21px;
   cursor: pointer;
 }
 
