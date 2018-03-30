@@ -6,7 +6,7 @@
 
 # Результат защиты проекта
 Сертификат: https://assets.htmlacademy.ru/certificates/intensive/67/619275.pdf
-<br>
+<br><br>
 ![Результат защиты](img/result_defence.png)
 
 # Кратко о Проекте
