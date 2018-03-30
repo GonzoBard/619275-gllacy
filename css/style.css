@@ -394,7 +394,7 @@ a:active {
 
 .site-nav__wrap {
   position: relative;
-  z-index: 1; /* сброс z-index + увеличенный по высоте li, для решения проблем с submenu */
+  z-index: 10; /* сброс z-index + увеличенный по высоте li, для решения проблем с submenu */
 
   height: 37px; /* 32 + 5 = 37px */
   padding-top: 5px;
