@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
   <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="plugins/noUiSlider/nouislider.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -155,24 +156,50 @@
         </li>
         <li class="filters-form__group" aria-label="Диапазон цены">
           <fieldset>
-            <legend class="filters-form__title">Цена: 100 руб.&nbsp;–&nbsp;500 руб.</legend>
+            <legend class="filters-form__title">
+              Цена: <span id="filters-form__price-range-text-lower-value">100</span> руб.
+              &nbsp;–&nbsp;
+              <span id="filters-form__price-range-text-upper-value">500</span> руб.
+            </legend>
             <label class="visually-hidden" for="filters-form__price-range-low">Нижняя граница цены</label>
             <label class="visually-hidden" for="filters-form__price-range-high">Верхняя граница цены</label>
             <input class="visually-hidden" type="number" name="price-range-low" id="filters-form__price-range-low" value="100" tabindex="-1">
             <input class="visually-hidden" type="number" name="price-range-high" id="filters-form__price-range-high" value="500" tabindex="-1">
+
             <div class="filters-form__wrap filters-form__wrap--price-range">
-              <div class="filters-form__price-range-low">
-                <span class="track"></span>
-                <span class="thumb" tabindex="0"></span>
+
+              <div class="noUi-target noUi-ltr noUi-horizontal" id="dual-band-range">
+                <!-- Внутренность только для отображения, если не работает JS -->
+                <div class="noUi-base">
+                  <div class="noUi-connects">
+                    <div class="noUi-connect" style="transform: translate(8.33333%, 0px) scale(0.333333, 1);"></div>
+                  </div>
+                  <div class="noUi-origin" style="transform: translate(-91.6667%, 0px); z-index: 5;">
+                    <div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="41.7" aria-valuenow="8.3" aria-valuetext="100.00"></div>
+                  </div>
+                  <div class="noUi-origin" style="transform: translate(-58.3333%, 0px); z-index: 6;">
+                    <div class="noUi-handle noUi-handle-upper" data-handle="1" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="8.3" aria-valuemax="100.0" aria-valuenow="41.7" aria-valuetext="500.00"></div>
+                  </div>
+                </div>
+                <!-- Внутренность только для отображения, если не работает JS -->
               </div>
-              <div class="filters-form__price-range-between">
-                <span class="track"></span>
-              </div>
-              <div class="filters-form__price-range-high">
-                <span class="track"></span>
-                <span class="thumb" tabindex="0"></span>
-              </div>
+
             </div>
+
+            <!--<div class="filters-form__wrap filters-form__wrap&#45;&#45;price-range">-->
+            <!--<div class="filters-form__price-range-low">-->
+            <!--<span class="track"></span>-->
+            <!--<span class="thumb" tabindex="0"></span>-->
+            <!--</div>-->
+            <!--<div class="filters-form__price-range-between">-->
+            <!--<span class="track"></span>-->
+            <!--</div>-->
+            <!--<div class="filters-form__price-range-high">-->
+            <!--<span class="track"></span>-->
+            <!--<span class="thumb" tabindex="0"></span>-->
+            <!--</div>-->
+            <!--</div>-->
+
           </fieldset>
         </li>
         <li class="filters-form__group" aria-label="Жирность">
@@ -434,5 +461,7 @@
 
 </footer>
 
+<script src="plugins/noUiSlider/nouislider.min.js"></script>
+<script src="js/noUI-use.min.js"></script>
 </body>
 </html>
