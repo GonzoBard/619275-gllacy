@@ -2,7 +2,6 @@
 
 * Студент: [Алексей Баранов](https://up.htmlacademy.ru/htmlcss/20/user/619275)
 * Наставник: [Евгений Баранков](https://up.htmlacademy.ru/htmlcss/20/user/518169)
-<br>
 Постоянная ссылка: https://gonzobard.github.io/619275-gllacy/
 
 # Кратко о Проекте
