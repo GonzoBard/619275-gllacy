@@ -2,10 +2,11 @@
 
 * Студент: [Алексей Баранов](https://up.htmlacademy.ru/htmlcss/20/user/619275)
 * Наставник: [Евгений Баранков](https://up.htmlacademy.ru/htmlcss/20/user/518169)  
-Проект online: https://gonzobard.github.io/619275-gllacy/
+* Online: https://gonzobard.github.io/619275-gllacy/
 
 # Результат защиты проекта
 Сертификат: https://assets.htmlacademy.ru/certificates/intensive/67/619275.pdf
+<br>
 ![Результат защиты](img/result_defence.png)
 
 # Кратко о Проекте
