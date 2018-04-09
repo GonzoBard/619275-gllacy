@@ -5,7 +5,7 @@
 * Online: https://gonzobard.github.io/619275-gllacy/
 
 # Результат защиты проекта
-Сертификат: https://assets.htmlacademy.ru/certificates/intensive/67/619275.pdf
+Сертификат: https://goo.gl/QA66xg
 <br><br>
 ![Результат защиты](img/result_defence.png)
 
